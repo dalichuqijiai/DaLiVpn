@@ -76,8 +76,8 @@ jobs:
         run: |
           cd bettbox-src/android
           rm -rf .gradle build app/keystore.jks local.properties
-          keytool -genkey -v -keystore app/keystore.jks -alias key -keyalg RSA -keysize 2048 -validity 10000 -storepass p123! -keypass p123! -dname "CN=VPN, OU=Dev, O=VPN, L=Unknown, ST=Unknown, C=CN"
-          echo -e "keyAlias=key\nstorePassword=p123!\nkeyPassword=p123!\nstoreFile=app/keystore.jks" >> local.properties
+          keytool -genkey -v -keystore app/keystore.jks -alias key -keyalg RSA -keysize 2048 -validity 10000 -storepass Dalivpn123! -keypass Dalivpn123! -dname "CN=VPN, OU=Dev, O=VPN, L=Unknown, ST=Unknown, C=CN"
+          echo -e "keyAlias=key\nstorePassword=Dalivpn123!\nkeyPassword=Dalivpn123!\nstoreFile=app/keystore.jks" >> local.properties
           cd ..
           flutter pub get
           find . -name "*.freezed.dart" -o -name "*.g.dart" | grep -v ".dart_tool" | while read f; do rm -f "$f"; done
