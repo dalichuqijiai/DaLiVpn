@@ -128,7 +128,9 @@ jobs:
           if grep -q 'autoUpdateProfiles' lib/controller.dart; then
             sed -i 's/autoUpdateProfiles();/await autoLoadDefaultSubscription();\n    autoUpdateProfiles();/' lib/controller.dart
             if ! grep -q "auto_subscription.dart" lib/controller.dart; then
-              sed -i 's/^import.*constant\.dart.*/import "package:dali_vpn\/common\/constant.dart";\nimport "package:dali_vpn\/common\/auto_subscription.dart";/' lib/controller.dart
+              echo 'import "package:dali_vpn/common/auto_subscription.dart";' > /tmp/new_header.dart
+              cat lib/controller.dart >> /tmp/new_header.dart
+              mv /tmp/new_header.dart lib/controller.dart
             fi
             echo "自动加载逻辑已注入"
           else
