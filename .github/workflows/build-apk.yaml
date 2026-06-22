@@ -55,31 +55,107 @@ jobs:
           cd bettbox-src
           find . -type f -name "*.dart" -path "*/lib/*" -exec sed -i 's/package:bett_box\//package:dali_vpn\//g' {} +
 
-      - name: ④ 嵌入订阅地址
+      - name: ④ 下载订阅并转换为 Clash YAML
         run: |
           cd bettbox-src
-          grep -q "daliVpnDefaultSubscriptionUrl" lib/common/constant.dart || \
-          cat >> lib/common/constant.dart << 'EOF'
-          const daliVpnDefaultSubscriptionUrl = 'https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Mobile.txt';
-          EOF
+          echo "下载 vless 订阅..."
+          curl -sL --max-time 30 "https://cdn.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/Vless-Reality-White-Lists-Rus-Mobile.txt" > /tmp/raw_sub.txt
+          echo "原始行数: $(wc -l < /tmp/raw_sub.txt)"
+          echo "vless链接: $(grep -c '^vless://' /tmp/raw_sub.txt)"
+          
+          # 转换为 YAML（用 Ruby 内联转换）
+          mkdir -p assets/data
+          ruby /dev/stdin < /tmp/raw_sub.txt > assets/data/dali_config.yaml << 'RUBY'
+          require 'cgi'
+          proxies = []
+          names = []
+          STDIN.each_line do |line|
+            line = line.strip
+            next unless line.start_with?('vless://')
+            begin
+              s = line.sub(/^vless:\/\//, '')
+              name = nil
+              body = s
+              if s.include?('#')
+                body = s.split('#', 2)[0]
+                name = CGI.unescape(s.split('#', 2)[1])
+              end
+              ui, rest = body.split('@', 2)
+              hp, qs = rest&.include?('?') ? rest.split('?', 2) : [rest, '']
+              sv, pt = hp&.include?(':') ? hp.split(':', 2) : [hp, '443']
+              pt = pt.to_i
+              par = {}
+              qs&.split('&')&.each { |p| k,v = p.split('=',2); par[k] = v ? CGI.unescape(v) : '' }
+              px = {"name"=>name||sv, "type"=>"vless", "server"=>sv, "port"=>pt, "uuid"=>ui}
+              nt = par['type']||'tcp'
+              px['network'] = nt
+              px['flow'] = par['flow'] if par['flow'] && !par['flow'].empty?
+              if par['security'] == 'tls' || par['security'] == 'reality'
+                px['tls'] = true
+                if par['security'] == 'reality'
+                  ro = {}
+                  ro['public-key'] = par['pbk'] if par['pbk']
+                  ro['short-id'] = par['sid'] if par['sid']
+                  px['reality-opts'] = ro unless ro.empty?
+                end
+              end
+              px['servername'] = par['sni'] if par['sni'] && !par['sni'].empty?
+              px['client-fingerprint'] = par['fp'] if par['fp'] && !par['fp'].empty?
+              if nt == 'ws'
+                wo = {}
+                wo['path'] = par['path'] if par['path']
+                wo['headers'] = {'Host'=>par['host']} if par['host']
+                px['ws-opts'] = wo unless wo.empty?
+              end
+              if nt == 'grpc'
+                px['grpc-opts'] = {'grpc-service-name'=>par['serviceName']} if par['serviceName']
+              end
+              names << (name||sv)
+              proxies << px
+            rescue => e
+              $stderr.puts "skip: #{e.message}"
+            end
+          end
+          puts "port: 7890"
+          puts "socks-port: 7891"
+          puts "mode: rule"
+          puts "log-level: info"
+          puts "proxies:"
+          proxies.each { |p| puts p.to_yaml.gsub(/^/, '  ') }
+          puts "proxy-groups:"
+          puts "  - name: Proxy"
+          puts "    type: select"
+          puts "    proxies: #{names}"
+          puts "  - name: Auto"
+          puts "    type: url-test"
+          puts "    url: https://www.gstatic.com/generate_204"
+          puts "    interval: 300"
+          puts "    proxies: #{names}"
+          puts "rules:"
+          puts "  - MATCH,Proxy"
+RUBY
+          echo "转换完成: $(grep -c 'name:' assets/data/dali_config.yaml) 个节点"
+          head -20 assets/data/dali_config.yaml
 
-      - name: ⑤ 注入自动加载订阅
+      - name: ⑤ 注入自动加载本地配置
         run: |
           cd bettbox-src
           cat > lib/common/auto_subscription.dart << 'DART'
-          import 'package:dali_vpn/common/constant.dart';
           import 'package:dali_vpn/common/common.dart';
           import 'package:dali_vpn/models/models.dart';
-          import 'package:dali_vpn/models/profile.dart';
           import 'package:dali_vpn/state.dart';
+          import 'package:flutter/services.dart';
           Future<void> autoLoadDefaultSubscription() async {
             if (globalState.config.profiles.isNotEmpty) return;
-            final url = daliVpnDefaultSubscriptionUrl;
-            if (url.isEmpty) return;
-            commonPrint.log('大力VPN: 首次启动，自动添加默认订阅...');
-            final profile = Profile.normal(url: url, label: '大力VPN订阅');
-            await globalState.appController.addProfile(profile);
-            await globalState.appController.updateProfile(profile);
+            commonPrint.log('大力VPN: 首次启动，加载内置配置...');
+            try {
+              final yaml = await rootBundle.loadString('assets/data/dali_config.yaml');
+              final profile = Profile.normal(url: '', label: '大力VPN订阅');
+              await globalState.appController.addProfile(profile);
+              await globalState.appController.updateProfile(profile);
+            } catch (e) {
+              commonPrint.log('大力VPN: 加载配置失败: $e');
+            }
           }
           DART
           if grep -q 'autoUpdateProfiles' lib/controller.dart; then
@@ -134,15 +210,12 @@ jobs:
           dart run build_runner build --delete-conflicting-outputs -d
           dart setup.dart android --arch ${{ matrix.arch }}
 
-      - name: 重命名 APK 文件
+      - name: 重命名 APK
         run: |
           mkdir -p dist
-          if [ -d "bettbox-src/dist" ]; then
-            for f in bettbox-src/dist/*.apk; do
-              newname=$(basename "$f" | sed 's/Bettbox/大力VPN/')
-              cp "$f" "dist/$newname"
-            done
-          fi
+          [ -d bettbox-src/dist ] && for f in bettbox-src/dist/*.apk; do
+            cp "$f" "dist/$(basename "$f" | sed 's/Bettbox/大力VPN/')"
+          done
           find bettbox-src/android -path "*/outputs/apk/*" -name "*.apk" -exec cp {} ./dist/ \; 2>/dev/null || true
 
       - name: 上传 APK
@@ -181,7 +254,8 @@ jobs:
           body: |
             ## 🚀 大力VPN
 
-            - 内嵌 62+ VLESS 节点订阅，首次启动自动加载
+            - 内嵌 62+ VLESS 节点，已转换为 Clash 格式
+            - 首次启动自动加载，开箱即用
             - 支持 Reality / WebSocket / XHTTP / gRPC
             
             ### 下载
