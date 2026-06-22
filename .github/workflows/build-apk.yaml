@@ -3,7 +3,8 @@ name: 构建大力VPN
 
 on:
   push:
-    tags: ['v*']
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 env:
