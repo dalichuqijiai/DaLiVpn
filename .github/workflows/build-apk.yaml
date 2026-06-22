@@ -6,7 +6,6 @@ on:
 
 env:
   GRADLE_OPTS: -Dorg.gradle.vfs.watch=false
-  SENTRY_BACKEND: none
 
 jobs:
   build-android:
@@ -27,47 +26,34 @@ jobs:
       - name: Clone Bettbox
         run: git clone --depth 1 https://github.com/appshubcc/Bettbox.git bettbox-src
 
-      - name: Branding - 大力VPN
+      - name: 改显示名 → 大力VPN
         run: |
           cd bettbox-src
-          # 只改显示名，不改包名（核心库 .so 改不了）
-          sed -i 's/^name: bett_box/name: dali_vpn/' pubspec.yaml
           sed -i 's|android:label="Bettbox"|android:label="大力VPN"|g' android/app/src/main/AndroidManifest.xml
 
-      - name: Embed subscription URL
+      - name: 嵌入订阅地址
         run: |
           cd bettbox-src
           URL="https://raw.githubusercontent.com/dalichuqijiai/DaLiVpn/main/assets/data/dali_config.yaml"
           cat >> lib/common/constant.dart << EOF
-          const daliVpnDefaultSubscriptionUrl = '$URL';
+          const daliConfigUrl = '$URL';
           EOF
-
-      - name: Auto-load on first launch
-        run: |
-          cd bettbox-src
-          mkdir -p lib/common
-          cat > lib/common/auto_subscription.dart << DART
-          import 'package:bett_box/common/constant.dart';
+          cat > lib/common/auto_sub.dart << 'DART'
           import 'package:bett_box/common/common.dart';
           import 'package:bett_box/models/models.dart';
-          import 'package:bett_box/models/profile.dart';
           import 'package:bett_box/state.dart';
-          Future<void> autoLoadDefaultSubscription() async {
+          Future<void> loadSub() async {
             if (globalState.config.profiles.isNotEmpty) return;
-            final url = daliVpnDefaultSubscriptionUrl;
+            final url = daliConfigUrl;
             if (url.isEmpty) return;
-            commonPrint.log('大力VPN: 首次启动，自动加载节点...');
-            final profile = Profile.normal(url: url, label: '大力VPN订阅');
-            await globalState.appController.addProfile(profile);
-            await globalState.appController.updateProfile(profile);
+            commonPrint.log('大力VPN: 自动加载...');
+            final p = Profile.normal(url: url, label: '大力VPN');
+            await globalState.appController.addProfile(p);
+            await globalState.appController.updateProfile(p);
           }
           DART
-          if grep -q 'autoUpdateProfiles' lib/controller.dart; then
-            sed -i 's/autoUpdateProfiles();/await autoLoadDefaultSubscription();\n    autoUpdateProfiles();/' lib/controller.dart
-            if ! grep -q "auto_subscription.dart" lib/controller.dart; then
-              (echo 'import "package:bett_box/common/auto_subscription.dart";'; cat lib/controller.dart) > /tmp/t && mv /tmp/t lib/controller.dart
-            fi
-          fi
+          sed -i 's/autoUpdateProfiles();/await loadSub();\n    autoUpdateProfiles();/' lib/controller.dart
+          (echo 'import "package:bett_box/common/auto_sub.dart";'; cat lib/controller.dart) > /tmp/t && mv /tmp/t lib/controller.dart
 
       - uses: actions/setup-java@v5
         with:
@@ -86,32 +72,21 @@ jobs:
           cache: true
           flutter-version: '3.44.0'
 
-      - name: Build APK
+      - name: Build
         run: |
           cd bettbox-src/android
           rm -rf .gradle build app/keystore.jks local.properties
-          keytool -genkey -v -keystore app/keystore.jks -alias dali_vpn \
-            -keyalg RSA -keysize 2048 -validity 10000 \
-            -storepass Dalivpn123! -keypass Dalivpn123! \
-            -dname "CN=VPN, OU=Dev, O=VPN, L=Unknown, ST=Unknown, C=CN"
-          cat >> local.properties << PROPS
-          keyAlias=dali_vpn
-          storePassword=Dalivpn123!
-          keyPassword=Dalivpn123!
-          storeFile=app/keystore.jks
-          PROPS
+          keytool -genkey -v -keystore app/keystore.jks -alias key -keyalg RSA -keysize 2048 -validity 10000 -storepass p123! -keypass p123! -dname "CN=VPN, OU=Dev, O=VPN, L=Unknown, ST=Unknown, C=CN"
+          echo -e "keyAlias=key\nstorePassword=p123!\nkeyPassword=p123!\nstoreFile=app/keystore.jks" >> local.properties
           cd ..
           flutter pub get
           find . -name "*.freezed.dart" -o -name "*.g.dart" | grep -v ".dart_tool" | while read f; do rm -f "$f"; done
           dart run build_runner build --delete-conflicting-outputs -d
           dart setup.dart android --arch ${{ matrix.arch }}
 
-      - name: Rename APK
-        run: |
+      - run: |
           mkdir -p dist
-          [ -d bettbox-src/dist ] && for f in bettbox-src/dist/*.apk; do
-            cp "$f" "dist/$(basename "$f" | sed 's/Bettbox/大力VPN/')"
-          done
+          [ -d bettbox-src/dist ] && for f in bettbox-src/dist/*.apk; do cp "$f" "dist/$(basename "$f" | sed 's/Bettbox/大力VPN/')"; done
           find bettbox-src/android -path "*/outputs/apk/*" -name "*.apk" -exec cp {} ./dist/ \; 2>/dev/null || true
 
       - uses: actions/upload-artifact@v6
@@ -130,22 +105,14 @@ jobs:
           path: ./apks/
           pattern: 大力VPN-*
           merge-multiple: true
-      - name: Generate tag
+      - name: Tag
         id: tag
         run: |
-          if [ "${{ github.event_name }}" = "push" ] && [ -n "${{ github.ref_name }}" ]; then
-            echo "TAG=${{ github.ref_name }}" >> $GITHUB_OUTPUT
-          else
-            echo "TAG=大力VPN-$(date +%Y%m%d-%H%M)" >> $GITHUB_OUTPUT
-          fi
+          [ "${{ github.event_name }}" = "push" ] && [ -n "${{ github.ref_name }}" ] && echo "TAG=${{ github.ref_name }}" >> $GITHUB_OUTPUT || echo "TAG=大力VPN-$(date +%Y%m%d-%H%M)" >> $GITHUB_OUTPUT
       - uses: softprops/action-gh-release@v3.0.0
         with:
           tag_name: ${{ steps.tag.outputs.TAG }}
           name: 大力VPN ${{ steps.tag.outputs.TAG }}
           files: ./apks/**/*.apk
-          body: |
-            ## 🚀 大力VPN
-            - 内嵌 62 节点 Clash YAML
-            - 首次启动自动加载
-            - 支持 VLESS Reality / WS / XHTTP / gRPC
+          body: "## 大力VPN\n内嵌 62 节点，首次启动自动加载"
           fail_on_unmatched_files: false
