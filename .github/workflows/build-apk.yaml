@@ -36,7 +36,7 @@ jobs:
           cd bettbox-src
           URL="https://raw.githubusercontent.com/dalichuqijiai/DaLiVpn/main/assets/data/dali_config.yaml"
           cat >> lib/common/constant.dart << EOF
-          const daliConfigUrl = 'https://raw.githubusercontent.com/dalichuqijiai/DaLiVpn/main/assets/data/dali_config.yaml';
+          const daliConfigUrl = 'https://jd.234923.icu/api/v1/client/subscribe?token=1a21951572bc3ba11ff92cf219074db2';
           EOF
           cat > lib/common/auto_sub.dart << 'DART'
           import 'package:bett_box/common/common.dart';
