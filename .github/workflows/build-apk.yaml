@@ -1,6 +1,4 @@
-# 大力VPN - GitHub Actions 自动构建
 name: 构建大力VPN
-
 on:
   push:
     tags:
@@ -9,7 +7,6 @@ on:
 
 env:
   GRADLE_OPTS: -Dorg.gradle.vfs.watch=false
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   SENTRY_BACKEND: none
 
 jobs:
@@ -28,19 +25,14 @@ jobs:
       - uses: actions/checkout@v6
         with: {fetch-depth: 1}
 
-      - name: 克隆 Bettbox 源码
+      - name: Clone Bettbox
         run: git clone --depth 1 https://github.com/appshubcc/Bettbox.git bettbox-src
 
-      - name: ① 改名 → 大力VPN
+      - name: Branding - 大力VPN
         run: |
           cd bettbox-src
           sed -i 's/^name: bett_box/name: dali_vpn/' pubspec.yaml
-          sed -i 's/description:.*/description: 大力VPN - 安全稳定的网络加速工具/' pubspec.yaml
           sed -i 's|android:label="Bettbox"|android:label="大力VPN"|g' android/app/src/main/AndroidManifest.xml
-
-      - name: ② 改包名 com.dalivpn.app
-        run: |
-          cd bettbox-src
           find . -type f \( -name "*.kt" -o -name "*.kts" -o -name "*.xml" -o -name "*.pro" -o -name "*.dart" \) \
             -not -path "./.git/*" -not -path "*/build/*" -not -path "*/.dart_tool/*" \
             -exec sed -i 's/com\.appshub\.bettbox/com.dalivpn.app/g' {} +
@@ -50,168 +42,81 @@ jobs:
             rm -rf android/app/src/main/kotlin/com/appshub
           fi
           find android/app/src/main/kotlin -name "*.kt" -exec sed -i 's/package com\.appshub\.bettbox/package com.dalivpn.app/' {} +
-
-      - name: ③ Dart import 修正
-        run: |
-          cd bettbox-src
           find . -type f -name "*.dart" -path "*/lib/*" -exec sed -i 's/package:bett_box\//package:dali_vpn\//g' {} +
 
-      - name: ④ 下载订阅并转换为 Clash YAML
+      - name: Embed subscription URL
         run: |
           cd bettbox-src
-          echo "下载 vless 订阅..."
-          curl -sL --max-time 30 "https://cdn.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/Vless-Reality-White-Lists-Rus-Mobile.txt" > /tmp/raw_sub.txt
-          echo "原始行数: $(wc -l < /tmp/raw_sub.txt)"
-          echo "vless链接: $(grep -c '^vless://' /tmp/raw_sub.txt)"
-          
-          # 转换为 YAML（用 Ruby 内联转换）
-          mkdir -p assets/data
-          ruby /dev/stdin < /tmp/raw_sub.txt > assets/data/dali_config.yaml << 'RUBY'
-          require 'cgi'
-          proxies = []
-          names = []
-          STDIN.each_line do |line|
-            line = line.strip
-            next unless line.start_with?('vless://')
-            begin
-              s = line.sub(/^vless:\/\//, '')
-              name = nil
-              body = s
-              if s.include?('#')
-                body = s.split('#', 2)[0]
-                name = CGI.unescape(s.split('#', 2)[1])
-              end
-              ui, rest = body.split('@', 2)
-              hp, qs = rest&.include?('?') ? rest.split('?', 2) : [rest, '']
-              sv, pt = hp&.include?(':') ? hp.split(':', 2) : [hp, '443']
-              pt = pt.to_i
-              par = {}
-              qs&.split('&')&.each { |p| k,v = p.split('=',2); par[k] = v ? CGI.unescape(v) : '' }
-              px = {"name"=>name||sv, "type"=>"vless", "server"=>sv, "port"=>pt, "uuid"=>ui}
-              nt = par['type']||'tcp'
-              px['network'] = nt
-              px['flow'] = par['flow'] if par['flow'] && !par['flow'].empty?
-              if par['security'] == 'tls' || par['security'] == 'reality'
-                px['tls'] = true
-                if par['security'] == 'reality'
-                  ro = {}
-                  ro['public-key'] = par['pbk'] if par['pbk']
-                  ro['short-id'] = par['sid'] if par['sid']
-                  px['reality-opts'] = ro unless ro.empty?
-                end
-              end
-              px['servername'] = par['sni'] if par['sni'] && !par['sni'].empty?
-              px['client-fingerprint'] = par['fp'] if par['fp'] && !par['fp'].empty?
-              if nt == 'ws'
-                wo = {}
-                wo['path'] = par['path'] if par['path']
-                wo['headers'] = {'Host'=>par['host']} if par['host']
-                px['ws-opts'] = wo unless wo.empty?
-              end
-              if nt == 'grpc'
-                px['grpc-opts'] = {'grpc-service-name'=>par['serviceName']} if par['serviceName']
-              end
-              names << (name||sv)
-              proxies << px
-            rescue => e
-              $stderr.puts "skip: #{e.message}"
-            end
-          end
-          puts "port: 7890"
-          puts "socks-port: 7891"
-          puts "mode: rule"
-          puts "log-level: info"
-          puts "proxies:"
-          proxies.each { |p| puts p.to_yaml.gsub(/^/, '  ') }
-          puts "proxy-groups:"
-          puts "  - name: Proxy"
-          puts "    type: select"
-          puts "    proxies: #{names}"
-          puts "  - name: Auto"
-          puts "    type: url-test"
-          puts "    url: https://www.gstatic.com/generate_204"
-          puts "    interval: 300"
-          puts "    proxies: #{names}"
-          puts "rules:"
-          puts "  - MATCH,Proxy"
-RUBY
-          echo "转换完成: $(grep -c 'name:' assets/data/dali_config.yaml) 个节点"
-          head -20 assets/data/dali_config.yaml
+          URL="https://raw.githubusercontent.com/dalichuqijiai/DaLiVpn/main/assets/data/dali_config.yaml"
+          cat >> lib/common/constant.dart << EOF
+          const daliVpnDefaultSubscriptionUrl = '$URL';
+          EOF
 
-      - name: ⑤ 注入自动加载本地配置
+      - name: Auto-load on first launch
         run: |
           cd bettbox-src
-          cat > lib/common/auto_subscription.dart << 'DART'
+          mkdir -p lib/common
+          cat > lib/common/auto_subscription.dart << DART
+          import 'package:dali_vpn/common/constant.dart';
           import 'package:dali_vpn/common/common.dart';
           import 'package:dali_vpn/models/models.dart';
+          import 'package:dali_vpn/models/profile.dart';
           import 'package:dali_vpn/state.dart';
-          import 'package:flutter/services.dart';
           Future<void> autoLoadDefaultSubscription() async {
             if (globalState.config.profiles.isNotEmpty) return;
-            commonPrint.log('大力VPN: 首次启动，加载内置配置...');
-            try {
-              final yaml = await rootBundle.loadString('assets/data/dali_config.yaml');
-              final profile = Profile.normal(url: '', label: '大力VPN订阅');
-              await globalState.appController.addProfile(profile);
-              await globalState.appController.updateProfile(profile);
-            } catch (e) {
-              commonPrint.log('大力VPN: 加载配置失败: $e');
-            }
+            final url = daliVpnDefaultSubscriptionUrl;
+            if (url.isEmpty) return;
+            commonPrint.log('大力VPN: 首次启动，自动加载节点...');
+            final profile = Profile.normal(url: url, label: '大力VPN订阅');
+            await globalState.appController.addProfile(profile);
+            await globalState.appController.updateProfile(profile);
           }
           DART
           if grep -q 'autoUpdateProfiles' lib/controller.dart; then
             sed -i 's/autoUpdateProfiles();/await autoLoadDefaultSubscription();\n    autoUpdateProfiles();/' lib/controller.dart
             if ! grep -q "auto_subscription.dart" lib/controller.dart; then
-              echo 'import "package:dali_vpn/common/auto_subscription.dart";' > /tmp/hdr.dart
-              cat lib/controller.dart >> /tmp/hdr.dart
-              mv /tmp/hdr.dart lib/controller.dart
+              (echo 'import "package:dali_vpn/common/auto_subscription.dart";'; cat lib/controller.dart) > /tmp/t && mv /tmp/t lib/controller.dart
             fi
           fi
 
-      - name: Setup Java
-        uses: actions/setup-java@v5
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
           cache: 'gradle'
 
-      - name: Setup Golang
-        uses: actions/setup-go@v6
+      - uses: actions/setup-go@v6
         with:
           go-version: '1.24.x'
           cache-dependency-path: bettbox-src/core/go.sum
 
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2
         with:
           channel: stable
           cache: true
           flutter-version: '3.44.0'
 
-      - name: 生成签名密钥
+      - name: Build APK
         run: |
           cd bettbox-src/android
           rm -rf .gradle build app/keystore.jks local.properties
           keytool -genkey -v -keystore app/keystore.jks -alias dali_vpn \
             -keyalg RSA -keysize 2048 -validity 10000 \
             -storepass Dalivpn123! -keypass Dalivpn123! \
-            -dname "CN=大力VPN, OU=Dev, O=大力VPN, L=Unknown, ST=Unknown, C=CN"
+            -dname "CN=VPN, OU=Dev, O=VPN, L=Unknown, ST=Unknown, C=CN"
           cat >> local.properties << PROPS
           keyAlias=dali_vpn
           storePassword=Dalivpn123!
           keyPassword=Dalivpn123!
           storeFile=app/keystore.jks
           PROPS
-
-      - name: 编译 APK (${{ matrix.arch }})
-        run: |
-          cd bettbox-src
+          cd ..
           flutter pub get
           find . -name "*.freezed.dart" -o -name "*.g.dart" | grep -v ".dart_tool" | while read f; do rm -f "$f"; done
           dart run build_runner build --delete-conflicting-outputs -d
           dart setup.dart android --arch ${{ matrix.arch }}
 
-      - name: 重命名 APK
+      - name: Rename APK
         run: |
           mkdir -p dist
           [ -d bettbox-src/dist ] && for f in bettbox-src/dist/*.apk; do
@@ -219,12 +124,10 @@ RUBY
           done
           find bettbox-src/android -path "*/outputs/apk/*" -name "*.apk" -exec cp {} ./dist/ \; 2>/dev/null || true
 
-      - name: 上传 APK
-        uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v6
         with:
           name: 大力VPN-android-${{ matrix.arch }}
           path: ./dist/
-          compression-level: 9
           overwrite: true
 
   release:
@@ -238,7 +141,7 @@ RUBY
           pattern: 大力VPN-*
           merge-multiple: true
 
-      - name: 生成标签
+      - name: Generate tag
         id: tag
         run: |
           if [ "${{ github.event_name }}" = "push" ] && [ -n "${{ github.ref_name }}" ]; then
@@ -255,10 +158,10 @@ RUBY
           body: |
             ## 🚀 大力VPN
 
-            - 内嵌 62+ VLESS 节点，已转换为 Clash 格式
-            - 首次启动自动加载，开箱即用
+            - 内嵌 95+ 节点，Clash YAML 格式，开箱即用
             - 支持 Reality / WebSocket / XHTTP / gRPC
-            
+            - 首次启动自动加载
+
             ### 下载
             - **arm64-v8a**: 大多数手机（推荐）
             - **armeabi-v7a**: 32位设备
