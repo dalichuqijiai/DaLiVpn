@@ -1,8 +1,7 @@
 name: 构建大力VPN
 on:
   push:
-    tags:
-      - 'v*'
+    tags: ['v*']
   workflow_dispatch:
 
 env:
@@ -31,18 +30,9 @@ jobs:
       - name: Branding - 大力VPN
         run: |
           cd bettbox-src
+          # 只改显示名，不改包名（核心库 .so 改不了）
           sed -i 's/^name: bett_box/name: dali_vpn/' pubspec.yaml
           sed -i 's|android:label="Bettbox"|android:label="大力VPN"|g' android/app/src/main/AndroidManifest.xml
-          find . -type f \( -name "*.kt" -o -name "*.kts" -o -name "*.xml" -o -name "*.pro" -o -name "*.dart" \) \
-            -not -path "./.git/*" -not -path "*/build/*" -not -path "*/.dart_tool/*" \
-            -exec sed -i 's/com\.appshub\.bettbox/com.dalivpn.app/g' {} +
-          mkdir -p android/app/src/main/kotlin/com/dalivpn/app
-          if [ -d "android/app/src/main/kotlin/com/appshub/bettbox" ]; then
-            cp -r android/app/src/main/kotlin/com/appshub/bettbox/* android/app/src/main/kotlin/com/dalivpn/app/
-            rm -rf android/app/src/main/kotlin/com/appshub
-          fi
-          find android/app/src/main/kotlin -name "*.kt" -exec sed -i 's/package com\.appshub\.bettbox/package com.dalivpn.app/' {} +
-          find . -type f -name "*.dart" -path "*/lib/*" -exec sed -i 's/package:bett_box\//package:dali_vpn\//g' {} +
 
       - name: Embed subscription URL
         run: |
@@ -57,11 +47,11 @@ jobs:
           cd bettbox-src
           mkdir -p lib/common
           cat > lib/common/auto_subscription.dart << DART
-          import 'package:dali_vpn/common/constant.dart';
-          import 'package:dali_vpn/common/common.dart';
-          import 'package:dali_vpn/models/models.dart';
-          import 'package:dali_vpn/models/profile.dart';
-          import 'package:dali_vpn/state.dart';
+          import 'package:bett_box/common/constant.dart';
+          import 'package:bett_box/common/common.dart';
+          import 'package:bett_box/models/models.dart';
+          import 'package:bett_box/models/profile.dart';
+          import 'package:bett_box/state.dart';
           Future<void> autoLoadDefaultSubscription() async {
             if (globalState.config.profiles.isNotEmpty) return;
             final url = daliVpnDefaultSubscriptionUrl;
@@ -75,7 +65,7 @@ jobs:
           if grep -q 'autoUpdateProfiles' lib/controller.dart; then
             sed -i 's/autoUpdateProfiles();/await autoLoadDefaultSubscription();\n    autoUpdateProfiles();/' lib/controller.dart
             if ! grep -q "auto_subscription.dart" lib/controller.dart; then
-              (echo 'import "package:dali_vpn/common/auto_subscription.dart";'; cat lib/controller.dart) > /tmp/t && mv /tmp/t lib/controller.dart
+              (echo 'import "package:bett_box/common/auto_subscription.dart";'; cat lib/controller.dart) > /tmp/t && mv /tmp/t lib/controller.dart
             fi
           fi
 
@@ -140,7 +130,6 @@ jobs:
           path: ./apks/
           pattern: 大力VPN-*
           merge-multiple: true
-
       - name: Generate tag
         id: tag
         run: |
@@ -149,7 +138,6 @@ jobs:
           else
             echo "TAG=大力VPN-$(date +%Y%m%d-%H%M)" >> $GITHUB_OUTPUT
           fi
-
       - uses: softprops/action-gh-release@v3.0.0
         with:
           tag_name: ${{ steps.tag.outputs.TAG }}
@@ -157,14 +145,7 @@ jobs:
           files: ./apks/**/*.apk
           body: |
             ## 🚀 大力VPN
-
-            - 内嵌 95+ 节点，Clash YAML 格式，开箱即用
-            - 支持 Reality / WebSocket / XHTTP / gRPC
+            - 内嵌 62 节点 Clash YAML
             - 首次启动自动加载
-
-            ### 下载
-            - **arm64-v8a**: 大多数手机（推荐）
-            - **armeabi-v7a**: 32位设备
-            - **x86_64**: 平板/模拟器
-            - **universal**: 全架构
+            - 支持 VLESS Reality / WS / XHTTP / gRPC
           fail_on_unmatched_files: false
