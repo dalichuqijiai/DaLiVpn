@@ -134,10 +134,15 @@ jobs:
           dart run build_runner build --delete-conflicting-outputs -d
           dart setup.dart android --arch ${{ matrix.arch }}
 
-      - name: 收集 APK
+      - name: 重命名 APK 文件
         run: |
           mkdir -p dist
-          [ -d bettbox-src/dist ] && cp bettbox-src/dist/* ./dist/ 2>/dev/null || true
+          if [ -d "bettbox-src/dist" ]; then
+            for f in bettbox-src/dist/*.apk; do
+              newname=$(basename "$f" | sed 's/Bettbox/大力VPN/')
+              cp "$f" "dist/$newname"
+            done
+          fi
           find bettbox-src/android -path "*/outputs/apk/*" -name "*.apk" -exec cp {} ./dist/ \; 2>/dev/null || true
 
       - name: 上传 APK
@@ -159,10 +164,10 @@ jobs:
           pattern: 大力VPN-*
           merge-multiple: true
 
-      - name: 自动生成标签
+      - name: 生成标签
         id: tag
         run: |
-          if [ -n "${{ github.ref_name }}" ]; then
+          if [ "${{ github.event_name }}" = "push" ] && [ -n "${{ github.ref_name }}" ]; then
             echo "TAG=${{ github.ref_name }}" >> $GITHUB_OUTPUT
           else
             echo "TAG=大力VPN-$(date +%Y%m%d-%H%M)" >> $GITHUB_OUTPUT
