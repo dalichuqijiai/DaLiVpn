@@ -1,16 +1,4 @@
 proxies:
-  - name: "N173 其他 juzibaipiao 04"
-    type: trojan
-    server: 211.49.57.178
-    port: 443
-    password: eeb6823c-b926-4ea2-866a-5542edd26e59
-    tls: true
-  - name: "N176 其他 juzibaipiao 05"
-    type: trojan
-    server: 211.49.57.161
-    port: 443
-    password: eeb6823c-b926-4ea2-866a-5542edd26e59
-    tls: true
   - name: "N149 其他 juzibaipiao 01"
     type: vless
     server: tw3.miyazono-kaori.com
@@ -35,12 +23,6 @@ proxies:
       path: "/"
       headers:
         Host: auv.vavava.kdns.fr
-  - name: "N158 其他 juzibaipiao 02"
-    type: trojan
-    server: 211.49.57.175
-    port: 443
-    password: eeb6823c-b926-4ea2-866a-5542edd26e59
-    tls: true
   - name: "N138 其他 V2CROSSCOM"
     type: vless
     server: tw3.miyazono-kaori.com
@@ -53,12 +35,6 @@ proxies:
     client-fingerprint: chrome
     reality-opts:
       public-key: "JE82iORUH7ffxJ5yfoxXeRkMlE-aVu1wxR7n6jrVM"
-  - name: "N148 其他 juzibaipiao 01"
-    type: vmess
-    server: 154.37.223.56
-    port: 43203
-    uuid: 68bd04a1-0547-46a6-cdb2-c8ac3fce1e67
-    tls: false
   - name: "N111 芬兰 🌐 🇫🇮 Finland Helsinki  "
     type: vless
     server: 109.236.57.209
@@ -83,11 +59,6 @@ proxies:
     client-fingerprint: firefox
     reality-opts:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-  - name: "N80 德国 🇨🇦 🇩🇪 🇸🇪 AnycastIP  🇨🇦 🇩🇪 🇸🇪  "
-    type: trojan
-    server: 151.101.110.219
-    port: 443
-    password: MITIVPN
   - name: "N203 其他 juzibaipiao 144"
     type: vless
     server: 209.46.30.140
@@ -413,16 +384,11 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "N173 其他 juzibaipiao 04"
-      - "N176 其他 juzibaipiao 05"
       - "N149 其他 juzibaipiao 01"
       - "N166 其他 juzibaipiao 03"
-      - "N158 其他 juzibaipiao 02"
       - "N138 其他 V2CROSSCOM"
-      - "N148 其他 juzibaipiao 01"
       - "N111 芬兰 🌐 🇫🇮 Finland Helsinki  "
       - "N116 芬兰 🌐 🇫🇮 Finland Helsinki  "
-      - "N80 德国 🇨🇦 🇩🇪 🇸🇪 AnycastIP  🇨🇦 🇩🇪 🇸🇪  "
       - "N203 其他 juzibaipiao 144"
       - "N92 德国 🌐 🇩🇪 Germany Nuremberg "
       - "N19 美国 🌐 🇺🇸 United States    B"
