@@ -125,20 +125,24 @@ jobs:
           dart run build_runner build --delete-conflicting-outputs -d || true
           dart setup.dart android --arch ${{ matrix.arch }}
 
-      - name: 收集 APK + 重命名为 大力VPN
+      - name: 收集 APK + 统一重命名为 大力VPN-<arch>.apk
         run: |
           mkdir -p dist
           [ -d bettbox-src/dist ] && cp bettbox-src/dist/* ./dist/ 2>/dev/null || true
           find bettbox-src/android -path "*/outputs/apk/*" -name "*.apk" -exec cp {} ./dist/ \; 2>/dev/null || true
-          # 把 Bettbox-xxx.apk 重命名为 大力VPN-xxx.apk
           cd dist
-          for f in Bettbox-*.apk; do
+          # 统一命名为 大力VPN-<arch>.apk，按 arch 关键字匹配
+          for f in *.apk; do
             [ -f "$f" ] || continue
-            newname=$(echo "$f" | sed 's/^Bettbox/大力VPN/')
-            mv "$f" "$newname"
-            echo "  ✓ $f → $newname"
+            case "$f" in
+              *arm64*|*arm64-v8a*)    mv "$f" "大力VPN-arm64-v8a.apk" ;;
+              *armeabi*|*arm-v7a*)    mv "$f" "大力VPN-armeabi-v7a.apk" ;;
+              *x86_64*|*amd64*)       mv "$f" "大力VPN-x86_64.apk" ;;
+              *universal*|*all*)      mv "$f" "大力VPN-universal.apk" ;;
+            esac
           done
-          ls -la
+          echo "=== 最终 APK 列表 ==="
+          ls -la *.apk
 
       - name: 上传 APK
         uses: actions/upload-artifact@v6
