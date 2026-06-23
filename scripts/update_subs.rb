@@ -370,8 +370,8 @@ def deep_test(px, timeout = 4)
 end
 
 puts "开始深度测速（TLS 握手 + WS Upgrade）..."
-# 优先测试 TLS 节点（这些是中国最可能可用的）
-candidates = (tls_nodes + notls_nodes).first(120) # 最多测 120 个，给 60 个名额留余量
+# 测全部候选节点（不设上限，保留所有可用节点）
+candidates = tls_nodes + notls_nodes
 results = candidates.each_with_index.map do |p, i|
   lat, alive = deep_test(p)
   print(alive ? "+" : "-")
@@ -380,16 +380,14 @@ results = candidates.each_with_index.map do |p, i|
 end
 puts ""
 
-# === 5. 选 60 个存活节点 ===
+# === 5. 选所有节点（按延迟排序，存活优先）===
 alive_results = results.select { |r| r[:alive] && r[:latency] < 9999 }.sort_by { |r| r[:latency] }
 puts "深度测试存活: #{alive_results.length}/#{results.length}"
 
-selected = alive_results.first(60)
-# 如果 TLS 存活节点不足 60，混入未通过深度测试的候选
-if selected.length < 60
-  rest = (results - alive_results).first(60 - selected.length)
-  selected += rest
-end
+# 全部保留：先存活节点（按延迟排序），再补未存活的（按原始顺序）
+selected = alive_results
+rest = results - alive_results
+selected += rest
 
 # 极端情况：如果没存活节点，回退到 TCP ping
 if selected.empty?
@@ -406,7 +404,6 @@ if selected.empty?
     end
   end
   selected.sort_by! { |r| r[:latency] }
-  selected = selected.first(60)
 end
 
 puts "最终选取: #{selected.length}"
