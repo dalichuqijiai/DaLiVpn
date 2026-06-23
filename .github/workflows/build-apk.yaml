@@ -36,13 +36,28 @@ jobs:
         run: |
           # 用仓库里 bettbox-patches/ 的已修复文件覆盖上游 buggy 版本
           # 这些文件修复了上游 getter 被当函数调用等编译错误
-          for patch in bettbox-patches/*.dart; do
-            base=$(basename "$patch")
-            # 文件名格式：lib_common_datetime.dart → lib/common/datetime.dart
-            target="bettbox-src/$(echo "$base" | sed 's/_/\//g')"
-            mkdir -p "$(dirname "$target")"
-            cp "$patch" "$target"
-            echo "  ✓ 覆盖 $target"
+          # 注意：用显式映射表，不能用 sed 全局 _ → /（auto_sub 里的下划线会被错转）
+          declare -A PATCH_MAP=(
+            ["lib_common_auto_sub.dart"]="lib/common/auto_sub.dart"
+            ["lib_common_datetime.dart"]="lib/common/datetime.dart"
+            ["lib_controller.dart"]="lib/controller.dart"
+            ["lib_views_connection_connections.dart"]="lib/views/connection/connections.dart"
+            ["lib_views_connection_item.dart"]="lib/views/connection/item.dart"
+            ["lib_views_connection_requests.dart"]="lib/views/connection/requests.dart"
+            ["lib_views_logs.dart"]="lib/views/logs.dart"
+            ["lib_views_profiles_profiles.dart"]="lib/views/profiles/profiles.dart"
+            ["lib_views_proxies_providers.dart"]="lib/views/proxies/providers.dart"
+          )
+          for src in "${!PATCH_MAP[@]}"; do
+            target="bettbox-src/${PATCH_MAP[$src]}"
+            if [ -f "bettbox-patches/$src" ]; then
+              mkdir -p "$(dirname "$target")"
+              cp "bettbox-patches/$src" "$target"
+              echo "  ✓ $src → $target"
+            else
+              echo "  ✗ 缺少 patch: $src"
+              exit 1
+            fi
           done
 
       - name: ② 改名 → 大力VPN（仅改 label，不改包名避免 .so 不匹配）
@@ -52,13 +67,20 @@ jobs:
           # 验证
           grep 'android:label' android/app/src/main/AndroidManifest.xml
 
-      - name: ③ 注入默认订阅地址（auto_sub.dart 已由 patch 覆盖，这里只确保 URL 正确）
+      - name: ③ 把订阅 URL 改为 jsdelivr CDN（国内可访问）
         run: |
           cd bettbox-src
-          # auto_sub.dart 里写死的是 raw.githubusercontent URL，国内可能被墙
-          # 改成 jsdelivr CDN（国内可访问）
-          sed -i 's|raw.githubusercontent.com/dalichuqijiai/DaLiVpn/main/assets/data/dali_config.yaml|cdn.jsdelivr.net/gh/dalichuqijiai/DaLiVpn@main/assets/data/dali_config.yaml|g' lib/common/auto_sub.dart
-          grep -A1 "const url" lib/common/auto_sub.dart | head -3
+          # auto_sub.dart 里写死的是 raw.githubusercontent URL，国内可能被墙，改成 jsdelivr CDN
+          python3 -c "
+          import re
+          p = 'lib/common/auto_sub.dart'
+          s = open(p).read()
+          s = re.sub(r'https?://[^\s\\'\"]+dali_config\.yaml',
+                      'https://cdn.jsdelivr.net/gh/dalichuqijiai/DaLiVpn@main/assets/data/dali_config.yaml', s)
+          open(p,'w').write(s)
+          "
+          echo '--- auto_sub.dart URL 验证 ---'
+          grep -n "dali_config" lib/common/auto_sub.dart || (echo 'URL 未注入！'; exit 1)
 
       - name: Setup Java
         uses: actions/setup-java@v5
