@@ -1,5 +1,4 @@
-proxies:
-  - name: "意大利 米兰Fastly节点"
+proxies:  - name: "意大利 米兰Fastly节点"
     type: trojan
     server: 151.101.242.172
     port: 80
@@ -177,7 +176,10 @@ proxies:
     client-fingerprint: chrome
 proxy-groups:
   - name: Proxy
-    type: select
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 120
+    tolerance: 50
     proxies:
       - "意大利 米兰Fastly节点"
       - "美国 CloudFlare节点"
