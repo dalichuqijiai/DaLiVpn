@@ -1,363 +1,237 @@
 proxies:
-
-  - name: "N3 美国 🇨🇦 🇩🇪 🇮🇶 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇮🇶 🇺"
-
+  - name: "🇩🇪 Germany, Nuremberg | 🌐 | [BL]"
     type: vless
-
-    server: 178.22.26.54
-
+    server: 140.248.185.253
     port: 443
-
-    uuid: 659a9075-d5ab-4fd2-bf34-b37043fae832
-
+    uuid: 6e7ebc40-58a6-c567-4ae8-51b7605a272b
     network: ws
-
     tls: true
-
-    servername: nbhhh.mrcool.kdns.fr
-
-    client-fingerprint: firefox
-
-    ws-opts:
-
-      path: "/proxyip=3cfb8e26.tp30304.ip.090227.xyz"
-
-      headers:
-
-        Host: nbhhh.mrcool.kdns.fr#🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇶 🇺🇸 | [BL]
-
-  - name: "N5 美国 🇨🇦 🇩🇪 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇺🇸  "
-
-    type: vless
-
-    server: 185.21.8.105
-
-    port: 443
-
-    uuid: 8624ba0f-d03e-48de-9df6-b7fcff482ea2
-
-    network: ws
-
-    tls: true
-
-    servername: x1htl81r.njcdoaw.workers.dev
-
+    servername: global.fastly.com#🇩🇪 Germany, Nuremberg | 🌐 | [BL]
     client-fingerprint: chrome
-
-    ws-opts:
-
-      path: "/?ed=2560"
-
-      headers:
-
-        Host: x1htl81r.njcdoaw.workers.dev
-
-  - name: "N19 美国 🌐 🇺🇸 United States    B"
-
+  - name: "🌐 Anycast-IP | 🇦🇷 🇺🇸 | [BL]"
     type: vless
-
-    server: 109.236.57.209
-
+    server: 64.186.240.152
     port: 443
-
-    uuid: 33de2596-d95d-412b-a8c2-410be7060ca3
-
-    network: tcp
-
-    flow: xtls-rprx-vision
-
-    tls: true
-
-    servername: ai.sellflow.org
-
-    client-fingerprint: firefox
-
-    reality-opts:
-
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-
-  - name: "N4 美国 🇨🇦 🇩🇪 🇮🇶 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇮🇶 🇺"
-
-    type: vless
-
-    server: 213.176.77.231
-
-    port: 443
-
-    uuid: 23e5a6a4-bad4-4be6-873b-fce27c9ca8be
-
+    uuid: 23cb9aa7-9756-459f-aa84-3a27bdf6ad64
     network: ws
-
     tls: true
-
-    ws-opts:
-
-      path: "/"
-
-      headers:
-
-        Host: srb6j666.65p5drnb2vxb7rkbzwlx.workers.dev
-
-  - name: "N7 美国 🇨🇦 🇩🇪 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇺🇸  "
-
-    type: vless
-
-    server: 31.25.89.134
-
+    servername: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇸🇪 | [BL]"
+    type: trojan
+    server: 151.101.110.219
     port: 443
-
-    uuid: 659a9075-d5ab-4fd2-bf34-b37043fae832
-
+    password: MITIVPN
+  - name: "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇸🇪 | [BL]"
+    type: trojan
+    server: 199.232.78.157
+    port: 443
+    password: MITIVPN
+  - name: "美国 Fastly全球Anycast节点"
+    type: vless
+    server: 151.101.130.219
+    port: 80
+    uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
+    network: ws#美国 Fastly全球Anycast节点
+  - name: "美国 Fastly节点"
+    type: vless
+    server: 151.101.103.151
+    port: 80
+    uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
+    network: ws#美国 Fastly节点
+  - name: "🌐 Anycast-IP | 🇦🇷 🇨🇦 🇫🇮 | [BL]"
+    type: vless
+    server: 103.160.204.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
     network: ws
-
-    tls: true
-
-    servername: nbhhh.mrcool.kdns.fr
-
-    client-fingerprint: firefox
-
-    ws-opts:
-
-      path: "/proxyip=3cfb8e26.tp30304.ip.090227.xyz"
-
-      headers:
-
-        Host: nbhhh.mrcool.kdns.fr#🌐 Anycast-IP | 🇨🇦 🇩🇪 🇺🇸 | [BL]
-
-  - name: "N18 美国 🌐 🇺🇸 United States    B"
-
+    flow: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
     type: vless
-
-    server: 185.185.142.88
-
-    port: 443
-
-    uuid: 33de2596-d95d-412b-a8c2-410be7060ca3
-
-    network: tcp
-
-    flow: xtls-rprx-vision
-
-    tls: true
-
-    servername: ai.sellflow.org
-
-    client-fingerprint: firefox
-
-    reality-opts:
-
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-
-  - name: "N2 美国 🇨🇦 🇩🇪 🇮🇪 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇮🇪 🇺"
-
-    type: vless
-
-    server: 5.187.7.200
-
-    port: 21821
-
-    uuid: 23e5a6a4-bad4-4be6-873b-fce27c9ca8be
-
+    server: 104.129.166.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
     network: ws
-
-    tls: true
-
-    ws-opts:
-
-      path: "/"
-
-      headers:
-
-        Host: srb6j666.65p5drnb2vxb7rkbzwlx.workers.dev
-
-  - name: "N17 美国 🌐 🇺🇸 United States    B"
-
+    flow: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
     type: vless
-
-    server: 186.246.6.10
-
-    port: 443
-
-    uuid: 33de2596-d95d-412b-a8c2-410be7060ca3
-
-    network: tcp
-
-    flow: xtls-rprx-vision
-
-    tls: true
-
-    servername: ai.sellflow.org
-
-    client-fingerprint: firefox
-
-    reality-opts:
-
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-
-  - name: "N1 美国 🇨🇦 🇩🇪 🇮🇪 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇮🇪 🇺"
-
-    type: vless
-
-    server: 5.187.7.200
-
-    port: 21821
-
-    uuid: 23e5a6a4-bad4-4be6-873b-fce27c9ca8be
-
+    server: 104.129.167.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
     network: ws
-
-    tls: true
-
-    servername: srb6j666.65p5drnb2vxb7rkbzwlx.workers.dev
-
-    client-fingerprint: chrome
-
-    ws-opts:
-
-      path: "/?ed=2560"
-
-      headers:
-
-        Host: srb6j666.65p5drnb2vxb7rkbzwlx.workers.dev
-
-  - name: "N15 美国 🌐 🇺🇸 United States    B"
-
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
     type: vless
-
-    server: 93.183.80.110
-
-    port: 443
-
-    uuid: 33de2596-d95d-412b-a8c2-410be7060ca3
-
-    network: tcp
-
-    flow: xtls-rprx-vision
-
-    tls: true
-
-    servername: ai.sellflow.org
-
-    client-fingerprint: firefox
-
-    reality-opts:
-
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-
-  - name: "N11 美国 🇩🇪 🇺🇸 AnycastIP  🇩🇪 🇺🇸  BL"
-
-    type: vless
-
-    server: 31.25.89.134
-
-    port: 443
-
-    uuid: 659a9075-d5ab-4fd2-bf34-b37043fae832
-
+    server: 104.239.72.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
     network: ws
-
-    tls: true
-
-    servername: nbhhh.mrcool.kdns.fr
-
-  - name: "N23 美国 BL 🇺🇸 United States Hern"
-
+    flow: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
     type: vless
-
-    server: gb2.univesalsrv.com
-
-    port: 443
-
-    uuid: e4468d51-2528-4d40-a92d-5cf409d00dac
-
-    network: grpc
-
-    tls: true
-
-    servername: gb2.univesalsrv.com
-
-    client-fingerprint: firefox
-
-    grpc-opts:
-
-      grpc-service-name: mobile.api.Event
-
-  - name: "N21 美国 BL 🇺🇸 United States Hern"
-
+    server: 147.185.161.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws#🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
     type: vless
-
-    server: gb2.univesalsrv.com
-
-    port: 443
-
-    uuid: e4468d51-2528-4d40-a92d-5cf409d00dac
-
-    network: grpc
-
-    tls: true
-
-    client-fingerprint: chrome
-
-    grpc-opts:
-
-      grpc-service-name: mobile.api.Event
-
-  - name: "N22 美国 BL 🇺🇸 United States Hern"
-
-    type: vless
-
-    server: gb2.univesalsrv.com
-
-    port: 443
-
-    uuid: e4468d51-2528-4d40-a92d-5cf409d00dac
-
-    network: grpc
-
-    tls: true
-
-    servername: gb2.univesalsrv.com
-
-    grpc-opts:
-
-      grpc-service-name: mobile.api.Event
-
-  - name: "N8 美国 🇩🇪 🇮🇪 🇹🇼 🇺🇸 AnycastIP  🇩🇪 🇮🇪 🇹🇼 🇺"
-
-    type: vless
-
-    server: 31.25.88.11
-
-    port: 443
-
-    uuid: 659a9075-d5ab-4fd2-bf34-b37043fae832
-
+    server: 159.246.55.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
     network: ws
-
-    tls: true
-
-    servername: nbhhh.mrcool.kdns.fr
-
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 160.153.138.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    flow: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 166.62.112.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 167.68.5.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    flow: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 185.148.105.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 185.162.228.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    flow: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 188.42.89.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 194.59.5.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    flow: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 31.43.179.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    client-fingerprint: firefox
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 45.142.120.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    flow: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 45.149.12.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 45.153.7.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 50.62.175.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws#🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 88.216.66.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    flow: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 89.116.250.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    client-fingerprint: firefox
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 89.117.112.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    flow: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+    type: vless
+    server: 94.247.142.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    client-fingerprint: firefox
+  - name: "🌐 Anycast-IP | 🇨🇦 🇷🇺 | [BL]"
+    type: vless
+    server: 45.131.5.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    flow: 
+  - name: "🌐 Anycast-IP | 🇨🇦 🇸🇪 | [BL]"
+    type: vless
+    server: 185.176.26.140
+    port: 80
+    uuid: f9255507-1b65-433f-bfd8-193b35e068e2
+    network: ws
+    flow: 
 
 proxy-groups:
   - name: Proxy
     type: select
     proxies:
-      - "N3 美国 🇨🇦 🇩🇪 🇮🇶 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇮🇶 🇺"
-      - "N5 美国 🇨🇦 🇩🇪 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇺🇸  "
-      - "N19 美国 🌐 🇺🇸 United States    B"
-      - "N4 美国 🇨🇦 🇩🇪 🇮🇶 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇮🇶 🇺"
-      - "N7 美国 🇨🇦 🇩🇪 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇺🇸  "
-      - "N18 美国 🌐 🇺🇸 United States    B"
-      - "N2 美国 🇨🇦 🇩🇪 🇮🇪 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇮🇪 🇺"
-      - "N17 美国 🌐 🇺🇸 United States    B"
-      - "N1 美国 🇨🇦 🇩🇪 🇮🇪 🇺🇸 AnycastIP  🇨🇦 🇩🇪 🇮🇪 🇺"
-      - "N15 美国 🌐 🇺🇸 United States    B"
-      - "N11 美国 🇩🇪 🇺🇸 AnycastIP  🇩🇪 🇺🇸  BL"
-      - "N23 美国 BL 🇺🇸 United States Hern"
-      - "N21 美国 BL 🇺🇸 United States Hern"
-      - "N22 美国 BL 🇺🇸 United States Hern"
-      - "N8 美国 🇩🇪 🇮🇪 🇹🇼 🇺🇸 AnycastIP  🇩🇪 🇮🇪 🇹🇼 🇺"
+      - "🇩🇪 Germany, Nuremberg | 🌐 | [BL]"
+      - "🌐 Anycast-IP | 🇦🇷 🇺🇸 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇸🇪 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇸🇪 | [BL]"
+      - "美国 Fastly全球Anycast节点"
+      - "美国 Fastly节点"
+      - "🌐 Anycast-IP | 🇦🇷 🇨🇦 🇫🇮 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇷🇺 | [BL]"
+      - "🌐 Anycast-IP | 🇨🇦 🇸🇪 | [BL]"
 
 rules:
   - MATCH,Proxy
