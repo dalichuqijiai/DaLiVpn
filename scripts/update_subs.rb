@@ -371,23 +371,23 @@ end
 
 puts "开始深度测速（TLS 握手 + WS Upgrade）..."
 # 优先测试 TLS 节点（这些是中国最可能可用的）
-candidates = (tls_nodes + notls_nodes).first(60) # 最多测 60 个避免超时
+candidates = (tls_nodes + notls_nodes).first(120) # 最多测 120 个，给 60 个名额留余量
 results = candidates.each_with_index.map do |p, i|
   lat, alive = deep_test(p)
   print(alive ? "+" : "-")
-  print "\n" if (i + 1) % 20 == 0
+  print "\n" if (i + 1) % 30 == 0
   { proxy: p, latency: lat, alive: alive }
 end
 puts ""
 
-# === 5. 选 30 个存活节点 ===
+# === 5. 选 60 个存活节点 ===
 alive_results = results.select { |r| r[:alive] && r[:latency] < 9999 }.sort_by { |r| r[:latency] }
 puts "深度测试存活: #{alive_results.length}/#{results.length}"
 
-selected = alive_results.first(30)
-# 如果 TLS 存活节点不足 30，混入非 TLS 节点
-if selected.length < 30
-  rest = (results - alive_results).first(30 - selected.length)
+selected = alive_results.first(60)
+# 如果 TLS 存活节点不足 60，混入未通过深度测试的候选
+if selected.length < 60
+  rest = (results - alive_results).first(60 - selected.length)
   selected += rest
 end
 
@@ -406,7 +406,7 @@ if selected.empty?
     end
   end
   selected.sort_by! { |r| r[:latency] }
-  selected = selected.first(30)
+  selected = selected.first(60)
 end
 
 puts "最终选取: #{selected.length}"
