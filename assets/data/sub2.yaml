@@ -175,3 +175,27 @@ proxies:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc#美国 佛罗里达州迈阿密市"
     servername: fi.sellflow.org
     client-fingerprint: chrome
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - "意大利 米兰Fastly节点"
+      - "美国 CloudFlare节点"
+      - "美国 Fastly全球Anycast节点"
+      - "俄罗斯 V2CROSS.COM"
+      - "美国 Fastly节点"
+      - "美国 CloudFlare节点 2"
+      - "英国 V2CROSS.COM"
+      - "波斯尼亚和黑塞哥维那 V2CROSS.COM"
+      - "立陶宛 V2CROSS.COM"
+      - "美国 V2CROSS.COM"
+      - "美国 Fastly节点 2"
+      - "美国 CloudFlare节点 3"
+      - "美国 V2CROSS.COM 2"
+      - "日本 东京Fastly节点"
+      - "英国 V2CROSS.COM 2"
+      - "美国 V2CROSS.COM 3"
+      - "美国 V2CROSS.COM 4"
+      - "美国 佛罗里达州迈阿密市"
+rules:
+  - MATCH,Proxy
