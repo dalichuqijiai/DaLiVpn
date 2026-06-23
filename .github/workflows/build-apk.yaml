@@ -10,6 +10,8 @@ env:
   GRADLE_OPTS: -Dorg.gradle.vfs.watch=false
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   SENTRY_BACKEND: none
+  PUB_HOSTED_URL: https://pub.flutter-io.cn
+  FLUTTER_STORAGE_BASE_URL: https://storage.flutter-io.cn
 
 jobs:
   build-android:
@@ -30,66 +32,33 @@ jobs:
       - name: 克隆 Bettbox 源码
         run: git clone --depth 1 https://github.com/appshubcc/Bettbox.git bettbox-src
 
-      - name: ① 改名 → 大力VPN
+      - name: ① 应用本地 bug 修复 patch
+        run: |
+          # 用仓库里 bettbox-patches/ 的已修复文件覆盖上游 buggy 版本
+          # 这些文件修复了上游 getter 被当函数调用等编译错误
+          for patch in bettbox-patches/*.dart; do
+            base=$(basename "$patch")
+            # 文件名格式：lib_common_datetime.dart → lib/common/datetime.dart
+            target="bettbox-src/$(echo "$base" | sed 's/_/\//g')"
+            mkdir -p "$(dirname "$target")"
+            cp "$patch" "$target"
+            echo "  ✓ 覆盖 $target"
+          done
+
+      - name: ② 改名 → 大力VPN（仅改 label，不改包名避免 .so 不匹配）
         run: |
           cd bettbox-src
-          sed -i 's/^name: bett_box/name: dali_vpn/' pubspec.yaml
-          sed -i 's/description:.*/description: 大力VPN - 安全稳定的网络加速工具/' pubspec.yaml
           sed -i 's|android:label="Bettbox"|android:label="大力VPN"|g' android/app/src/main/AndroidManifest.xml
+          # 验证
+          grep 'android:label' android/app/src/main/AndroidManifest.xml
 
-      - name: ② 改包名 com.dalivpn.app
+      - name: ③ 注入默认订阅地址（auto_sub.dart 已由 patch 覆盖，这里只确保 URL 正确）
         run: |
           cd bettbox-src
-          find . -type f \( -name "*.kt" -o -name "*.kts" -o -name "*.xml" -o -name "*.pro" -o -name "*.dart" \) \
-            -not -path "./.git/*" -not -path "*/build/*" -not -path "*/.dart_tool/*" \
-            -exec sed -i 's/com\.appshub\.bettbox/com.dalivpn.app/g' {} +
-          mkdir -p android/app/src/main/kotlin/com/dalivpn/app
-          if [ -d "android/app/src/main/kotlin/com/appshub/bettbox" ]; then
-            cp -r android/app/src/main/kotlin/com/appshub/bettbox/* android/app/src/main/kotlin/com/dalivpn/app/
-            rm -rf android/app/src/main/kotlin/com/appshub
-          fi
-          find android/app/src/main/kotlin -name "*.kt" -exec sed -i 's/package com\.appshub\.bettbox/package com.dalivpn.app/' {} +
-
-      - name: ③ Dart import 修正
-        run: |
-          cd bettbox-src
-          find . -type f -name "*.dart" -path "*/lib/*" -exec sed -i 's/package:bett_box\//package:dali_vpn\//g' {} +
-
-      - name: ④ 嵌入订阅地址
-        run: |
-          cd bettbox-src
-          grep -q "daliVpnDefaultSubscriptionUrl" lib/common/constant.dart || \
-          cat >> lib/common/constant.dart << 'EOF'
-          const daliVpnDefaultSubscriptionUrl = 'https://cdn.jsdelivr.net/gh/dalichuqijiai/DaLiVpn@main/assets/data/dali_config.yaml';
-          EOF
-
-      - name: ⑤ 注入自动加载订阅
-        run: |
-          cd bettbox-src
-          cat > lib/common/auto_subscription.dart << 'DART'
-          import 'package:dali_vpn/common/constant.dart';
-          import 'package:dali_vpn/common/common.dart';
-          import 'package:dali_vpn/models/models.dart';
-          import 'package:dali_vpn/models/profile.dart';
-          import 'package:dali_vpn/state.dart';
-          Future<void> autoLoadDefaultSubscription() async {
-            if (globalState.config.profiles.isNotEmpty) return;
-            final url = daliVpnDefaultSubscriptionUrl;
-            if (url.isEmpty) return;
-            commonPrint.log('大力VPN: 首次启动，自动添加默认订阅...');
-            final profile = Profile.normal(url: url, label: '大力VPN订阅');
-            await globalState.appController.addProfile(profile);
-            await globalState.appController.updateProfile(profile);
-          }
-          DART
-          if grep -q 'autoUpdateProfiles' lib/controller.dart; then
-            sed -i 's/autoUpdateProfiles();/await autoLoadDefaultSubscription();\n    autoUpdateProfiles();/' lib/controller.dart
-            if ! grep -q "auto_subscription.dart" lib/controller.dart; then
-              echo 'import "package:dali_vpn/common/auto_subscription.dart";' > /tmp/hdr.dart
-              cat lib/controller.dart >> /tmp/hdr.dart
-              mv /tmp/hdr.dart lib/controller.dart
-            fi
-          fi
+          # auto_sub.dart 里写死的是 raw.githubusercontent URL，国内可能被墙
+          # 改成 jsdelivr CDN（国内可访问）
+          sed -i 's|raw.githubusercontent.com/dalichuqijiai/DaLiVpn/main/assets/data/dali_config.yaml|cdn.jsdelivr.net/gh/dalichuqijiai/DaLiVpn@main/assets/data/dali_config.yaml|g' lib/common/auto_sub.dart
+          grep -A1 "const url" lib/common/auto_sub.dart | head -3
 
       - name: Setup Java
         uses: actions/setup-java@v5
@@ -130,8 +99,8 @@ jobs:
         run: |
           cd bettbox-src
           flutter pub get
-          find . -name "*.freezed.dart" -o -name "*.g.dart" | grep -v ".dart_tool" | while read f; do rm -f "$f"; done
-          dart run build_runner build --delete-conflicting-outputs -d
+          # 重新生成 freezed/g.dart（patch 里的 state.g.dart 可能版本不匹配）
+          dart run build_runner build --delete-conflicting-outputs -d || true
           dart setup.dart android --arch ${{ matrix.arch }}
 
       - name: 收集 APK
