@@ -18,7 +18,7 @@ jobs:
           curl -sL --max-time 30 "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub" | base64 -d > /tmp/s3.txt 2>/dev/null
           echo "s1=$(wc -l < /tmp/s1.txt) s2=$(wc -l < /tmp/s2.txt) s3=$(wc -l < /tmp/s3.txt)"
 
-      - name: 合并+清洗+测速+选60个
+      - name: 合并+清洗+测速+选全部可用节点
         run: ruby scripts/update_subs.rb
 
       - name: 校验 YAML（语法检查）
@@ -33,5 +33,5 @@ jobs:
           git config user.name "大力VPN Bot"
           git config user.email "bot@dalivpn.com"
           git add assets/data/dali_config.yaml
-          git diff --cached --quiet || git commit -m "🔄 自动更新 $(date +%Y-%m-%d)（60 低延迟节点）"
+          git diff --cached --quiet || git commit -m "🔄 自动更新 $(date +%Y-%m-%d)（全部可用节点）"
           git push
