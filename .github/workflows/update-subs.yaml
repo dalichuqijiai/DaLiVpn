@@ -10,120 +10,75 @@ jobs:
     permissions: write-all
     steps:
       - uses: actions/checkout@v6
-        with: {fetch-depth: 1}
 
-      - name: 下载并转换订阅2
+      - name: 下载并合并
         run: |
-          curl -sL --max-time 30 "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub" | base64 -d > /tmp/s2.txt
-          ruby -e '
-            require "cgi"; names = {}; proxies = []
-            File.read("/tmp/s2.txt").each_line do |line|
-              line = line.strip; next unless line.start_with?("vless://","trojan://","ss://","vmess://")
-              next if line.empty?
-              raw_name = nil
-              if line.include?("#")
-                raw_name = CGI.unescape(line.split("#",2)[1]).strip rescue nil
-              end
-              base = raw_name || line[0..30]
-              names[base] = (names[base] || 0) + 1
-              uname = names[base] > 1 ? "#{base} #{names[base]}" : base
+          # 下载三个订阅
+          curl -sL --max-time 30 "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS_mobile.txt" -o /tmp/s1.txt
+          curl -sL --max-time 30 "https://x.v50.lat/view.php?id=1570ebe7f5bb04ba" -o /tmp/s2.txt
+          curl -sL --max-time 30 "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub" | base64 -d > /tmp/s3.txt 2>/dev/null
 
-              if line =~ /^vless:\/\//
-                s = line.sub(/^vless:\/\//,""); ui,rest = s.split("@",2); next unless rest
-                hp,qs = rest.include?("?") ? rest.split("?",2) : [rest,""]
-                sv,pt = hp&.include?(":") ? hp.split(":",2) : [hp,"443"]; pt=pt.to_i
-                pa={}; qs&.split("&")&.each { |p| k,v=p.split("=",2); pa[k]=v ? CGI.unescape(v) : "" }
-                l = ["  - name: \"#{uname}\"","    type: vless","    server: #{sv}","    port: #{pt}","    uuid: #{ui}"]
-                nt = pa["type"]||"tcp"; l << "    network: #{nt}"
-                l << "    flow: #{pa["flow"]}" if pa["flow"]&&!pa["flow"].empty?
-                if pa["security"]=="reality"
-                  l << "    tls: true"; l << "    reality-opts:"
-                  l << "      public-key: \"#{pa["pbk"]}\"" if pa["pbk"]
-                  l << "      short-id: \"#{pa["sid"]}\"" if pa["sid"]&&pa["sid"].length==16
-                elsif pa["security"]=="tls"
-                  l << "    tls: true"
+          # 合并
+          ruby -e '
+            require "yaml"
+            all = []
+            
+            [["/tmp/s1.txt","S1-"],["/tmp/s2.txt","S2-"],["/tmp/s3.txt","S3-"]].each do |f,pre|
+              begin
+                parsed = YAML.safe_load(File.read(f))
+                if parsed && parsed["proxies"]
+                  parsed["proxies"].each do |p|
+                    p["name"] = "#{pre}#{p["name"]}"
+                    p["alterId"] = 0 if p["type"] == "vmess" && !p["alterId"]
+                    all << p unless p["type"] == "anytls"
+                  end
                 end
-                l << "    servername: #{pa["sni"]}" if pa["sni"]&&!pa["sni"].empty?
-                l << "    client-fingerprint: #{pa["fp"]}" if pa["fp"]&&!pa["fp"].empty?
-                if nt=="ws"&&(pa["path"]||pa["host"])
-                  l << "    ws-opts:"; l << "      path: \"#{pa["path"]}\"" if pa["path"]
-                  l << "      headers:\n        Host: #{pa["host"]}" if pa["host"]
-                end
-                l << "    grpc-opts:\n      grpc-service-name: #{pa["serviceName"]}" if nt=="grpc"&&pa["serviceName"]
-                proxies << l
-              elsif line =~ /^trojan:\/\//
-                s = line.sub(/^trojan:\/\//,""); pw,rest = s.split("@",2); next unless rest
-                hp,qs = rest.include?("?") ? rest.split("?",2) : [rest,""]
-                sv,pt = hp&.include?(":") ? hp.split(":",2) : [hp,"443"]; pt=pt.to_i
-                pa={}; qs&.split("&")&.each { |p| k,v=p.split("=",2); pa[k]=v ? CGI.unescape(v) : "" }
-                l = ["  - name: \"#{uname}\"","    type: trojan","    server: #{sv}","    port: #{pt}","    password: #{pw}"]
-                l << "    sni: #{pa["sni"]}" if pa["sni"]; l << "    udp: true"; l << "    skip-cert-verify: true"
-                proxies << l
-              elsif line =~ /^ss:\/\//
-                s = line.sub(/^ss:\/\//,""); b64 = s.split("@")[0]
-                begin
-                  decoded = Base64.decode64(b64).force_encoding("UTF-8")
-                  method, password = decoded.split(":",2)
-                  rest = s.split("@")[1] rescue next
-                  sv,pt = rest&.include?(":") ? rest.split(":",2) : [rest,"443"]; pt=pt.to_i
-                  l = ["  - name: \"#{uname}\"","    type: ss","    server: #{sv}","    port: #{pt}","    cipher: #{method}","    password: #{password}"]
-                  proxies << l
-                rescue; end
+              rescue; end
+            end
+
+            # 去重
+            seen = {}; all.reject! { |p| seen["#{p["server"]}:#{p["port"]}"] ? true : (seen["#{p["server"]}:#{p["port"]}"] = true; false) }
+
+            names = all.map { |p| p["name"] }
+            yaml = "proxies:\n"
+            all.each do |p|
+              yaml += "  - name: \"#{p["name"]}\"\n    type: #{p["type"]}\n    server: #{p["server"]}\n    port: #{p["port"]}\n"
+              yaml += "    uuid: #{p["uuid"]}\n" if p["uuid"]
+              yaml += "    password: #{p["password"]}\n" if p["password"]
+              yaml += "    cipher: #{p["cipher"]}\n" if p["cipher"]
+              yaml += "    alterId: #{p["alterId"]}\n" if p["alterId"]
+              yaml += "    network: #{p["network"]}\n" if p["network"]
+              yaml += "    flow: #{p["flow"]}\n" if p["flow"]
+              yaml += "    tls: #{p["tls"]}\n" if p["tls"] != nil
+              yaml += "    servername: #{p["servername"]}\n" if p["servername"]
+              yaml += "    client-fingerprint: #{p["client-fingerprint"]}\n" if p["client-fingerprint"]
+              if p["reality-opts"]
+                yaml += "    reality-opts:\n      public-key: \"#{p["reality-opts"]["public-key"]}\"\n" if p["reality-opts"]["public-key"]
+                yaml += "      short-id: \"#{p["reality-opts"]["short-id"]}\"\n" if p["reality-opts"]["short-id"]
+              end
+              yaml += "    sni: #{p["sni"]}\n" if p["sni"]
+              yaml += "    udp: #{p["udp"]}\n" if p["udp"] != nil
+              yaml += "    skip-cert-verify: #{p["skip-cert-verify"]}\n" if p["skip-cert-verify"] != nil
+              if p["ws-opts"]
+                yaml += "    ws-opts:\n      path: \"#{p["ws-opts"]["path"]}\"\n" if p["ws-opts"]["path"]
+                yaml += "      headers:\n        Host: #{p["ws-opts"]["headers"]["Host"]}\n" if p["ws-opts"] && p["ws-opts"]["headers"]
+              end
+              if p["grpc-opts"]
+                yaml += "    grpc-opts:\n      grpc-service-name: #{p["grpc-opts"]["grpc-service-name"]}\n" if p["grpc-opts"]["grpc-service-name"]
               end
             end
-            puts "proxies:"
-            proxies.each { |px| puts px.join("\n") }
-          ' > assets/data/sub2.yaml
-          echo "sub2: $(grep -c 'name:' assets/data/sub2.yaml) 节点"
+            yaml += "proxy-groups:\n  - name: Proxy\n    type: url-test\n    url: https://www.gstatic.com/generate_204\n    interval: 120\n    tolerance: 50\n    proxies:\n"
+            names.each { |n| yaml += "      - \"#{n}\"\n" }
+            yaml += "rules:\n  - MATCH,Proxy\n"
+            File.write("/tmp/dali_config.yaml", yaml)
+            puts "完成: #{all.length} 节点"
+          '
 
-      - name: 下载并转换订阅3
+      - name: 提交
         run: |
-          curl -sL --max-time 30 "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS_mobile.txt" > /tmp/s3.txt
-          ruby -e '
-            require "cgi"; names = {}; proxies = []
-            File.read("/tmp/s3.txt").each_line do |line|
-              line = line.strip; next unless line.start_with?("vless://")
-              s = line.sub(/^vless:\/\//,"")
-              raw_name = nil
-              if s.include?("#")
-                raw_name = CGI.unescape(s.split("#",2)[1]).strip rescue nil
-              end
-              body = s; body = s.split("#",2)[0] if s.include?("#")
-              ui,rest = body.split("@",2); next unless rest
-              hp,qs = rest.include?("?") ? rest.split("?",2) : [rest,""]
-              sv,pt = hp&.include?(":") ? hp.split(":",2) : [hp,"443"]; pt=pt.to_i
-              pa={}; qs&.split("&")&.each { |p| k,v=p.split("=",2); pa[k]=v ? CGI.unescape(v) : "" }
-              base = raw_name || sv
-              if names[base]; names[base] += 1; uname = "#{base} #{names[base]}"
-              else; names[base] = 1; uname = base; end
-              l = ["  - name: \"#{uname}\"","    type: vless","    server: #{sv}","    port: #{pt}","    uuid: #{ui}"]
-              nt = pa["type"]||"tcp"; l << "    network: #{nt}"
-              l << "    flow: #{pa["flow"]}" if pa["flow"]&&!pa["flow"].empty?
-              if pa["security"]=="reality"
-                l << "    tls: true"; l << "    reality-opts:"
-                l << "      public-key: \"#{pa["pbk"]}\"" if pa["pbk"]
-                l << "      short-id: \"#{pa["sid"]}\"" if pa["sid"]&&pa["sid"].length==16
-              elsif pa["security"]=="tls"
-                l << "    tls: true"
-              end
-              l << "    servername: #{pa["sni"]}" if pa["sni"]&&!pa["sni"].empty?
-              l << "    client-fingerprint: #{pa["fp"]}" if pa["fp"]&&!pa["fp"].empty?
-              if nt=="ws"&&(pa["path"]||pa["host"])
-                l << "    ws-opts:"; l << "      path: \"#{pa["path"]}\"" if pa["path"]
-                l << "      headers:\n        Host: #{pa["host"]}" if pa["host"]
-              end
-              l << "    grpc-opts:\n      grpc-service-name: #{pa["serviceName"]}" if nt=="grpc"&&pa["serviceName"]
-              proxies << l
-            end
-            puts "proxies:"
-            proxies.each { |px| puts px.join("\n") }
-          ' > assets/data/sub3.yaml
-          echo "sub3: $(grep -c 'name:' assets/data/sub3.yaml) 节点"
-
-      - name: 提交更新
-        run: |
+          cp /tmp/dali_config.yaml assets/data/dali_config.yaml
           git config user.name "大力VPN Bot"
           git config user.email "bot@dalivpn.com"
-          git add assets/data/sub2.yaml assets/data/sub3.yaml
+          git add assets/data/dali_config.yaml
           git diff --cached --quiet || git commit -m "🔄 自动更新订阅 $(date +%Y-%m-%d)"
           git push
