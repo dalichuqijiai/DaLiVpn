@@ -11,74 +11,140 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: 下载并合并
+      - name: 下载订阅源
         run: |
-          # 下载三个订阅
           curl -sL --max-time 30 "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS_mobile.txt" -o /tmp/s1.txt
           curl -sL --max-time 30 "https://x.v50.lat/view.php?id=1570ebe7f5bb04ba" -o /tmp/s2.txt
           curl -sL --max-time 30 "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub" | base64 -d > /tmp/s3.txt 2>/dev/null
+          echo "下载完成"
 
-          # 合并
+      - name: 合并+测速+选30个
+        run: |
           ruby -e '
             require "yaml"
+            require "socket"
+            require "timeout"
+            require "cgi"
+
             all = []
-            
-            [["/tmp/s1.txt","S1-"],["/tmp/s2.txt","S2-"],["/tmp/s3.txt","S3-"]].each do |f,pre|
-              begin
-                parsed = YAML.safe_load(File.read(f))
-                if parsed && parsed["proxies"]
-                  parsed["proxies"].each do |p|
-                    p["name"] = "#{pre}#{p["name"]}"
-                    p["alterId"] = 0 if p["type"] == "vmess" && !p["alterId"]
-                    all << p unless p["type"] == "anytls"
+            seen = {}
+
+            # 解析三个订阅
+            [["/tmp/s1.txt","vless"],["/tmp/s2.txt","yaml"],["/tmp/s3.txt","raw"]].each do |f, fmt|
+              data = File.read(f)
+              proxies = []
+              if fmt == "yaml"
+                begin; parsed = YAML.safe_load(data); proxies = parsed["proxies"] if parsed; rescue; end
+              else
+                data.each_line do |line|
+                  line = line.strip; next unless line.start_with?("vless://","trojan://","ss://","vmess://")
+                  s = line.sub(/^[a-z]+:\/\//,"")
+                  key = (s.split("@")[1] rescue s)
+                  next if seen[key]; seen[key] = true
+                  raw_name = nil
+                  if line.include?("#")
+                    raw_name = CGI.unescape(line.split("#",2)[1]).strip rescue nil
                   end
+                  name = raw_name || key[0..20]
+                  px = {"name"=>name,"server"=>"","port"=>443,"type"=>"vless"}
+                  if line.start_with?("vless://")
+                    s = line.sub(/^vless:\/\//,""); ui, rest = s.split("@",2); hp = (rest&.split("?")[0] rescue rest)
+                    sv, pt = hp&.include?(":") ? hp.split(":",2) : [hp||"","443"]
+                    px["server"] = sv; px["port"] = pt.to_i; px["uuid"] = ui
+                    qs = rest&.include?("?") ? rest.split("?",2)[1] : ""
+                    pa = {}; qs.split("&").each { |p| k,v = p.split("=",2); pa[k] = v ? CGI.unescape(v) : "" }
+                    px["network"] = pa["type"] || "tcp"
+                    px["flow"] = pa["flow"] if pa["flow"]
+                    px["tls"] = true if pa["security"] == "tls" || pa["security"] == "reality"
+                    if pa["security"] == "reality"
+                      px["reality-opts"] = {"public-key" => pa["pbk"]}
+                      px["reality-opts"]["short-id"] = pa["sid"] if pa["sid"] && pa["sid"].length == 16
+                    end
+                    px["servername"] = pa["sni"] if pa["sni"]
+                    px["client-fingerprint"] = pa["fp"] if pa["fp"]
+                  elsif line.start_with?("trojan://")
+                    s = line.sub(/^trojan:\/\//,""); pw, rest = s.split("@",2)
+                    hp = rest&.split("?")[0] rescue rest
+                    sv, pt = hp&.include?(":") ? hp.split(":",2) : [hp||"","443"]
+                    px["server"] = sv; px["port"] = pt.to_i; px["password"] = pw; px["type"] = "trojan"
+                  end
+                  proxies << px
                 end
+              end
+              proxies.each do |p|
+                key = "#{p["server"]}:#{p["port"]}"
+                next if seen[key]; seen[key] = true
+                all << p
+              end
+            end
+
+            puts "总节点: #{all.length}"
+
+            # TCP 测速
+            results = []
+            all.each_with_index do |p, i|
+              sv = p["server"]; pt = p["port"] || 443
+              lat = 9999
+              begin
+                start = Time.now
+                Timeout.timeout(3) do
+                  s = TCPSocket.new(sv, pt); s.close
+                end
+                lat = ((Time.now - start) * 1000).round
               rescue; end
+              results << {proxy: p, latency: lat}
+              print "." if i % 10 == 0
             end
 
-            # 去重
-            seen = {}; all.reject! { |p| seen["#{p["server"]}:#{p["port"]}"] ? true : (seen["#{p["server"]}:#{p["port"]}"] = true; false) }
+            # 选前30
+            results.sort_by! { |r| r[:latency] }
+            top = results.first(30)
+            alive = top.select { |r| r[:latency] < 9999 }
+            puts "\n存活: #{alive.length}, 前30个: #{top.length}"
 
-            names = all.map { |p| p["name"] }
-            yaml = "proxies:\n"
-            all.each do |p|
-              yaml += "  - name: \"#{p["name"]}\"\n    type: #{p["type"]}\n    server: #{p["server"]}\n    port: #{p["port"]}\n"
-              yaml += "    uuid: #{p["uuid"]}\n" if p["uuid"]
-              yaml += "    password: #{p["password"]}\n" if p["password"]
-              yaml += "    cipher: #{p["cipher"]}\n" if p["cipher"]
-              yaml += "    alterId: #{p["alterId"]}\n" if p["alterId"]
-              yaml += "    network: #{p["network"]}\n" if p["network"]
-              yaml += "    flow: #{p["flow"]}\n" if p["flow"]
-              yaml += "    tls: #{p["tls"]}\n" if p["tls"] != nil
-              yaml += "    servername: #{p["servername"]}\n" if p["servername"]
-              yaml += "    client-fingerprint: #{p["client-fingerprint"]}\n" if p["client-fingerprint"]
+            # 生成 YAML（标准 Clash 格式）
+            lines = ["proxies:"]
+            selected = alive.empty? ? top : alive
+            selected.each do |r|
+              p = r[:proxy]
+              lines << "  - name: \"#{p["name"]}\""
+              lines << "    type: #{p["type"]}"
+              lines << "    server: #{p["server"]}"
+              lines << "    port: #{p["port"]}"
+              lines << "    uuid: #{p["uuid"]}" if p["uuid"]
+              lines << "    password: #{p["password"]}" if p["password"]
+              lines << "    network: #{p["network"]}" if p["network"]
+              lines << "    flow: #{p["flow"]}" if p["flow"]
+              lines << "    tls: #{p["tls"]}" if p["tls"] != nil
+              lines << "    servername: #{p["servername"]}" if p["servername"]
+              lines << "    client-fingerprint: #{p["client-fingerprint"]}" if p["client-fingerprint"]
               if p["reality-opts"]
-                yaml += "    reality-opts:\n      public-key: \"#{p["reality-opts"]["public-key"]}\"\n" if p["reality-opts"]["public-key"]
-                yaml += "      short-id: \"#{p["reality-opts"]["short-id"]}\"\n" if p["reality-opts"]["short-id"]
-              end
-              yaml += "    sni: #{p["sni"]}\n" if p["sni"]
-              yaml += "    udp: #{p["udp"]}\n" if p["udp"] != nil
-              yaml += "    skip-cert-verify: #{p["skip-cert-verify"]}\n" if p["skip-cert-verify"] != nil
-              if p["ws-opts"]
-                yaml += "    ws-opts:\n      path: \"#{p["ws-opts"]["path"]}\"\n" if p["ws-opts"]["path"]
-                yaml += "      headers:\n        Host: #{p["ws-opts"]["headers"]["Host"]}\n" if p["ws-opts"] && p["ws-opts"]["headers"]
-              end
-              if p["grpc-opts"]
-                yaml += "    grpc-opts:\n      grpc-service-name: #{p["grpc-opts"]["grpc-service-name"]}\n" if p["grpc-opts"]["grpc-service-name"]
+                lines << "    reality-opts:"
+                lines << "      public-key: \"#{p["reality-opts"]["public-key"]}\"" if p["reality-opts"]["public-key"]
+                lines << "      short-id: \"#{p["reality-opts"]["short-id"]}\"" if p["reality-opts"]["short-id"]
               end
             end
-            yaml += "proxy-groups:\n  - name: Proxy\n    type: url-test\n    url: https://www.gstatic.com/generate_204\n    interval: 120\n    tolerance: 50\n    proxies:\n"
-            names.each { |n| yaml += "      - \"#{n}\"\n" }
-            yaml += "rules:\n  - MATCH,Proxy\n"
-            File.write("/tmp/dali_config.yaml", yaml)
-            puts "完成: #{all.length} 节点"
+
+            names = selected.map { |r| r[:proxy]["name"] }
+            lines << ""
+            lines << "proxy-groups:"
+            lines << "  - name: Proxy"
+            lines << "    type: select"
+            lines << "    proxies:"
+            names.each { |n| lines << "      - \"#{n}\"" }
+            lines << ""
+            lines << "rules:"
+            lines << "  - MATCH,Proxy"
+
+            File.write("/tmp/dali_config.yaml", lines.join("\n") + "\n")
+            puts "生成: #{selected.length} 节点"
           '
 
-      - name: 提交
+      - name: 提交到仓库
         run: |
           cp /tmp/dali_config.yaml assets/data/dali_config.yaml
           git config user.name "大力VPN Bot"
           git config user.email "bot@dalivpn.com"
           git add assets/data/dali_config.yaml
-          git diff --cached --quiet || git commit -m "🔄 自动更新订阅 $(date +%Y-%m-%d)"
+          git diff --cached --quiet || git commit -m "🔄 自动更新 $(date +%Y-%m-%d)（30 低延迟节点）"
           git push
