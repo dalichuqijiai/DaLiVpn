@@ -1452,15 +1452,6 @@ proxies:
     tls: true
     grpc-opts:
       grpc-service-name: grpc-api
-  - name: "S2-日本-橘子电报频道@juzibaipiao 01"
-    type: anytls
-    server: ppziw00zmx.265897.xyz
-    port: 443
-    password: 0fe6c2e6-c242-476f-8b7d-068bc0e13e6e
-    tls: true
-    sni: ppziw00zmx.265897.xyz
-    skip-cert-verify: true
-    udp: true
   - name: "S2-香港-橘子电报频道@juzibaipiao 08"
     type: vmess
     server: 154.37.223.105
@@ -1955,15 +1946,6 @@ proxies:
     tls: true
     servername: ams1.fromblancwithlove.com
     client-fingerprint: chrome
-    skip-cert-verify: true
-    udp: true
-  - name: "S2-日本-橘子电报频道@juzibaipiao 01_1"
-    type: anytls
-    server: ppziw00zmx.265897.xyz
-    port: 443
-    password: 0fe6c2e6-c242-476f-8b7d-068bc0e13e6e
-    tls: true
-    sni: ppziw00zmx.265897.xyz
     skip-cert-verify: true
     udp: true
   - name: "S2-日本-橘子电报频道@juzibaipiao 02"
@@ -3257,7 +3239,6 @@ proxy-groups:
       - "S1-🌐 Anycast-IP | 🇬🇧 🇷🇺 | [BL] 3"
       - "S1-🌐 Anycast-IP | 🇬🇧 🇺🇸 | [BL]"
       - "S1-🌐 Anycast-IP | 🇬🇧 🇺🇸 | [BL] 2"
-      - "S2-日本-橘子电报频道@juzibaipiao 01"
       - "S2-香港-橘子电报频道@juzibaipiao 08"
       - "S2-美国-橘子电报频道@juzibaipiao 104"
       - "S2-美国-橘子电报频道@juzibaipiao 105"
@@ -3307,7 +3288,6 @@ proxy-groups:
       - "S2-越南-橘子电报频道@juzibaipiao 02"
       - "S2-美国-橘子电报频道@juzibaipiao 115"
       - "S2-罗马尼亚-橘子电报频道@juzibaipiao 13"
-      - "S2-日本-橘子电报频道@juzibaipiao 01_1"
       - "S2-日本-橘子电报频道@juzibaipiao 02"
       - "S2-日本-橘子电报频道@juzibaipiao 03"
       - "S2-日本-橘子电报频道@juzibaipiao 04"
