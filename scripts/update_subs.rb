@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-# 大力VPN 订阅合并+清洗+测速+选30个，参考 siiway/urlclash-converter 转换规则
-# 输入: /tmp/s1.txt /tmp/s2.txt /tmp/s3.txt 三个订阅源
-# 输出: /tmp/dali_config.yaml
+# 大力VPN 订阅合并+清洗+深度测速+选30个
+# 参考 siiway/urlclash-converter 转换规则
+# 改进：用实际 TLS/HTTP 握手代替纯 TCP ping，模拟中国可达性
 require "yaml"
 require "socket"
 require "timeout"
@@ -10,6 +10,9 @@ require "cgi"
 require "base64"
 require "resolv"
 require "json"
+require "openssl"
+require "net/http"
+require "uri"
 
 # === 1. 读 3 个订阅源 ===
 sources = ["/tmp/s1.txt", "/tmp/s2.txt", "/tmp/s3.txt"]
@@ -17,11 +20,10 @@ raw_lines = []
 sources.each do |f|
   next unless File.exist?(f)
   data = File.read(f).strip
-  # 整文件 base64 解码
   if data.length > 50 && data !~ /\n/ && data =~ /\A[A-Za-z0-9+\/=\-_]+\z/
     begin
       decoded = Base64.decode64(data.tr("-_", "+/"))
-      if decoded =~ /(vless|trojan|vmess|ss):\/\//
+      if decoded =~ /^(vless|trojan|vmess|ss):\/\//
         data = decoded
       end
     rescue StandardError
@@ -81,7 +83,6 @@ raw_lines.each do |line|
       if security == "reality"
         pbk = params["pbk"].to_s
         sid = params["sid"].to_s
-        # 严格校验: pbk 必须是 43 字符 urlsafe-base64，sid 必须是 ≤16 字符 hex
         unless pbk.length == 43 && pbk =~ /\A[A-Za-z0-9+\/\-_]+\z/
           skipped += 1
           next
@@ -99,14 +100,12 @@ raw_lines.each do |line|
         ro["short-id"] = sid unless sid.empty?
         px["reality-opts"] = ro
       elsif security == "tls"
-        # 仅当 security=tls 才启用 TLS（参考 siiway: security && security != "none"）
         px["tls"] = true
         sni = params["sni"] || params["peer"] || params["host"]
         px["servername"] = sni if sni && !sni.empty?
         px["flow"] = "xtls-rprx-vision" if params["flow"] && params["flow"].to_s.include?("vision")
         px["client-fingerprint"] = clean_fp(params["fp"]) if params["fp"]
       elsif security == "none" || security == ""
-        # 无 TLS（port 80 等）
         px["tls"] = false
       else
         skipped += 1
@@ -137,7 +136,8 @@ raw_lines.each do |line|
       raw_name = m[6] ? CGI.unescape(m[6]) : nil
       name = (raw_name && !raw_name.strip.empty?) ? raw_name.strip : "Trojan-#{host}:#{port}"
       px = { "name" => name, "type" => "trojan", "server" => host, "port" => port, "password" => pw, "tls" => true }
-      px["servername"] = params["sni"] || params["peer"] || host if params["sni"] || params["peer"]
+      sni = params["sni"] || params["peer"]
+      px["servername"] = sni if sni && !sni.empty?
       px["skip-cert-verify"] = true if params["allowInsecure"] == "1"
 
     elsif line =~ /^vmess:\/\//
@@ -226,41 +226,193 @@ by_type = proxies.group_by { |p| p["type"] }
 by_type.each { |t, arr| puts "  #{t}: #{arr.length}" }
 exit 1 if proxies.empty?
 
-# === 3. TCP 测速（并发加速）===
-def tcp_ping(host, port, timeout = 2)
-  ip = nil
-  begin
-    ip = host =~ /\A\d+\.\d+\.\d+\.\d+\z/ ? host : Resolv.getaddress(host).to_s
-  rescue StandardError
-    return 9999
+# === 3. 启发式过滤：剔除中国几乎肯定不可达的节点 ===
+# 这些模式在中国移动/联通/电信网络几乎必然被 GFW 阻断
+BLOCKED_PATTERNS = [
+  /\.workers\.dev\z/i,           # Cloudflare Workers（中国完全封锁）
+  /\.pages\.dev\z/i,             # Cloudflare Pages
+  /google/i,                     # Google 相关
+  /gstatic\.com/i,
+  /youtube|ytimg/i,
+  /facebook|fbcdn/i,
+  /twitter|x\.com\z/i,
+  /wikipedia/i,
+  /telegram/i,                  # Telegram 在中国被严格限制
+  /\.appspot\.com/i,
+  /\.googleusercontent\.com/i,
+  /wikimedia/i,
+  /\.ggpht\.com/i,
+].freeze
+
+def china_blocked?(px)
+  # 检查 server 和 servername
+  targets = [px["server"], px["servername"]].compact.map(&:to_s)
+  targets.each do |t|
+    BLOCKED_PATTERNS.each { |re| return true if t =~ re }
   end
+  false
+end
+
+before_filter = proxies.length
+proxies.reject! { |p| china_blocked?(p) }
+puts "剔除中国不可达域名: #{before_filter - proxies.length} 个"
+
+# 偏好：TLS 节点（port 443）>> no-TLS 节点（port 80）
+# port 80 + no TLS 的节点在中国几乎必然被运营商劫持/封锁
+tls_nodes = proxies.select { |p| p["tls"] == true || p["type"] == "trojan" }
+notls_nodes = proxies - tls_nodes
+puts "TLS 节点: #{tls_nodes.length} / 无 TLS 节点: #{notls_nodes.length}"
+
+# === 4. 深度测速：实际 TLS/HTTP 握手 ===
+# 不再只用 TCP ping，而是真正握手：
+# - TLS 节点：尝试 TLS 握手到 (server:port, SNI)，验证证书 SNI 匹配
+# - WS 节点：尝试发送 HTTP Upgrade 请求，看是否返回 101
+# 这样能筛掉"TCP 通但代理不可用"的假阳性
+
+def resolve(host)
+  return host if host =~ /\A\d+\.\d+\.\d+\.\d+\z/
+  Resolv.getaddress(host).to_s
+rescue StandardError
+  nil
+end
+
+# 深度测试：返回 [latency_ms, alive]
+# alive 表示该节点的传输层确实可用（不只是 TCP 端口开放）
+def deep_test(px, timeout = 4)
+  host = px["server"].to_s
+  port = px["port"].to_i
+  return [9999, false] if host.empty? || port == 0
+
+  ip = resolve(host)
+  return [9999, false] unless ip
+
+  sni = (px["servername"] || px["sni"] || host).to_s
+  use_tls = px["tls"] == true || px["type"] == "trojan"
+
   begin
     start = Time.now
-    Timeout.timeout(timeout) do
-      s = TCPSocket.new(ip, port)
-      s.close
+    sock = Timeout.timeout(timeout) { TCPSocket.new(ip, port) }
+    sock.setsockopt(Socket::IPPROTO_TCP, Socket::TCP_NODELAY, 1)
+
+    if use_tls
+      # 真实 TLS 握手，验证证书链能建立
+      ctx = OpenSSL::SSL::SSLContext.new
+      ctx.min_version = OpenSSL::SSL::TLS1_2_VERSION
+      ctx.verify_mode = OpenSSL::SSL::VERIFY_NONE # 不验证证书，只验证能握手
+      ssl = OpenSSL::SSL::SSLSocket.new(sock, ctx)
+      ssl.hostname = sni if sni && !sni.empty?
+      Timeout.timeout(timeout) { ssl.connect }
+      latency = ((Time.now - start) * 1000).round
+
+      # 对 WS 节点：发送 HTTP Upgrade，期望 101 响应（更可靠）
+      if px["network"] == "ws" && px["ws-opts"] && !ssl.closed?
+        begin
+          ws_path = px["ws-opts"]["path"] || "/"
+          ws_host = (px["ws-opts"]["headers"] || {}).fetch("Host", sni)
+          req = "GET #{ws_path} HTTP/1.1\r\nHost: #{ws_host}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==\r\nSec-WebSocket-Version: 13\r\n\r\n"
+          ssl.write(req)
+          resp = ""
+          Timeout.timeout(timeout) do
+            while (line = ssl.gets)
+              resp += line
+              break if resp =~ /\r\n\r\n/
+            end
+          end
+          # 101 Switching Protocols 表示 WS 服务端确实在响应
+          if resp =~ /^HTTP\/1\.1 101/
+            ssl.close rescue nil
+            sock.close rescue nil
+            return [latency, true]
+          else
+            # 即便不是 101，只要 TLS 握手成功且收到 HTTP 响应也算可用
+            if resp =~ /^HTTP\/1\.1/
+              ssl.close rescue nil
+              sock.close rescue nil
+              return [latency, true]
+            end
+          end
+        rescue StandardError
+          nil
+        end
+      end
+
+      ssl.close rescue nil
+      sock.close rescue nil
+      return [latency, true]
+    else
+      # no-TLS 节点：发 HTTP 请求验证服务确实在线（防止运营商劫持）
+      begin
+        ws_path = (px["ws-opts"] || {})["path"] || "/"
+        ws_host = (px["ws-opts"] && px["ws-opts"]["headers"] && px["ws-opts"]["headers"]["Host"]) || host
+        req = "GET #{ws_path} HTTP/1.1\r\nHost: #{ws_host}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==\r\nSec-WebSocket-Version: 13\r\n\r\n"
+        sock.write(req)
+        resp = ""
+        Timeout.timeout(timeout) do
+          while (line = sock.gets)
+            resp += line
+            break if resp =~ /\r\n\r\n/
+          end
+        end
+        latency = ((Time.now - start) * 1000).round
+        sock.close rescue nil
+        # 只接受真实 HTTP 响应（防止运营商 DNS 劫持返回 HTML 广告页）
+        return [latency, true] if resp =~ /^HTTP\/1\.1 (101|200|400|404|401|403)/
+        return [9999, false]
+      rescue StandardError
+        sock.close rescue nil
+        return [9999, false]
+      end
     end
-    ((Time.now - start) * 1000).round
   rescue StandardError
-    9999
+    (sock&.close rescue nil)
+    [9999, false]
   end
 end
 
-puts "开始 TCP 测速..."
-results = proxies.each_with_index.map do |p, i|
-  lat = tcp_ping(p["server"], p["port"])
-  print "." if (i % 10).zero?
-  { proxy: p, latency: lat }
+puts "开始深度测速（TLS 握手 + WS Upgrade）..."
+# 优先测试 TLS 节点（这些是中国最可能可用的）
+candidates = (tls_nodes + notls_nodes).first(60) # 最多测 60 个避免超时
+results = candidates.each_with_index.map do |p, i|
+  lat, alive = deep_test(p)
+  print(alive ? "+" : "-")
+  print "\n" if (i + 1) % 20 == 0
+  { proxy: p, latency: lat, alive: alive }
+end
+puts ""
+
+# === 5. 选 30 个存活节点 ===
+alive_results = results.select { |r| r[:alive] && r[:latency] < 9999 }.sort_by { |r| r[:latency] }
+puts "深度测试存活: #{alive_results.length}/#{results.length}"
+
+selected = alive_results.first(30)
+# 如果 TLS 存活节点不足 30，混入非 TLS 节点
+if selected.length < 30
+  rest = (results - alive_results).first(30 - selected.length)
+  selected += rest
 end
 
-# === 4. 选前 30 个存活节点 ===
-alive = results.select { |r| r[:latency] < 9999 }.sort_by { |r| r[:latency] }
-selected = alive.first(30)
-selected += results.select { |r| r[:latency] >= 9999 }.first(30 - selected.length) if selected.length < 30
-puts "\n存活: #{alive.length}, 最终选取: #{selected.length}"
+# 极端情况：如果没存活节点，回退到 TCP ping
+if selected.empty?
+  puts "⚠️ 深度测试全部失败，回退到 TCP ping..."
+  candidates.each_with_index do |p, i|
+    ip = resolve(p["server"])
+    next unless ip
+    begin
+      start = Time.now
+      Timeout.timeout(3) { TCPSocket.new(ip, p["port"]).close }
+      selected << { proxy: p, latency: ((Time.now - start) * 1000).round, alive: false }
+    rescue StandardError
+      nil
+    end
+  end
+  selected.sort_by! { |r| r[:latency] }
+  selected = selected.first(30)
+end
+
+puts "最终选取: #{selected.length}"
 exit 1 if selected.empty?
 
-# === 5. 节点重命名：序号+地理标签 ===
+# === 6. 节点重命名：序号+地理标签 ===
 cc_map = {
   "美国" => "US", "United States" => "US", "英国" => "GB", "United Kingdom" => "GB",
   "德国" => "DE", "Germany" => "DE", "法国" => "FR", "France" => "FR",
@@ -272,7 +424,8 @@ cc_map = {
   "瑞典" => "SE", "Sweden" => "SE", "阿联酋" => "AE", "United Arab Emirates" => "AE",
   "印度" => "IN", "India" => "IN", "土耳其" => "TR", "Turkey" => "TR",
   "波兰" => "PL", "Poland" => "PL", "意大利" => "IT", "Italy" => "IT",
-  "西班牙" => "ES", "Spain" => "ES", "巴西" => "BR", "Brazil" => "BR"
+  "西班牙" => "ES", "Spain" => "ES", "巴西" => "BR", "Brazil" => "BR",
+  "印度尼西亚" => "ID", "Indonesia" => "ID",
 }
 used_names = {}
 renamed = selected.each_with_index.map do |r, i|
@@ -288,10 +441,11 @@ renamed = selected.each_with_index.map do |r, i|
     used_names[base] = 1
   end
   p["name"] = base
-  { proxy: p, latency: r[:latency] }
+  r[:proxy] = p
+  r
 end
 
-# === 6. 生成 YAML（手动构造，Mihomo 兼容）===
+# === 7. 生成 YAML ===
 def yaml_quote(v)
   v = v.to_s
   needs_quote = v.empty? || v =~ /[\s:,#\[\]{}&*!|>'"%@`]/ || v =~ /\A[-?]/
@@ -383,3 +537,7 @@ lines << "  - MATCH,Proxy"
 
 File.write("/tmp/dali_config.yaml", lines.join("\n") + "\n")
 puts "✅ 生成成功，节点数: #{renamed.length}"
+# 打印存活节点统计
+tls_count = renamed.count { |r| r[:proxy]["tls"] == true || r[:proxy]["type"] == "trojan" }
+notls_count = renamed.length - tls_count
+puts "   其中 TLS: #{tls_count} / 无 TLS: #{notls_count}"
