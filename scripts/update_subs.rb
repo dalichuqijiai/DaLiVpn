@@ -462,31 +462,107 @@ end
 puts "最终选取: #{selected.length}"
 exit 1 if selected.empty?
 
-# === 6. 节点重命名：序号+地理标签 ===
-cc_map = {
-  "美国" => "US", "United States" => "US", "英国" => "GB", "United Kingdom" => "GB",
-  "德国" => "DE", "Germany" => "DE", "法国" => "FR", "France" => "FR",
-  "日本" => "JP", "Japan" => "JP", "韩国" => "KR", "Korea" => "KR",
-  "新加坡" => "SG", "Singapore" => "SG", "香港" => "HK", "Hong Kong" => "HK",
-  "台湾" => "TW", "Taiwan" => "TW", "加拿大" => "CA", "Canada" => "CA",
-  "澳大利亚" => "AU", "Australia" => "AU", "俄罗斯" => "RU", "Russia" => "RU",
-  "荷兰" => "NL", "Netherlands" => "NL", "芬兰" => "FI", "Finland" => "FI",
-  "瑞典" => "SE", "Sweden" => "SE", "阿联酋" => "AE", "United Arab Emirates" => "AE",
-  "印度" => "IN", "India" => "IN", "土耳其" => "TR", "Turkey" => "TR",
-  "波兰" => "PL", "Poland" => "PL", "意大利" => "IT", "Italy" => "IT",
-  "西班牙" => "ES", "Spain" => "ES", "巴西" => "BR", "Brazil" => "BR",
-  "印度尼西亚" => "ID", "Indonesia" => "ID",
-}
+# === 6. 节点重命名：序号+中文国家/地区名 ===
+# 关键词 → 中文名（按匹配优先级排列，先匹配的优先）
+# 同时支持中文关键词、英文国名、英文城市、国家代码 TLD
+cc_map = [
+  ["美国", "美国"], ["United States", "美国"], ["UnitedStates", "美国"], ["USA", "美国"], ["美国", "美国"], [".us", "美国"], ["Los Angeles", "美国"], ["New York", "美国"], ["San Jose", "美国"], ["Seattle", "美国"], ["Chicago", "美国"], ["Dallas", "美国"], ["Miami", "美国"], ["Washington", "美国"], ["Oregon", "美国"],
+  ["香港", "香港"], ["Hong Kong", "香港"], ["HongKong", "香港"], ["HK", "香港"], [".hk", "香港"],
+  ["台湾", "台湾"], ["Taiwan", "台湾"], [".tw", "台湾"], ["台北", "台湾"],
+  ["日本", "日本"], ["Japan", "日本"], ["JP", "日本"], [".jp", "日本"], ["Tokyo", "日本"], ["大阪", "日本"], ["Osaka", "日本"],
+  ["新加坡", "新加坡"], ["Singapore", "新加坡"], ["SG", "新加坡"], [".sg", "新加坡"],
+  ["韩国", "韩国"], ["Korea", "韩国"], ["Seoul", "韩国"], ["首尔", "韩国"], [".kr", "韩国"],
+  ["英国", "英国"], ["United Kingdom", "英国"], ["UK", "英国"], ["London", "英国"], ["伦敦", "英国"], [".uk", "英国"],
+  ["德国", "德国"], ["Germany", "德国"], ["DE", "德国"], ["Frankfurt", "德国"], ["法兰克福", "德国"], [".de", "德国"],
+  ["法国", "法国"], ["France", "法国"], ["Paris", "法国"], ["巴黎", "法国"], [".fr", "法国"],
+  ["荷兰", "荷兰"], ["Netherlands", "荷兰"], ["Amsterdam", "荷兰"], ["阿姆斯特丹", "荷兰"], [".nl", "荷兰"],
+  ["俄罗斯", "俄罗斯"], ["Russia", "俄罗斯"], ["RU", "俄罗斯"], ["Moscow", "俄罗斯"], ["莫斯科", "俄罗斯"], [".ru", "俄罗斯"],
+  ["加拿大", "加拿大"], ["Canada", "加拿大"], ["Toronto", "加拿大"], ["Vancouver", "加拿大"], [".ca", "加拿大"],
+  ["澳大利亚", "澳大利亚"], ["Australia", "澳大利亚"], ["Sydney", "澳大利亚"], ["悉尼", "澳大利亚"], [".au", "澳大利亚"],
+  ["芬兰", "芬兰"], ["Finland", "芬兰"], ["Helsinki", "芬兰"], [".fi", "芬兰"],
+  ["瑞典", "瑞典"], ["Sweden", "瑞典"], ["Stockholm", "瑞典"], [".se", "瑞典"],
+  ["意大利", "意大利"], ["Italy", "意大利"], ["Milan", "意大利"], ["Rome", "意大利"], [".it", "意大利"],
+  ["西班牙", "西班牙"], ["Spain", "西班牙"], ["Madrid", "西班牙"], [".es", "西班牙"],
+  ["土耳其", "土耳其"], ["Turkey", "土耳其"], ["Istanbul", "土耳其"], [".tr", "土耳其"],
+  ["波兰", "波兰"], ["Poland", "波兰"], ["Warsaw", "波兰"], [".pl", "波兰"],
+  ["印度", "印度"], ["India", "印度"], ["Mumbai", "印度"], ["孟买", "印度"], [".in", "印度"],
+  ["巴西", "巴西"], ["Brazil", "巴西"], ["Sao Paulo", "巴西"], [".br", "巴西"],
+  ["阿联酋", "阿联酋"], ["United Arab Emirates", "阿联酋"], ["Dubai", "阿联酋"], ["迪拜", "阿联酋"], [".ae", "阿联酋"],
+  ["印度尼西亚", "印度尼西亚"], ["Indonesia", "印度尼西亚"], ["Jakarta", "印度尼西亚"], [".id", "印度尼西亚"],
+  ["泰国", "泰国"], ["Thailand", "泰国"], ["Bangkok", "泰国"], ["曼谷", "泰国"], [".th", "泰国"],
+  ["越南", "越南"], ["Vietnam", "越南"], ["Viet Nam", "越南"], ["Hanoi", "越南"], [".vn", "越南"],
+  ["菲律宾", "菲律宾"], ["Philippines", "菲律宾"], ["Manila", "菲律宾"], [".ph", "菲律宾"],
+  ["马来西亚", "马来西亚"], ["Malaysia", "马来西亚"], ["Kuala Lumpur", "马来西亚"], [".my", "马来西亚"],
+  ["阿根廷", "阿根廷"], ["Argentina", "阿根廷"], [".ar", "阿根廷"],
+  ["墨西哥", "墨西哥"], ["Mexico", "墨西哥"], [".mx", "墨西哥"],
+  ["瑞士", "瑞士"], ["Switzerland", "瑞士"], [".ch", "瑞士"],
+  ["奥地利", "奥地利"], ["Austria", "奥地利"], [".at", "奥地利"],
+  ["比利时", "比利时"], ["Belgium", "比利时"], [".be", "比利时"],
+  ["捷克", "捷克"], ["Czech", "捷克"], [".cz", "捷克"],
+  ["罗马尼亚", "罗马尼亚"], ["Romania", "罗马尼亚"], [".ro", "罗马尼亚"],
+  ["乌克兰", "乌克兰"], ["Ukraine", "乌克兰"], [".ua", "乌克兰"],
+  ["以色列", "以色列"], ["Israel", "以色列"], [".il", "以色列"],
+  ["南非", "南非"], ["South Africa", "南非"], [".za", "南非"],
+  ["立陶宛", "立陶宛"], ["Lithuania", "立陶宛"], [".lt", "立陶宛"],
+  ["哈萨克斯坦", "哈萨克斯坦"], ["Kazakhstan", "哈萨克斯坦"], [".kz", "哈萨克斯坦"],
+  ["白俄罗斯", "白俄罗斯"], ["Belarus", "白俄罗斯"], [".by", "白俄罗斯"],
+  ["摩尔多瓦", "摩尔多瓦"], ["Moldova", "摩尔多瓦"], [".md", "摩尔多瓦"],
+  ["保加利亚", "保加利亚"], ["Bulgaria", "保加利亚"], [".bg", "保加利亚"],
+  ["塞尔维亚", "塞尔维亚"], ["Serbia", "塞尔维亚"], [".rs", "塞尔维亚"],
+  ["拉脱维亚", "拉脱维亚"], ["Latvia", "拉脱维亚"], [".lv", "拉脱维亚"],
+  ["葡萄牙", "葡萄牙"], ["Portugal", "葡萄牙"], [".pt", "葡萄牙"],
+  ["爱尔兰", "爱尔兰"], ["Ireland", "爱尔兰"], [".ie", "爱尔兰"],
+  ["丹麦", "丹麦"], ["Denmark", "丹麦"], [".dk", "丹麦"],
+  ["挪威", "挪威"], ["Norway", "挪威"], [".no", "挪威"],
+  ["希腊", "希腊"], ["Greece", "希腊"], [".gr", "希腊"],
+  ["匈牙利", "匈牙利"], ["Hungary", "匈牙利"], [".hu", "匈牙利"],
+  ["智利", "智利"], ["Chile", "智利"], [".cl", "智利"],
+  ["哥伦比亚", "哥伦比亚"], ["Colombia", "哥伦比亚"], [".co", "哥伦比亚"],
+  ["埃及", "埃及"], ["Egypt", "埃及"], [".eg", "埃及"],
+  ["尼日利亚", "尼日利亚"], ["Nigeria", "尼日利亚"], [".ng", "尼日利亚"],
+  ["肯尼亚", "肯尼亚"], ["Kenya", "肯尼亚"], [".ke", "肯尼亚"],
+]
+# Cloudflare / Fastly 等 CDN IP 段：归类为美国（主要节点在美）
+CDN_US_RANGES = [
+  /\A162\.159\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare
+  /\A104\.1[6-9]\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare 104.16-19
+  /\A104\.2[0-7]\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare 104.20-27
+  /\A172\.6[4-7]\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare 172.64-67
+  /\A188\.114\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare
+  /\A141\.193\.\d{1,3}\.\d{1,3}\z/,  # Fastly
+  /\A199\.232\.\d{1,3}\.\d{1,3}\z/,  # Fastly
+  /\A151\.101\.\d{1,3}\.\d{1,3}\z/,  # Fastly
+  /\A167\.82\.\d{1,3}\.\d{1,3}\z/,  # Vercel/Fastly
+  /\A63\.141\.\d{1,3}\.\d{1,3}\z/,  # Kafka US
+]
 used_names = {}
 renamed = selected.each_with_index.map do |r, i|
   p = r[:proxy].dup
   orig = p["name"].to_s
-  cc = "OT"
-  cc_map.each { |k, v| orig.include?(k) && cc = v }
-  base = format("N%03d-%s", i + 1, cc)
+  # 同时检查原始 name 和 server 域名
+  check_str = (orig + " " + p["server"].to_s + " " + (p["servername"] || p["sni"] || "").to_s).downcase
+  region = "其他"
+  # 1. 先用关键词匹配（国家名/城市/TLD）
+  cc_map.each do |kw, cn|
+    if check_str.include?(kw.downcase)
+      region = cn
+      break
+    end
+  end
+  # 2. 如果没匹配到，检查是否是 CDN IP（Cloudflare/Fastly 等归类美国）
+  if region == "其他"
+    server_ip = p["server"].to_s
+    CDN_US_RANGES.each do |re|
+      if server_ip =~ re
+        region = "美国"
+        break
+      end
+    end
+  end
+  base = format("%s-%03d", region, i + 1)
   if used_names[base]
     used_names[base] += 1
-    base = "#{base}##{used_names[base]}"
+    base = "#{base}-#{used_names[base]}"
   else
     used_names[base] = 1
   end
