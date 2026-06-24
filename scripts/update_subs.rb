@@ -522,13 +522,18 @@ cc_map = [
   ["尼日利亚", "尼日利亚"], ["Nigeria", "尼日利亚"], [".ng", "尼日利亚"],
   ["肯尼亚", "肯尼亚"], ["Kenya", "肯尼亚"], [".ke", "肯尼亚"],
 ]
-# Cloudflare / Fastly 等 CDN IP 段：归类为美国（主要节点在美）
-CDN_US_RANGES = [
-  /\A162\.159\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare
+# Cloudflare CDN IP 段（单独归类为 美国-CDN，与普通美国节点区分）
+CLOUDFLARE_RANGES = [
+  /\A162\.159\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare 主要段
   /\A104\.1[6-9]\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare 104.16-19
   /\A104\.2[0-7]\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare 104.20-27
   /\A172\.6[4-7]\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare 172.64-67
   /\A188\.114\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare
+  /\A172\.7[0-1]\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare 172.70-71
+  /\A104\.1[5]\.\d{1,3}\.\d{1,3}\z/,  # Cloudflare 104.15
+]
+# 其他美国 CDN（Fastly/Vercel 等）
+CDN_US_RANGES = [
   /\A141\.193\.\d{1,3}\.\d{1,3}\z/,  # Fastly
   /\A199\.232\.\d{1,3}\.\d{1,3}\z/,  # Fastly
   /\A151\.101\.\d{1,3}\.\d{1,3}\z/,  # Fastly
@@ -549,13 +554,23 @@ renamed = selected.each_with_index.map do |r, i|
       break
     end
   end
-  # 2. 如果没匹配到，检查是否是 CDN IP（Cloudflare/Fastly 等归类美国）
+  # 2. 如果没匹配到，检查是否是 CDN IP
   if region == "其他"
     server_ip = p["server"].to_s
-    CDN_US_RANGES.each do |re|
+    # 2a. Cloudflare 节点单独标记为 美国-CDN
+    CLOUDFLARE_RANGES.each do |re|
       if server_ip =~ re
-        region = "美国"
+        region = "美国-CDN"
         break
+      end
+    end
+    # 2b. 其他美国 CDN（Fastly/Vercel）归类美国
+    if region == "其他"
+      CDN_US_RANGES.each do |re|
+        if server_ip =~ re
+          region = "美国"
+          break
+        end
       end
     end
   end
