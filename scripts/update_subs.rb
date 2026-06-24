@@ -224,6 +224,11 @@ end
 puts "解析成功节点数: #{proxies.length}（跳过 #{skipped}）"
 by_type = proxies.group_by { |p| p["type"] }
 by_type.each { |t, arr| puts "  #{t}: #{arr.length}" }
+
+# 只保留 vless 节点（剔除 trojan / vmess / ss / hy2 / hysteria 等）
+before_vless = proxies.length
+proxies.select! { |p| p["type"] == "vless" }
+puts "只保留 vless 节点: #{proxies.length}（剔除 #{before_vless - proxies.length} 个非 vless）"
 exit 1 if proxies.empty?
 
 # === 3. 启发式过滤：剔除中国几乎肯定不可达的节点 ===
