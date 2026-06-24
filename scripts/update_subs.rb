@@ -14,8 +14,8 @@ require "openssl"
 require "net/http"
 require "uri"
 
-# === 1. 读 3 个订阅源 ===
-sources = ["/tmp/s1.txt", "/tmp/s2.txt", "/tmp/s3.txt"]
+# === 1. 读 5 个订阅源 ===
+sources = ["/tmp/s1.txt", "/tmp/s2.txt", "/tmp/s3.txt", "/tmp/s4.txt", "/tmp/s5.txt"]
 raw_lines = []
 sources.each do |f|
   next unless File.exist?(f)
@@ -400,15 +400,32 @@ def deep_test(px, timeout = 4)
   end
 end
 
-puts "开始深度测速（TLS 握手 + WS Upgrade）..."
 # 测全部候选节点（不设上限，保留所有可用节点）
 candidates = tls_nodes + notls_nodes
-results = candidates.each_with_index.map do |p, i|
-  lat, alive = deep_test(p)
-  print(alive ? "+" : "-")
-  print "\n" if (i + 1) % 30 == 0
-  { proxy: p, latency: lat, alive: alive }
+puts "开始深度测速（TLS 握手 + WS Upgrade，并发 50 / 共 #{candidates.length}）..."
+# 并发测速：用工作队列限制并发数为 50，避免一次起上千线程
+require "thread"
+results = Array.new(candidates.length)
+mutex = Mutex.new
+done = [0]
+queue = candidates.each_with_index.to_a
+threads = 50.times.map do
+  Thread.new do
+    loop do
+      item = mutex.synchronize { queue.shift }
+      break if item.nil?
+      p, idx = item  # each_with_index 返回 [element, index]
+      lat, alive = deep_test(p)
+      mutex.synchronize do
+        results[idx] = { proxy: p, latency: lat, alive: alive }
+        done[0] += 1
+        print(alive ? "+" : "-")
+        print "\n" if done[0] % 30 == 0
+      end
+    end
+  end
 end
+threads.each(&:join)
 puts ""
 
 # === 5. 只保留深度测试真正存活的节点（剔除所有 Timeout）===
