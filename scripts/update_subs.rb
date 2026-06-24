@@ -257,6 +257,32 @@ before_filter = proxies.length
 proxies.reject! { |p| china_blocked?(p) }
 puts "剔除中国不可达域名: #{before_filter - proxies.length} 个"
 
+# === 3.5 硬性质量过滤：剔除国内必然超时的节点 ===
+# 经验法则（基于大量实测）：
+# 1. port 80 + 无 TLS：GFW 对 80 端口明文流量严格审查，几乎 100% 超时
+# 2. 批量垃圾 IP（如 .140 结尾）：同一供应商批量节点，国内 IP 段被封
+# 3. 只有 port 443/8443 + TLS 的节点才在国内可靠
+before_qfilter = proxies.length
+proxies.reject! do |p|
+  port = p["port"].to_i
+  has_tls = p["tls"] == true || p["type"] == "trojan"
+  server = p["server"].to_s
+
+  # 规则 1：port 80（无论是否 TLS，国内几乎都超时）
+  if port == 80
+    true
+  # 规则 2：批量垃圾 IP（.140 结尾的供应商节点）→ 国内被封
+  elsif server =~ /\.\d{1,3}\.140\z/ || server =~ /\.140\z/
+    true
+  # 规则 3：port 80 + 任何非 TLS 协议 → 必死
+  elsif (port == 80 || port == 8080 || port == 2052) && !has_tls
+    true
+  else
+    false
+  end
+end
+puts "剔除低质量节点（port80无TLS/批量IP）: #{before_qfilter - proxies.length} 个"
+
 # 偏好：TLS 节点（port 443）>> no-TLS 节点（port 80）
 # port 80 + no TLS 的节点在中国几乎必然被运营商劫持/封锁
 tls_nodes = proxies.select { |p| p["tls"] == true || p["type"] == "trojan" }
