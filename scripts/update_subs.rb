@@ -406,14 +406,19 @@ results = candidates.each_with_index.map do |p, i|
 end
 puts ""
 
-# === 5. 选所有节点（按延迟排序，存活优先）===
+# === 5. 只保留深度测试真正存活的节点（剔除所有 Timeout）===
 alive_results = results.select { |r| r[:alive] && r[:latency] < 9999 }.sort_by { |r| r[:latency] }
 puts "深度测试存活: #{alive_results.length}/#{results.length}"
 
-# 全部保留：先存活节点（按延迟排序），再补未存活的（按原始顺序）
+# 只保留存活节点（不再补未存活的，避免 App 里一堆 Timeout）
 selected = alive_results
-rest = results - alive_results
-selected += rest
+
+# 保底：如果存活节点太少（<10），才补未存活的
+if selected.length < 10
+  puts "⚠️ 存活节点不足 10 个，补入未存活节点（按质量排序）..."
+  rest = (results - alive_results).first(20 - selected.length)
+  selected += rest
+end
 
 # 极端情况：如果没存活节点，回退到 TCP ping
 if selected.empty?
