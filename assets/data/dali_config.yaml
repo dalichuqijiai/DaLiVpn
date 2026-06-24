@@ -1,37 +1,64 @@
 proxies:
-  - name: "N001-OT"
+  - name: "N001-US"
+    type: vless
+    server: tmesubgift.up.railway.app
+    port: 443
+    uuid: 3e488cf9-a685-2997-0b39-3950bf98bcea
+    network: ws
+    udp: true
+    tls: true
+    servername: tmesubgift.up.railway.app
+    client-fingerprint: chrome
+    ws-opts:
+      path: /ws/3e488cf9-a685-2997-0b39-3950bf98bcea
+      headers:
+        Host: tmesubgift.up.railway.app
+  - name: "N002-NL"
+    type: vless
+    server: 199.232.245.208
+    port: 443
+    uuid: fc71fffb-3743-4cfe-9edb-c8cb513e9146
+    network: ws
+    udp: true
+    tls: true
+    servername: "default.ssl.fastly.net👉🆔freenettir📡🇺🇸®️United States©️San Francisco🅿️ping:45ms"
+    ws-opts:
+      path: /
+      headers:
+        Host: bazaryabab.global.ssl.fastly.net
+  - name: "N003-OT"
     type: trojan
     server: 151.101.110.219
     port: 443
-    password: MITIVPN
+    password: MiTiVPN
     udp: true
     sni: global.fastly.com
     skip-cert-verify: false
-  - name: "N002-PL"
+  - name: "N004-OT"
     type: trojan
-    server: 81.255.155.10
+    server: 199.232.237.245
     port: 443
-    password: humanity
+    password: MiTiVPN
     udp: true
-    sni: www.creationlong.org
+    sni: ssl.fastly.com
     skip-cert-verify: false
-  - name: "N003-US"
+  - name: "N005-OT"
     type: trojan
-    server: 141.193.213.21
+    server: 151.101.56.6
+    port: 443
+    password: MiTiVPN
+    udp: true
+    sni: global.fastly.com
+    skip-cert-verify: false
+  - name: "N006-US"
+    type: trojan
+    server: 104.20.6.134
     port: 443
     password: humanity
     udp: true
     sni: www.calmloud.com
     skip-cert-verify: false
-  - name: "N004-OT"
-    type: trojan
-    server: 199.232.78.157
-    port: 443
-    password: MITIVPN
-    udp: true
-    sni: global.fastly.com
-    skip-cert-verify: false
-  - name: "N005-OT"
+  - name: "N007-OT"
     type: vless
     server: 64.186.242.72
     port: 443
@@ -44,203 +71,142 @@ proxies:
       path: "/proxyip%3Dtw.william.us.ci"
       headers:
         Host: s5.868001.xyz
-  - name: "N006-US"
-    type: trojan
-    server: 45.61.52.243
-    port: 443
-    password: "O4O8.Ew ujFX6GJBQ=xQr.heGwux0GYHqk"
-    udp: true
-    sni: 45.61.52.243
-    skip-cert-verify: false
-  - name: "N007-ES"
+  - name: "N008-US"
     type: vless
-    server: spain.cloudpath.live
+    server: 108.162.194.135
     port: 443
-    uuid: 5e1083b9-4d4f-50ef-93e7-6e966dfce1f9
-    network: tcp
+    uuid: 659a9075-d5ab-4fd2-bf34-b37043fae832
+    network: ws
     udp: true
     tls: true
-    servername: microsoft.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "5R_vRfvga1_D-o5CI4S7_HUpn7gaRsGjuH-849Zet2Y"
-      short-id: "5501dd75"
-  - name: "N008-DE"
+    servername: nbhhh.mrcool.kdns.fr
+    ws-opts:
+      path: /
+      headers:
+        Host: nbhhh.mrcool.kdns.fr
+  - name: "N009-US"
     type: vless
-    server: de-dp-01.com
+    server: 104.16.75.224
+    port: 443
+    uuid: b3bd8d0e-3cbe-4241-a4f1-e3dd0a9e432c
+    network: ws
+    udp: true
+    tls: true
+    servername: server-ir-3.ariyuz.org
+    ws-opts:
+      path: /page=2
+  - name: "N010-OT"
+    type: trojan
+    server: 74.120.174.34
+    port: 443
+    password: eeb6823c-b926-4ea2-866a-5542edd26e59
+    udp: true
+    sni: hhcm.hhxaf.cc.cd
+    skip-cert-verify: false
+  - name: "N011-OT"
+    type: trojan
+    server: 216.167.68.73
+    port: 443
+    password: eeb6823c-b926-4ea2-866a-5542edd26e59
+    udp: true
+    sni: tjsp.hhxaf.cc.cd
+    skip-cert-verify: false
+  - name: "N012-US"
+    type: trojan
+    server: 207.126.167.162
+    port: 443
+    password: "GTCCjtvCtuy03-aV1mwF0OkG2q6yL Fc5K"
+    udp: true
+    sni: 207.126.167.162
+    skip-cert-verify: false
+  - name: "N013-OT"
+    type: trojan
+    server: 92.119.35.119
+    port: 443
+    password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
+    udp: true
+    sni: 92.119.35.119
+    skip-cert-verify: false
+  - name: "N014-DE"
+    type: trojan
+    server: 92.119.35.87
+    port: 443
+    password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
+    udp: true
+    sni: 92.119.35.87
+    skip-cert-verify: false
+  - name: "N015-OT"
+    type: trojan
+    server: 37.235.49.118
+    port: 443
+    password: p=Xuu4jK_lJ9rOKw5+7BsW798DZ-01cv4S
+    udp: true
+    sni: 37.235.49.118
+    skip-cert-verify: false
+  - name: "N016-GB"
+    type: trojan
+    server: 185.126.236.44
+    port: 443
+    password: BSs5IAVMQdYuykvDsOYZoa6gNPSGBjAbLL
+    udp: true
+    sni: www.mesaly.click
+    skip-cert-verify: false
+  - name: "N017-OT"
+    type: trojan
+    server: 92.119.35.127
+    port: 443
+    password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
+    udp: true
+    sni: 92.119.35.127
+    skip-cert-verify: false
+  - name: "N018-OT"
+    type: vless
+    server: grinoree.ru
     port: 8443
-    uuid: aa5b231c-4e18-4ae6-b83c-a293f51c0dfa
+    uuid: 360c46b7-afe1-4e86-bfe1-ba09b5fcd8a6
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
     servername: storage.yandex.net
-    client-fingerprint: chrome
+    client-fingerprint: firefox
     reality-opts:
-      public-key: "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo"
-      short-id: "8d3293f0066e129a"
-  - name: "N009-OT"
+      public-key: "7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg"
+      short-id: "2715592069f36fe7"
+  - name: "N019-OT"
     type: trojan
-    server: 185.137.157.59
+    server: 167.82.101.251
     port: 443
-    password: fFj7MAGy1VlAWmB_gMBG_27oPYTSHvV6MX
+    password: MiTiVPN
     udp: true
-    sni: www.lateralio.click
+    sni: global.fastly.com
     skip-cert-verify: false
-  - name: "N010-OT"
+  - name: "N020-OT"
     type: vless
-    server: switzerland.cloudpath.live
+    server: 213.176.77.231
     port: 443
-    uuid: 5e1083b9-4d4f-50ef-93e7-6e966dfce1f9
-    network: tcp
+    uuid: 23e5a6a4-bad4-4be6-873b-fce27c9ca8be
+    network: ws
     udp: true
     tls: true
-    servername: microsoft.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "pgPg0nR_TipYr_exLqa3gLOBLm6u_LCZLv9w6RC6iQ0"
-      short-id: "eb4b5cf9"
-  - name: "N011-OT"
-    type: vless
-    server: serbia.cloudpath.live
-    port: 443
-    uuid: 5e1083b9-4d4f-50ef-93e7-6e966dfce1f9
-    network: tcp
-    udp: true
-    tls: true
-    servername: microsoft.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "UOp1SM7b6AgDZAwQ6aTLGzCyKv-K6Xxkiedp2619jwc"
-      short-id: "857ec9a9"
-  - name: "N012-OT"
-    type: trojan
-    server: 37.156.44.6
-    port: 42549
-    password: SoftNetConnect
-    udp: true
-    sni: www.speedtest.net
-    skip-cert-verify: false
-  - name: "N013-DE"
-    type: vless
-    server: germany.cloudpath.live
-    port: 443
-    uuid: 5e1083b9-4d4f-50ef-93e7-6e966dfce1f9
-    network: tcp
-    udp: true
-    tls: true
-    servername: microsoft.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "9LTpivOtvUds71_Hxmqk7vfeMx7JeHB0aJuaQX6xXzI"
-      short-id: "065ee439"
-  - name: "N014-OT"
-    type: vless
-    server: romania.cloudpath.live
-    port: 443
-    uuid: 5e1083b9-4d4f-50ef-93e7-6e966dfce1f9
-    network: tcp
-    udp: true
-    tls: true
-    servername: microsoft.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "NsYaWPLOMWC9KQpxQEnALDNeJ8yw2-c0hM9SmA8SfBA"
-      short-id: "a57d80c7"
-  - name: "N015-OT"
-    type: vless
-    server: albania.cloudpath.live
-    port: 443
-    uuid: 5e1083b9-4d4f-50ef-93e7-6e966dfce1f9
-    network: tcp
-    udp: true
-    tls: true
-    servername: microsoft.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "ziozqQgr2yghTlD25SaCf5oKIMgyRqfl47IZZgl8oVs"
-      short-id: "6f2f9256"
-  - name: "N016-RU"
-    type: vless
-    server: 109.73.194.240
-    port: 443
-    uuid: 33de2596-d95d-412b-a8c2-410be7060ca3
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: sellflow.org
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-  - name: "N017-SE"
-    type: vless
-    server: swe-01.gni-daed.ru
-    port: 443
-    uuid: 7c0f30a2-a7c1-43b1-bc51-20f07036a76e
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: swe-01.gni-daed.ru
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "L78hKnIWL5jdxw3R2NcY725t8QMqAfX8rGdYI46cFgs"
-      short-id: "a8399289e18af5f4"
-  - name: "N018-US"
-    type: vless
-    server: 201.51.4.103
-    port: 443
-    uuid: 33de2596-d95d-412b-a8c2-410be7060ca3
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: sellflow.org
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-  - name: "N019-TR"
-    type: vless
-    server: 72.56.234.220
-    port: 443
-    uuid: 7b3b6e39-dd78-000c-af6e-6d00da419aa0
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: ru16.aimodelhub.top
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "jwT3lcIzJQMjzBKRNsmyRGrgaa1qNfE7pQF_nAKu0GA"
-      short-id: "a73cf719b624"
-  - name: "N020-US"
-    type: vless
-    server: 109.196.101.41
-    port: 443
-    uuid: 7b3b6e39-dd78-000d-af6e-6d00da419aa0
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: ru17.aimodelhub.top
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "jwT3lcIzJQMjzBKRNsmyRGrgaa1qNfE7pQF_nAKu0GA"
-      short-id: "a73cf719b624"
+    ws-opts:
+      path: /
+      headers:
+        Host: srb6j666.65p5drnb2vxb7rkbzwlx.workers.dev
   - name: "N021-OT"
     type: vless
-    server: ukraine.cloudpath.live
-    port: 443
-    uuid: 5e1083b9-4d4f-50ef-93e7-6e966dfce1f9
+    server: bez3.stream-room.com
+    port: 8443
+    uuid: 41fc2564-31e5-4570-b351-1d39453603cd
     network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: microsoft.com
+    servername: bez3.stream-room.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: "6ObbnVoyJ5NGk-UtOjR0oBwmIdoA98e8nVpiutOAMlQ"
-      short-id: "8a23c1f2"
+      public-key: "QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0"
+      short-id: "4326"
   - name: "N022-TR"
     type: vless
     server: ru16.aimodelhub.top
@@ -255,133 +221,83 @@ proxies:
     reality-opts:
       public-key: "jwT3lcIzJQMjzBKRNsmyRGrgaa1qNfE7pQF_nAKu0GA"
       short-id: "a73cf719b624"
-  - name: "N023-OT"
+  - name: "N023-TR"
     type: vless
-    server: 92.113.124.215
-    port: 2096
-    uuid: 23cb9aa7-9756-459f-aa84-3a27bdf6ad64
-    network: ws
+    server: 72.56.234.220
+    port: 443
+    uuid: 7b3b6e39-dd78-000c-af6e-6d00da419aa0
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: s5.868001.xyz
+    servername: ru16.aimodelhub.top
     client-fingerprint: firefox
-    ws-opts:
-      path: /proxyip=tw.william.us.ci
-      headers:
-        Host: s5.868001.xyz
-  - name: "N024-OT"
-    type: trojan
-    server: 151.241.129.141
-    port: 443
-    password: eeb6823c-b926-4ea2-866a-5542edd26e59
-    udp: true
-    sni: tjsp.hhxaf.cc.cd
-    skip-cert-verify: false
-  - name: "N025-OT"
+    reality-opts:
+      public-key: "jwT3lcIzJQMjzBKRNsmyRGrgaa1qNfE7pQF_nAKu0GA"
+      short-id: "a73cf719b624"
+  - name: "N024-US"
     type: vless
-    server: 176.109.88.218
-    port: 443
-    uuid: 124d62b5-8763-41eb-8762-dc75269698d1
-    network: grpc
-    udp: true
-    tls: true
-    servername: 95.85.246.16.speed-storage.ru
-    client-fingerprint: edge
-  - name: "N026-FI"
-    type: vless
-    server: 201.51.6.30
+    server: 201.51.4.103
     port: 443
     uuid: 33de2596-d95d-412b-a8c2-410be7060ca3
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: fi.sellflow.org
+    servername: sellflow.org
     client-fingerprint: firefox
     reality-opts:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-  - name: "N027-OT"
-    type: trojan
-    server: 143.20.204.5
-    port: 443
-    password: eeb6823c-b926-4ea2-866a-5542edd26e59
-    udp: true
-    sni: tjsp.hhxaf.cc.cd
-    skip-cert-verify: false
-  - name: "N028-OT"
-    type: trojan
-    server: 83.147.60.186
-    port: 443
-    password: 114514
-    udp: true
-    sni: tjaaa.hhllfly.kdns.fr
-    skip-cert-verify: false
-  - name: "N029-OT"
-    type: trojan
-    server: 23.156.153.57
-    port: 443
-    password: eeb6823c-b926-4ea2-866a-5542edd26e59
-    udp: true
-    sni: hhcm.hhxaf.cc.cd
-    skip-cert-verify: false
-  - name: "N030-OT"
-    type: trojan
-    server: 209.33.160.242
-    port: 443
-    password: eeb6823c-b926-4ea2-866a-5542edd26e59
-    udp: true
-    sni: tjsp.hhxaf.cc.cd
-    skip-cert-verify: false
-  - name: "N031-OT"
+  - name: "N025-OT"
     type: vless
-    server: 85.155.176.11
-    port: 8443
-    uuid: 23cb9aa7-9756-459f-aa84-3a27bdf6ad64
-    network: ws
-    udp: true
-    tls: true
-    servername: s5.868001.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /proxyip=tw.william.us.ci
-      headers:
-        Host: s5.868001.xyz
-  - name: "N032-OT"
-    type: trojan
-    server: 209.33.166.199
+    server: msk.fast-cone.com
     port: 443
-    password: eeb6823c-b926-4ea2-866a-5542edd26e59
-    udp: true
-    sni: hhcm.hhxaf.cc.cd
-    skip-cert-verify: false
-  - name: "N033-HK"
-    type: vless
-    server: hongkong.cloudpath.live
-    port: 443
-    uuid: 5e1083b9-4d4f-50ef-93e7-6e966dfce1f9
-    network: tcp
-    udp: true
-    tls: true
-    servername: microsoft.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "jnlUXqaLeqZSYBQLjk1oUGTrxH0TTmLojXWb1X8vzgE"
-      short-id: "33b973c3"
-  - name: "N034-OT"
-    type: vless
-    server: 37.156.44.6
-    port: 2083
-    uuid: 89049f79-320b-48a0-b1cf-110165cae30c
+    uuid: cf30deec-917f-4b1a-bb01-c48527cbc83a
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: www.yahoo.com
-    client-fingerprint: chrome
+    servername: msk.fast-cone.com
+    client-fingerprint: edge
     reality-opts:
-      public-key: "l1Ekgk-8T5rB-yolp5OIpc0XZTcd2gBeqmIR2bytKXY"
-      short-id: "4e590fdc"
-  - name: "N035-OT"
+      public-key: "9gjAcFU1qBtbyyXV7h2y6eUd7_kMTI1sCd-bEUSPjWY"
+      short-id: "11"
+  - name: "N026-US"
+    type: trojan
+    server: 38.54.64.247
+    port: 443
+    password: ks3og6wZ9kH8UJv1bmpvwXbfgDNNaTd1Lk
+    udp: true
+    sni: 38.54.64.247
+    skip-cert-verify: false
+  - name: "N027-ES"
+    type: vless
+    server: 176.32.33.251
+    port: 8443
+    uuid: 69a2af58-d74a-44ca-864a-e09b493f4274
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.ya.ru
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "3Pwxkagh3O6jWtzKjJXwHSDC2hmGTuGlCtQMg1mGTAY"
+      short-id: "35"
+  - name: "N028-SE"
+    type: vless
+    server: astrid.kosmolet.me
+    port: 443
+    uuid: 9e017b53-345d-4607-a15a-35877a6352ce
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.nvidia.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "aK614q2laQmTDPJaome93s2OsemvIeQvxSP3re5JAS8"
+      short-id: "6e249ff1da"
+  - name: "N029-OT"
     type: trojan
     server: 37.156.44.6
     port: 2087
@@ -389,68 +305,32 @@ proxies:
     udp: true
     sni: www.yahoo.com
     skip-cert-verify: false
-  - name: "N036-OT"
-    type: trojan
-    server: 37.156.44.6
-    port: 443
-    password: SoftNetConnect
-    udp: true
-    sni: www.yahoo.com
-    skip-cert-verify: false
-  - name: "N037-US"
+  - name: "N030-SE"
     type: vless
-    server: 201.51.8.119
+    server: 171.25.158.115
     port: 443
-    uuid: 33de2596-d95d-412b-a8c2-410be7060ca3
+    uuid: 9e017b53-345d-4607-a15a-35877a6352ce
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: ai.sellflow.org
+    servername: www.nvidia.com
     client-fingerprint: firefox
     reality-opts:
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-  - name: "N038-SG"
+      public-key: "aK614q2laQmTDPJaome93s2OsemvIeQvxSP3re5JAS8"
+      short-id: "6e249ff1da"
+  - name: "N031-GB"
     type: vless
-    server: sgxi.959555.xyz
-    port: 10000
-    uuid: af6904c1-4349-4448-8e99-0024824a0c33
-    network: tcp
-    flow: xtls-rprx-vision
+    server: 31.76.38.28
+    port: 8943
+    uuid: 559d4f79-cc35-4f39-997a-6357aacf33d4
+    network: grpc
     udp: true
     tls: true
-    servername: gateway.icloud.com
-    client-fingerprint: chrome
+    servername: kick.facepunch.com
+    client-fingerprint: edge
     reality-opts:
-      public-key: "xELgry1aUBwZLDAAvyiBkLTXsIi1M-mKhuqvwiP6FxU"
-      short-id: "3b0b73e5"
-  - name: "N039-SG"
-    type: vless
-    server: singapore.cloudpath.live
-    port: 443
-    uuid: 5e1083b9-4d4f-50ef-93e7-6e966dfce1f9
-    network: tcp
-    udp: true
-    tls: true
-    servername: microsoft.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "xPEXenK1VOMc2VKmnA8a4VSHb7AjcGIScGG7iy0EiwQ"
-      short-id: "84fc368a"
-  - name: "N040-OT"
-    type: vless
-    server: 125.228.236.138
-    port: 443
-    uuid: 23cb9aa7-9756-459f-aa84-3a27bdf6ad64
-    network: ws
-    udp: true
-    tls: true
-    servername: s5.868001.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /proxyip=tw.william.us.ci
-      headers:
-        Host: s5.868001.xyz
+      public-key: "BwzBwUJiQ8hPihkwTV6PvzuSgThZ6Sz7GAuR_9aYH2c"
 
 proxy-groups:
   - name: Auto
@@ -459,90 +339,72 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "N001-OT"
-      - "N002-PL"
-      - "N003-US"
+      - "N001-US"
+      - "N002-NL"
+      - "N003-OT"
       - "N004-OT"
       - "N005-OT"
       - "N006-US"
-      - "N007-ES"
-      - "N008-DE"
-      - "N009-OT"
+      - "N007-OT"
+      - "N008-US"
+      - "N009-US"
       - "N010-OT"
       - "N011-OT"
-      - "N012-OT"
-      - "N013-DE"
-      - "N014-OT"
+      - "N012-US"
+      - "N013-OT"
+      - "N014-DE"
       - "N015-OT"
-      - "N016-RU"
-      - "N017-SE"
-      - "N018-US"
-      - "N019-TR"
-      - "N020-US"
+      - "N016-GB"
+      - "N017-OT"
+      - "N018-OT"
+      - "N019-OT"
+      - "N020-OT"
       - "N021-OT"
       - "N022-TR"
-      - "N023-OT"
-      - "N024-OT"
+      - "N023-TR"
+      - "N024-US"
       - "N025-OT"
-      - "N026-FI"
-      - "N027-OT"
-      - "N028-OT"
+      - "N026-US"
+      - "N027-ES"
+      - "N028-SE"
       - "N029-OT"
-      - "N030-OT"
-      - "N031-OT"
-      - "N032-OT"
-      - "N033-HK"
-      - "N034-OT"
-      - "N035-OT"
-      - "N036-OT"
-      - "N037-US"
-      - "N038-SG"
-      - "N039-SG"
-      - "N040-OT"
+      - "N030-SE"
+      - "N031-GB"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "N001-OT"
-      - "N002-PL"
-      - "N003-US"
+      - "N001-US"
+      - "N002-NL"
+      - "N003-OT"
       - "N004-OT"
       - "N005-OT"
       - "N006-US"
-      - "N007-ES"
-      - "N008-DE"
-      - "N009-OT"
+      - "N007-OT"
+      - "N008-US"
+      - "N009-US"
       - "N010-OT"
       - "N011-OT"
-      - "N012-OT"
-      - "N013-DE"
-      - "N014-OT"
+      - "N012-US"
+      - "N013-OT"
+      - "N014-DE"
       - "N015-OT"
-      - "N016-RU"
-      - "N017-SE"
-      - "N018-US"
-      - "N019-TR"
-      - "N020-US"
+      - "N016-GB"
+      - "N017-OT"
+      - "N018-OT"
+      - "N019-OT"
+      - "N020-OT"
       - "N021-OT"
       - "N022-TR"
-      - "N023-OT"
-      - "N024-OT"
+      - "N023-TR"
+      - "N024-US"
       - "N025-OT"
-      - "N026-FI"
-      - "N027-OT"
-      - "N028-OT"
+      - "N026-US"
+      - "N027-ES"
+      - "N028-SE"
       - "N029-OT"
-      - "N030-OT"
-      - "N031-OT"
-      - "N032-OT"
-      - "N033-HK"
-      - "N034-OT"
-      - "N035-OT"
-      - "N036-OT"
-      - "N037-US"
-      - "N038-SG"
-      - "N039-SG"
-      - "N040-OT"
+      - "N030-SE"
+      - "N031-GB"
 
 rules:
   - MATCH,Proxy
