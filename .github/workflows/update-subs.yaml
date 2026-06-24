@@ -14,9 +14,11 @@ jobs:
       - name: 下载订阅源
         run: |
           curl -sL --max-time 30 "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS_mobile.txt" -o /tmp/s1.txt
-          curl -sL --max-time 30 "https://x.v50.lat/view.php?id=1570ebe7f5bb04ba" -o /tmp/s2.txt
-          curl -sL --max-time 30 "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub" | base64 -d > /tmp/s3.txt 2>/dev/null
-          echo "s1=$(wc -l < /tmp/s1.txt) s2=$(wc -l < /tmp/s2.txt) s3=$(wc -l < /tmp/s3.txt)"
+          curl -sL --max-time 30 "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt" -o /tmp/s2.txt
+          curl -sL --max-time 30 "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt" -o /tmp/s3.txt
+          curl -sL --max-time 30 "https://x.v50.lat/view.php?id=1570ebe7f5bb04ba" -o /tmp/s4.txt
+          curl -sL --max-time 30 "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub" | base64 -d > /tmp/s5.txt 2>/dev/null
+          echo "s1=$(wc -l < /tmp/s1.txt) s2=$(wc -l < /tmp/s2.txt) s3=$(wc -l < /tmp/s3.txt) s4=$(wc -l < /tmp/s4.txt) s5=$(wc -l < /tmp/s5.txt)"
 
       - name: 合并+清洗+测速+选全部可用节点
         run: ruby scripts/update_subs.rb
