@@ -1,33 +1,18 @@
 proxies:
-  - name: "法国-001"
+  - name: "美国-001"
     type: vless
-    server: 8.6.112.0
-    port: 443
-    uuid: 3e37ef76-835d-4ad2-a1d3-414ef90532bf
-    network: ws
-    udp: true
-    tls: true
-    servername: polshaov.ochmaybrooooo.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: polshaov.ochmaybrooooo.online
-  - name: "美国-002"
-    type: vless
-    server: 108.162.198.5
+    server: 172.66.44.97
     port: 443
     uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
     network: ws
     udp: true
     tls: true
     servername: support.zoom.us.yxls.eu.cc
-    client-fingerprint: chrome
     ws-opts:
       path: /sg-melbi
       headers:
         Host: support.zoom.us.yxls.eu.cc
-  - name: "新加坡-003"
+  - name: "新加坡-002"
     type: vless
     server: 91.193.58.136
     port: 2096
@@ -40,33 +25,7 @@ proxies:
       path: /free-server.techsonic.dev
       headers:
         Host: free-server.techsonic.dev
-  - name: "新加坡-004"
-    type: vless
-    server: 91.193.58.122
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-005"
-    type: vless
-    server: 91.193.58.131
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-006"
+  - name: "新加坡-003"
     type: vless
     server: 91.193.58.132
     port: 2096
@@ -79,273 +38,36 @@ proxies:
       path: /free-server.techsonic.dev
       headers:
         Host: free-server.techsonic.dev
-  - name: "新加坡-007"
+  - name: "英国-004"
     type: vless
-    server: 91.193.58.15
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-008"
-    type: vless
-    server: 91.193.58.218
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-009"
-    type: vless
-    server: 91.193.58.108
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-010"
-    type: vless
-    server: 91.193.58.198
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    client-fingerprint: firefox
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-011"
-    type: vless
-    server: 91.193.58.231
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-012"
-    type: vless
-    server: 91.193.58.255
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-013"
-    type: vless
-    server: 91.193.58.80
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "加拿大-014"
-    type: vless
-    server: 172.64.80.1
-    port: 8443
-    uuid: 304a1e62-eb26-4b44-994e-b96a70fff9b4
-    network: ws
-    udp: true
-    tls: true
-    servername: ad-013.fluxmxd18.info
-    client-fingerprint: firefox
-    ws-opts:
-      path: /
-      headers:
-        Host: ad-013.fluxmxd18.info
-  - name: "新加坡-015"
-    type: vless
-    server: 91.193.58.250
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-016"
-    type: vless
-    server: 91.193.58.45
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-017"
-    type: vless
-    server: 91.193.58.27
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    client-fingerprint: firefox
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-018"
-    type: vless
-    server: 91.193.58.52
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-019"
-    type: vless
-    server: 91.193.58.37
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-020"
-    type: vless
-    server: 91.193.58.249
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-021"
-    type: vless
-    server: 91.193.58.57
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-022"
-    type: vless
-    server: 91.193.58.85
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-023"
-    type: vless
-    server: 91.193.58.99
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "波兰-024"
-    type: vless
-    server: 77.105.163.46
+    server: 140.248.186.45
     port: 443
-    uuid: 3e37ef76-835d-4ad2-a1d3-414ef90532bf
+    uuid: XpnTeam-4
     network: ws
     udp: true
     tls: true
-    servername: ov186.ochmaybrooooo.online
+    servername: ssl.fastly.com
+    client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
-        Host: ov186.ochmaybrooooo.online
-  - name: "新加坡-025"
+        Host: Appxdn.global.ssl.fastly.net
+  - name: "美国-005"
     type: vless
-    server: 91.193.58.31
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
+    server: pro-us.emrata.top
+    port: 443
+    uuid: e2526432-35f8-4619-af54-476bf14d85c1
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: free-server.techsonic.dev
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-026"
-    type: vless
-    server: 91.193.58.61
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: free-server.techsonic.dev
+    servername: pro-us.emrata.top
     client-fingerprint: firefox
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "新加坡-027"
+    reality-opts:
+      public-key: "uY-4wMHFY1pD8SIwHBfcxVRdolB7NAJIWIbYjaG8iw0"
+  - name: "新加坡-006"
     type: vless
-    server: 91.193.58.5
+    server: 91.193.58.118
     port: 2096
     uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
     network: ws
@@ -356,7 +78,7 @@ proxies:
       path: /free-server.techsonic.dev
       headers:
         Host: free-server.techsonic.dev
-  - name: "新加坡-028"
+  - name: "新加坡-007"
     type: vless
     server: 91.193.58.157
     port: 2096
@@ -370,52 +92,285 @@ proxies:
       path: /free-server.techsonic.dev
       headers:
         Host: free-server.techsonic.dev
-  - name: "美国-029"
+  - name: "新加坡-008"
     type: vless
-    server: free.us1.laodavip.com
+    server: 91.193.58.231
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "新加坡-009"
+    type: vless
+    server: 91.193.58.122
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "新加坡-010"
+    type: vless
+    server: 91.193.58.249
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "法国-011"
+    type: vless
+    server: 8.6.112.0
     port: 443
-    uuid: 2f3a2a4d-ca46-4012-a472-b559d379ad0a
+    uuid: 3e37ef76-835d-4ad2-a1d3-414ef90532bf
+    network: ws
+    udp: true
+    tls: true
+    servername: polshaov.ochmaybrooooo.online
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: polshaov.ochmaybrooooo.online
+  - name: "新加坡-012"
+    type: vless
+    server: 91.193.58.15
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "新加坡-013"
+    type: vless
+    server: 91.193.58.57
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "新加坡-014"
+    type: vless
+    server: 91.193.58.198
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    client-fingerprint: firefox
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "加拿大-015"
+    type: vless
+    server: 172.64.80.1
+    port: 8443
+    uuid: 304a1e62-eb26-4b44-994e-b96a70fff9b4
+    network: ws
+    udp: true
+    tls: true
+    servername: ad-013.orbitqgr7v.info
+    client-fingerprint: ios
+    ws-opts:
+      path: /
+      headers:
+        Host: ad-013.orbitqgr7v.info
+  - name: "新加坡-016"
+    type: vless
+    server: 91.193.58.5
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "新加坡-017"
+    type: vless
+    server: 91.193.58.131
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "新加坡-018"
+    type: vless
+    server: 91.193.58.80
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "新加坡-019"
+    type: vless
+    server: 91.193.58.31
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "新加坡-020"
+    type: vless
+    server: 91.193.58.45
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "新加坡-021"
+    type: vless
+    server: 91.193.58.85
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "波兰-022"
+    type: vless
+    server: 77.105.163.46
+    port: 443
+    uuid: 3e37ef76-835d-4ad2-a1d3-414ef90532bf
+    network: ws
+    udp: true
+    tls: true
+    servername: ov186.ochmaybrooooo.online
+    ws-opts:
+      path: /
+      headers:
+        Host: ov186.ochmaybrooooo.online
+  - name: "新加坡-023"
+    type: vless
+    server: 91.193.58.27
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    client-fingerprint: firefox
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "新加坡-024"
+    type: vless
+    server: 91.193.58.52
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "新加坡-025"
+    type: vless
+    server: 91.193.58.108
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "美国-026"
+    type: vless
+    server: 104.167.197.22
+    port: 443
+    uuid: bdba330b-dfc6-4b66-93e4-b10f906bf4fb
+    network: tcp
+    udp: true
+    tls: true
+    servername: monalisgame.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "Td6pxpk4V5hmDKU7_K0zV64VzUL1mEtI-F_6TCHNwjE"
+  - name: "美国-027"
+    type: vless
+    server: 157.238.208.110
+    port: 41834
+    uuid: 5adeccb9-dfca-41de-cdf7-4d901f2e70f5
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: "%2F5adeccb9"
+  - name: "加拿大-028"
+    type: vless
+    server: 167.17.68.205
+    port: 443
+    uuid: 4e0f4e59-3613-4f0c-b824-7348413d20e6
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: free.us1.laodavip.com
+    servername: www.cloudflare.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: "7_vH7zeCpAuc82hRhpewmCB0TGnF6EPfn7HZb4lDNmQ"
-      short-id: "a38fa7e8c1844957"
-  - name: "美国-030"
-    type: vless
-    server: 144.34.224.59
-    port: 443
-    uuid: 76792e97-ee95-4d29-86da-347362d491f2
-    network: ws
-    udp: true
-    tls: true
-    servername: usa_multi.mygoldiran.com
-    client-fingerprint: chrome
-    ws-opts:
-      path: /idea
-      headers:
-        Host: usa_multi.mygoldiran.com
-  - name: "美国-031"
-    type: vless
-    server: 179.255.148.66
-    port: 47588
-    uuid: 14be84e2-8b22-42c0-a1ba-3535fc8e9257
-    network: tcp
-    udp: true
-    tls: true
-    servername: yellowpages.amazon.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "ViI3P61PX_g1Qw5isp6C1ZaGqKQO471V9cCEJwHFpE4"
-      short-id: "8b2730e4eb1313"
-  - name: "英国-032"
+      public-key: "UE8hUjH1WYwemxIriq5lvtFCnHTdLF817okXr-u7MGs"
+      short-id: "250b5976473a"
+  - name: "英国-029"
     type: vless
     server: pro-uk.emrata.top
     port: 443
-    uuid: 2e4101cd-40b4-4d1a-8df6-cc949c136e5a
+    uuid: 02ae7872-1c03-4214-8b95-14c126da831e
     network: tcp
     udp: true
     tls: true
@@ -423,23 +378,46 @@ proxies:
     client-fingerprint: firefox
     reality-opts:
       public-key: "RYnbBzo-UTB4nVMymzJ5B6TgYed7DfOc6O5Pr_htYSc"
-  - name: "德国-033"
+  - name: "新加坡-030"
     type: vless
-    server: free-de-05.la-la-land.top
+    server: 80.79.4.33
     port: 443
-    uuid: a0dc4486-bc99-4756-bcf6-fd459d22bd87
+    uuid: bdba330b-dfc6-4b66-93e4-b10f906bf4fb
     network: tcp
     udp: true
     tls: true
-    servername: free-de-05.la-la-land.top
+    servername: monalisgame.com
+    client-fingerprint: edge
+    reality-opts:
+      public-key: "3fiA3iHYbEA27MswEpPP03vSKDVI5RpIRL1zO6o37g0"
+      short-id: "ddd6"
+  - name: "哥伦比亚-031"
+    type: vless
+    server: 217.60.193.1
+    port: 443
+    uuid: 5c192fd7-ef98-4112-a20c-129108fcd7e9
+    network: tcp
+    udp: true
+    tls: true
+    servername: ddc-akn.astralweb.tech
+    client-fingerprint: firefox
+  - name: "德国-032"
+    type: vless
+    server: free-de-03.la-la-land.top
+    port: 443
+    uuid: 157b5532-6601-0032-81c1-dca551ba6b98
+    network: tcp
+    udp: true
+    tls: true
+    servername: free-de-03.la-la-land.top
     client-fingerprint: firefox
     reality-opts:
       public-key: "uRuW2K9JNw64jgAVEdV39NMh_udtVD6xxEV-dQFATHY"
-  - name: "德国-034"
+  - name: "德国-033"
     type: vless
     server: pro-de.emrata.top
     port: 443
-    uuid: 2e4101cd-40b4-0032-8df6-cc949c136e5a
+    uuid: 02ae7872-1c03-0032-8b95-14c126da831e
     network: tcp
     udp: true
     tls: true
@@ -447,11 +425,11 @@ proxies:
     client-fingerprint: firefox
     reality-opts:
       public-key: "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
-  - name: "意大利-035"
+  - name: "意大利-034"
     type: vless
     server: pro-it.emrata.top
     port: 443
-    uuid: 2e4101cd-40b4-4d1a-8df6-cc949c136e5a
+    uuid: 02ae7872-1c03-4214-8b95-14c126da831e
     network: tcp
     udp: true
     tls: true
@@ -459,23 +437,19 @@ proxies:
     client-fingerprint: chrome
     reality-opts:
       public-key: "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
-  - name: "哥伦比亚-036"
+  - name: "荷兰-035"
     type: vless
-    server: titandarkness.mooo.com
-    port: 443
-    uuid: 2a6b708e-6799-473e-85e9-d4b116c5eedc
+    server: 176.65.151.212
+    port: 11382
+    uuid: e51ba2a3-a79f-461d-b515-0ef2d573a8a2
     network: ws
     udp: true
-    tls: true
-    servername: titandarkness.mooo.com
-    client-fingerprint: chrome
+    tls: false
     ws-opts:
-      path: /21381/0kO2id8FMQ
-      headers:
-        Host: titandarkness.mooo.com
-  - name: "美国-037"
+      path: /nasf8s3et6
+  - name: "美国-036"
     type: vless
-    server: jdwabxe.cvewfjg.shop
+    server: 152.53.127.214
     port: 443
     uuid: 711c018e-2692-4aa8-93f3-544d83fcd16c
     network: tcp
@@ -487,22 +461,52 @@ proxies:
     reality-opts:
       public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
       short-id: "7a76f3c4b9dd"
-  - name: "德国-038"
+  - name: "哥伦比亚-037"
     type: vless
-    server: 78.17.129.108.fwqfw783rg2dad.website
+    server: titandarkness.mooo.com
     port: 443
-    uuid: 72b2e405-0b49-4f2c-872a-61787fcedc45
+    uuid: 2a6b708e-6799-473e-85e9-d4b116c5eedc
     network: ws
     udp: true
     tls: true
-    servername: 78.17.129.108.fwqfw783rg2dad.website
+    servername: titandarkness.mooo.com
     ws-opts:
-      path: /websocket
-  - name: "德国-039"
+      path: /21381/0kO2id8FMQ
+      headers:
+        Host: titandarkness.mooo.com
+  - name: "美国-038"
+    type: vless
+    server: jdwadgw.cvewfjg.shop
+    port: 443
+    uuid: 711c018e-2692-4aa8-93f3-544d83fcd16c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+      short-id: "7a76f3c4b9dd"
+  - name: "英国-039"
+    type: vless
+    server: 31.76.251.127.cdn-one.org
+    port: 443
+    uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+    network: ws
+    udp: true
+    tls: true
+    servername: 31.76.251.127.cdn-one.org
+    client-fingerprint: chrome
+    ws-opts:
+      path: /10336/2GCOqG7bvA
+      headers:
+        Host: 31.76.251.127.cdn-one.org
+  - name: "德国-040"
     type: vless
     server: pro-se.emrata.top
     port: 443
-    uuid: 2e4101cd-40b4-4d1a-8df6-cc949c136e5a
+    uuid: 02ae7872-1c03-4214-8b95-14c126da831e
     network: tcp
     udp: true
     tls: true
@@ -510,22 +514,38 @@ proxies:
     client-fingerprint: firefox
     reality-opts:
       public-key: "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk"
-  - name: "英国-040"
+  - name: "德国-041"
     type: vless
-    server: 31.76.53.16.fwqfw783rg2dad.website
-    port: 443
-    uuid: 72b2e405-0b49-554b-872a-61787fcedc45
-    network: ws
+    server: 156.238.230.3
+    port: 22264
+    uuid: d71ce631-d4e6-4385-98a8-aa39473487d0
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: 31.76.53.16.fwqfw783rg2dad.website
-    ws-opts:
-      path: /websocket
-  - name: "芬兰-041"
+    servername: academy.nvidia.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "zVts3v2fSpuI92D5vyC8sZBplE_kPmPVLk0ihCoLYTE"
+      short-id: "6ba85179e30d4fc2"
+  - name: "新加坡-042"
+    type: vless
+    server: 185.72.86.39
+    port: 443
+    uuid: bdba330b-dfc6-4b66-93e4-b10f906bf4fb
+    network: tcp
+    udp: true
+    tls: true
+    servername: monalisgame.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "cbYXTGB1cWP29JuV8chwF7O0ZqbyUqjmu7CUHCaHRzY"
+      short-id: "fff8"
+  - name: "芬兰-043"
     type: vless
     server: pro-fi.emrata.top
     port: 443
-    uuid: 57b575f7-f738-42c3-8151-e6bacc8c6717
+    uuid: 02ae7872-1c03-4214-8b95-14c126da831e
     network: tcp
     flow: xtls-rprx-vision
     udp: true
@@ -534,11 +554,11 @@ proxies:
     client-fingerprint: firefox
     reality-opts:
       public-key: "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
-  - name: "土耳其-042"
+  - name: "土耳其-044"
     type: vless
     server: pro-tr.emrata.top
     port: 443
-    uuid: 2e4101cd-40b4-4d1a-8df6-cc949c136e5a
+    uuid: 02ae7872-1c03-4214-8b95-14c126da831e
     network: tcp
     flow: xtls-rprx-vision
     udp: true
@@ -547,22 +567,36 @@ proxies:
     client-fingerprint: firefox
     reality-opts:
       public-key: "da5UVhoC5QOCDm84AxB-RRxf0z2nySZ3lOemgqizLS4"
-  - name: "其他-043"
+  - name: "新加坡-045"
     type: vless
-    server: 150.241.101.218.fwqfw783rg2dad.website
+    server: 176.98.177.192
     port: 443
-    uuid: 72b2e405-0b49-4f2c-872a-61787fcedc45
-    network: ws
+    uuid: bdba330b-dfc6-001f-93e4-b10f906bf4fb
+    network: tcp
     udp: true
     tls: true
-    servername: 150.241.101.218.fwqfw783rg2dad.website
-    ws-opts:
-      path: /websocket
-  - name: "其他-044"
+    servername: monalisgame.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "0J8o7RTIGJzUV6gOjCtpPvgzCZz7Yowfla_I0a01GRY"
+  - name: "新加坡-046"
     type: vless
-    server: 104.171.134.67
+    server: 72.56.234.184
+    port: 443
+    uuid: bdba330b-dfc6-000a-93e4-b10f906bf4fb
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: monalisgame.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "Mkxs9LT0tRg208EbLXmP-_dQYlsPOgaTwZ3acwgVVWs"
+  - name: "俄罗斯-047"
+    type: vless
+    server: 168.222.202.187
     port: 4100
-    uuid: 47947923-49ac-49f8-86ed-2912bcbf2d18
+    uuid: 55009b9b-7b9c-4830-86c6-cb058a7a2e2f
     network: ws
     udp: true
     tls: false
@@ -570,31 +604,20 @@ proxies:
       path: /v1
       headers:
         Host: live.ok.ru
-  - name: "德国-045"
+  - name: "哥伦比亚-048"
     type: vless
-    server: pro-ru-bridge.emrata.top
-    port: 443
-    uuid: 57b575f7-f738-42c3-8151-e6bacc8c6717
+    server: 86.107.178.66
+    port: 448
+    uuid: b3eed393-e990-40a0-978c-689d40be9da4
     network: tcp
-    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: pro-ru-bridge.emrata.top
-    client-fingerprint: firefox
+    servername: www.samsung.com
+    client-fingerprint: chrome
     reality-opts:
-      public-key: "F8tqvcuJUSVbxv_i9ZsVOef3EPwULzzDqgvmj3vWNlA"
-  - name: "拉脱维亚-046"
-    type: vless
-    server: profit.tyr-agentstvo.tech
-    port: 443
-    uuid: 72b2e405-0b49-4f2c-872a-61787fcedc45
-    network: ws
-    udp: true
-    tls: true
-    servername: profit.tyr-agentstvo.tech
-    ws-opts:
-      path: /websocket
-  - name: "美国-047"
+      public-key: "i3cJbIu8AN7qCD7xQTVfCN7de9RkxVohk_PGQgHqRl8"
+      short-id: "52a74e01683e9173"
+  - name: "美国-049"
     type: vless
     server: 45.155.52.231
     port: 443
@@ -607,82 +630,17 @@ proxies:
     reality-opts:
       public-key: "6p0aVCkOgd-xaxqSMANYABL6O4Tdbftnxjiy5qcmISQ"
       short-id: "0b"
-  - name: "俄罗斯-048"
+  - name: "俄罗斯-050"
     type: vless
-    server: 168.222.141.146
-    port: 2200
-    uuid: bceda826-c83c-45d0-891e-15c4bfec76bc
+    server: 201.51.0.38
+    port: 4100
+    uuid: e7299042-7d8f-440f-8368-2516b0e69341
     network: ws
     udp: true
     tls: false
     ws-opts:
       path: /v1
-      headers:
-        Host: rzd.ru
-  - name: "德国-049"
-    type: vless
-    server: 95.156.206.12
-    port: 443
-    uuid: 72b2e405-0b49-4f2c-872a-61787fcedc45
-    network: ws
-    udp: true
-    tls: true
-    servername: cloudflare.vhub.pro
-    ws-opts:
-      path: /websocket
-      headers:
-        Host: cloudflare.vhub.pro
-  - name: "德国-050"
-    type: vless
-    server: 89.208.198.151
-    port: 9443
-    uuid: bdba330b-dfc6-001f-93e4-b10f906bf4fb
-    network: tcp
-    udp: true
-    tls: true
-    servername: api-maps.yandex.ru
-    client-fingerprint: android
-    reality-opts:
-      public-key: "0J8o7RTIGJzUV6gOjCtpPvgzCZz7Yowfla_I0a01GRY"
-      short-id: "ddd6"
-  - name: "新加坡-051"
-    type: vless
-    server: 72.56.234.184
-    port: 443
-    uuid: bdba330b-dfc6-000a-93e4-b10f906bf4fb
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: monalisgame.com
-    client-fingerprint: android
-    reality-opts:
-      public-key: "Mkxs9LT0tRg208EbLXmP-_dQYlsPOgaTwZ3acwgVVWs"
-  - name: "德国-052"
-    type: vless
-    server: 79.174.78.25
-    port: 9443
-    uuid: bdba330b-dfc6-0023-93e4-b10f906bf4fb
-    network: tcp
-    udp: true
-    tls: true
-    servername: api-maps.yandex.ru
-    client-fingerprint: edge
-    reality-opts:
-      public-key: "0J8o7RTIGJzUV6gOjCtpPvgzCZz7Yowfla_I0a01GRY"
-  - name: "波兰-053"
-    type: vless
-    server: 132.243.212.12
-    port: 605
-    uuid: b55a6115-07f5-4464-85b5-7059ce4701f3
-    network: grpc
-    udp: true
-    tls: true
-    servername: www.kayak.com
-    client-fingerprint: edge
-    reality-opts:
-      public-key: "Ux2M6x46mIcoAoP2oCA8qEQnqc1O5cpa5zYRIdCNdnw"
-  - name: "德国-054"
+  - name: "德国-051"
     type: vless
     server: 185.86.145.253
     port: 443
@@ -691,10 +649,35 @@ proxies:
     udp: true
     tls: true
     servername: api-maps.yandex.ru
-    client-fingerprint: android
+    client-fingerprint: chrome
     reality-opts:
       public-key: "Mkxs9LT0tRg208EbLXmP-_dQYlsPOgaTwZ3acwgVVWs"
-  - name: "俄罗斯-055"
+  - name: "德国-052"
+    type: vless
+    server: pro-ru-bridge.emrata.top
+    port: 443
+    uuid: 87d2ab46-0575-42e7-8bf8-4d8b0cb484f0
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: pro-ru-bridge.emrata.top
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "F8tqvcuJUSVbxv_i9ZsVOef3EPwULzzDqgvmj3vWNlA"
+  - name: "德国-053"
+    type: vless
+    server: 79.174.78.25
+    port: 9443
+    uuid: bdba330b-dfc6-0023-93e4-b10f906bf4fb
+    network: tcp
+    udp: true
+    tls: true
+    servername: api-maps.yandex.ru
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "0J8o7RTIGJzUV6gOjCtpPvgzCZz7Yowfla_I0a01GRY"
+  - name: "俄罗斯-054"
     type: vless
     server: 212.233.93.223
     port: 443
@@ -703,15 +686,54 @@ proxies:
     udp: true
     tls: true
     servername: eh.vk.com
-    client-fingerprint: edge
+    client-fingerprint: chrome
     reality-opts:
       public-key: "0J8o7RTIGJzUV6gOjCtpPvgzCZz7Yowfla_I0a01GRY"
       short-id: "ddd6"
-  - name: "日本-056"
+  - name: "荷兰-055"
+    type: vless
+    server: 94.139.250.35
+    port: 443
+    uuid: 35699c54-9188-4f43-972e-e8e42dbb104e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
+    client-fingerprint: safari
+    reality-opts:
+      public-key: "M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w"
+  - name: "荷兰-056"
+    type: vless
+    server: 94.139.251.189
+    port: 443
+    uuid: 35699c54-9188-4f43-972e-e8e42dbb104e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE"
+  - name: "荷兰-057"
+    type: vless
+    server: 94.126.206.129
+    port: 443
+    uuid: 35699c54-9188-4f43-972e-e8e42dbb104e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w"
+  - name: "日本-058"
     type: vless
     server: pro-jp.emrata.top
     port: 443
-    uuid: 2e4101cd-40b4-4d1a-8df6-cc949c136e5a
+    uuid: 02ae7872-1c03-4214-8b95-14c126da831e
     network: tcp
     udp: true
     tls: true
@@ -719,101 +741,150 @@ proxies:
     client-fingerprint: firefox
     reality-opts:
       public-key: "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
-  - name: "香港-057"
+  - name: "荷兰-059"
     type: vless
-    server: saggy.papapple.xyz
-    port: 41099
-    uuid: e7d317bd-9124-4eb0-ae76-4d3b8dc54e92
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: academy.nvidia.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "J6AH-cR4oAg8Nzc88lp8EIKnfBlQYuknmANebmM-qng"
-      short-id: "0f7921df8d6378"
-  - name: "香港-058"
-    type: vless
-    server: blunt.papapple.xyz
-    port: 29545
-    uuid: e7d317bd-9124-4eb0-ae76-4d3b8dc54e92
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: academy.nvidia.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "FGDyizfv3NMbMAUExJGHZ4Pqkq9794Zg_JWfufkXnhI"
-      short-id: "722f0f29c8"
-  - name: "香港-059"
-    type: vless
-    server: 34.96.200.38
+    server: 94.126.204.43
     port: 443
-    uuid: 2058418a-7718-4050-bdd5-db7487ffdb3b
-    network: tcp
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "uoXBNYcBgR-h2YmU1NFhFyASr6qh9UghWOuo1WZIikw"
-      short-id: "17d824dd68e24aaf"
-  - name: "香港-060"
-    type: vless
-    server: contabo.papapple.xyz
-    port: 47597
-    uuid: e7d317bd-9124-4eb0-ae76-4d3b8dc54e92
+    uuid: 35699c54-9188-4f43-972e-e8e42dbb104e
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: zh-hk.vuejs.org
-    client-fingerprint: chrome
+    servername: apple.com
+    client-fingerprint: qq
     reality-opts:
-      public-key: "HTjzjjAQbnOEgjkKUTP1tWMCNDX5wCOEcVsgPgFg5GA"
-      short-id: "d236cee1"
-  - name: "香港-061"
+      public-key: "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE"
+  - name: "荷兰-060"
     type: vless
-    server: 35.241.98.220
+    server: 94.139.250.36
     port: 443
-    uuid: 96563f88-f743-4395-a3b2-27ec462ae45e
-    network: tcp
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "bSK8gtmPMlw7gP415tmh6kQzzFiwzxBsT3Kuqql6cRo"
-      short-id: "ec2c7091fe76336c"
-  - name: "美国-062"
-    type: vless
-    server: 170.168.97.3
-    port: 993
-    uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
+    uuid: 435d616b-f0e6-489d-a70d-bdde70750b43
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: download.nvidia.com
+    servername: apple.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE"
+  - name: "荷兰-061"
+    type: vless
+    server: 94.139.251.9
+    port: 443
+    uuid: 35699c54-9188-4f43-972e-e8e42dbb104e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
+    client-fingerprint: qq
+    reality-opts:
+      public-key: "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE"
+  - name: "荷兰-062"
+    type: vless
+    server: 94.126.204.143
+    port: 443
+    uuid: 35699c54-9188-4f43-972e-e8e42dbb104e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
     client-fingerprint: firefox
     reality-opts:
-      public-key: "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs"
-  - name: "新加坡-063"
+      public-key: "M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w"
+  - name: "荷兰-063"
     type: vless
-    server: 34.126.158.226
+    server: 94.126.206.117
     port: 443
-    uuid: 7f7031b3-cd5c-4ba6-9627-91a9cc702941
+    uuid: 35699c54-9188-4f43-972e-e8e42dbb104e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "m_Xgh5XeqmN9JaDxkct4yTup2YPVxCV5fGnUnMZ3pWE"
+  - name: "荷兰-064"
+    type: vless
+    server: 94.126.205.65
+    port: 443
+    uuid: eadcacfa-ef1a-4901-a28b-8815fa1962a5
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
+    client-fingerprint: qq
+    reality-opts:
+      public-key: "M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w"
+  - name: "新加坡-065"
+    type: vless
+    server: 185.72.86.13
+    port: 443
+    uuid: bdba330b-dfc6-4b66-93e4-b10f906bf4fb
     network: tcp
     udp: true
     tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
+    servername: monalisgame.com
+    client-fingerprint: firefox
     reality-opts:
-      public-key: "ZTo_XhHaaXEJnDZFZ7S8-BYBS_fbk2F2IADoHdmU7W8"
-      short-id: "3cf84632f6dd14c7"
-  - name: "捷克-064"
+      public-key: "cbYXTGB1cWP29JuV8chwF7O0ZqbyUqjmu7CUHCaHRzY"
+      short-id: "fff8"
+  - name: "荷兰-066"
+    type: vless
+    server: 94.139.251.191
+    port: 443
+    uuid: 35699c54-9188-4f43-972e-e8e42dbb104e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w"
+  - name: "荷兰-067"
+    type: vless
+    server: 94.126.204.159
+    port: 443
+    uuid: 35699c54-9188-4f43-972e-e8e42dbb104e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "6ycuxfrEPsqE9eXZ5_Osbnx4g6hXWmkc8pFuAJkJ4jY"
+  - name: "荷兰-068"
+    type: vless
+    server: 94.139.251.23
+    port: 443
+    uuid: 35699c54-9188-4f43-972e-e8e42dbb104e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
+    client-fingerprint: qq
+    reality-opts:
+      public-key: "6ycuxfrEPsqE9eXZ5_Osbnx4g6hXWmkc8pFuAJkJ4jY"
+  - name: "荷兰-069"
+    type: vless
+    server: 94.139.250.34
+    port: 443
+    uuid: 35699c54-9188-4f43-972e-e8e42dbb104e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "6ycuxfrEPsqE9eXZ5_Osbnx4g6hXWmkc8pFuAJkJ4jY"
+  - name: "哥伦比亚-070"
     type: vless
     server: 188.127.247.129
     port: 443
@@ -827,46 +898,32 @@ proxies:
     reality-opts:
       public-key: "Kb0rDCu2kKhfnC6bsi0DMRxDej9S-Mu1vVza1H1l4U4"
       short-id: "0c"
-  - name: "俄罗斯-065"
+  - name: "波兰-071"
     type: vless
-    server: cr-r1.astralweb.tech
+    server: 138.16.128.137
     port: 443
-    uuid: cd1673b3-7cec-4fe6-bedf-b534eb54e647
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: cr-r1.astralweb.tech
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q"
-      short-id: "496ee75c2f91f51d"
-  - name: "德国-066"
-    type: vless
-    server: 194.135.22.141
-    port: 443
-    uuid: 9b4c96f9-60e8-4694-b069-c46992390555
-    network: ws
-    udp: true
-    tls: true
-    servername: cloudflare.vhub.pro
-    ws-opts:
-      path: /websocket
-      headers:
-        Host: cloudflare.vhub.pro
-  - name: "哥伦比亚-067"
-    type: vless
-    server: 142.111.244.75
-    port: 448
-    uuid: f128bc2c-8018-43a1-8ed7-66eabc8f157c
+    uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
     network: tcp
     udp: true
     tls: true
     servername: www.samsung.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "krwQUB0aR-ezyW9uzdKNfPl8XmWP6_dHPTszEw9P8ho"
+      short-id: "bfe9acf4"
+  - name: "美国-072"
+    type: vless
+    server: 179.255.148.66
+    port: 47588
+    uuid: 14be84e2-8b22-42c0-a1ba-3535fc8e9257
+    network: tcp
+    udp: true
+    tls: true
+    servername: yellowpages.amazon.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: "r8ljXJO_4yLUonHdkPeWbD9A__XqoudwWAiXx9fbcj8"
-      short-id: "39a997621a3598c9"
+      public-key: "ViI3P61PX_g1Qw5isp6C1ZaGqKQO471V9cCEJwHFpE4"
+      short-id: "8b2730e4eb1313"
 
 proxy-groups:
   - name: Auto
@@ -875,144 +932,154 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "法国-001"
-      - "美国-002"
+      - "美国-001"
+      - "新加坡-002"
       - "新加坡-003"
-      - "新加坡-004"
-      - "新加坡-005"
+      - "英国-004"
+      - "美国-005"
       - "新加坡-006"
       - "新加坡-007"
       - "新加坡-008"
       - "新加坡-009"
       - "新加坡-010"
-      - "新加坡-011"
+      - "法国-011"
       - "新加坡-012"
       - "新加坡-013"
-      - "加拿大-014"
-      - "新加坡-015"
+      - "新加坡-014"
+      - "加拿大-015"
       - "新加坡-016"
       - "新加坡-017"
       - "新加坡-018"
       - "新加坡-019"
       - "新加坡-020"
       - "新加坡-021"
-      - "新加坡-022"
+      - "波兰-022"
       - "新加坡-023"
-      - "波兰-024"
+      - "新加坡-024"
       - "新加坡-025"
-      - "新加坡-026"
-      - "新加坡-027"
-      - "新加坡-028"
-      - "美国-029"
-      - "美国-030"
-      - "美国-031"
-      - "英国-032"
+      - "美国-026"
+      - "美国-027"
+      - "加拿大-028"
+      - "英国-029"
+      - "新加坡-030"
+      - "哥伦比亚-031"
+      - "德国-032"
       - "德国-033"
-      - "德国-034"
-      - "意大利-035"
-      - "哥伦比亚-036"
-      - "美国-037"
-      - "德国-038"
-      - "德国-039"
-      - "英国-040"
-      - "芬兰-041"
-      - "土耳其-042"
-      - "其他-043"
-      - "其他-044"
-      - "德国-045"
-      - "拉脱维亚-046"
-      - "美国-047"
-      - "俄罗斯-048"
-      - "德国-049"
-      - "德国-050"
-      - "新加坡-051"
+      - "意大利-034"
+      - "荷兰-035"
+      - "美国-036"
+      - "哥伦比亚-037"
+      - "美国-038"
+      - "英国-039"
+      - "德国-040"
+      - "德国-041"
+      - "新加坡-042"
+      - "芬兰-043"
+      - "土耳其-044"
+      - "新加坡-045"
+      - "新加坡-046"
+      - "俄罗斯-047"
+      - "哥伦比亚-048"
+      - "美国-049"
+      - "俄罗斯-050"
+      - "德国-051"
       - "德国-052"
-      - "波兰-053"
-      - "德国-054"
-      - "俄罗斯-055"
-      - "日本-056"
-      - "香港-057"
-      - "香港-058"
-      - "香港-059"
-      - "香港-060"
-      - "香港-061"
-      - "美国-062"
-      - "新加坡-063"
-      - "捷克-064"
-      - "俄罗斯-065"
-      - "德国-066"
-      - "哥伦比亚-067"
+      - "德国-053"
+      - "俄罗斯-054"
+      - "荷兰-055"
+      - "荷兰-056"
+      - "荷兰-057"
+      - "日本-058"
+      - "荷兰-059"
+      - "荷兰-060"
+      - "荷兰-061"
+      - "荷兰-062"
+      - "荷兰-063"
+      - "荷兰-064"
+      - "新加坡-065"
+      - "荷兰-066"
+      - "荷兰-067"
+      - "荷兰-068"
+      - "荷兰-069"
+      - "哥伦比亚-070"
+      - "波兰-071"
+      - "美国-072"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "法国-001"
-      - "美国-002"
+      - "美国-001"
+      - "新加坡-002"
       - "新加坡-003"
-      - "新加坡-004"
-      - "新加坡-005"
+      - "英国-004"
+      - "美国-005"
       - "新加坡-006"
       - "新加坡-007"
       - "新加坡-008"
       - "新加坡-009"
       - "新加坡-010"
-      - "新加坡-011"
+      - "法国-011"
       - "新加坡-012"
       - "新加坡-013"
-      - "加拿大-014"
-      - "新加坡-015"
+      - "新加坡-014"
+      - "加拿大-015"
       - "新加坡-016"
       - "新加坡-017"
       - "新加坡-018"
       - "新加坡-019"
       - "新加坡-020"
       - "新加坡-021"
-      - "新加坡-022"
+      - "波兰-022"
       - "新加坡-023"
-      - "波兰-024"
+      - "新加坡-024"
       - "新加坡-025"
-      - "新加坡-026"
-      - "新加坡-027"
-      - "新加坡-028"
-      - "美国-029"
-      - "美国-030"
-      - "美国-031"
-      - "英国-032"
+      - "美国-026"
+      - "美国-027"
+      - "加拿大-028"
+      - "英国-029"
+      - "新加坡-030"
+      - "哥伦比亚-031"
+      - "德国-032"
       - "德国-033"
-      - "德国-034"
-      - "意大利-035"
-      - "哥伦比亚-036"
-      - "美国-037"
-      - "德国-038"
-      - "德国-039"
-      - "英国-040"
-      - "芬兰-041"
-      - "土耳其-042"
-      - "其他-043"
-      - "其他-044"
-      - "德国-045"
-      - "拉脱维亚-046"
-      - "美国-047"
-      - "俄罗斯-048"
-      - "德国-049"
-      - "德国-050"
-      - "新加坡-051"
+      - "意大利-034"
+      - "荷兰-035"
+      - "美国-036"
+      - "哥伦比亚-037"
+      - "美国-038"
+      - "英国-039"
+      - "德国-040"
+      - "德国-041"
+      - "新加坡-042"
+      - "芬兰-043"
+      - "土耳其-044"
+      - "新加坡-045"
+      - "新加坡-046"
+      - "俄罗斯-047"
+      - "哥伦比亚-048"
+      - "美国-049"
+      - "俄罗斯-050"
+      - "德国-051"
       - "德国-052"
-      - "波兰-053"
-      - "德国-054"
-      - "俄罗斯-055"
-      - "日本-056"
-      - "香港-057"
-      - "香港-058"
-      - "香港-059"
-      - "香港-060"
-      - "香港-061"
-      - "美国-062"
-      - "新加坡-063"
-      - "捷克-064"
-      - "俄罗斯-065"
-      - "德国-066"
-      - "哥伦比亚-067"
+      - "德国-053"
+      - "俄罗斯-054"
+      - "荷兰-055"
+      - "荷兰-056"
+      - "荷兰-057"
+      - "日本-058"
+      - "荷兰-059"
+      - "荷兰-060"
+      - "荷兰-061"
+      - "荷兰-062"
+      - "荷兰-063"
+      - "荷兰-064"
+      - "新加坡-065"
+      - "荷兰-066"
+      - "荷兰-067"
+      - "荷兰-068"
+      - "荷兰-069"
+      - "哥伦比亚-070"
+      - "波兰-071"
+      - "美国-072"
 
 rules:
   - MATCH,Proxy
