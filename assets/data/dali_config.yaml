@@ -1,41 +1,18 @@
 proxies:
   - name: "美国-001"
     type: vless
-    server: cf-vless-4cf55824.aimall.fr
+    server: 172.66.44.97
     port: 443
-    uuid: ea50b1a3-3a98-4c5e-a150-48ada40d68d7
+    uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
     network: ws
     udp: true
     tls: true
-  - name: "英国-002"
-    type: vless
-    server: 140.248.186.45
-    port: 443
-    uuid: XpnTeam-29
-    network: ws
-    udp: true
-    tls: true
-    servername: ssl.fastly.com
-    client-fingerprint: chrome
+    servername: josni.hoyes.cloudns.ch
     ws-opts:
-      path: /
+      path: /sg?ed=512TELEGRAM-MTMVPN---TELEGRAM-MTMVPN---TELEGRAM-MTMVPN---TELEGRAM-MTMVPN---TELEGRAM-MTMVPN
       headers:
-        Host: Appxdn.global.ssl.fastly.net
-  - name: "美国-003"
-    type: vless
-    server: 104.20.6.134
-    port: 443
-    uuid: 2088ef0d-4d2c-43b3-874b-b6a03531c81b
-    network: ws
-    udp: true
-    tls: true
-    servername: r.meDiASHOPPp.sbS
-    client-fingerprint: chrome
-    ws-opts:
-      path: /eyJqdW5rIjoiVVpPeXNodUFQMHNVcU12aCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-      headers:
-        Host: r.mediashoppp.sbs
-  - name: "荷兰-004"
+        Host: josni.hoyes.cloudns.ch
+  - name: "荷兰-002"
     type: vless
     server: 199.232.78.159
     port: 443
@@ -49,44 +26,7 @@ proxies:
       path: "/TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER"
       headers:
         Host: pane2.global.ssl.fastly.net
-  - name: "美国-005"
-    type: vless
-    server: 104.16.75.44
-    port: 443
-    uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
-    network: ws
-    udp: true
-    tls: true
-    servername: de-new.ariyuz.org
-  - name: "德国-006"
-    type: vless
-    server: 141.193.213.10
-    port: 443
-    uuid: a321980f-54ce-432a-862a-76035b9d78ad
-    network: ws
-    udp: true
-    tls: true
-    servername: m.udemy.com.r3xxe.eu.cc
-    client-fingerprint: chrome
-    ws-opts:
-      path: /nl-tw
-      headers:
-        Host: m.udemy.com.r3xxe.eu.cc
-  - name: "其他-007"
-    type: vless
-    server: 91.193.58.215
-    port: 2083
-    uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-    network: ws
-    udp: true
-    tls: true
-    servername: vlso4.1d.mom
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/socks5=888:888"
-      headers:
-        Host: vlso4.1d.mom
-  - name: "瑞士-008"
+  - name: "瑞士-003"
     type: vless
     server: 208.103.161.32
     port: 443
@@ -95,55 +35,12 @@ proxies:
     udp: true
     tls: true
     servername: josni.hoyes.cloudns.ch
-    client-fingerprint: chrome
+    client-fingerprint: android
     ws-opts:
       path: "/sg-melbi_/@sil3nt_network"
       headers:
         Host: josni.hoyes.cloudns.ch
-  - name: "美国-009"
-    type: vless
-    server: 104.21.25.168
-    port: 8880
-    uuid: abd3678b-f654-404c-adc7-1355865197e1
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /eyJqdW5rIjoiNUZVWmdPNWNpTW5LOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzI2MDI6ZmM1OTpiMDo2NDo6XSJdfQ
-      headers:
-        Host: vless.a-amr79.workers.dev
-  - name: "荷兰-010"
-    type: vless
-    server: 5.253.19.29
-    port: 443
-    uuid: 56d2b973-dc0c-42b2-8460-b580db13981f
-    network: grpc
-    udp: true
-    tls: true
-    servername: nl.avara.fit
-    client-fingerprint: firefox
-  - name: "法国-011"
-    type: vless
-    server: lvksp.kintuso.com
-    port: 443
-    uuid: 16a1eeb0-8408-4592-a469-ecd33751021e
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: lvksp.kintuso.com
-    client-fingerprint: edge
-  - name: "法国-012"
-    type: vless
-    server: fr186.mechvpn.online
-    port: 443
-    uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    client-fingerprint: firefox
-  - name: "法国-013"
+  - name: "法国-004"
     type: vless
     server: fr213.mechvpn.online
     port: 443
@@ -152,129 +49,32 @@ proxies:
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    client-fingerprint: qq
-  - name: "德国-014"
+    client-fingerprint: chrome
+  - name: "德国-005"
     type: vless
-    server: 172.93.185.99
+    server: refraction.chelyabinskdev.com
     port: 443
-    uuid: 56d2b973-dc0c-42b2-8460-b580db13981f
-    network: grpc
-    udp: true
-    tls: true
-    servername: de.avara.fit
-    client-fingerprint: firefox
-  - name: "其他-015"
-    type: vless
-    server: nuagevpn.duckdns.org
-    port: 18094
-    uuid: 9623a087-ca5b-57c1-8ae1-722c964cc8ea
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /yojcfk2680
-      headers:
-        Host: dl.google.com
-  - name: "新加坡-016"
-    type: vless
-    server: 45.92.158.251
-    port: 443
-    uuid: 56d2b973-dc0c-42b2-8460-b580db13981f
-    network: grpc
-    udp: true
-    tls: true
-    servername: sg.avara.fit
-    client-fingerprint: firefox
-  - name: "加拿大-017"
-    type: vless
-    server: 144.31.3.53
-    port: 443
-    uuid: 645710cd-317d-420b-bb07-db6620cc65d0
+    uuid: 16a1eeb0-8408-4592-a469-ecd33751021e
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: proud-dynamo.cdn.cachefleet.com
-    client-fingerprint: random
-    reality-opts:
-      public-key: "KOgPteoWEwtVtykS2FGV5NHdZw6197VzbITPGkUJDBQ"
-  - name: "德国-018"
+    servername: refraction.chelyabinskdev.com
+    client-fingerprint: chrome
+  - name: "美国-006"
     type: vless
-    server: boltvia.orbvia.online
+    server: 179.198.49.14
     port: 443
-    uuid: b50a52ba-891f-44ff-af82-f5f0f3317024
+    uuid: 4cfb9456-0921-4547-a684-4614980d4a86
     network: tcp
-    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: boltvia.orbvia.online
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "c9FNVDSx_oUTDFW0JewGq511wlGweUkQGgPPY9vsCVM"
-      short-id: "08804e078e1257c8"
-  - name: "其他-019"
-    type: vless
-    server: novea.shieldix.top
-    port: 443
-    uuid: b50a52ba-891f-44ff-af82-f5f0f3317024
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: novea.shieldix.top
+    servername: yandex.ru
     client-fingerprint: chrome
     reality-opts:
-      public-key: "V9MHR6nhlKPenVUq1172uIHJFZYOkRVqSOUkjCS4430"
-      short-id: "f0ba53a31b489b3e"
-  - name: "其他-020"
-    type: vless
-    server: boltea.ciphero.xyz
-    port: 443
-    uuid: b50a52ba-891f-44ff-af82-f5f0f3317024
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: boltea.ciphero.xyz
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "8qUm4S6MR9bLa-ZfblO64aKjRIwGEFEwdVIxgz_tbn4"
-      short-id: "33b5887524592cad"
-  - name: "其他-021"
-    type: vless
-    server: 201.24.118.145
-    port: 2200
-    uuid: 89537879-e550-45e9-ab1c-5e1a11c168f1
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /v1
-      headers:
-        Host: rzd.ru
-  - name: "俄罗斯-022"
-    type: vless
-    server: 186.246.6.234
-    port: 2200
-    uuid: 2a88091e-e3f8-4478-9751-6ce0557a7f2e
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /v1
-  - name: "俄罗斯-023"
-    type: vless
-    server: 104.171.134.67
-    port: 4100
-    uuid: 47947923-49ac-49f8-86ed-2912bcbf2d18
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /v1
-      headers:
-        Host: live.ok.ru
-  - name: "以色列-024"
+      public-key: "0tsW6-mbhq0zPODM7BlymfZDYAjSB5S5doDDk8qpYXE"
+      short-id: "8e79809e9958ae22"
+  - name: "以色列-007"
     type: vless
     server: static.kintuso.com
     port: 443
@@ -284,79 +84,47 @@ proxies:
     udp: true
     tls: true
     servername: static.kintuso.com
-    client-fingerprint: firefox
-  - name: "保加利亚-025"
+    client-fingerprint: chrome
+  - name: "法国-008"
     type: vless
-    server: 91.92.136.28
-    port: 443
-    uuid: 52bc7468-0c2f-4e9d-bdfa-e266242ab44b
-    network: tcp
+    server: 194.55.137.138
+    port: 2443
+    uuid: d80cd696-ec21-4afd-ad8e-cb65893535a4
+    network: grpc
     udp: true
     tls: true
-    servername: ripe.net
+    servername: ads.x5.ru
     client-fingerprint: chrome
     reality-opts:
-      public-key: "VuM9HrCRtt7gaOXYkrPggV3GT_HKj18_5y6PcQKjWgQ"
-      short-id: "0a076a71"
-  - name: "瑞典-026"
+      public-key: "rRg3JiP2006ldJYh2TDPAn7dtlXLcSHdgHgkGI_HZTE"
+      short-id: "ef567890"
+  - name: "俄罗斯-009"
     type: vless
-    server: 159.194.226.13
-    port: 2053
-    uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /
-  - name: "俄罗斯-027"
-    type: vless
-    server: 168.222.141.146
-    port: 2200
-    uuid: bceda826-c83c-45d0-891e-15c4bfec76bc
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /v1
-  - name: "瑞士-028"
-    type: vless
-    server: 45.90.56.231
-    port: 443
-    uuid: e2b8f727-c5ee-47e1-8f1b-7c5c61479ce0
-    network: tcp
-    flow: xtls-rprx-vision
+    server: 78.17.96.52
+    port: 2443
+    uuid: d80cd696-ec21-4afd-ad8e-cb65893535a4
+    network: grpc
     udp: true
     tls: true
-    servername: www.cloudflare.com
+    servername: ads.x5.ru
     client-fingerprint: chrome
     reality-opts:
-      public-key: "KrFnWxAwVGL6tuj1JE0qpykLzY4aOFjyK3OaymF_hT0"
-      short-id: "e2e66f4537770cef"
-  - name: "智利-029"
+      public-key: "rRg3JiP2006ldJYh2TDPAn7dtlXLcSHdgHgkGI_HZTE"
+      short-id: "ef567890"
+  - name: "俄罗斯-010"
     type: vless
-    server: 209.200.246.143
+    server: 138.16.141.172
     port: 443
-    uuid: 6ca50712-c5cd-4e32-97c5-bfa6485b848a
+    uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
     network: tcp
-    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
+    servername: media11.abvphelp.cc
+    client-fingerprint: edge
     reality-opts:
-      public-key: "6clD-wWfOGRFlh91SRgnfvtO6BjZP7LM2-B4u7x3gh0"
-      short-id: "03c7c40feb004001"
-  - name: "俄罗斯-030"
-    type: vless
-    server: ru156.mechvpn.online
-    port: 443
-    uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    client-fingerprint: qq
-  - name: "俄罗斯-031"
+      public-key: "LZyjSvaqbGOe9ELbGAT31gXirkeE294OxksO_-mPk0A"
+      short-id: "40fdb230"
+  - name: "俄罗斯-011"
     type: vless
     server: 31.177.83.201
     port: 4100
@@ -366,101 +134,49 @@ proxies:
     tls: false
     ws-opts:
       path: /v1
-  - name: "美国-032"
+      headers:
+        Host: live.ok.ru
+  - name: "俄罗斯-012"
     type: vless
-    server: 193.233.48.92
-    port: 443
-    uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
+    server: 78.17.40.188
+    port: 2443
+    uuid: d80cd696-ec21-4afd-ad8e-cb65893535a4
     network: grpc
     udp: true
     tls: true
-    servername: media3.abvphelp.cc
+    servername: ads.x5.ru
     client-fingerprint: chrome
     reality-opts:
-      public-key: "iUc9JqWjFemnQo8R5fgiwssCjEdWmixB4X-mRJkx2VE"
-      short-id: "3182f9ae"
-  - name: "哥伦比亚-033"
+      public-key: "rRg3JiP2006ldJYh2TDPAn7dtlXLcSHdgHgkGI_HZTE"
+      short-id: "ef567890"
+  - name: "新加坡-013"
     type: vless
-    server: 193.17.183.81
-    port: 8433
-    uuid: 3a4dbd51-72ea-4c20-a764-f51de001c0ab
+    server: 185.92.47.57
+    port: 443
+    uuid: 8273201d-45fa-3e29-beb5-f2c79bc23bf5
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: yahoo.com
+    servername: 82ee2658s70.csgfw.top
     client-fingerprint: chrome
     reality-opts:
-      public-key: "VnpuNVes24AiqJofMykF5ZPj_1ufZZyHnj_oAZ4_8kw"
-      short-id: "81f3d1e4c057"
-  - name: "土耳其-034"
+      public-key: "O2f0dq8rg1CuixizZDC226RZzUWFMNg2qjMSHwPP20Y"
+      short-id: "74ee5f64"
+  - name: "波兰-014"
     type: vless
-    server: 62.60.188.240
-    port: 443
-    uuid: 0108346a-e5a8-485f-912c-e5b142cf0a80
-    network: tcp
-    udp: true
-    tls: true
-    servername: it.nvidia.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "2HZyHolhLXqkOW3A6VGNJeDwC7lStJJmN1GhIVkpYWI"
-      short-id: "571a5e8791b284e7"
-  - name: "智利-035"
-    type: vless
-    server: 150.251.113.34
-    port: 443
-    uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
+    server: pl03.skorostnet.space
+    port: 13868
+    uuid: 06d44c57-8e1a-41f4-b9c4-65d35869e078
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: www.cloudflare.com
+    servername: wp.pl
     client-fingerprint: chrome
     reality-opts:
-      public-key: "8yMLSTbkpJFfbgTjNzotzz7U8OT6AERrclgKdKrXXW8"
-      short-id: "150a627d15154cf2"
-  - name: "智利-036"
-    type: vless
-    server: 166.1.89.85
-    port: 40056
-    uuid: 090122da-ad6b-42a1-92d7-bab2630e2511
-    network: tcp
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "EYLZTm0VpViSmTLfehDg0DE57ZEp0P0hab5ME3pXrgs"
-      short-id: "9ccdca9f"
-  - name: "智利-037"
-    type: vless
-    server: 83.147.18.3
-    port: 443
-    uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA"
-      short-id: "fd8cf7e1173f0edb"
-  - name: "俄罗斯-038"
-    type: vless
-    server: 45.91.52.125
-    port: 443
-    uuid: 3ab2615c-689d-463b-8990-a95013894348
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: android
-    reality-opts:
-      public-key: "8bkjYMx4EXdRTHTgQ6wMaeyGl-HfskzixE0Is-kMQXU"
-      short-id: "e3c60a1b71b462fa"
+      public-key: "YxGdcVKnOjKUtaG-E68lzI_rd9DI5RvsbLY0qyMFX2w"
+      short-id: "e852dc"
 
 proxy-groups:
   - name: Auto
@@ -470,85 +186,37 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "美国-001"
-      - "英国-002"
-      - "美国-003"
-      - "荷兰-004"
-      - "美国-005"
-      - "德国-006"
-      - "其他-007"
-      - "瑞士-008"
-      - "美国-009"
-      - "荷兰-010"
-      - "法国-011"
-      - "法国-012"
-      - "法国-013"
-      - "德国-014"
-      - "其他-015"
-      - "新加坡-016"
-      - "加拿大-017"
-      - "德国-018"
-      - "其他-019"
-      - "其他-020"
-      - "其他-021"
-      - "俄罗斯-022"
-      - "俄罗斯-023"
-      - "以色列-024"
-      - "保加利亚-025"
-      - "瑞典-026"
-      - "俄罗斯-027"
-      - "瑞士-028"
-      - "智利-029"
-      - "俄罗斯-030"
-      - "俄罗斯-031"
-      - "美国-032"
-      - "哥伦比亚-033"
-      - "土耳其-034"
-      - "智利-035"
-      - "智利-036"
-      - "智利-037"
-      - "俄罗斯-038"
+      - "荷兰-002"
+      - "瑞士-003"
+      - "法国-004"
+      - "德国-005"
+      - "美国-006"
+      - "以色列-007"
+      - "法国-008"
+      - "俄罗斯-009"
+      - "俄罗斯-010"
+      - "俄罗斯-011"
+      - "俄罗斯-012"
+      - "新加坡-013"
+      - "波兰-014"
   - name: Proxy
     type: select
     proxies:
       - Auto
       - "美国-001"
-      - "英国-002"
-      - "美国-003"
-      - "荷兰-004"
-      - "美国-005"
-      - "德国-006"
-      - "其他-007"
-      - "瑞士-008"
-      - "美国-009"
-      - "荷兰-010"
-      - "法国-011"
-      - "法国-012"
-      - "法国-013"
-      - "德国-014"
-      - "其他-015"
-      - "新加坡-016"
-      - "加拿大-017"
-      - "德国-018"
-      - "其他-019"
-      - "其他-020"
-      - "其他-021"
-      - "俄罗斯-022"
-      - "俄罗斯-023"
-      - "以色列-024"
-      - "保加利亚-025"
-      - "瑞典-026"
-      - "俄罗斯-027"
-      - "瑞士-028"
-      - "智利-029"
-      - "俄罗斯-030"
-      - "俄罗斯-031"
-      - "美国-032"
-      - "哥伦比亚-033"
-      - "土耳其-034"
-      - "智利-035"
-      - "智利-036"
-      - "智利-037"
-      - "俄罗斯-038"
+      - "荷兰-002"
+      - "瑞士-003"
+      - "法国-004"
+      - "德国-005"
+      - "美国-006"
+      - "以色列-007"
+      - "法国-008"
+      - "俄罗斯-009"
+      - "俄罗斯-010"
+      - "俄罗斯-011"
+      - "俄罗斯-012"
+      - "新加坡-013"
+      - "波兰-014"
 
 rules:
   - MATCH,Proxy
