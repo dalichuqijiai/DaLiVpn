@@ -1,19 +1,47 @@
 proxies:
-  - name: "芬兰-001"
+  - name: "美国-001"
     type: vless
-    server: k1.cloud--vpn.site
-    port: 443
-    uuid: 81df88b4-ab24-4510-dc5f-7ebdbf24ff0a
+    server: freesocks.work
+    port: 2083
+    uuid: 79dafc6f-e61b-46cf-8a3c-74f6304d230c
     network: ws
     udp: true
     tls: true
-    servername: ssl.fastly.com
-    client-fingerprint: android
+    servername: uwu.meowpew.de5.net
+    client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
-        Host: c12.com
-  - name: "英国-002"
+        Host: uwu.meowpew.de5.net
+  - name: "美国-002"
+    type: vless
+    server: 172.67.201.133
+    port: 8443
+    uuid: 05cf7b0e-ad1a-42bb-80e7-73ae45b1019a
+    network: ws
+    udp: true
+    tls: true
+    servername: france.io-com-de-dev.org
+    client-fingerprint: chrome
+    ws-opts:
+      path: /api/voip/updates/static/x9i2
+      headers:
+        Host: france.io-com-de-dev.org
+  - name: "德国-003"
+    type: vless
+    server: 91.193.58.250
+    port: 2096
+    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+    network: ws
+    udp: true
+    tls: true
+    servername: free-server.techsonic.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: /free-server.techsonic.dev
+      headers:
+        Host: free-server.techsonic.dev
+  - name: "英国-004"
     type: vless
     server: 172.64.80.1
     port: 443
@@ -27,33 +55,53 @@ proxies:
       path: /vless
       headers:
         Host: admin.jikebet.com
-  - name: "美国-003"
+  - name: "俄罗斯-005"
     type: vless
-    server: cf3.466688.xyz
-    port: 8880
-    uuid: 6b504c50-8535-44cf-8e4e-f8ee674a922e
+    server: 188.225.81.61
+    port: 4100
+    uuid: 155e8dd4-a559-407a-9ea8-13a5e829f066
     network: ws
     udp: true
     tls: false
     ws-opts:
-      path: "/pyip=ProxyIP.JP.CMLiussss.net@https://t.me/QiangLieTuiJian"
+      path: "%2Fv1"
       headers:
-        Host: old-moon-16d0.156-a25.workers.dev
-  - name: "荷兰-004"
+        Host: live.ok.ru
+  - name: "俄罗斯-006"
     type: vless
-    server: 89.105.208.121
-    port: 443
-    uuid: 91d0fa43-e557-43e7-a731-f0c3d1fb306a
-    network: tcp
-    flow: xtls-rprx-vision
+    server: 5.129.241.247
+    port: 4100
+    uuid: 5d0fbb28-3be3-4044-bc5b-e4b7ca1916c7
+    network: ws
     udp: true
-    tls: true
-    servername: n1.cloudgaming.one
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk"
-      short-id: "6d6f13013d3e1d0c"
-  - name: "新加坡-005"
+    tls: false
+    ws-opts:
+      path: /v1
+  - name: "俄罗斯-007"
+    type: vless
+    server: 104.171.133.161
+    port: 4100
+    uuid: 155e8dd4-a559-407a-9ea8-13a5e829f066
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: "%2Fv1"
+      headers:
+        Host: live.ok.ru
+  - name: "俄罗斯-008"
+    type: vless
+    server: 77.222.46.162
+    port: 2200
+    uuid: 2aa7f4b1-e859-46d0-b8ac-8587811ab7b1
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /v1
+      headers:
+        Host: rzd.ru
+  - name: "新加坡-009"
     type: vless
     server: 36.248.14.90
     port: 33102
@@ -64,20 +112,21 @@ proxies:
     tls: true
     servername: sgg.knhqf.com
     client-fingerprint: android
-  - name: "哥伦比亚-006"
+  - name: "芬兰-010"
     type: vless
-    server: 103.161.237.54
+    server: k1.cloud--vpn.site
     port: 443
-    uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
+    uuid: 81df88b4-ab24-4510-dc5f-7ebdbf24ff0a
     network: ws
     udp: true
     tls: true
-    servername: vod.ensf.top
+    servername: ssl.fastly.com
+    client-fingerprint: android
     ws-opts:
-      path: /api/v1/irc
+      path: /
       headers:
-        Host: vod.ensf.top
-  - name: "波兰-007"
+        Host: c12.com
+  - name: "波兰-011"
     type: vless
     server: 82.40.62.22
     port: 8443
@@ -86,34 +135,21 @@ proxies:
     udp: true
     tls: true
     client-fingerprint: android
-  - name: "俄罗斯-008"
+  - name: "德国-012"
     type: vless
-    server: vruaz.mostserv.xyz
+    server: 84.201.135.86
     port: 443
-    uuid: 463a26c2-eba8-0031-89c4-ee5c1373ccbe
+    uuid: 8491e506-02d9-4ad7-8fce-73aae002cdf3
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: vruaz.mostserv.xyz
-    client-fingerprint: chrome
+    servername: eh3.vk.ru
+    client-fingerprint: edge
     reality-opts:
-      public-key: "ckPCrgbrSdQaz1j3vP0-f0P8F4E8ZucQTeQGtxBKagU"
-      short-id: "3882f019072c5dcd"
-  - name: "德国-009"
-    type: vless
-    server: 46.8.221.218
-    port: 443
-    uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
-    network: grpc
-    udp: true
-    tls: true
-    servername: media2.tcpdoor.net
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8"
-      short-id: "3303c7a5"
-  - name: "香港-010"
+      public-key: "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw"
+      short-id: "2f3e735aedc55aaf"
+  - name: "香港-013"
     type: vless
     server: 103.118.252.45
     port: 13131
@@ -121,7 +157,7 @@ proxies:
     network: tcp
     udp: true
     tls: false
-  - name: "美国-CDN-011"
+  - name: "美国-CDN-014"
     type: vless
     server: 172.64.80.1
     port: 8880
@@ -141,32 +177,38 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "芬兰-001"
-      - "英国-002"
-      - "美国-003"
-      - "荷兰-004"
-      - "新加坡-005"
-      - "哥伦比亚-006"
-      - "波兰-007"
+      - "美国-001"
+      - "美国-002"
+      - "德国-003"
+      - "英国-004"
+      - "俄罗斯-005"
+      - "俄罗斯-006"
+      - "俄罗斯-007"
       - "俄罗斯-008"
-      - "德国-009"
-      - "香港-010"
-      - "美国-CDN-011"
+      - "新加坡-009"
+      - "芬兰-010"
+      - "波兰-011"
+      - "德国-012"
+      - "香港-013"
+      - "美国-CDN-014"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "芬兰-001"
-      - "英国-002"
-      - "美国-003"
-      - "荷兰-004"
-      - "新加坡-005"
-      - "哥伦比亚-006"
-      - "波兰-007"
+      - "美国-001"
+      - "美国-002"
+      - "德国-003"
+      - "英国-004"
+      - "俄罗斯-005"
+      - "俄罗斯-006"
+      - "俄罗斯-007"
       - "俄罗斯-008"
-      - "德国-009"
-      - "香港-010"
-      - "美国-CDN-011"
+      - "新加坡-009"
+      - "芬兰-010"
+      - "波兰-011"
+      - "德国-012"
+      - "香港-013"
+      - "美国-CDN-014"
 
 rules:
   - MATCH,Proxy
