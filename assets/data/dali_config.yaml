@@ -1,578 +1,61 @@
 proxies:
   - name: "美国-001"
     type: vless
-    server: 151.101.56.6
+    server: 199.232.78.159
     port: 443
-    uuid: ce99a4f9-02a4-4476-d31d-8152b0d999ea
+    uuid: 1a3829ce-f01a-4899-8537-1b4d188408ef
     network: ws
     udp: true
     tls: true
     servername: ssl.fastly.com
     client-fingerprint: chrome
     ws-opts:
-      path: "/?TELEGRAM--KANAL--@VPNine1--@VPNine1--@VPNine1--@VPNine1--@VPNine1--@VPNine1--@VPNine1--@VPNine1--@VPNine1--@VPNine1--@VPNine1--@VPNine1"
+      path: "/TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed=2053"
       headers:
-        Host: c12.com
-  - name: "美国-002"
+        Host: pane2.global.ssl.fastly.net
+  - name: "德国-002"
     type: vless
-    server: 144.225.246.111
-    port: 443
-    uuid: 7893b302-3882-4c38-9ab6-6313f1575d1a
-    network: ws
+    server: suno.kupivodku.top
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: cf.udpid.org
-    ws-opts:
-      path: "/@zyzzzoao"
-      headers:
-        Host: cf.udpid.org
-  - name: "美国-003"
-    type: vless
-    server: 142.248.219.3
-    port: 443
-    uuid: 7893b302-3882-4c38-9ab6-6313f1575d1a
-    network: ws
-    udp: true
-    tls: true
-    servername: cf.udpid.org
-    ws-opts:
-      path: "/@zyzzzoao"
-      headers:
-        Host: cf.udpid.org
-  - name: "荷兰-004"
-    type: vless
-    server: 69.46.46.123
-    port: 443
-    uuid: b3e2470b-5940-b801-6381-51b2902ee380
-    network: ws
-    udp: true
-    tls: true
-    servername: sr-production-d768.up.railway.app
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ws/b3e2470b-5940-b801-6381-51b2902ee380
-      headers:
-        Host: sr-production-d768.up.railway.app
-  - name: "美国-005"
-    type: vless
-    server: deepl.com
-    port: 8880
-    uuid: 878dd962-027b-4bd3-a1f8-66be68a03c4d
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /pyip=ProxyIP.SG.CMLiussss.net
-      headers:
-        Host: young-wind-3c58.240-2ce.workers.dev
-  - name: "美国-006"
-    type: vless
-    server: 179.255.108.176
-    port: 443
-    uuid: 7893b302-3882-4c38-9ab6-6313f1575d1a
-    network: ws
-    udp: true
-    tls: true
-    servername: cf.udpid.org
-    ws-opts:
-      path: "/@zyzzzoao"
-      headers:
-        Host: cf.udpid.org
-  - name: "美国-007"
-    type: vless
-    server: 141.193.213.30
-    port: 8880
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /
-      headers:
-        Host: vms.lifetime23.workers.dev
-  - name: "其他-008"
-    type: vless
-    server: 159.246.55.30
-    port: 8880
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /
-      headers:
-        Host: vms.lifetime59.workers.dev
-  - name: "美国-CDN-009"
-    type: vless
-    server: 172.64.80.1
-    port: 8880
-    uuid: 5bbf0601-8431-45f6-a4e9-a1e8b44c0055
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /pyip=ProxyIP.KR.CMLiussss.net
-      headers:
-        Host: misty-mouse-141d.177-f18.workers.dev
-  - name: "其他-010"
-    type: vless
-    server: 89.116.46.50
-    port: 8880
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /?ed
-      headers:
-        Host: vms.lifetime07.workers.dev
-  - name: "哥伦比亚-011"
-    type: vless
-    server: www.epicgames.com
-    port: 2095
-    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /
-      headers:
-        Host: cnmfangbinxing.cnmfangbinxing-f.workers.dev
-  - name: "美国-012"
-    type: vless
-    server: 140.235.168.6
-    port: 8443
-    uuid: 10d192cd-66ab-2817-39ac-a8f8a0dd95e1
-    network: grpc
-    udp: true
-    tls: true
-    servername: download.nvidia.com
+    servername: suno.kupivodku.top
     client-fingerprint: chrome
     reality-opts:
-      public-key: "fCVnWVMTCS5fzMMTwk7EaBLlg4a2kAVDt2CG2jwobQ0"
-  - name: "加拿大-013"
+      public-key: "EspGR3C-10emgNP4qil4Sk77pDYHOyxPpV3r6EkbEV8"
+      short-id: "13a7f33d0731e53c"
+  - name: "德国-003"
     type: vless
-    server: ca.milkabebar.ir
-    port: 17780
-    uuid: a06119a7-4f1a-4592-86d9-e050a332b2b3
-    network: tcp
-    udp: true
-    tls: true
-    servername: amp-api-edge.apps.apple.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "CHNEnURyZzZ1OQwb5SD2Ze8K9eIY2oggyrV5FOIsU28"
-      short-id: "a0fbc54d937aaccb"
-  - name: "荷兰-014"
-    type: vless
-    server: 172.239.237.246
-    port: 17780
-    uuid: a06119a7-4f1a-4592-86d9-e050a332b2b3
-    network: tcp
-    udp: true
-    tls: true
-    servername: amp-api-edge.apps.apple.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "CHNEnURyZzZ1OQwb5SD2Ze8K9eIY2oggyrV5FOIsU28"
-      short-id: "a0fbc54d937aaccb"
-  - name: "英国-015"
-    type: vless
-    server: 164.37.109.186
-    port: 443
-    uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
+    server: 87.120.104.91
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: uk.cdn.cachefleet.com
-    client-fingerprint: random
-    reality-opts:
-      public-key: "fYAeaCv2jMnzpu7WzQmx38eBRW43kEfpUqj_RwnVnEA"
-  - name: "荷兰-016"
-    type: vless
-    server: am1.milkabebar.ir
-    port: 17780
-    uuid: a06119a7-4f1a-4592-86d9-e050a332b2b3
-    network: tcp
-    udp: true
-    tls: true
-    servername: amp-api-edge.apps.apple.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "CHNEnURyZzZ1OQwb5SD2Ze8K9eIY2oggyrV5FOIsU28"
-      short-id: "a0fbc54d937aaccb"
-  - name: "英国-017"
-    type: vless
-    server: 164.37.105.36
-    port: 443
-    uuid: d86e6fda-e519-0065-98eb-9ff9a9da5984
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: sl.cdn.cachefleet.com
-    client-fingerprint: random
-    reality-opts:
-      public-key: "fYAeaCv2jMnzpu7WzQmx38eBRW43kEfpUqj_RwnVnEA"
-  - name: "英国-018"
-    type: vless
-    server: 164.37.105.34
-    port: 443
-    uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: sl.cdn.cachefleet.com
-    client-fingerprint: random
-    reality-opts:
-      public-key: "fYAeaCv2jMnzpu7WzQmx38eBRW43kEfpUqj_RwnVnEA"
-  - name: "美国-019"
-    type: vless
-    server: 43.161.254.71
-    port: 443
-    uuid: 7893b302-3882-4c38-9ab6-6313f1575d1a
-    network: ws
-    udp: true
-    tls: true
-    servername: cf.udpid.org
-    ws-opts:
-      path: "/@zyzzzoao"
-      headers:
-        Host: cf.udpid.org
-  - name: "阿联酋-020"
-    type: vless
-    server: 151.242.160.94
-    port: 443
-    uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: pl94.mechvpn.online
-    client-fingerprint: firefox
-  - name: "阿联酋-021"
-    type: vless
-    server: pl94.mechvpn.online
-    port: 443
-    uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: pl94.mechvpn.online
-  - name: "法国-022"
-    type: vless
-    server: fr1.milkabebar.ir
-    port: 17780
-    uuid: a06119a7-4f1a-4592-86d9-e050a332b2b3
-    network: tcp
-    udp: true
-    tls: true
-    servername: amp-api-edge.apps.apple.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "CHNEnURyZzZ1OQwb5SD2Ze8K9eIY2oggyrV5FOIsU28"
-      short-id: "a0fbc54d937aaccb"
-  - name: "英国-023"
-    type: vless
-    server: 2.27.201.184
-    port: 443
-    uuid: 15e83ced-7544-422e-863d-deafe29a1dbe
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.amd.com
+    servername: suno.kupivodku.top
     client-fingerprint: chrome
     reality-opts:
-      public-key: "jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ"
-      short-id: "635a76c25a4b1820"
-  - name: "德国-024"
+      public-key: "EspGR3C-10emgNP4qil4Sk77pDYHOyxPpV3r6EkbEV8"
+      short-id: "13a7f33d0731e53c"
+  - name: "法国-004"
     type: vless
-    server: 194.55.189.249
-    port: 40443
-    uuid: 8212a50b-25bf-4739-bba1-aaffb5ffc84c
+    server: kruassan.buildsnow.top
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
     network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: deepl.com
+    servername: kruassan.buildsnow.top
     client-fingerprint: chrome
     reality-opts:
-      public-key: "KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo"
-      short-id: "aae8"
-  - name: "荷兰-025"
-    type: vless
-    server: 5.129.209.118
-    port: 443
-    uuid: afa92127-9235-4f03-9663-5eaef3f3d7bb
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.bing.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "5FHR9361HdRaycDAmACmok_SvpmM2xnzYRkUBsgZARM"
-      short-id: "c7d4e6fb729b69c2"
-  - name: "德国-026"
-    type: vless
-    server: grs2.milkabebar.ir
-    port: 17780
-    uuid: a06119a7-4f1a-4592-86d9-e050a332b2b3
-    network: tcp
-    udp: true
-    tls: true
-    servername: amp-api-edge.apps.apple.com
-    client-fingerprint: edge
-    reality-opts:
-      public-key: "CHNEnURyZzZ1OQwb5SD2Ze8K9eIY2oggyrV5FOIsU28"
-      short-id: "a0fbc54d937aaccb"
-  - name: "德国-027"
-    type: vless
-    server: 104.105.3.100
-    port: 17780
-    uuid: a06119a7-4f1a-4592-86d9-e050a332b2b3
-    network: tcp
-    udp: true
-    tls: true
-    servername: amp-api-edge.apps.apple.com
-    client-fingerprint: edge
-    reality-opts:
-      public-key: "CHNEnURyZzZ1OQwb5SD2Ze8K9eIY2oggyrV5FOIsU28"
-      short-id: "a0fbc54d937aaccb"
-  - name: "英国-028"
-    type: vless
-    server: sk.sywl4.uk
-    port: 443
-    uuid: 0ce122a3-1c91-4cf5-a2cc-67f25e8cb56f
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: sk.sywl4.uk
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "vLixH3QobMv6Rg4UcGbMp49i-w1asnw3Bsgv_gwm4DQ"
-      short-id: "abcdef99"
-  - name: "荷兰-029"
-    type: vless
-    server: 94.183.255.133
-    port: 443
-    uuid: 15e83ced-7544-422e-863d-deafe29a1dbe
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.amd.com
-    client-fingerprint: edge
-    reality-opts:
-      public-key: "jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ"
-      short-id: "635a76c25a4b1820"
-  - name: "荷兰-030"
-    type: vless
-    server: 94.183.228.156
-    port: 443
-    uuid: 15e83ced-7544-422e-863d-deafe29a1dbe
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.amd.com
-    client-fingerprint: qq
-    reality-opts:
-      public-key: "jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ"
-      short-id: "635a76c25a4b1820"
-  - name: "加拿大-031"
-    type: vless
-    server: 144.31.3.54
-    port: 443
-    uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: proud-dynamo.cdn.cachefleet.com
-    client-fingerprint: random
-    reality-opts:
-      public-key: "KOgPteoWEwtVtykS2FGV5NHdZw6197VzbITPGkUJDBQ"
-  - name: "意大利-032"
-    type: vless
-    server: ita.milkabebar.ir
-    port: 17780
-    uuid: a06119a7-4f1a-4592-86d9-e050a332b2b3
-    network: tcp
-    udp: true
-    tls: true
-    servername: amp-api-edge.apps.apple.com
-    client-fingerprint: qq
-    reality-opts:
-      public-key: "CHNEnURyZzZ1OQwb5SD2Ze8K9eIY2oggyrV5FOIsU28"
-      short-id: "a0fbc54d937aaccb"
-  - name: "加拿大-033"
-    type: vless
-    server: 144.31.3.101
-    port: 443
-    uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: warm-leopard.cdn.cachefleet.com
-    client-fingerprint: random
-    reality-opts:
-      public-key: "KOgPteoWEwtVtykS2FGV5NHdZw6197VzbITPGkUJDBQ"
-  - name: "美国-034"
-    type: vless
-    server: 94.183.209.59
-    port: 443
-    uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /
-  - name: "新加坡-035"
-    type: vless
-    server: 167.150.100.81
-    port: 57218
-    uuid: 9e6e7584-2806-4815-b9f9-1388c6c6e38b
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /040m1kjlez
-  - name: "波兰-036"
-    type: vless
-    server: mchq2tvxva.740.laviroso.click
-    port: 443
-    uuid: 20df893e-dcf4-491d-8261-6dbb24f9566b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: 740.laviroso.click
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "ezv2jd8PHLSt2ZpfbY6qhy-4kGxijOS9i-lm5xtdDXY"
-  - name: "波兰-037"
-    type: vless
-    server: 31.56.188.179
-    port: 8443
-    uuid: afa92127-9235-4f03-9663-5eaef3f3d7bb
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.bing.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "UuEiv2T1QFnZA1IYb3is-th-eMCFFVENl6M3IGXZ9zs"
-      short-id: "6e3df2765ab89224"
-  - name: "英国-038"
-    type: vless
-    server: sk2.sywl4.uk
-    port: 443
-    uuid: 0ce122a3-1c91-4cf5-a2cc-67f25e8cb56f
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: sk2.sywl4.uk
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "ETeAUJpZugcGIO-dbjgx55mH835m026nveRvLYVsuU4"
-      short-id: "abcdef99"
-  - name: "加拿大-039"
-    type: vless
-    server: 5.175.178.38
-    port: 443
-    uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: keen-siren.cdn.cachefleet.com
-    client-fingerprint: random
-    reality-opts:
-      public-key: "ym3hAtR8IhSWN-uRGGRcjHm7tvaPfeVcBDW6DM8w_Ec"
-  - name: "波兰-040"
-    type: vless
-    server: 31.56.188.83
-    port: 443
-    uuid: 20df893e-dcf4-491d-8261-6dbb24f9566b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: 740.laviroso.click
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "ezv2jd8PHLSt2ZpfbY6qhy-4kGxijOS9i-lm5xtdDXY"
-  - name: "法国-041"
-    type: vless
-    server: 104.245.242.9
-    port: 8443
-    uuid: 10d192cd-66ab-2817-39ac-a8f8a0dd95e1
-    network: grpc
-    udp: true
-    tls: true
-    servername: www.philips.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "Sq7mtLmaanwsTVNBR9gU7ECU87ftrb_wFGRLLNRBlmQ"
-  - name: "哥伦比亚-042"
-    type: vless
-    server: 89.47.55.7
-    port: 8443
-    uuid: 10d192cd-66ab-2817-39ac-a8f8a0dd95e1
-    network: grpc
-    udp: true
-    tls: true
-    servername: www.sony.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "TWaatavWGcWV-E7c4AXmBXypLKJzm6eR3FGG61spayQ"
-  - name: "其他-043"
-    type: vless
-    server: 201.24.49.237
-    port: 2200
-    uuid: af412668-578c-4296-bc8c-8fac6a8d9003
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /v1
-      headers:
-        Host: rzd.ru
-  - name: "新加坡-044"
-    type: vless
-    server: 5.253.28.21
-    port: 443
-    uuid: 20df893e-dcf4-491d-8261-6dbb24f9566b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: il.stream-host.site
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "bO6oE5j-3-ONc3nqNsicX1hs6UhmrNLS5g_aMIRDUEc"
-  - name: "哥伦比亚-045"
-    type: vless
-    server: tr.pollcenter.site
-    port: 34156
-    uuid: 35dc1a9b-c02c-4670-a3f9-1f8106567f14
-    network: tcp
-    udp: true
-    tls: true
-    servername: yahoo.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "BsCp88E9PdpEDjC5bxLMP2tiJYK6afCPQT_CoxCVgAI"
-      short-id: "d6cdfdd9a21f8d23"
-  - name: "德国-046"
+      public-key: "_ulb4xykTvrGqAOxFKCK3Oce0aDT9fVAU2cPbYRkOT0"
+      short-id: "eab4bc60d31415c3"
+  - name: "德国-005"
     type: vless
     server: 194.48.250.172
     port: 443
@@ -582,82 +65,227 @@ proxies:
     udp: true
     tls: true
     servername: eu-central.cendora.ru
-    client-fingerprint: edge
+    client-fingerprint: chrome
     reality-opts:
       public-key: "b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI"
       short-id: "00bca5982f82d083"
-  - name: "德国-047"
+  - name: "瑞士-006"
     type: vless
-    server: 64.188.82.152
-    port: 443
-    uuid: 7836b28e-8451-4596-ad3e-e3601b2335ba
+    server: 176.65.144.220
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ch.snowfalls.top
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "rvOPhBAT3c5Uok7UDuxVfML3j4mib3Y9MU_Cd9M822c"
+      short-id: "0441f3e34348cb45"
+  - name: "德国-007"
+    type: vless
+    server: 87.120.104.188
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: suno.kupivodku.top
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "EspGR3C-10emgNP4qil4Sk77pDYHOyxPpV3r6EkbEV8"
+      short-id: "13a7f33d0731e53c"
+  - name: "瑞士-008"
+    type: vless
+    server: 176.65.144.230
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ch.snowfalls.top
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "rvOPhBAT3c5Uok7UDuxVfML3j4mib3Y9MU_Cd9M822c"
+      short-id: "0441f3e34348cb45"
+  - name: "瑞士-009"
+    type: vless
+    server: ch.snowfalls.top
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ch.snowfalls.top
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "rvOPhBAT3c5Uok7UDuxVfML3j4mib3Y9MU_Cd9M822c"
+      short-id: "0441f3e34348cb45"
+  - name: "瑞士-010"
+    type: vless
+    server: 176.65.144.235
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ch.snowfalls.top
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "rvOPhBAT3c5Uok7UDuxVfML3j4mib3Y9MU_Cd9M822c"
+      short-id: "0441f3e34348cb45"
+  - name: "意大利-011"
+    type: vless
+    server: it.buildsnow.top
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: it.buildsnow.top
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "dhTXgiFZvZPJSNc33EqNvn_CRor_RKeiMxSkHsEdDic"
+      short-id: "0441f3e34348cb45"
+  - name: "德国-012"
+    type: vless
+    server: bip.snowfalls.top
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: bip.snowfalls.top
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "wHhzA580eLv3fxvwVe1IPBgel9vFUWR_xLjAvTXNRio"
+      short-id: "0441f3e34348cb45"
+  - name: "德国-013"
+    type: vless
+    server: serbskacdn.kupivodku.top
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: serbskacdn.kupivodku.top
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "VzaK-JDlYYWF5EYoDPKMLyqSFMisK28f8eIEFOnpT1A"
+      short-id: "0441f3e34348cb45"
+  - name: "其他-014"
+    type: vless
+    server: 201.24.49.53
+    port: 4100
+    uuid: 33965d4f-f9bd-4437-8867-ed705b435518
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /v1
+      headers:
+        Host: live.ok.ru
+  - name: "其他-015"
+    type: vless
+    server: 104.171.134.87
+    port: 4100
+    uuid: 84d0ff7b-9760-415f-a974-b3e1fe92264f
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /v1
+  - name: "俄罗斯-016"
+    type: vless
+    server: 217.60.63.206
+    port: 2053
+    uuid: c7e9c591-2764-423a-afca-efbd010fd396
     network: ws
     udp: true
     tls: true
-    servername: cloudflare.vhub.pro
+    servername: forfreeuse.rtqa.ru
     client-fingerprint: chrome
     ws-opts:
-      path: /websocket
+      path: /
       headers:
-        Host: cloudflare.vhub.pro
-  - name: "美国-048"
+        Host: forfreeuse.rtqa.ru
+  - name: "法国-017"
     type: vless
-    server: 64.49.38.8
-    port: 8443
-    uuid: 10d192cd-66ab-2817-39ac-a8f8a0dd95e1
-    network: grpc
-    udp: true
-    tls: true
-    servername: download.nvidia.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "JeVpfwIwteGa8xfysPJUzrbHgmOPyLGomRqyH8Pi7W0"
-  - name: "德国-049"
-    type: vless
-    server: 82.38.4.137
-    port: 443
-    uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+    server: 82.25.63.97
+    port: 1443
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: de137.mechvpn.online
-    client-fingerprint: firefox
-  - name: "德国-050"
+    servername: kruassan.buildsnow.top
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "_ulb4xykTvrGqAOxFKCK3Oce0aDT9fVAU2cPbYRkOT0"
+      short-id: "eab4bc60d31415c3"
+  - name: "捷克-018"
     type: vless
-    server: de137.mechvpn.online
+    server: fudjia.buildsnow.top
     port: 443
-    uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: de137.mechvpn.online
+    servername: fudjia.buildsnow.top
     client-fingerprint: chrome
-  - name: "德国-051"
+    reality-opts:
+      public-key: "nmPeOfYZT013UKwb2_Qz7j1cdUxxXs8cQ0c6Fy3drA4"
+      short-id: "0940f3e34948cb41"
+  - name: "捷克-019"
     type: vless
-    server: 31.56.187.86
+    server: 5.39.202.22
     port: 443
-    uuid: a261baf0-8e37-4ff0-b9d1-7180c570073a
-    network: grpc
+    uuid: 237b7689-d644-4f32-be77-b0f76b1c1135
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: ee.dealfre.xyz
-    client-fingerprint: firefox
+    servername: fudjia.buildsnow.top
+    client-fingerprint: chrome
     reality-opts:
-      public-key: "Zo3OftHANSWinV-kajh98gqzcjWnkB_q7JPaG87SMGA"
-  - name: "德国-052"
+      public-key: "nmPeOfYZT013UKwb2_Qz7j1cdUxxXs8cQ0c6Fy3drA4"
+      short-id: "0940f3e34948cb41"
+  - name: "美国-020"
     type: vless
-    server: ee.dealfre.xyz
-    port: 443
-    uuid: a261baf0-8e37-4ff0-b9d1-7180c570073a
-    network: grpc
+    server: 23.94.227.94
+    port: 15884
+    uuid: c543f497-6a6d-4842-8317-a5f62ea56dc2
+    network: tcp
     udp: true
     tls: true
-    servername: ee.dealfre.xyz
-    client-fingerprint: edge
+    servername: www.intel.com
+    client-fingerprint: chrome
     reality-opts:
-      public-key: "Zo3OftHANSWinV-kajh98gqzcjWnkB_q7JPaG87SMGA"
+      public-key: "rZAYGSqaklKNltwTGPpAok74VYCxV9uKvrOyydSn9UE"
+      short-id: "a391369e7596"
+  - name: "俄罗斯-021"
+    type: vless
+    server: 91.232.114.148
+    port: 443
+    uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
+    network: ws
+    udp: true
+    tls: true
+    servername: vod.ensf.top
+    client-fingerprint: chrome
+    ws-opts:
+      path: /api/v1/irc
+      headers:
+        Host: vod.ensf.top
 
 proxy-groups:
   - name: Auto
@@ -667,113 +295,51 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "美国-001"
-      - "美国-002"
-      - "美国-003"
-      - "荷兰-004"
-      - "美国-005"
-      - "美国-006"
-      - "美国-007"
-      - "其他-008"
-      - "美国-CDN-009"
-      - "其他-010"
-      - "哥伦比亚-011"
-      - "美国-012"
-      - "加拿大-013"
-      - "荷兰-014"
-      - "英国-015"
-      - "荷兰-016"
-      - "英国-017"
-      - "英国-018"
-      - "美国-019"
-      - "阿联酋-020"
-      - "阿联酋-021"
-      - "法国-022"
-      - "英国-023"
-      - "德国-024"
-      - "荷兰-025"
-      - "德国-026"
-      - "德国-027"
-      - "英国-028"
-      - "荷兰-029"
-      - "荷兰-030"
-      - "加拿大-031"
-      - "意大利-032"
-      - "加拿大-033"
-      - "美国-034"
-      - "新加坡-035"
-      - "波兰-036"
-      - "波兰-037"
-      - "英国-038"
-      - "加拿大-039"
-      - "波兰-040"
-      - "法国-041"
-      - "哥伦比亚-042"
-      - "其他-043"
-      - "新加坡-044"
-      - "哥伦比亚-045"
-      - "德国-046"
-      - "德国-047"
-      - "美国-048"
-      - "德国-049"
-      - "德国-050"
-      - "德国-051"
-      - "德国-052"
+      - "德国-002"
+      - "德国-003"
+      - "法国-004"
+      - "德国-005"
+      - "瑞士-006"
+      - "德国-007"
+      - "瑞士-008"
+      - "瑞士-009"
+      - "瑞士-010"
+      - "意大利-011"
+      - "德国-012"
+      - "德国-013"
+      - "其他-014"
+      - "其他-015"
+      - "俄罗斯-016"
+      - "法国-017"
+      - "捷克-018"
+      - "捷克-019"
+      - "美国-020"
+      - "俄罗斯-021"
   - name: Proxy
     type: select
     proxies:
       - Auto
       - "美国-001"
-      - "美国-002"
-      - "美国-003"
-      - "荷兰-004"
-      - "美国-005"
-      - "美国-006"
-      - "美国-007"
-      - "其他-008"
-      - "美国-CDN-009"
-      - "其他-010"
-      - "哥伦比亚-011"
-      - "美国-012"
-      - "加拿大-013"
-      - "荷兰-014"
-      - "英国-015"
-      - "荷兰-016"
-      - "英国-017"
-      - "英国-018"
-      - "美国-019"
-      - "阿联酋-020"
-      - "阿联酋-021"
-      - "法国-022"
-      - "英国-023"
-      - "德国-024"
-      - "荷兰-025"
-      - "德国-026"
-      - "德国-027"
-      - "英国-028"
-      - "荷兰-029"
-      - "荷兰-030"
-      - "加拿大-031"
-      - "意大利-032"
-      - "加拿大-033"
-      - "美国-034"
-      - "新加坡-035"
-      - "波兰-036"
-      - "波兰-037"
-      - "英国-038"
-      - "加拿大-039"
-      - "波兰-040"
-      - "法国-041"
-      - "哥伦比亚-042"
-      - "其他-043"
-      - "新加坡-044"
-      - "哥伦比亚-045"
-      - "德国-046"
-      - "德国-047"
-      - "美国-048"
-      - "德国-049"
-      - "德国-050"
-      - "德国-051"
-      - "德国-052"
+      - "德国-002"
+      - "德国-003"
+      - "法国-004"
+      - "德国-005"
+      - "瑞士-006"
+      - "德国-007"
+      - "瑞士-008"
+      - "瑞士-009"
+      - "瑞士-010"
+      - "意大利-011"
+      - "德国-012"
+      - "德国-013"
+      - "其他-014"
+      - "其他-015"
+      - "俄罗斯-016"
+      - "法国-017"
+      - "捷克-018"
+      - "捷克-019"
+      - "美国-020"
+      - "俄罗斯-021"
 
 rules:
   - MATCH,Proxy
