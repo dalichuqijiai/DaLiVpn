@@ -1,19 +1,79 @@
 proxies:
   - name: "美国-001"
     type: vless
-    server: 161.114.13.225
-    port: 14451
-    uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
+    server: spider-panel-production-474a.up.railway.app
+    port: 443
+    uuid: ec15515b-3e5b-4cc1-8882-c4375bace7f9
+    network: ws
+    udp: true
+    tls: true
+    servername: spider-panel-production-474a.up.railway.app
+    client-fingerprint: android
+    ws-opts:
+      path: /ws/ec15515b-3e5b-4cc1-8882-c4375bace7f9
+      headers:
+        Host: spider-panel-production-474a.up.railway.app
+  - name: "美国-002"
+    type: vless
+    server: 162.159.48.32
+    port: 8880
+    uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
     network: ws
     udp: true
     tls: false
     ws-opts:
-      path: /
+      path: /?ed=2560security=tls
       headers:
-        Host: a.189.cn
-  - name: "立陶宛-002"
+        Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  - name: "美国-003"
     type: vless
-    server: 88.216.190.206
+    server: 104.16.150.108
+    port: 2087
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+    network: ws
+    udp: true
+    tls: true
+    servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+  - name: "日本-004"
+    type: vless
+    server: qp.lichao0223.cn
+    port: 49152
+    uuid: 71b460a1-8f78-45c5-fb3c-ab26a2a1f7b9
+    network: ws
+    udp: true
+    tls: true
+    servername: qp.lichao0223.cn
+    client-fingerprint: android
+  - name: "美国-005"
+    type: vless
+    server: 167.104.223.179
+    port: 443
+    uuid: c6cff605-90cf-4953-bf97-0a44e43f229d
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: gb5.murhost.network
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "fyfX-egDrRvXNW1Gt2P_8rH4jdupAcmhFLOCZCzCowo"
+      short-id: "fc36b4a584871aa5"
+  - name: "澳大利亚-006"
+    type: vless
+    server: 163.8.195.241
+    port: 2087
+    uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /29c8fed7ca22
+  - name: "立陶宛-007"
+    type: vless
+    server: app4.goonars.com
     port: 443
     uuid: 2f600710-9f4e-4eab-8de1-89f60a878e55
     network: tcp
@@ -25,120 +85,44 @@ proxies:
     reality-opts:
       public-key: "u51rZT5vJj8nO80QBBHVW2-WA5OzzQ1eL6euvszWLQI"
       short-id: "09ef88a6"
-  - name: "德国-003"
+  - name: "荷兰-008"
     type: vless
-    server: 88.216.214.143
-    port: 40443
-    uuid: ed2c5f6c-8383-4f7a-a231-c28916489f76
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: tv.apple.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "-cxFcuI9vCkNZvlwGFms4bENl_cZbOz2pUMOVCKB4j0"
-      short-id: "e6bbe5cbfd3a1c9f"
-  - name: "德国-004"
-    type: vless
-    server: sw.deeplcdn.com
-    port: 40443
-    uuid: ed2c5f6c-8383-4f7a-a231-c28916489f76
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: tv.apple.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "-cxFcuI9vCkNZvlwGFms4bENl_cZbOz2pUMOVCKB4j0"
-      short-id: "e6bbe5cbfd3a1c9f"
-  - name: "德国-005"
-    type: vless
-    server: eu-gw.videomonitor.cloud
-    port: 2053
-    uuid: b1e4bfe2-2b12-11f1-92cb-12ba70109d32
-    network: grpc
-    udp: true
-    tls: true
-    servername: dzen.ru
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "j8OW1foMwfeiy3VMbNPHLgTXgy_ZPdFFxv-H3HrbNF0"
-      short-id: "f0c18fcc1d09b637"
-  - name: "奥地利-006"
-    type: vless
-    server: lb20.westondigita.cloud
-    port: 8443
-    uuid: e8badfe0-eaaa-4664-9b32-7a53a501aefa
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: westondigita.cloud
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "cynncQk7kKzEQaExg-FN7pMqFaZPSXEi_Ggy7AXXmVg"
-      short-id: "2356d1ae4b"
-  - name: "德国-007"
-    type: vless
-    server: 151.242.168.155
+    server: wsnl4.wba-pn.ru
     port: 443
-    uuid: 43ca296b-321f-4b61-a12c-ddf8370b9761
-    network: tcp
-    flow: xtls-rprx-vision
+    uuid: 3d059048-8857-4101-a275-f55142159b5c
+    network: ws
     udp: true
     tls: true
-    servername: kibi-institut.de
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "mWzXDVWUhjGcuizZHA-rEnRpxv2wgeSZUIuHmQdteiA"
-      short-id: "f576da5e05a1d4d2"
-  - name: "英国-008"
+    client-fingerprint: android
+  - name: "其他-009"
     type: vless
-    server: nian.001.url111.kcloud02.top
-    port: 15003
-    uuid: 399c4c9b-27e1-37f1-9dce-22ccc2727a86
-    network: tcp
-    flow: xtls-rprx-vision
+    server: 178.72.147.246
+    port: 2200
+    uuid: 099f0859-cb81-4a57-b6d8-2c8e18030627
+    network: ws
     udp: true
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "R_3usai5pYqcc0aIzXPfaoe-VE_7JOe60fUNMicwfQ8"
-      short-id: "4c517b9e"
-  - name: "荷兰-009"
+    tls: false
+    ws-opts:
+      path: /v1
+      headers:
+        Host: rzd.ru
+  - name: "哥伦比亚-010"
     type: vless
-    server: 45.143.167.154
-    port: 8443
-    uuid: f374a660-2dc5-11f1-9ec5-baabcd4be2cd
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.apple.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "FVL0r87K3-vUP2KXQX1juLMFEHJtvxwKM-nm6_PYllc"
-      short-id: "deadbeef42"
-  - name: "英国-010"
-    type: vless
-    server: 31.77.220.162
+    server: 81.90.17.117
     port: 443
-    uuid: 74f73fb2-49cc-4744-bd37-97c5f83963ab
+    uuid: 9bbd487f-8f84-4ad7-b897-681c3f7d95dc
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: ge.aeternavpn.space
+    servername: magazin6.mervi.icu
     client-fingerprint: chrome
     reality-opts:
-      public-key: "HsxQYvmZIA53bxPmHJIVsLqP7MeMp6jxKmIHIzzU_D4"
-      short-id: "a1b2c3d4"
+      public-key: "VoUKOKxP103a3-SYTAOKlXsxaBtpyVSE4G2cadWXJgE"
+      short-id: "d98c716c17c0dc68"
   - name: "俄罗斯-011"
     type: vless
-    server: 176.108.245.3
+    server: 147.45.116.52
     port: 443
     uuid: a34b5e88-cf0d-4c01-8199-2d1002d3c787
     network: tcp
@@ -149,6 +133,118 @@ proxies:
     client-fingerprint: chrome
     reality-opts:
       public-key: "HKpd1sbrhBds8SJSL0d22MAq_QyTR6EP6y5b5DYol3U"
+  - name: "芬兰-012"
+    type: vless
+    server: 31.77.220.183
+    port: 1443
+    uuid: 6379673b-197f-4944-ba81-a45c66aefe9c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: fi.aeternavpn.space
+    client-fingerprint: android
+    reality-opts:
+      public-key: "HNjZe5pYUhcuE8sASYVVrVSMW_jFfekgLnrnO4xXIyQ"
+      short-id: "a1b2c3d4"
+  - name: "俄罗斯-013"
+    type: vless
+    server: ru05.abvpn.ru
+    port: 443
+    uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
+    network: ws
+    udp: true
+    tls: true
+    servername: ru05.abvpn.ru
+    client-fingerprint: edge
+    ws-opts:
+      path: /websocket
+      headers:
+        Host: ru05.abvpn.ru
+  - name: "美国-014"
+    type: vless
+    server: 2.27.205.136
+    port: 8443
+    uuid: e03a3489-b7e3-4a9b-9017-f8d4c720401e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: xnod5x.artemida.live
+    client-fingerprint: android
+    reality-opts:
+      public-key: "ZRTNgwFRP8viY4SQOgPTfWlLWJCwY3dr0aawA7vHwhU"
+      short-id: "a1b2c3d4e5f6a7b8"
+  - name: "香港-015"
+    type: vless
+    server: family.bucket.zjs.h.1.0.kfc-520.com
+    port: 10023
+    uuid: c2564a65-0821-3241-b090-45d49cef58fd
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.hp.com
+    client-fingerprint: android
+    reality-opts:
+      public-key: "sPNVi_cpk51PLxKVWAusfQBokEjYh69B3p5HhDbbLB4"
+      short-id: "fe"
+  - name: "香港-016"
+    type: vless
+    server: family.bucket.zjs.h.1.0.kfc-520.com
+    port: 10025
+    uuid: c2564a65-0821-3241-b090-45d49cef58fd
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.hp.com
+    client-fingerprint: android
+    reality-opts:
+      public-key: "o9HJwtbkN76N7Tp5Iz_mVgOWGGjdIFLVSMN4VeK1M38"
+      short-id: "dc3a980d52dd"
+  - name: "英国-017"
+    type: vless
+    server: 130.78.216.210
+    port: 443
+    uuid: 3d09f1e9-da54-4ba1-9c25-8131563a708e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: free3.anotherboring.top
+    client-fingerprint: android
+    reality-opts:
+      public-key: "ork7ibKio_WWoeDjdGALI3rNkw1becVxD0_A86mLExw"
+      short-id: "75c6c89d5d9fa6e8"
+  - name: "新加坡-018"
+    type: vless
+    server: family.bucket.zjs.s.1.kfc-520.com
+    port: 10017
+    uuid: c2564a65-0821-3241-b090-45d49cef58fd
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.sap.com
+    client-fingerprint: android
+    reality-opts:
+      public-key: "XV85nYU2U8OlC9HYGBH9gXLUvkLELGbHAeI8bGD0SSY"
+      short-id: "68f899acc3729e"
+  - name: "德国-019"
+    type: vless
+    server: 151.242.168.186
+    port: 443
+    uuid: 258ab003-733b-4d79-b0b0-c41044ba2e86
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: kibi-institut.de
+    client-fingerprint: android
+    reality-opts:
+      public-key: "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY"
+      short-id: "fd55b698ee8c3629"
 
 proxy-groups:
   - name: Auto
@@ -158,31 +254,47 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "美国-001"
-      - "立陶宛-002"
-      - "德国-003"
-      - "德国-004"
-      - "德国-005"
-      - "奥地利-006"
-      - "德国-007"
-      - "英国-008"
-      - "荷兰-009"
-      - "英国-010"
+      - "美国-002"
+      - "美国-003"
+      - "日本-004"
+      - "美国-005"
+      - "澳大利亚-006"
+      - "立陶宛-007"
+      - "荷兰-008"
+      - "其他-009"
+      - "哥伦比亚-010"
       - "俄罗斯-011"
+      - "芬兰-012"
+      - "俄罗斯-013"
+      - "美国-014"
+      - "香港-015"
+      - "香港-016"
+      - "英国-017"
+      - "新加坡-018"
+      - "德国-019"
   - name: Proxy
     type: select
     proxies:
       - Auto
       - "美国-001"
-      - "立陶宛-002"
-      - "德国-003"
-      - "德国-004"
-      - "德国-005"
-      - "奥地利-006"
-      - "德国-007"
-      - "英国-008"
-      - "荷兰-009"
-      - "英国-010"
+      - "美国-002"
+      - "美国-003"
+      - "日本-004"
+      - "美国-005"
+      - "澳大利亚-006"
+      - "立陶宛-007"
+      - "荷兰-008"
+      - "其他-009"
+      - "哥伦比亚-010"
       - "俄罗斯-011"
+      - "芬兰-012"
+      - "俄罗斯-013"
+      - "美国-014"
+      - "香港-015"
+      - "香港-016"
+      - "英国-017"
+      - "新加坡-018"
+      - "德国-019"
 
 rules:
   - MATCH,Proxy
