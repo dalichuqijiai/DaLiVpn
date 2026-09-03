@@ -7,61 +7,178 @@ proxies:
     network: ws
     udp: true
     tls: true
-    servername: 1-StATiC-iMg-m13.xdc.CcWu.Cc
+    servername: 5-stAtic-ImG-m13.xDC.ccWu.cC
     ws-opts:
       path: /ED3ZQPu7lqyeDGD58KabZ
       headers:
-        Host: 1-StaTic-ImG-m13.Xdc.cCWU.Cc
-  - name: "英国-002"
+        Host: 5-StATIc-iMG-M13.xdC.CCwU.Cc
+  - name: "美国-002"
     type: vless
-    server: 188.220.67.245
-    port: 2087
-    uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee
+    server: 172.67.140.11
+    port: 443
+    uuid: a90c264d-3853-4eef-9a3d-628b2d02d15e
+    network: ws
+    udp: true
+    tls: true
+    servername: 4-M19.sUdaN-paRk.CCwU.cc
+    client-fingerprint: chrome
+    ws-opts:
+      path: /CjBjB9sn5pCvaSwScc
+      headers:
+        Host: 4-m19.SUdan-pArk.ccWu.CC
+  - name: "美国-003"
+    type: vless
+    server: 108.162.198.178
+    port: 2086
+    uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
     network: ws
     udp: true
     tls: false
     ws-opts:
-      path: /8f2690e2d016
-  - name: "法国-003"
+      path: /
+      headers:
+        Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  - name: "美国-004"
     type: vless
-    server: 46.16.36.222
-    port: 11444
-    uuid: d7430ae7-320c-4658-808b-3006d0627d82
-    network: grpc
+    server: 172.67.150.230
+    port: 443
+    uuid: a90c264d-3853-4eef-9a3d-628b2d02d15e
+    network: ws
     udp: true
     tls: true
-    servername: mageia.ubuntuhosting.host
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "gUU8rOYxXtE2ENvQ-RLrmaON2lw2L9lObStu-EaJxhs"
-      short-id: "d05e7ab9872797f4"
-  - name: "波兰-004"
+    servername: 8-M19.MEXICo-pOrt.Ccwu.Cc
+    client-fingerprint: chrome
+    ws-opts:
+      path: /CjBjB9sn5pCvaSwScc
+      headers:
+        Host: 8-M19.mexIco-PoRT.CcWU.Cc
+  - name: "澳大利亚-005"
     type: vless
-    server: 46.16.36.222
-    port: 11446
-    uuid: d7430ae7-320c-4658-808b-3006d0627d82
-    network: grpc
+    server: 163.8.195.241
+    port: 2087
+    uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /29c8fed7ca22
+  - name: "德国-006"
+    type: vless
+    server: syncpointbase.online
+    port: 443
+    uuid: b9507a19-b57c-4065-b9a4-75f16e5e49dc
+    network: ws
     udp: true
     tls: true
-    servername: mageia.ubuntuhosting.host
-    client-fingerprint: qq
-    reality-opts:
-      public-key: "gUU8rOYxXtE2ENvQ-RLrmaON2lw2L9lObStu-EaJxhs"
-      short-id: "b34f41089f1e"
-  - name: "英国-005"
+    client-fingerprint: android
+    ws-opts:
+      path: /ws
+  - name: "德国-007"
     type: vless
-    server: 31.76.4.128
-    port: 5001
-    uuid: 5a92a9d2-3067-49cd-bfc5-989bbdfc5d52
+    server: se.monkeyisland.xyz
+    port: 443
+    uuid: cf80b5fc-c445-4373-87e6-f8a22ad10d81
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: fi.aeternavpn.space
-    client-fingerprint: qq
+    servername: se.monkeyisland.xyz
+    client-fingerprint: android
     reality-opts:
-      public-key: "HNjZe5pYUhcuE8sASYVVrVSMW_jFfekgLnrnO4xXIyQ"
-      short-id: "a1b2c3d4"
+      public-key: "2AKBmK0PMf2zUMhRo1Ad-WNf_XoRk3AN-SGo6ZdhxA4"
+      short-id: "ecca56e9a9963ed7"
+  - name: "俄罗斯-008"
+    type: vless
+    server: 155.212.215.76
+    port: 443
+    uuid: cf80b5fc-c445-4373-87e6-f8a22ad10d81
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ru-bridge.monkeyisland.xyz
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "2AKBmK0PMf2zUMhRo1Ad-WNf_XoRk3AN-SGo6ZdhxA4"
+      short-id: "ecca56e9a9963ed7"
+  - name: "其他-009"
+    type: vless
+    server: 212.43.158.154
+    port: 192
+    uuid: 6cbc63c1-97de-4460-847c-7fd7bdda3fa6
+    network: tcp
+    udp: true
+    tls: true
+    servername: fyu.bazaragelbazara.cfd
+    client-fingerprint: android
+    reality-opts:
+      public-key: "t59o65kEgrYZDGHg3AayZmzmNMsTI8LIqfRXopVyCAY"
+  - name: "其他-010"
+    type: vless
+    server: 176.109.88.223
+    port: 443
+    uuid: 1cf3c15c-16ce-46cc-8a96-b33c33b8a20f
+    network: ws
+    udp: true
+    tls: true
+    servername: 2.26.148.147.tyr-agentstvo.tech
+    client-fingerprint: firefox
+    ws-opts:
+      path: /websocket
+      headers:
+        Host: 2.26.148.147.tyr-agentstvo.tech
+  - name: "意大利-011"
+    type: vless
+    server: free-exp.kyras.pw
+    port: 443
+    uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: free-exp.kyras.pw
+    client-fingerprint: android
+    reality-opts:
+      public-key: "k1Gtkk9ylyyq8hzuabnRmGn_H5tmRghWkKZfgEg7KVM"
+      short-id: "b4e1"
+  - name: "香港-012"
+    type: vless
+    server: hk.monkora.org
+    port: 443
+    uuid: cf80b5fc-c445-4373-87e6-f8a22ad10d81
+    network: tcp
+    udp: true
+    tls: true
+    servername: hk.monkora.org
+    client-fingerprint: android
+    reality-opts:
+      public-key: "aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU"
+  - name: "瑞典-013"
+    type: vless
+    server: 45.131.212.60
+    port: 443
+    uuid: 3ba36a4e-9542-43d3-85c1-9f0177972231
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: at.sellflow.org
+    client-fingerprint: android
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "德国-014"
+    type: vless
+    server: 45.131.212.13
+    port: 443
+    uuid: 3ba36a4e-9542-43d3-85c1-9f0177972231
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: se.sellflow.org
+    client-fingerprint: android
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
 
 proxy-groups:
   - name: Auto
@@ -71,19 +188,37 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "美国-001"
-      - "英国-002"
-      - "法国-003"
-      - "波兰-004"
-      - "英国-005"
+      - "美国-002"
+      - "美国-003"
+      - "美国-004"
+      - "澳大利亚-005"
+      - "德国-006"
+      - "德国-007"
+      - "俄罗斯-008"
+      - "其他-009"
+      - "其他-010"
+      - "意大利-011"
+      - "香港-012"
+      - "瑞典-013"
+      - "德国-014"
   - name: Proxy
     type: select
     proxies:
       - Auto
       - "美国-001"
-      - "英国-002"
-      - "法国-003"
-      - "波兰-004"
-      - "英国-005"
+      - "美国-002"
+      - "美国-003"
+      - "美国-004"
+      - "澳大利亚-005"
+      - "德国-006"
+      - "德国-007"
+      - "俄罗斯-008"
+      - "其他-009"
+      - "其他-010"
+      - "意大利-011"
+      - "香港-012"
+      - "瑞典-013"
+      - "德国-014"
 
 rules:
   - MATCH,Proxy
