@@ -1,33 +1,139 @@
 proxies:
   - name: "美国-001"
     type: vless
-    server: 104.21.62.202
-    port: 443
-    uuid: a1a6a3be-2bf9-46a2-bc24-328306e49ab7
-    network: ws
-    udp: true
-    tls: true
-    servername: 3-m17.KAzAKHsTAn-Link.kDns.fR
-    client-fingerprint: chrome
-    ws-opts:
-      path: /fVs1qv0xm8dxmnwuaPwokxgY4XlP
-      headers:
-        Host: 3-m17.KazaKHStaN-link.kDnS.FR
-  - name: "乌克兰-002"
-    type: vless
-    server: 178.95.170.83
-    port: 2087
-    uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
+    server: 104.18.47.113
+    port: 8880
+    uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
     network: ws
     udp: true
     tls: false
     ws-opts:
-      path: /4bc027a44532
+      path: /?ed=2560security=tls
       headers:
-        Host: Telegram-Leviko_v2ray
-  - name: "俄罗斯-003"
+        Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  - name: "美国-002"
     type: vless
-    server: 45.9.15.206
+    server: 162.217.248.241
+    port: 443
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: kombo.api3-max.ru
+    client-fingerprint: chrome
+  - name: "美国-003"
+    type: vless
+    server: kombo.api3-max.ru
+    port: 443
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: kombo.api3-max.ru
+    client-fingerprint: chrome
+  - name: "日本-004"
+    type: vless
+    server: 31.76.91.24
+    port: 443
+    uuid: 0dc1fc26-b8e9-4296-9870-0996de3c2333
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: jp-1.kihsuyhf8jkiugsxb.cfd
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "AAsUuwJgvSy1dH69mXOgZ35oUEXPFNPdAlWJULOiZl8"
+  - name: "法国-005"
+    type: vless
+    server: 167.104.216.12
+    port: 443
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: kamaz4.api3-max.ru
+    client-fingerprint: chrome
+  - name: "香港-006"
+    type: vless
+    server: schkyydshktbgwxx.cfooov.xyz
+    port: 46899
+    uuid: f8738084-d3e4-457b-a15e-10d85709681f
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.apple.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "nbIa7R7_-I8T24U2C1Q3-wuiQVUmAahxdSo33AjKYiA"
+      short-id: "63bdbd0662a3da"
+  - name: "法国-007"
+    type: vless
+    server: kamaz4.api3-max.ru
+    port: 443
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: kamaz4.api3-max.ru
+    client-fingerprint: chrome
+  - name: "波兰-008"
+    type: vless
+    server: 2.26.5.75
+    port: 443
+    uuid: 0dc1fc26-b8e9-4296-9870-0996de3c2333
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: pl-2.kihsuyhf8jkiugsxb.cfd
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "5y7pN96xWP6tThOgJOSav6sQyOPVZ95OE2a4P_YYDkY"
+  - name: "俄罗斯-009"
+    type: vless
+    server: parta3.api3-max.ru
+    port: 443
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: parta3.api3-max.ru
+    client-fingerprint: chrome
+  - name: "俄罗斯-010"
+    type: vless
+    server: 198.105.123.79
+    port: 443
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: parta3.api3-max.ru
+    client-fingerprint: chrome
+  - name: "德国-011"
+    type: vless
+    server: 176.109.88.216
+    port: 443
+    uuid: 2c7f1414-87ae-4a01-9796-a02c067891a6
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: api-maps.yandex.ru
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk"
+      short-id: "a9c4f17e3b62d8"
+  - name: "俄罗斯-012"
+    type: vless
+    server: ru05.abvpn.ru
     port: 443
     uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
     network: ws
@@ -39,42 +145,165 @@ proxies:
       path: /websocket
       headers:
         Host: ru05.abvpn.ru
-  - name: "法国-004"
+  - name: "法国-013"
     type: vless
-    server: 178.250.157.206
+    server: 107.161.160.176
     port: 443
-    uuid: 78a5dd29-baac-4e4d-b9bd-a3a722bb317a
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: xuvamom-virilol.thistlemeadow.me
-    client-fingerprint: edge
-    reality-opts:
-      public-key: "w-7BT5ZSqB0B25D5_c5BOv59U1v8LUc-gx2HNF7kZQQ"
-      short-id: "bff30c0187d4ee2b"
-  - name: "德国-005"
+    servername: kamaz1.api3-max.ru
+    client-fingerprint: chrome
+  - name: "法国-014"
     type: vless
-    server: ruwl.skskks.top
+    server: kamaz03.api3-max.ru
     port: 443
-    uuid: dfddb977-5fef-470a-8ab6-96bcd7a83d00
-    network: ws
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: ruwl.skskks.top
-    client-fingerprint: android
-    ws-opts:
-      path: /ws
-      headers:
-        Host: ruwl.skskks.top
-  - name: "其他-006"
+    servername: kamaz03.api3-max.ru
+    client-fingerprint: chrome
+  - name: "菲律宾-015"
     type: vless
-    server: us22.sofast.live
-    port: 58011
-    uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+    server: 61.245.11.164
+    port: 443
+    uuid: 0dc1fc26-b8e9-4296-9870-0996de3c2333
     network: tcp
+    flow: xtls-rprx-vision
     udp: true
-    tls: false
+    tls: true
+    servername: ph-1.kihsuyhf8jkiugsxb.cfd
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "19h48_R3YFHGEKiWsZi0kHgum4AJgyPsuJuui7K8q3A"
+  - name: "法国-016"
+    type: vless
+    server: 167.104.216.206
+    port: 443
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: kamaz03.api3-max.ru
+    client-fingerprint: chrome
+  - name: "法国-017"
+    type: vless
+    server: kamaz1.api3-max.ru
+    port: 443
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: kamaz1.api3-max.ru
+    client-fingerprint: chrome
+  - name: "美国-018"
+    type: vless
+    server: api-uk.upd-media.com
+    port: 443
+    uuid: ef4f4c3d-0b16-48ad-a8d8-2d22512b3b36
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: api-uk.upd-media.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "WxGqUqMkMBfXSRIoY1NfgHFNSf7sfffz5qsAW6IgNGg"
+      short-id: "f3c4d9b1e7e4f712"
+  - name: "美国-019"
+    type: vless
+    server: 144.31.140.127
+    port: 443
+    uuid: d31aefb3-775b-4e87-a093-a4677addf10a
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: stackoverflow.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "3EwukQs0ows0H4l2atTgz_Mo5SV-v5p14D4zfA41tU4"
+      short-id: "c010293d0bafac"
+  - name: "法国-020"
+    type: vless
+    server: kamaz02.api3-max.ru
+    port: 443
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: kamaz02.api3-max.ru
+    client-fingerprint: chrome
+  - name: "德国-021"
+    type: vless
+    server: ns.o11111o.club
+    port: 443
+    uuid: 39d927a4-b8c7-4dc7-91f1-8b2e05d8b6b6
+    network: grpc
+    udp: true
+    tls: true
+    servername: id.vk.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "法国-022"
+    type: vless
+    server: 45.92.218.85
+    port: 443
+    uuid: 5999a497-a2da-41d0-92cb-5b758082f83c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: kamaz02.api3-max.ru
+    client-fingerprint: chrome
+  - name: "荷兰-023"
+    type: vless
+    server: 130.17.23.252
+    port: 443
+    uuid: 0dc1fc26-b8e9-4296-9870-0996de3c2333
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: nl-4.kihsuyhf8jkiugsxb.cfd
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "T422l5z4xfnyEx0C3o0l61cqDo8QgQZBLiROBHO2QAk"
+  - name: "哈萨克斯坦-024"
+    type: vless
+    server: 45.144.175.185
+    port: 443
+    uuid: 0dc1fc26-b8e9-4296-9870-0996de3c2333
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: kz-1.kihsuyhf8jkiugsxb.cfd
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "arLt1yI09Y_wf0u-CO1SrZ6FXlDkyC-CuvXMqeRZ_XU"
+  - name: "香港-025"
+    type: vless
+    server: 8.210.124.162
+    port: 443
+    uuid: 6f4d667f-c992-45c8-9114-cf3f2d722462
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.pixiv.co.jp
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "XtRoJGHudrJ4sMpzvzRPCvJCY60_IEINYB2osgN68AM"
+      short-id: "b19a9e0bf0dc3bcc"
 
 proxy-groups:
   - name: Auto
@@ -84,21 +313,59 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "美国-001"
-      - "乌克兰-002"
-      - "俄罗斯-003"
-      - "法国-004"
-      - "德国-005"
-      - "其他-006"
+      - "美国-002"
+      - "美国-003"
+      - "日本-004"
+      - "法国-005"
+      - "香港-006"
+      - "法国-007"
+      - "波兰-008"
+      - "俄罗斯-009"
+      - "俄罗斯-010"
+      - "德国-011"
+      - "俄罗斯-012"
+      - "法国-013"
+      - "法国-014"
+      - "菲律宾-015"
+      - "法国-016"
+      - "法国-017"
+      - "美国-018"
+      - "美国-019"
+      - "法国-020"
+      - "德国-021"
+      - "法国-022"
+      - "荷兰-023"
+      - "哈萨克斯坦-024"
+      - "香港-025"
   - name: Proxy
     type: select
     proxies:
       - Auto
       - "美国-001"
-      - "乌克兰-002"
-      - "俄罗斯-003"
-      - "法国-004"
-      - "德国-005"
-      - "其他-006"
+      - "美国-002"
+      - "美国-003"
+      - "日本-004"
+      - "法国-005"
+      - "香港-006"
+      - "法国-007"
+      - "波兰-008"
+      - "俄罗斯-009"
+      - "俄罗斯-010"
+      - "德国-011"
+      - "俄罗斯-012"
+      - "法国-013"
+      - "法国-014"
+      - "菲律宾-015"
+      - "法国-016"
+      - "法国-017"
+      - "美国-018"
+      - "美国-019"
+      - "法国-020"
+      - "德国-021"
+      - "法国-022"
+      - "荷兰-023"
+      - "哈萨克斯坦-024"
+      - "香港-025"
 
 rules:
   - MATCH,Proxy
