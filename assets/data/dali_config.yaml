@@ -1,109 +1,245 @@
 proxies:
-  - name: "美国-001"
+  - name: "荷兰-001"
     type: vless
-    server: 104.21.33.59
+    server: channel-linevpnco-production-169e.up.railway.app
     port: 443
-    uuid: 9b18ccef-b9e0-41d1-8990-9d970569e142
+    uuid: 6b4416f3-da65-489a-b082-f6f335c2c56d
     network: ws
     udp: true
     tls: true
-    servername: web-socket.tgdaosheng.ggff.net
+    servername: channel-linevpnco-production-169e.up.railway.app
+    client-fingerprint: android
     ws-opts:
-      path: /proxyip=bpb.yousef.isegaro.com
+      path: /vl-ws
       headers:
-        Host: web-socket.tgdaosheng.ggff.net
+        Host: channel-linevpnco-production-169e.up.railway.app
   - name: "美国-002"
     type: vless
-    server: 104.18.39.218
+    server: 104.18.42.163
+    port: 443
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+    network: ws
+    udp: true
+    tls: true
+    servername: fx3h2kf8xn.fx6hsv0.ccwu.cc
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
+  - name: "美国-003"
+    type: vless
+    server: 172.64.151.134
     port: 8880
-    uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+    uuid: 878dd962-027b-4bd3-a1f8-66be68a03c4d
     network: ws
     udp: true
     tls: false
     ws-opts:
-      path: /?ed=2560security=tls
+      path: /
       headers:
-        Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  - name: "哥伦比亚-003"
+        Host: young-wind-3c58.240-2ce.workers.dev
+  - name: "美国-004"
     type: vless
-    server: 188.137.242.143
+    server: deepl.com
+    port: 8880
+    uuid: b1b99d33-8df1-4c74-b140-28941b43a4d2
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /pyip=ProxyIP.KR.CMLiussss.net
+      headers:
+        Host: nameless-poetry-cc33.268-910.workers.dev
+  - name: "美国-005"
+    type: vless
+    server: 172.67.151.243
+    port: 2086
+    uuid: b4a16091-a25d-4d33-aee3-f5ae04f34b14
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /eyJqdW5rIjoiRjJEdlF3U251aCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjE0Ni4xMDMuMTEzLjE1OCIsIjEwMy45Ny44OC4xMzMiLCIxOTQuMTgwLjE4OC4yNDEiLCIxMTYuMjAyLjEzMi4yMDUiXX0=?ed=2560
+      headers:
+        Host: blue-brook-cc73.karren391.workers.dev
+  - name: "美国-006"
+    type: vless
+    server: 104.21.55.229
+    port: 8880
+    uuid: f769b7ea-9cd1-4d61-b578-7644b7c8eb3d
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /pyip=ProxyIP.US.CMLiussss.net
+      headers:
+        Host: quiet-waterfall-e914.180-ac4.workers.dev
+  - name: "其他-007"
+    type: vless
+    server: 91.193.58.10
+    port: 8880
+    uuid: bb5f4b63-0b91-4f2c-8a02-66c3f99c1aaa
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: "/pyip=Telegram🇨🇳 @WangCai2"
+      headers:
+        Host: yellow-mouse-fcce.400-318.workers.dev
+  - name: "德国-008"
+    type: vless
+    server: de.cloudtechone.org
+    port: 443
+    uuid: 2b2ea9d8-501e-4b79-8fd9-19bff6ed5cf5
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: de.cloudtechone.org
+    client-fingerprint: android
+    reality-opts:
+      public-key: "_IBXb9NfhsnS21XbU9PIl73ExvrjXGXVLO0Za1ui5Fo"
+      short-id: "f93c9d5127e622e4"
+  - name: "德国-009"
+    type: vless
+    server: 217.60.96.124
+    port: 443
+    uuid: 2b2ea9d8-501e-4b79-8fd9-19bff6ed5cf5
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: de.cloudtechone.org
+    client-fingerprint: android
+    reality-opts:
+      public-key: "_IBXb9NfhsnS21XbU9PIl73ExvrjXGXVLO0Za1ui5Fo"
+      short-id: "f93c9d5127e622e4"
+  - name: "英国-010"
+    type: vless
+    server: nl.coffeconsulting.uk
+    port: 443
+    uuid: c7fc009a-026b-46e5-a0c5-82e32bcabd69
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: nl.coffeconsulting.uk
+    client-fingerprint: android
+    reality-opts:
+      public-key: "Q7-sRiaAcmlJ_iwqiA46kDKso_r2kJ7X1mrVjL2illo"
+      short-id: "492d593d82fc6674"
+  - name: "德国-011"
+    type: vless
+    server: eu-central-de2.hanvpn.biz
     port: 443
     uuid: d9d0f208-d582-41d5-bb7b-742671402810
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: us-main-1.hanvpn.biz
-    client-fingerprint: chrome
+    servername: eu-central-de2.hanvpn.biz
+    client-fingerprint: android
     reality-opts:
-      public-key: "RY0VjR_1hwb6oO9FvhRvFOjf4iLfYC95xagmDdk2fCA"
-      short-id: "54b5a7681806bc97"
-  - name: "美国-004"
+      public-key: "w0J3H-DEyHEK-Nj7bst_5sQqzcPl700ybHpqq5mFz0U"
+      short-id: "12a3b7681806bc97"
+  - name: "芬兰-012"
     type: vless
-    server: 104.21.37.195
-    port: 443
-    uuid: a90c264d-3853-4eef-9a3d-628b2d02d15e
-    network: ws
-    udp: true
-    tls: true
-    servername: 4-M19.fGH.cCWU.Cc
-    client-fingerprint: chrome
-    ws-opts:
-      path: /CjBjB9sn5pCvaSwScc
-      headers:
-        Host: 4-M19.Fgh.CCwU.Cc
-  - name: "美国-005"
-    type: vless
-    server: 104.18.46.46
-    port: 2086
-    uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /?ed=2560security=tls
-      headers:
-        Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  - name: "加拿大-006"
-    type: vless
-    server: freshjuniper.download
+    server: brightharbor.download
     port: 443
     uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
     network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
     servername: localhost
-    client-fingerprint: chrome
+    client-fingerprint: android
     reality-opts:
       public-key: "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
-  - name: "俄罗斯-007"
+  - name: "芬兰-013"
     type: vless
-    server: 79.174.92.85
-    port: 6443
-    uuid: b7797db2-27fa-4127-a9f7-18ae181a1cb7
-    network: grpc
-    udp: true
-    tls: true
-    servername: iv.kommersant.ru
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "lU1yF2A1b0lM9DZbXWPpLfoU7_KQpXOYX0NFrPEIJy8"
-      short-id: "bad5722c72a0"
-  - name: "其他-008"
-    type: vless
-    server: eu-north-sw-1.hanvpn.biz
+    server: 81.29.140.90
     port: 443
-    uuid: d9d0f208-d582-41d5-bb7b-742671402810
+    uuid: 68265e76-6704-4abc-9428-37ee315f4f0d
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: eu-north-sw-1.hanvpn.biz
+    servername: opswell.app
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "SZSiNTdrwDmz-8R53Uw2QxMWM64tLXwtntQv43DmEBA"
+      short-id: "9d79629df98fed49"
+  - name: "其他-014"
+    type: vless
+    server: 81.94.159.33
+    port: 443
+    uuid: 68265e76-6704-4abc-9428-37ee315f4f0d
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: voltwell.app
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "xolTzU9cWIy0ud7kGspXMh41hGBOhwypYq6whMnyKE4"
+      short-id: "2f1f45b9a0e48500"
+  - name: "其他-015"
+    type: vless
+    server: 150.241.101.227
+    port: 443
+    uuid: c09cfd91-b234-4998-9bed-a0211b7f5c3c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ee.yservice.help
     client-fingerprint: android
     reality-opts:
-      public-key: "ELFdNdI6NYwuEq5OqCkYwnUInHvIpsUhd4z2ud7pOCM"
-      short-id: "0172b7681806bc97"
-  - name: "荷兰-009"
+      public-key: "-qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04"
+      short-id: "abcd1234"
+  - name: "英国-016"
+    type: vless
+    server: de.coffeconsulting.uk
+    port: 443
+    uuid: c7fc009a-026b-46e5-a0c5-82e32bcabd69
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: de.coffeconsulting.uk
+    client-fingerprint: android
+    reality-opts:
+      public-key: "Q7-sRiaAcmlJ_iwqiA46kDKso_r2kJ7X1mrVjL2illo"
+      short-id: "11a646ca6678c507"
+  - name: "智利-017"
+    type: vless
+    server: 94.241.142.180
+    port: 23443
+    uuid: 7ab9fe4f-6699-427f-a828-9fcf2496d714
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "WGIBJ3eoHqBYgaklDehHUZYSAREh5HtFtcUs7MjUfxg"
+      short-id: "a432f464e0d4f65a"
+  - name: "德国-018"
+    type: vless
+    server: 109.172.39.252
+    port: 8444
+    uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
+    network: grpc
+    udp: true
+    tls: true
+    servername: maps.apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "22xsvJd-vHeh8Xtg7n8Zb6C7yz31UCPyWZTreKTUrlY"
+      short-id: "a1b2c3d4"
+  - name: "荷兰-019"
     type: vless
     server: 109.172.39.252
     port: 8443
@@ -112,10 +248,65 @@ proxies:
     udp: true
     tls: true
     servername: maps.apple.com
-    client-fingerprint: chrome
+    client-fingerprint: qq
     reality-opts:
       public-key: "22xsvJd-vHeh8Xtg7n8Zb6C7yz31UCPyWZTreKTUrlY"
       short-id: "a1b2c3d4"
+  - name: "印度尼西亚-020"
+    type: vless
+    server: family.bucket.9.kfc-520.com
+    port: 10053
+    uuid: 3979cfac-7f7b-3dcf-a4e4-513eb8d125a7
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.amd.com
+    client-fingerprint: android
+    reality-opts:
+      public-key: "o-ud3x7exNVYmknsVseZyUGMyK_680Nub0Cf6W4KiRw"
+      short-id: "cbbf64"
+  - name: "其他-021"
+    type: vless
+    server: 45.159.79.71
+    port: 4443
+    uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: sentry.io
+    client-fingerprint: android
+    reality-opts:
+      public-key: "321Ii2xbCoyll6WJ0Qm1Sh8qcC0kxXvUaZhe3kyasD8"
+      short-id: "a1b2c3d4e5f6a7b8"
+  - name: "智利-022"
+    type: vless
+    server: 83.147.245.109
+    port: 24443
+    uuid: 7ab9fe4f-6699-427f-a828-9fcf2496d714
+    network: grpc
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "s2uiu3GQA2SlZzsr86Z5Dav97eAFTPf7Nvr-zqzzRgg"
+      short-id: "72ccd4a7563c2953"
+  - name: "德国-023"
+    type: vless
+    server: 178.236.255.9
+    port: 443
+    uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: amazon.de
+    client-fingerprint: android
+    reality-opts:
+      public-key: "G8SING6Ibc_igZ5vI5578fXCT_mBMRuq_o8_Ymnj2SQ"
+      short-id: "eba1498e012ef580"
 
 proxy-groups:
   - name: Auto
@@ -124,28 +315,56 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "美国-001"
+      - "荷兰-001"
       - "美国-002"
-      - "哥伦比亚-003"
+      - "美国-003"
       - "美国-004"
       - "美国-005"
-      - "加拿大-006"
-      - "俄罗斯-007"
-      - "其他-008"
-      - "荷兰-009"
+      - "美国-006"
+      - "其他-007"
+      - "德国-008"
+      - "德国-009"
+      - "英国-010"
+      - "德国-011"
+      - "芬兰-012"
+      - "芬兰-013"
+      - "其他-014"
+      - "其他-015"
+      - "英国-016"
+      - "智利-017"
+      - "德国-018"
+      - "荷兰-019"
+      - "印度尼西亚-020"
+      - "其他-021"
+      - "智利-022"
+      - "德国-023"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "美国-001"
+      - "荷兰-001"
       - "美国-002"
-      - "哥伦比亚-003"
+      - "美国-003"
       - "美国-004"
       - "美国-005"
-      - "加拿大-006"
-      - "俄罗斯-007"
-      - "其他-008"
-      - "荷兰-009"
+      - "美国-006"
+      - "其他-007"
+      - "德国-008"
+      - "德国-009"
+      - "英国-010"
+      - "德国-011"
+      - "芬兰-012"
+      - "芬兰-013"
+      - "其他-014"
+      - "其他-015"
+      - "英国-016"
+      - "智利-017"
+      - "德国-018"
+      - "荷兰-019"
+      - "印度尼西亚-020"
+      - "其他-021"
+      - "智利-022"
+      - "德国-023"
 
 rules:
   - MATCH,Proxy
