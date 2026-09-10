@@ -1,174 +1,137 @@
 proxies:
   - name: "美国-001"
     type: vless
-    server: 172.64.150.28
-    port: 2082
-    uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+    server: 172.64.145.93
+    port: 2083
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
     network: ws
     udp: true
-    tls: false
+    tls: true
+    servername: fx3h2kf8xn.fx6hsv0.ccwu.cc
+    client-fingerprint: chrome
     ws-opts:
-      path: /fp
+      path: /
       headers:
-        Host: hhlfy.twiladaphne.ndjp.net
+        Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
   - name: "美国-002"
     type: vless
-    server: 104.21.92.49
-    port: 443
-    uuid: a90c264d-3853-4eef-9a3d-628b2d02d15e
+    server: 104.18.40.152
+    port: 2087
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
     network: ws
     udp: true
     tls: true
-    servername: 7-m19.omAn-linK.KdNS.FR
+    servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
     client-fingerprint: chrome
     ws-opts:
-      path: /CjBjB9sn5pCvaSwScc
+      path: /
       headers:
-        Host: 7-m19.OmAn-link.kdnS.FR
-  - name: "美国-003"
+        Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  - name: "荷兰-003"
     type: vless
-    server: 172.67.223.223
+    server: tw2.apruxdomain.website
     port: 443
-    uuid: 7e26fd8f-d75a-473d-84ba-9f4e3f47d086
+    uuid: 64c3ae71-4874-4a05-8d52-73b2fbb8a207
     network: ws
     udp: true
     tls: true
-    servername: 1-m20.d3b454d2-cba8-4b62-8d16-189d13194e3a.kdns.fr
+    servername: tw2.apruxdomain.website
     client-fingerprint: chrome
     ws-opts:
-      path: /8qMLgNapWf6SBxo8fhQlVPYO
-      headers:
-        Host: 1-m20.d3b454d2-cba8-4b62-8d16-189d13194e3a.kdns.fr
-  - name: "美国-004"
+      path: /api/v1/connect/7a21b2d668
+  - name: "爱尔兰-004"
     type: vless
-    server: 104.21.58.93
+    server: 5.254.4.157
     port: 443
-    uuid: 1aa96574-c28b-4ee9-855d-ebdbbf1f7e90
-    network: ws
-    udp: true
-    tls: true
-    servername: 4-M13.aYUTtHAya-XX.kDnS.fR
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ED3ZQPu7lqyeDGD58KabZ
-      headers:
-        Host: 4-m13.aYUtThaYA-xx.KdnS.Fr
-  - name: "美国-005"
-    type: vless
-    server: 104.21.33.59
-    port: 443
-    uuid: 9b18ccef-b9e0-41d1-8990-9d970569e142
-    network: ws
-    udp: true
-    tls: true
-    servername: web-socket.tgdaosheng.ggff.net
-    client-fingerprint: chrome
-    ws-opts:
-      path: /proxyip=bpb.yousef.isegaro.com
-      headers:
-        Host: web-socket.tgdaosheng.ggff.net
-  - name: "加拿大-006"
-    type: vless
-    server: 130.12.102.125
-    port: 443
-    uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-    network: tcp
-    udp: true
-    tls: true
-    servername: localhost
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I"
-  - name: "香港-007"
-    type: vless
-    server: bdd23461-tla000-tvvhcz-tl32.hk3.hyhuawei.com
-    port: 443
-    uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
-    network: tcp
-    udp: true
-    tls: true
-    servername: updates.cdn-apple.com
-    client-fingerprint: android
-    reality-opts:
-      public-key: "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
-  - name: "香港-008"
-    type: vless
-    server: 619c9ae2-tla000-tls5or-6gn6.hk3.hyhuawei.com
-    port: 443
-    uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
-    network: tcp
-    udp: true
-    tls: true
-    servername: updates.cdn-apple.com
-    client-fingerprint: android
-    reality-opts:
-      public-key: "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
-  - name: "香港-009"
-    type: vless
-    server: ac35c80b-tla000-tpmc23-1s3lb.hk3.hyhuawei.com
-    port: 443
-    uuid: fbf91120-50ba-11ef-a203-f23c91cfbbc9
-    network: tcp
-    udp: true
-    tls: true
-    servername: updates.cdn-apple.com
-    client-fingerprint: android
-    reality-opts:
-      public-key: "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
-  - name: "俄罗斯-010"
-    type: vless
-    server: 150.241.68.208
-    port: 443
-    uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
-    network: ws
-    udp: true
-    tls: true
-    servername: cf13.rumedia-cdn.com
-    client-fingerprint: chrome
-    ws-opts:
-      path: /cdn/v3/live
-      headers:
-        Host: cf13.rumedia-cdn.com
-  - name: "荷兰-011"
-    type: vless
-    server: 89.105.202.115
-    port: 443
-    uuid: 4550993c-2191-493a-a612-aaba4a4ec083
+    uuid: 65b1dd9b-e959-40ca-b7fe-49b19cc5d9c8
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: g2.steptofsvo.com
-    client-fingerprint: chrome
+    servername: cdn6-72.taobao.com
+    client-fingerprint: firefox
     reality-opts:
-      public-key: "ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk"
-      short-id: "6d6f13013d3e1d0c"
-  - name: "德国-012"
+      public-key: "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw"
+      short-id: "9a247b7e6a16b2a1"
+  - name: "荷兰-005"
     type: vless
-    server: 151.242.17.99
-    port: 8443
-    uuid: a04814d9-d006-4e7b-ae20-8ab304b3b429
+    server: tw1.apruxdomain.website
+    port: 443
+    uuid: 64c3ae71-4874-4a05-8d52-73b2fbb8a207
+    network: ws
+    udp: true
+    tls: true
+    servername: tw1.apruxdomain.website
+    client-fingerprint: chrome
+    ws-opts:
+      path: /api/v1/pipe/b1bb509248
+  - name: "荷兰-006"
+    type: vless
+    server: 46.182.24.240
+    port: 443
+    uuid: 64c3ae71-4874-4a05-8d52-73b2fbb8a207
     network: grpc
     udp: true
     tls: true
-    servername: de.emvservice.com
-    client-fingerprint: chrome
+    servername: max.ru
+    client-fingerprint: edge
     reality-opts:
-      public-key: "6Yskxg5U0WxPGtuCAAGH9uD57T4U8LeGrErTBNvIrwM"
-      short-id: "bc"
-  - name: "德国-013"
+      public-key: "Ed29G1bO6isJRo8iGPm7W_9c4mVFqHUilPmDP0llJW8"
+      short-id: "555555"
+  - name: "捷克-007"
     type: vless
-    server: 213.176.77.138
+    server: 85.137.165.160
     port: 443
-    uuid: ca19c24a-e5ec-45f8-8cd1-c97d84da5e35
+    uuid: 3c48b5f5-7766-4896-874e-b3ba1860e83a
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: de1.boutique-hotel1108.ru
-    client-fingerprint: chrome
+    servername: w-mebel.pro
+    client-fingerprint: firefox
     reality-opts:
-      public-key: "5yLzbmk8NAd12p-0Uu5WI7PjSLFbNScOZ5SmMWQ6txQ"
+      public-key: "R7NfFaabgh-0a2KR0Bfmn3a-O6mDT550OgXUDygDKBs"
+      short-id: "c603efb3ddaf633d"
+  - name: "德国-008"
+    type: vless
+    server: 195.66.24.172
+    port: 443
+    uuid: ea8eb632-7d56-4bfb-8195-dc34268b5844
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.vk.com
+    client-fingerprint: qq
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "德国-009"
+    type: vless
+    server: 195.66.24.169
+    port: 1932
+    uuid: ea8eb632-7d56-4bfb-8195-dc34268b5844
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.vk.com
+    client-fingerprint: qq
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "阿联酋-010"
+    type: vless
+    server: 31.59.150.174
+    port: 9443
+    uuid: 92089155-6602-4122-86d4-fe6de20e8c4d
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: hotcoals.aeternavpn.space
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "RWu6ktBE4DFbUz_prmz-5KuolLhO53ehh19mNxhP-wI"
+      short-id: "a1b2c3d4"
 
 proxy-groups:
   - name: Auto
@@ -179,34 +142,28 @@ proxy-groups:
     proxies:
       - "美国-001"
       - "美国-002"
-      - "美国-003"
-      - "美国-004"
-      - "美国-005"
-      - "加拿大-006"
-      - "香港-007"
-      - "香港-008"
-      - "香港-009"
-      - "俄罗斯-010"
-      - "荷兰-011"
-      - "德国-012"
-      - "德国-013"
+      - "荷兰-003"
+      - "爱尔兰-004"
+      - "荷兰-005"
+      - "荷兰-006"
+      - "捷克-007"
+      - "德国-008"
+      - "德国-009"
+      - "阿联酋-010"
   - name: Proxy
     type: select
     proxies:
       - Auto
       - "美国-001"
       - "美国-002"
-      - "美国-003"
-      - "美国-004"
-      - "美国-005"
-      - "加拿大-006"
-      - "香港-007"
-      - "香港-008"
-      - "香港-009"
-      - "俄罗斯-010"
-      - "荷兰-011"
-      - "德国-012"
-      - "德国-013"
+      - "荷兰-003"
+      - "爱尔兰-004"
+      - "荷兰-005"
+      - "荷兰-006"
+      - "捷克-007"
+      - "德国-008"
+      - "德国-009"
+      - "阿联酋-010"
 
 rules:
   - MATCH,Proxy
