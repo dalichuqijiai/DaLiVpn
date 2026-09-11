@@ -1,22 +1,8 @@
 proxies:
-  - name: "德国-001"
+  - name: "美国-001"
     type: vless
-    server: aljha.typeshoes.online
-    port: 443
-    uuid: acc591a0-04ae-4676-996a-e6fe01b26ed2
-    network: ws
-    udp: true
-    tls: true
-    servername: aljha.typeshoes.online
-    client-fingerprint: android
-    ws-opts:
-      path: /kdi
-      headers:
-        Host: aljha.typeshoes.online
-  - name: "美国-002"
-    type: vless
-    server: 104.19.215.97
-    port: 2053
+    server: 104.16.150.246
+    port: 2087
     uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
     network: ws
     udp: true
@@ -27,205 +13,200 @@ proxies:
       path: /
       headers:
         Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  - name: "日本-003"
+  - name: "美国-002"
     type: vless
-    server: 91.193.59.255
-    port: 2096
-    uuid: 42c62a5a-cd31-4551-80ef-908732370287
+    server: 172.64.52.24
+    port: 2087
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
     network: ws
     udp: true
     tls: true
-    servername: fq.jp188.dpdns.org
-    client-fingerprint: android
-    ws-opts:
-      path: "/proxyip=154.17.22.207,69.63.210.157,134.195.211.13,172.236.245.153,209.146.115.209,64.186.224.194,149.28.94.52,107.151.188.57"
-      headers:
-        Host: fq.jp188.dpdns.org
-  - name: "美国-004"
-    type: vless
-    server: 172.67.152.71
-    port: 8880
-    uuid: e1bd06de-a075-4ad5-b73f-b54587368cc7
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /pyip=ProxyIP.JP.CMLiussss.net
-      headers:
-        Host: morning-feather-dc98.136-25b.workers.dev
-  - name: "英国-005"
-    type: vless
-    server: 165.231.99.43
-    port: 8443
-    uuid: 6b03ffdd-6646-410b-b575-6c05eafdaf60
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: vusr-6aa2cf2b.adhil.uk
-    client-fingerprint: android
-  - name: "爱尔兰-006"
-    type: vless
-    server: 89.125.100.29
-    port: 443
-    uuid: b89196b1-7b72-4b81-83d0-e4d4df79f678
-    network: tcp
-    udp: true
-    tls: true
-    servername: nl2.yabloko.top
+    servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
     client-fingerprint: chrome
-    reality-opts:
-      public-key: "-bdfPh42n5vMnPsrknIDPOzEOMsI1TlY9AjDPSggaR0"
-      short-id: "1c10c8c03e2f0484"
-  - name: "德国-007"
-    type: vless
-    server: eu-north-sw-2.hanvpn.biz
-    port: 443
-    uuid: d9d0f208-d582-41d5-bb7b-742671402810
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: eu-north-sw-2.hanvpn.biz
-    client-fingerprint: android
-    reality-opts:
-      public-key: "EABhMlawKh-zPOVkef-G9n7Ap5PPZRbrtUzYWkVsamc"
-      short-id: "0172b7681806bc97"
-  - name: "其他-008"
-    type: vless
-    server: 91.215.40.6
-    port: 443
-    uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-    network: grpc
-    udp: true
-    tls: true
-    servername: id.dframe.app
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk"
-      short-id: "5c766813929a1fdd"
-  - name: "德国-009"
-    type: vless
-    server: 143.246.193.215
-    port: 443
-    uuid: 77da6e30-ad4e-11f1-94d5-525400d1d4f7
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.blocket.se
-    client-fingerprint: android
-    reality-opts:
-      public-key: "wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c"
-  - name: "香港-010"
-    type: vless
-    server: 207.57.135.125
-    port: 31895
-    uuid: 5e483359-08a3-46d9-904b-8f1f469577ac
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: aws.amazon.com
-    client-fingerprint: android
-    reality-opts:
-      public-key: "ezDjdoPtdw4-2mZFCLgdlIHD9RoQ7P1MMMVV-pBPuHc"
-  - name: "俄罗斯-011"
-    type: vless
-    server: pr-media.pepro.site
-    port: 14443
-    uuid: fb67fd37-8d41-43a9-a093-c0b807fc5299
-    network: ws
-    udp: true
-    tls: true
-    servername: pr-media.pepro.site
-    client-fingerprint: qq
-    ws-opts:
-      path: /ws
-  - name: "俄罗斯-012"
-    type: vless
-    server: 150.241.68.208
-    port: 443
-    uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
-    network: ws
-    udp: true
-    tls: true
-    servername: cf13.rumedia-cdn.com
-    client-fingerprint: chrome
-    ws-opts:
-      path: /cdn/v3/live
-      headers:
-        Host: cf13.rumedia-cdn.com
-  - name: "美国-013"
-    type: vless
-    server: 72.56.238.46
-    port: 443
-    uuid: d73e3cdc-a80b-4e73-a11b-cc467d7a84f8
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: fin.sdssh-vid.online
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "74pbcWZE8Ne6iYrsl_31qy_pWKRrILQiAWfZs2IuGR0"
-      short-id: "7e0f2634090e768b"
-  - name: "俄罗斯-014"
-    type: vless
-    server: 200.169.180.108
-    port: 26644
-    uuid: c7c1e422-ed22-478c-c0a6-fa527d58209e
-    network: tcp
-    udp: true
-    tls: false
-  - name: "美国-015"
-    type: vless
-    server: 172.66.132.196
-    port: 8880
-    uuid: d8a7b463-dc98-474d-a87e-8781476aef32
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /pyip=ProxyIP.KR.CMLiussss.net
-      headers:
-        Host: ancient-tree-7dc9.336-5f9.workers.dev
-  - name: "立陶宛-016"
-    type: vless
-    server: 185.148.106.30
-    port: 8880
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    udp: true
-    tls: false
     ws-opts:
       path: /
       headers:
-        Host: vms.lifetime54.workers.dev
-  - name: "美国-017"
+        Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  - name: "美国-003"
     type: vless
-    server: 172.67.151.243
-    port: 2086
-    uuid: b4a16091-a25d-4d33-aee3-f5ae04f34b14
+    server: 172.64.53.215
+    port: 2096
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
     network: ws
     udp: true
-    tls: false
+    tls: true
+    servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+    client-fingerprint: chrome
     ws-opts:
-      path: /eyJqdW5rIjoiRjJEdlF3U251aCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjE0Ni4xMDMuMTEzLjE1OCIsIjEwMy45Ny44OC4xMzMiLCIxOTQuMTgwLjE4OC4yNDEiLCIxMTYuMjAyLjEzMi4yMDUiXX0=?ed=2560
+      path: /
       headers:
-        Host: blue-brook-cc73.karren391.workers.dev
-  - name: "美国-018"
+        Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  - name: "美国-004"
     type: vless
-    server: www.gov.ua
-    port: 8880
-    uuid: 3e553ebf-db9d-4858-b608-03d6ff615a41
+    server: 104.18.42.163
+    port: 443
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
     network: ws
     udp: true
-    tls: false
+    tls: true
+    servername: fx3h2kf8xn.fx6hsv0.ccwu.cc
+    client-fingerprint: chrome
     ws-opts:
-      path: /pyip=ProxyIP.JP.CMLiussss.net
+      path: /
       headers:
-        Host: rapid-waterfall-7270.255-22b.workers.dev
+        Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
+  - name: "美国-005"
+    type: vless
+    server: 172.64.146.211
+    port: 8443
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+    network: ws
+    udp: true
+    tls: true
+    servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  - name: "德国-006"
+    type: vless
+    server: 162.249.126.230
+    port: 443
+    uuid: 6aaa7d1d-8b35-4fd2-ae60-0129ad624935
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: de.edgeses.org
+    client-fingerprint: android
+    reality-opts:
+      public-key: "BuWOXeVcfmw_I8qSPevsxMVS0cH4ua1b_nH-RFtutB8"
+      short-id: "c4a357107e45ac06"
+  - name: "荷兰-007"
+    type: vless
+    server: cloud.betust.net
+    port: 443
+    uuid: 02722550-1915-4629-a653-cbe95e594f70
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: cloud.betust.net
+    client-fingerprint: edge
+    reality-opts:
+      public-key: "bWjfg3wJxAUtd-_IWeqF_j2cW0U9aJO6whA83n3RIzg"
+      short-id: "8bccdd6c"
+  - name: "荷兰-008"
+    type: vless
+    server: 188.225.38.43
+    port: 443
+    uuid: 02722550-1915-4629-a653-cbe95e594f70
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: cloud.betust.net
+    client-fingerprint: android
+    reality-opts:
+      public-key: "bWjfg3wJxAUtd-_IWeqF_j2cW0U9aJO6whA83n3RIzg"
+      short-id: "8bccdd6c"
+  - name: "荷兰-009"
+    type: vless
+    server: 188.225.78.192
+    port: 443
+    uuid: 02722550-1915-4629-a653-cbe95e594f70
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: spark.betust.net
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "qjJPN31kim0dUeXMg2nKMJMkZKIVPtCMMR-4Eb3XEVc"
+      short-id: "88546590"
+  - name: "荷兰-010"
+    type: vless
+    server: news.betust.net
+    port: 443
+    uuid: 02722550-1915-4629-a653-cbe95e594f70
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: news.betust.net
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "zhsge9t2UhXBtV8uURmDKiB2KUe_0h_5mmsfwczTWBs"
+      short-id: "42a7a9c5"
+  - name: "荷兰-011"
+    type: vless
+    server: spark.betust.net
+    port: 443
+    uuid: 02722550-1915-4629-a653-cbe95e594f70
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: spark.betust.net
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "qjJPN31kim0dUeXMg2nKMJMkZKIVPtCMMR-4Eb3XEVc"
+      short-id: "88546590"
+  - name: "荷兰-012"
+    type: vless
+    server: 188.225.58.153
+    port: 443
+    uuid: 02722550-1915-4629-a653-cbe95e594f70
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: public.betust.net
+    client-fingerprint: android
+    reality-opts:
+      public-key: "j4F4oe2w0O7oqpWeUSa44C9FdBHZEH5fTiXBvEVLIyk"
+      short-id: "c51d359c"
+  - name: "荷兰-013"
+    type: vless
+    server: 188.225.58.195
+    port: 443
+    uuid: 02722550-1915-4629-a653-cbe95e594f70
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: news.betust.net
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "zhsge9t2UhXBtV8uURmDKiB2KUe_0h_5mmsfwczTWBs"
+      short-id: "42a7a9c5"
+  - name: "荷兰-014"
+    type: vless
+    server: 195.209.214.9
+    port: 443
+    uuid: 6c76b874-2273-56cf-8ba2-1b387e85af7c
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: absolute-disaster.org
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "nB8uPOyAjlKxZYQAgwlPzNVLL5yApB0KE5S_TbytBR0"
+  - name: "荷兰-015"
+    type: vless
+    server: 31.56.184.132
+    port: 8443
+    uuid: 11f21602-47aa-42e2-9149-69120f2e6df6
+    network: grpc
+    udp: true
+    tls: true
+    servername: cloudflare.com
+    client-fingerprint: android
+    reality-opts:
+      public-key: "bzbe7QdD633ew_Er1_YWEhuCEHWurmDpxpz3fRzXr0A"
+      short-id: "b4e3b0b55b8dc75b"
 
 proxy-groups:
   - name: Auto
@@ -234,46 +215,40 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "德国-001"
+      - "美国-001"
       - "美国-002"
-      - "日本-003"
+      - "美国-003"
       - "美国-004"
-      - "英国-005"
-      - "爱尔兰-006"
-      - "德国-007"
-      - "其他-008"
-      - "德国-009"
-      - "香港-010"
-      - "俄罗斯-011"
-      - "俄罗斯-012"
-      - "美国-013"
-      - "俄罗斯-014"
-      - "美国-015"
-      - "立陶宛-016"
-      - "美国-017"
-      - "美国-018"
+      - "美国-005"
+      - "德国-006"
+      - "荷兰-007"
+      - "荷兰-008"
+      - "荷兰-009"
+      - "荷兰-010"
+      - "荷兰-011"
+      - "荷兰-012"
+      - "荷兰-013"
+      - "荷兰-014"
+      - "荷兰-015"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "德国-001"
+      - "美国-001"
       - "美国-002"
-      - "日本-003"
+      - "美国-003"
       - "美国-004"
-      - "英国-005"
-      - "爱尔兰-006"
-      - "德国-007"
-      - "其他-008"
-      - "德国-009"
-      - "香港-010"
-      - "俄罗斯-011"
-      - "俄罗斯-012"
-      - "美国-013"
-      - "俄罗斯-014"
-      - "美国-015"
-      - "立陶宛-016"
-      - "美国-017"
-      - "美国-018"
+      - "美国-005"
+      - "德国-006"
+      - "荷兰-007"
+      - "荷兰-008"
+      - "荷兰-009"
+      - "荷兰-010"
+      - "荷兰-011"
+      - "荷兰-012"
+      - "荷兰-013"
+      - "荷兰-014"
+      - "荷兰-015"
 
 rules:
   - MATCH,Proxy
