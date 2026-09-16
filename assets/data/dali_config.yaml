@@ -1,47 +1,115 @@
 proxies:
   - name: "美国-001"
     type: vless
-    server: api.videokanal.cc
+    server: 104.19.215.97
     port: 443
-    uuid: 5f601e51-9659-44e2-bc74-c30f080933f9
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+    network: ws
+    udp: true
+    tls: true
+    servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  - name: "美国-002"
+    type: vless
+    server: 172.64.146.211
+    port: 8443
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+    network: ws
+    udp: true
+    tls: true
+    servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  - name: "美国-003"
+    type: vless
+    server: 108.162.198.178
+    port: 2095
+    uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  - name: "德国-004"
+    type: vless
+    server: marzban-node-production-29c5.up.railway.app
+    port: 443
+    uuid: 26107169-6dfb-4f90-9e68-6ff0da110118
+    network: ws
+    udp: true
+    tls: true
+    servername: marzban-node-production-29c5.up.railway.app
+    client-fingerprint: chrome
+    ws-opts:
+      path: /vless
+      headers:
+        Host: marzban-node-production-29c5.up.railway.app
+  - name: "其他-005"
+    type: vless
+    server: fr-gra-ovh-03.stre4m.net
+    port: 443
+    uuid: 98d0fa1b-d778-477e-b897-4e2569c53178
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: api.videokanal.cc
-    client-fingerprint: qq
+    servername: mother-earth.fyi
+    client-fingerprint: firefox
     reality-opts:
-      public-key: "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs"
-      short-id: "a8"
-  - name: "俄罗斯-002"
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+  - name: "德国-006"
     type: vless
-    server: 45.139.27.245
-    port: 9443
-    uuid: 9dec24b2-b0f4-4d90-b60f-cf6b328de204
-    network: grpc
+    server: ee.cdn-update.rutube.info
+    port: 20443
+    uuid: ad297a2b-ae17-4d2d-8fce-e2eafb89b145
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: eh.vk.ru
-    client-fingerprint: android
-    reality-opts:
-      public-key: "wSQIBnAc0cYO9JitaNcgZ2LwkTix0_dXVpDjnZxDrCE"
-  - name: "俄罗斯-003"
-    type: vless
-    server: 45.139.27.245
-    port: 448
-    uuid: 9dec24b2-b0f4-4d90-b60f-cf6b328de204
-    network: grpc
-    udp: true
-    tls: true
-    servername: eh.vk.ru
+    servername: dest1.cdn-update.rutube.info
     client-fingerprint: edge
     reality-opts:
-      public-key: "wSQIBnAc0cYO9JitaNcgZ2LwkTix0_dXVpDjnZxDrCE"
-  - name: "韩国-004"
+      public-key: "-AdhgMZeNHR2zAmGWa5peg7Ni0-e4IVMoSzydC9n7C4"
+      short-id: "08"
+  - name: "俄罗斯-007"
     type: vless
-    server: 47.80.61.21
+    server: 188.124.36.63
     port: 443
-    uuid: f5851a6e-72da-4e4e-99b2-c79629149503
+    uuid: 208a5dda-5f5e-47e8-8f22-8db77e00ab1b
+    network: grpc
+    udp: true
+    tls: true
+    servername: ultimate.warriorofblacksun.run
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "Ww_HS9_n7ob3uESSXtbU23EPM-BOJ5ZYLp-RFB0L0SY"
+  - name: "日本-008"
+    type: vless
+    server: jp-1.gsafevpnapi.com
+    port: 20270
+    uuid: 7647b321-4bfe-43f3-b21f-926c5de8f9b6
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.yahoo.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "l2Wjf_xR2rZYHYmST-zxaYDDj5QhiL9riXa1ozBSjEE"
+      short-id: "28500ae15838f905"
+  - name: "哥伦比亚-009"
+    type: vless
+    server: 8.209.217.129
+    port: 443
+    uuid: 4a1bd3a7-22e6-4ed0-add4-7ee824d8f54a
     network: tcp
     flow: xtls-rprx-vision
     udp: true
@@ -49,11 +117,24 @@ proxies:
     servername: www.logitech.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: "wrSzVpmEdnTU7oS5UbKuNnvP57Z7cJkOZRBwRqHM_Hk"
-      short-id: "6132a3b8dd2d8c6b"
-  - name: "保加利亚-005"
+      public-key: "Ci03uVNJ34iSg-BSeOgrhTAeWcJExB5gQNuQVRY3a2Q"
+      short-id: "01b4986b50245272"
+  - name: "俄罗斯-010"
     type: vless
-    server: pl.bubahero.com
+    server: 193.17.92.57
+    port: 2053
+    uuid: 1cbb3702-b434-45cf-8520-3e32d860fd83
+    network: grpc
+    udp: true
+    tls: true
+    servername: vk.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "G7VlRXdpKKaZ_33pA0Zsii70uiYkeoBiVYgAD_tL_28"
+      short-id: "76f9d74c385ae618"
+  - name: "保加利亚-011"
+    type: vless
+    server: 194.93.63.246
     port: 443
     uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
     network: tcp
@@ -65,7 +146,20 @@ proxies:
     reality-opts:
       public-key: "GmZv3anSeAeHr_cMFKr-6MPLli-nyKNatnY6P3AFK00"
       short-id: "9c2378562188c3cb"
-  - name: "台湾-006"
+  - name: "哥伦比亚-012"
+    type: vless
+    server: us-1.gsafevpnapi.com
+    port: 20270
+    uuid: e9e24ed8-b007-4e29-b54f-1ece641e60fb
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.yahoo.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "9I4kbgR2flpbRraCLQ-C0umbyQO26riRY3-GY-Tp9DE"
+      short-id: "e67d9a00676f15ac"
+  - name: "台湾-013"
     type: vless
     server: 35.201.230.136
     port: 443
@@ -79,7 +173,63 @@ proxies:
     reality-opts:
       public-key: "Uq9Q8VXK9VkVOJ1M5PfORTqMhjjGoIS40-V0tAG_1FM"
       short-id: "5e13a6d43d0644c9"
-  - name: "香港-007"
+  - name: "新加坡-014"
+    type: vless
+    server: sg-1.gsafevpnapi.com
+    port: 20270
+    uuid: 7647b321-4bfe-43f3-b21f-926c5de8f9b6
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.yahoo.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "q78tZmuaXQTsrrjZtjjRDtoni6tzN-HhXcAY-iT5zF0"
+      short-id: "fc13d6208ebbae16"
+  - name: "新加坡-015"
+    type: vless
+    server: 54.169.200.246
+    port: 41688
+    uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.intel.com
+    client-fingerprint: qq
+    reality-opts:
+      public-key: "srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk"
+      short-id: "7f342137c20387"
+  - name: "澳大利亚-016"
+    type: vless
+    server: au1.gsafevpnapi.com
+    port: 20270
+    uuid: 7647b321-4bfe-43f3-b21f-926c5de8f9b6
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.yahoo.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "RHLiKldLu3DONcQoX4Kjs7Xmd2K25ndVbw4pwxe45XE"
+      short-id: "e6a5a4a9115456de"
+  - name: "印度-017"
+    type: vless
+    server: 172.238.232.239
+    port: 32833
+    uuid: 167ed405-7de9-4bff-b1ea-6e3d49c76b0b
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.intel.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20"
+      short-id: "a0a305ccc8e94aa8"
+  - name: "香港-018"
     type: vless
     server: 34.92.123.152
     port: 443
@@ -93,38 +243,11 @@ proxies:
     reality-opts:
       public-key: "aZfMRLVe6AAcWbF9SpJ0s1RXN-OP5bqdTJ4C74_jTi0"
       short-id: "56c35a22730a22e5"
-  - name: "美国-008"
+  - name: "马来西亚-019"
     type: vless
-    server: nl.armankhan.shop
-    port: 8443
-    uuid: 4798121a-068d-4bf7-b290-287a2aa81f10
-    network: grpc
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "RP-llUEvsc-8FhsjGxA0-LOKCbu4z_sylu17aDwDH14"
-      short-id: "066d77d9"
-  - name: "印度-009"
-    type: vless
-    server: 54.169.200.246
-    port: 41688
-    uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.intel.com
-    client-fingerprint: random
-    reality-opts:
-      public-key: "srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk"
-      short-id: "7f342137c20387"
-  - name: "英国-010"
-    type: vless
-    server: 3.9.135.156
-    port: 51847
-    uuid: 391a01e9-b664-407b-9158-610fab3f5920
+    server: 56.69.159.191
+    port: 53271
+    uuid: e8358eb5-7210-4cf8-982f-68af141b7694
     network: tcp
     flow: xtls-rprx-vision
     udp: true
@@ -132,27 +255,39 @@ proxies:
     servername: www.tesla.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: "S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc"
-      short-id: "0eec442e7b34d2f2"
-  - name: "哥伦比亚-011"
+      public-key: "1P58ZYmo81kPDnL4U7SnEUA-aT2R86l-o6dbFXoeDjc"
+      short-id: "0a9bd9db19578964"
+  - name: "英国-020"
     type: vless
-    server: au1.gsafevpnapi.com
-    port: 20270
-    uuid: 1803e6f6-9da1-4b31-8cc5-ffa155771a14
+    server: 136.148.77.27
+    port: 4930
+    uuid: 89418511-64f9-4e74-ac6b-ffc1b828106f
     network: tcp
-    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: www.yahoo.com
-    client-fingerprint: ios
+    servername: app.stiga.com
+    client-fingerprint: firefox
     reality-opts:
-      public-key: "RHLiKldLu3DONcQoX4Kjs7Xmd2K25ndVbw4pwxe45XE"
-      short-id: "e6a5a4a9115456de"
-  - name: "香港-012"
+      public-key: "01qveLfH4r1DwOi4vfiW7hscWxJQys0s7b5uAegsF0M"
+      short-id: "791f21508a32f6bd"
+  - name: "德国-021"
+    type: vless
+    server: scz.clofidexa.ir
+    port: 4930
+    uuid: 89418511-64f9-4e74-ac6b-ffc1b828106f
+    network: tcp
+    udp: true
+    tls: true
+    servername: app.stiga.com
+    client-fingerprint: edge
+    reality-opts:
+      public-key: "01qveLfH4r1DwOi4vfiW7hscWxJQys0s7b5uAegsF0M"
+      short-id: "791f21508a32f6bd"
+  - name: "香港-022"
     type: vless
     server: hk-1.gsafevpnapi.com
     port: 20270
-    uuid: 1803e6f6-9da1-4b31-8cc5-ffa155771a14
+    uuid: 7647b321-4bfe-43f3-b21f-926c5de8f9b6
     network: tcp
     flow: xtls-rprx-vision
     udp: true
@@ -162,101 +297,6 @@ proxies:
     reality-opts:
       public-key: "0MIamX22OTB4zDokZ5WN_GHBVYs7MkFceuipUvql9Q8"
       short-id: "d5b538acf8a93540"
-  - name: "哥伦比亚-013"
-    type: vless
-    server: 3.89.19.170
-    port: 20270
-    uuid: e016d072-ed97-40d4-a83f-04c00f8df2a5
-    network: tcp
-    udp: true
-    tls: true
-    servername: www.yahoo.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "9I4kbgR2flpbRraCLQ-C0umbyQO26riRY3-GY-Tp9DE"
-      short-id: "e67d9a00676f15ac"
-  - name: "日本-014"
-    type: vless
-    server: 13.231.19.51
-    port: 11690
-    uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.tesla.com
-    client-fingerprint: qq
-    reality-opts:
-      public-key: "Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg"
-      short-id: "034885e346fd30"
-  - name: "新加坡-015"
-    type: vless
-    server: sg-1.gsafevpnapi.com
-    port: 20270
-    uuid: 5f82dcfd-cab5-4b71-91c6-8b6fb4f76c55
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.yahoo.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "q78tZmuaXQTsrrjZtjjRDtoni6tzN-HhXcAY-iT5zF0"
-      short-id: "fc13d6208ebbae16"
-  - name: "哥伦比亚-016"
-    type: vless
-    server: 18.183.215.124
-    port: 28573
-    uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.sony.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg"
-      short-id: "03653bc03be10c97"
-  - name: "哥伦比亚-017"
-    type: vless
-    server: 18.182.44.185
-    port: 20270
-    uuid: e016d072-ed97-40d4-a83f-04c00f8df2a5
-    network: tcp
-    udp: true
-    tls: true
-    servername: www.yahoo.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "l2Wjf_xR2rZYHYmST-zxaYDDj5QhiL9riXa1ozBSjEE"
-      short-id: "28500ae15838f905"
-  - name: "日本-018"
-    type: vless
-    server: jp-1.gsafevpnapi.com
-    port: 20270
-    uuid: 257b0378-01c9-4ded-836d-f94df60bd19c
-    network: tcp
-    udp: true
-    tls: true
-    servername: www.yahoo.com
-    client-fingerprint: edge
-    reality-opts:
-      public-key: "l2Wjf_xR2rZYHYmST-zxaYDDj5QhiL9riXa1ozBSjEE"
-      short-id: "28500ae15838f905"
-  - name: "哥伦比亚-019"
-    type: vless
-    server: 47.74.3.200
-    port: 443
-    uuid: 7fb42fab-ea8a-4f0f-af9e-55df8ae6cb1d
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.logitech.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "kb1uhDsBcfsCD6acCuFcVERW29dscNGIjKPd67NArVk"
-      short-id: "ab3b914f0c9d9de5"
 
 proxy-groups:
   - name: Auto
@@ -266,47 +306,53 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "美国-001"
-      - "俄罗斯-002"
-      - "俄罗斯-003"
-      - "韩国-004"
-      - "保加利亚-005"
-      - "台湾-006"
-      - "香港-007"
-      - "美国-008"
-      - "印度-009"
-      - "英国-010"
-      - "哥伦比亚-011"
-      - "香港-012"
-      - "哥伦比亚-013"
-      - "日本-014"
+      - "美国-002"
+      - "美国-003"
+      - "德国-004"
+      - "其他-005"
+      - "德国-006"
+      - "俄罗斯-007"
+      - "日本-008"
+      - "哥伦比亚-009"
+      - "俄罗斯-010"
+      - "保加利亚-011"
+      - "哥伦比亚-012"
+      - "台湾-013"
+      - "新加坡-014"
       - "新加坡-015"
-      - "哥伦比亚-016"
-      - "哥伦比亚-017"
-      - "日本-018"
-      - "哥伦比亚-019"
+      - "澳大利亚-016"
+      - "印度-017"
+      - "香港-018"
+      - "马来西亚-019"
+      - "英国-020"
+      - "德国-021"
+      - "香港-022"
   - name: Proxy
     type: select
     proxies:
       - Auto
       - "美国-001"
-      - "俄罗斯-002"
-      - "俄罗斯-003"
-      - "韩国-004"
-      - "保加利亚-005"
-      - "台湾-006"
-      - "香港-007"
-      - "美国-008"
-      - "印度-009"
-      - "英国-010"
-      - "哥伦比亚-011"
-      - "香港-012"
-      - "哥伦比亚-013"
-      - "日本-014"
+      - "美国-002"
+      - "美国-003"
+      - "德国-004"
+      - "其他-005"
+      - "德国-006"
+      - "俄罗斯-007"
+      - "日本-008"
+      - "哥伦比亚-009"
+      - "俄罗斯-010"
+      - "保加利亚-011"
+      - "哥伦比亚-012"
+      - "台湾-013"
+      - "新加坡-014"
       - "新加坡-015"
-      - "哥伦比亚-016"
-      - "哥伦比亚-017"
-      - "日本-018"
-      - "哥伦比亚-019"
+      - "澳大利亚-016"
+      - "印度-017"
+      - "香港-018"
+      - "马来西亚-019"
+      - "英国-020"
+      - "德国-021"
+      - "香港-022"
 
 rules:
   - MATCH,Proxy
