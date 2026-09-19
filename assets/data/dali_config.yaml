@@ -1,45 +1,19 @@
 proxies:
-  - name: "其他-001"
+  - name: "荷兰-001"
     type: vless
-    server: 69.46.46.41
+    server: ahbpanel-production-1919.up.railway.app
     port: 443
-    uuid: 662a0afa-1304-951b-67ff-9190609f9c66
+    uuid: 1f1268ea-a3e1-5efc-3674-90ece29e45d5
     network: ws
     udp: true
     tls: true
-    servername: panel-production-a472.up.railway.app
-    client-fingerprint: firefox
-    ws-opts:
-      path: /ws/662a0afa-1304-951b-67ff-9190609f9c66
-      headers:
-        Host: vodiwalkerpanel-production-a472.up.railway.app
-  - name: "德国-002"
-    type: vless
-    server: pechatprint-63.ru
-    port: 8080
-    uuid: 75db4327-dff6-4de2-a089-6924b22b7e51
-    network: ws
-    udp: true
-    tls: true
-    servername: pechatprint-63.ru
-    client-fingerprint: firefox
-    ws-opts:
-      path: /chws
-  - name: "美国-003"
-    type: vless
-    server: 104.21.53.114
-    port: 443
-    uuid: 7e26fd8f-d75a-473d-84ba-9f4e3f47d086
-    network: ws
-    udp: true
-    tls: true
-    servername: 4-m20.20260721-b3fa-439e-b14e-6e2ee3f22b8c.ccwu.cc
+    servername: ahbpanel-production-1919.up.railway.app
     client-fingerprint: chrome
     ws-opts:
-      path: /8qMLgNapWf6SBxo8fhQlVPYO
+      path: /ws/1f1268ea-a3e1-5efc-3674-90ece29e45d5
       headers:
-        Host: 4-m20.20260721-b3fa-439e-b14e-6e2ee3f22b8c.ccwu.cc
-  - name: "美国-004"
+        Host: ahbpanel-production-1919.up.railway.app
+  - name: "美国-002"
     type: vless
     server: www.wto.org
     port: 443
@@ -53,35 +27,49 @@ proxies:
       path: /
       headers:
         Host: cnmfangbinxingnmsl.asshole.us.ci
-  - name: "美国-005"
+  - name: "荷兰-003"
     type: vless
-    server: www.epicgames.com
+    server: 69.46.46.109
     port: 443
-    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+    uuid: 10c3b62f-59da-55cb-b24f-2072ecb4348c
     network: ws
     udp: true
     tls: true
-    servername: cnmfangbinxingnmsl.asshole.us.ci
+    servername: srv-59626b-f0a855-production.up.railway.app
+    client-fingerprint: chrome
+    ws-opts:
+      path: /ws/Default
+      headers:
+        Host: srv-59626b-f0a855-production.up.railway.app
+  - name: "荷兰-004"
+    type: vless
+    server: 69.46.46.110
+    port: 443
+    uuid: 10c3b62f-59da-55cb-b24f-2072ecb4348c
+    network: ws
+    udp: true
+    tls: true
+    servername: core-1d94b4-5a2002-production.up.railway.app
+    client-fingerprint: firefox
+    ws-opts:
+      path: /ws/Default
+      headers:
+        Host: core-1d94b4-5a2002-production.up.railway.app
+  - name: "美国-005"
+    type: vless
+    server: 172.64.146.211
+    port: 2083
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+    network: ws
+    udp: true
+    tls: true
+    servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
     client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
-        Host: cnmfangbinxingnmsl.asshole.us.ci
+        Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   - name: "美国-006"
-    type: vless
-    server: hyhhuh.mervi.icu
-    port: 443
-    uuid: 9bbd487f-8f84-4ad7-b897-681c3f7d95dc
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: hyhhuh.mervi.icu
-    client-fingerprint: random
-    reality-opts:
-      public-key: "wl-pbwMLXrvJkR4yo1JNBU7oiewyuQ-t7jxiS6Kz4D8"
-      short-id: "2997575f36da5a09"
-  - name: "其他-007"
     type: vless
     server: 162.35.96.18
     port: 8081
@@ -91,7 +79,45 @@ proxies:
     tls: false
     ws-opts:
       path: /vless-test
-  - name: "其他-008"
+  - name: "美国-007"
+    type: vless
+    server: usa-01.node.lumixnet.com
+    port: 443
+    uuid: 8645697d-51c1-4e90-aca5-ba63a0392f11
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: usa-01.node.lumixnet.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "vEXgvoW9iQo6iiKT71cNt1CC3cAB4IWswAn-cScDz1A"
+      short-id: "bd8a588cebc3395a"
+  - name: "美国-008"
+    type: vless
+    server: 162.35.96.39
+    port: 8081
+    uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /vless-test
+  - name: "哥伦比亚-009"
+    type: vless
+    server: 95.182.93.216
+    port: 8443
+    uuid: f94d7c42-4da8-4ae0-bbff-5bef552caf71
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: gateway.icloud.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "V6hTQovztprygXFg7MalH7hZwbzM1fDOnHHG28HVXxI"
+      short-id: "81cb1e3cf37a"
+  - name: "英国-010"
     type: vless
     server: 14ang88.snusoed.baby
     port: 443
@@ -105,21 +131,21 @@ proxies:
     reality-opts:
       public-key: "s0ypPx0AL3k2KOk74tbm-aE-i7eIR_MYVzfLHZeLaUk"
       short-id: "2e124af254a65e7c"
-  - name: "荷兰-009"
+  - name: "法国-011"
     type: vless
-    server: ams.sepporated.com
+    server: 195.58.140.164
     port: 443
-    uuid: 218ae360-0e5f-4856-91f3-1823adfc9037
-    network: ws
+    uuid: 1750cf0e-57d5-4fba-ba2a-3fda91d8b8c5
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: ams.sepporated.com
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ws
-      headers:
-        Host: ams.sepporated.com
-  - name: "英国-010"
+    servername: d2-fr.cloud-cdn.xyz
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "lRuJPDrUb0b32-47hl4BgDoQutqmkuW31N4qVxbDgmI"
+      short-id: "dc927a04e8572c61"
+  - name: "英国-012"
     type: vless
     server: 164.37.100.194
     port: 443
@@ -133,7 +159,7 @@ proxies:
     reality-opts:
       public-key: "s0ypPx0AL3k2KOk74tbm-aE-i7eIR_MYVzfLHZeLaUk"
       short-id: "2e124af254a65e7c"
-  - name: "英国-011"
+  - name: "英国-013"
     type: vless
     server: 50.7.227.252
     port: 443
@@ -143,8 +169,22 @@ proxies:
     udp: true
     tls: true
     servername: uk-dedic.failspace.top
-    client-fingerprint: qq
-  - name: "德国-012"
+    client-fingerprint: edge
+  - name: "德国-014"
+    type: vless
+    server: 95.129.236.239
+    port: 443
+    uuid: c748ab70-a175-4ff3-94e6-5b7090f6c891
+    network: ws
+    udp: true
+    tls: true
+    servername: wiki.solarinfra.net
+    client-fingerprint: android
+    ws-opts:
+      path: /stream/615428/socket
+      headers:
+        Host: wiki.solarinfra.net
+  - name: "德国-015"
     type: vless
     server: de-fra-2.blook.network
     port: 443
@@ -158,139 +198,88 @@ proxies:
     reality-opts:
       public-key: "AGqwhw3osT4iyh2rH0lgDXh8WNySyzzdhoCmGblG2iY"
       short-id: "3190"
-  - name: "哥伦比亚-013"
+  - name: "印度-016"
     type: vless
-    server: edge6.multikons.shop
+    server: 172.239.239.53
+    port: 22746
+    uuid: a4846a6c-163f-4b12-a99f-378d814e5e09
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.intel.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "B6bPTxNaLqqoUTuNggzTBP0pPxJEqE_Bd_Ob27MPvgU"
+      short-id: "d9fd4fa80238cd05"
+  - name: "法国-017"
+    type: vless
+    server: mrs.sepporated.com
+    port: 443
+    uuid: 218ae360-0e5f-4856-91f3-1823adfc9037
+    network: ws
+    udp: true
+    tls: true
+    servername: mrs.sepporated.com
+    client-fingerprint: chrome
+    ws-opts:
+      path: /ws
+      headers:
+        Host: mrs.sepporated.com
+  - name: "德国-018"
+    type: vless
+    server: 31.77.13.19
+    port: 2063
+    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: rusbid.de
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "德国-019"
+    type: vless
+    server: pl-waw.dontblockmepls.com
+    port: 2063
+    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: rusbid.de
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "其他-020"
+    type: vless
+    server: 151.242.160.153
+    port: 443
+    uuid: 129799e0-a9b1-4ae8-80bd-fa92db813f85
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: germm2.shhflow.xyz
+    client-fingerprint: ios
+    reality-opts:
+      public-key: "A0Na0oG3DYM8FtAsxN-oWVjikFbO-Ama8i1Z0C4V_ho"
+  - name: "哥伦比亚-021"
+    type: vless
+    server: core-data.gorekmas.online
     port: 443
     uuid: 4f8a1d19-4d21-47f5-816e-a8f475fbd3f7
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: edge6.multikons.shop
+    servername: core-data.gorekmas.online
     client-fingerprint: chrome
     reality-opts:
-      public-key: "9J0h1tl0PRGXSKMLbu-_nsnoxhw3IHJ4jZTi2p_4i00"
-      short-id: "e2422c761ef3fb15"
-  - name: "德国-014"
-    type: vless
-    server: 5.231.123.17
-    port: 443
-    uuid: e0d66042-eeb3-45e1-9106-045c4c4b24fa
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: johnydeep.net
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "6vDdlh4aAipoRQ-IXDjzTUtKpZS09xtNXIisCa__2CM"
-      short-id: "f74c6a18133e2e72"
-  - name: "德国-015"
-    type: vless
-    server: mail.figmafound.org
-    port: 443
-    uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: mail.figmafound.org
-    client-fingerprint: random
-    reality-opts:
-      public-key: "H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24"
-      short-id: "711ad7f475c35e5e"
-  - name: "其他-016"
-    type: vless
-    server: 31.76.80.238
-    port: 443
-    uuid: 9bbd487f-8f84-4ad7-b897-681c3f7d95dc
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: jujujuj.mervi.icu
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "j7_ysAZxK5vBkMqvu0r8_UUuR3Qp7Yml3fXFDGR5x3w"
-      short-id: "573703f224b75e8c"
-  - name: "德国-017"
-    type: vless
-    server: cloud.figmafound.org
-    port: 443
-    uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: cloud.figmafound.org
-    client-fingerprint: random
-    reality-opts:
-      public-key: "H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24"
-      short-id: "711ad7f475c35e5e"
-  - name: "德国-018"
-    type: vless
-    server: auth.figmafound.org
-    port: 443
-    uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: auth.figmafound.org
-    client-fingerprint: random
-    reality-opts:
-      public-key: "H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24"
-      short-id: "711ad7f475c35e5e"
-  - name: "德国-019"
-    type: vless
-    server: 143.246.195.98
-    port: 8081
-    uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /vless-test
-  - name: "德国-020"
-    type: vless
-    server: 103.139.51.21
-    port: 443
-    uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: auth.figmafound.org
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24"
-      short-id: "711ad7f475c35e5e"
-  - name: "其他-021"
-    type: vless
-    server: 131.123.41.18
-    port: 8081
-    uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /vless-test
-  - name: "其他-022"
-    type: vless
-    server: 5.181.201.36
-    port: 443
-    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: estomin1.vodniki.monster
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "r1MW0o1DsC6EEWN-KPKnoXszb1trxlKShRIgOpxqHBk"
-      short-id: "d98e7afec9c0c359"
-  - name: "德国-023"
+      public-key: "CRh0VOb2qvDm4H89m6qiHg_9M6nnJ0f_h0kpPitA6hw"
+      short-id: "266337e69bb1f189"
+  - name: "德国-022"
     type: vless
     server: 103.139.51.51
     port: 443
@@ -304,21 +293,58 @@ proxies:
     reality-opts:
       public-key: "H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24"
       short-id: "711ad7f475c35e5e"
+  - name: "德国-023"
+    type: vless
+    server: pl.node-edge09.com
+    port: 443
+    uuid: ddf09ad0-02dc-485b-9048-1038de5bebf0
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: pl.node-edge09.com
+    client-fingerprint: qq
+    reality-opts:
+      public-key: "JoIT56dCrKkeYJWSPA6-rllSqlXYKPg1rC2w7D_xogU"
+      short-id: "212a8beb0ea4817b"
   - name: "德国-024"
     type: vless
-    server: 103.139.51.41
+    server: cloud.figmafound.org
     port: 443
     uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: mail.figmafound.org
-    client-fingerprint: firefox
+    client-fingerprint: random
     reality-opts:
       public-key: "H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24"
       short-id: "711ad7f475c35e5e"
-  - name: "德国-025"
+  - name: "荷兰-025"
+    type: vless
+    server: 132.243.166.247
+    port: 8081
+    uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /vless-test
+  - name: "德国-026"
+    type: vless
+    server: svvedko.nxxzxaw.beer
+    port: 443
+    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: svvedko.nxxzxaw.beer
+    client-fingerprint: random
+    reality-opts:
+      public-key: "x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA"
+      short-id: "fb442438e2223836"
+  - name: "德国-027"
     type: vless
     server: 5.157.10.147
     port: 443
@@ -332,9 +358,37 @@ proxies:
     reality-opts:
       public-key: "x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA"
       short-id: "fb442438e2223836"
-  - name: "其他-026"
+  - name: "其他-028"
     type: vless
-    server: estomin1.vodniki.monster
+    server: vera.kyras.pw
+    port: 443
+    uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: vera.kyras.pw
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "xa2oqWBhi_uW7Zns1Irp8OlAEGQFU_vKTUqUqbnG2Wg"
+      short-id: "cdf67af2"
+  - name: "其他-029"
+    type: vless
+    server: 144.31.150.111
+    port: 443
+    uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: vera.kyras.pw
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "xa2oqWBhi_uW7Zns1Irp8OlAEGQFU_vKTUqUqbnG2Wg"
+      short-id: "cdf67af2"
+  - name: "其他-030"
+    type: vless
+    server: 5.181.201.36
     port: 443
     uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
     network: tcp
@@ -342,62 +396,10 @@ proxies:
     udp: true
     tls: true
     servername: estomin1.vodniki.monster
-    client-fingerprint: random
+    client-fingerprint: firefox
     reality-opts:
       public-key: "r1MW0o1DsC6EEWN-KPKnoXszb1trxlKShRIgOpxqHBk"
       short-id: "d98e7afec9c0c359"
-  - name: "拉脱维亚-027"
-    type: vless
-    server: 195.123.212.60
-    port: 15392
-    uuid: de78ba38-5600-47d1-b93b-b45bdf280ac0
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: intel.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "TgaE-83sqLrJ6auwPP2Nq7vDO_xuFqa6uMnG4Au18jg"
-      short-id: "82"
-  - name: "哥伦比亚-028"
-    type: vless
-    server: 131.123.41.18
-    port: 443
-    uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: sheetpeek.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "pX9uknHGLC9I26TT5kq4bIAljtX2AGWLK23EMgn6xFo"
-      short-id: "84be686ea1d16478"
-  - name: "拉脱维亚-029"
-    type: vless
-    server: latisha.loozerp.wiki
-    port: 443
-    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: latisha.loozerp.wiki
-    client-fingerprint: random
-    reality-opts:
-      public-key: "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk"
-      short-id: "ff776ff77be48b88"
-  - name: "荷兰-030"
-    type: vless
-    server: 132.243.166.247
-    port: 8081
-    uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /vless-test
   - name: "拉脱维亚-031"
     type: vless
     server: 2.27.210.32
@@ -412,49 +414,21 @@ proxies:
     reality-opts:
       public-key: "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk"
       short-id: "ff776ff77be48b88"
-  - name: "俄罗斯-032"
+  - name: "德国-032"
     type: vless
-    server: 185.39.204.135
+    server: auth.figmafound.org
     port: 443
-    uuid: 84a794a5-2420-4ca7-8e08-8d21571f36f3
+    uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: tr.plus-hit.ru
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "d3yQvdpwFHpLkl0ZbTnMH4uihCTKn4CAHy0W6so0VTI"
-      short-id: "7c8e3d4a9b1f26d3"
-  - name: "俄罗斯-033"
-    type: vless
-    server: dzen-ru-1.com
-    port: 443
-    uuid: bcb5a897-8cc4-4e21-ad96-c82fb3a9d72a
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: dzen-ru-1.com
-    client-fingerprint: android
-    reality-opts:
-      public-key: "9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg"
-      short-id: "19aa22f681923dc8"
-  - name: "芬兰-034"
-    type: vless
-    server: finkafsb.finiki.lol
-    port: 443
-    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: finkafsb.finiki.lol
+    servername: auth.figmafound.org
     client-fingerprint: random
     reality-opts:
-      public-key: "YBKHp6R7xp2Ss2kxbvDNMFPpRrf3oh1wQ2dVMukPHmA"
-      short-id: "d110331f200987ae"
-  - name: "芬兰-035"
+      public-key: "H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24"
+      short-id: "711ad7f475c35e5e"
+  - name: "芬兰-033"
     type: vless
     server: 196.196.206.38
     port: 443
@@ -468,37 +442,9 @@ proxies:
     reality-opts:
       public-key: "YBKHp6R7xp2Ss2kxbvDNMFPpRrf3oh1wQ2dVMukPHmA"
       short-id: "d110331f200987ae"
-  - name: "德国-036"
+  - name: "保加利亚-034"
     type: vless
-    server: 85.155.228.24
-    port: 443
-    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: alda1.thewalkingded.life
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "2IBUcPHOhFulmJaICe_xuRBJVgjDqVXB8fjHVdbdOQA"
-      short-id: "e114ca996877ce3a"
-  - name: "德国-037"
-    type: vless
-    server: alda1.thewalkingded.life
-    port: 443
-    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: alda1.thewalkingded.life
-    client-fingerprint: random
-    reality-opts:
-      public-key: "2IBUcPHOhFulmJaICe_xuRBJVgjDqVXB8fjHVdbdOQA"
-      short-id: "e114ca996877ce3a"
-  - name: "其他-038"
-    type: vless
-    server: 162.35.96.39
+    server: 131.123.37.199
     port: 8081
     uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
     network: ws
@@ -506,185 +452,35 @@ proxies:
     tls: false
     ws-opts:
       path: /vless-test
-  - name: "拉脱维亚-039"
+  - name: "芬兰-035"
     type: vless
-    server: 2.27.210.39
+    server: 31.76.80.238
     port: 443
     uuid: 9bbd487f-8f84-4ad7-b897-681c3f7d95dc
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: ciccuc.mervi.icu
+    servername: jujujuj.mervi.icu
     client-fingerprint: firefox
     reality-opts:
-      public-key: "3J-u0CiyQk47zVzkuMVgOiVIYtomNZPr__85MDxGxVw"
-      short-id: "5029592ae5516948"
-  - name: "韩国-040"
+      public-key: "j7_ysAZxK5vBkMqvu0r8_UUuR3Qp7Yml3fXFDGR5x3w"
+      short-id: "573703f224b75e8c"
+  - name: "德国-036"
     type: vless
-    server: 34.64.149.137
+    server: 103.139.51.21
     port: 443
-    uuid: 700a7a0e-3f27-406c-81d1-aa1abe411af8
-    network: tcp
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "kqIDhDhYFrXD-1GeurwjzFwbB0zWipgWmcbADXwmyy8"
-      short-id: "3fd0a8ddef3ae5c6"
-  - name: "美国-041"
-    type: vless
-    server: 5.78.159.97
-    port: 443
-    uuid: b88a54a0-501c-4acf-930b-305354452f4e
+    uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: www.yahoo.com
+    servername: auth.figmafound.org
     client-fingerprint: firefox
     reality-opts:
-      public-key: "XB7peN-a_9j_WGBHvs3DIMDlsOzJAOehGnziOE9OvwE"
-      short-id: "884dffd8e62a5c48"
-  - name: "其他-042"
-    type: vless
-    server: in-blr-2.blook.network
-    port: 443
-    uuid: c96879ff-e1b0-4378-b93b-525b08a97854
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: in-blr-2.blook.network
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "gyvfomzH1GnmSvqwwHhyKUkIaTwXhS-mA8jx4pJTKnA"
-      short-id: "1e8f"
-  - name: "芬兰-043"
-    type: vless
-    server: 144.31.150.111
-    port: 443
-    uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: vera.kyras.pw
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "xa2oqWBhi_uW7Zns1Irp8OlAEGQFU_vKTUqUqbnG2Wg"
-      short-id: "cdf67af2"
-  - name: "智利-044"
-    type: vless
-    server: 34.176.98.128
-    port: 443
-    uuid: 4fe7ceb2-160c-4564-89e6-8f5fd0b05cd5
-    network: tcp
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "3ekBKAuIIAOjtkKJ0T-qpC7uJsqsY2fVLRB6C70A5hw"
-      short-id: "d7676b6a468a03b3"
-  - name: "芬兰-045"
-    type: vless
-    server: vera.kyras.pw
-    port: 443
-    uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: vera.kyras.pw
-    client-fingerprint: random
-    reality-opts:
-      public-key: "xa2oqWBhi_uW7Zns1Irp8OlAEGQFU_vKTUqUqbnG2Wg"
-      short-id: "cdf67af2"
-  - name: "日本-046"
-    type: vless
-    server: 8.211.152.47
-    port: 443
-    uuid: 87646ddd-a8b0-4fea-a65c-ad86b0501c54
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.logitech.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "ycun6HN1qxz3fcfn15Bhut7loBGfohZ0wzTIkHKagyg"
-      short-id: "89fdcf10a3cbd0b1"
-  - name: "意大利-047"
-    type: vless
-    server: 172.238.232.239
-    port: 32833
-    uuid: 167ed405-7de9-4bff-b1ea-6e3d49c76b0b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.intel.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20"
-      short-id: "a0a305ccc8e94aa8"
-  - name: "德国-048"
-    type: vless
-    server: svvedko.nxxzxaw.beer
-    port: 443
-    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: svvedko.nxxzxaw.beer
-    client-fingerprint: random
-    reality-opts:
-      public-key: "x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA"
-      short-id: "fb442438e2223836"
-  - name: "拉脱维亚-049"
-    type: vless
-    server: ciccuc.mervi.icu
-    port: 443
-    uuid: 9bbd487f-8f84-4ad7-b897-681c3f7d95dc
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: ciccuc.mervi.icu
-    client-fingerprint: random
-    reality-opts:
-      public-key: "3J-u0CiyQk47zVzkuMVgOiVIYtomNZPr__85MDxGxVw"
-      short-id: "5029592ae5516948"
-  - name: "德国-050"
-    type: vless
-    server: 31.77.13.19
-    port: 2063
-    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: rusbid.de
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
-  - name: "德国-051"
-    type: vless
-    server: pl-waw.dontblockmepls.com
-    port: 2063
-    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: rusbid.de
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
-  - name: "芬兰-052"
+      public-key: "H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24"
+      short-id: "711ad7f475c35e5e"
+  - name: "芬兰-037"
     type: vless
     server: jujujuj.mervi.icu
     port: 443
@@ -698,6 +494,235 @@ proxies:
     reality-opts:
       public-key: "j7_ysAZxK5vBkMqvu0r8_UUuR3Qp7Yml3fXFDGR5x3w"
       short-id: "573703f224b75e8c"
+  - name: "其他-038"
+    type: vless
+    server: 131.123.34.145
+    port: 8081
+    uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /vless-test
+  - name: "英国-039"
+    type: vless
+    server: 3.9.135.156
+    port: 51847
+    uuid: 391a01e9-b664-407b-9158-610fab3f5920
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.tesla.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc"
+      short-id: "0eec442e7b34d2f2"
+  - name: "德国-040"
+    type: vless
+    server: alda1.thewalkingded.life
+    port: 443
+    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: alda1.thewalkingded.life
+    client-fingerprint: random
+    reality-opts:
+      public-key: "2IBUcPHOhFulmJaICe_xuRBJVgjDqVXB8fjHVdbdOQA"
+      short-id: "e114ca996877ce3a"
+  - name: "其他-041"
+    type: vless
+    server: 72.56.38.83
+    port: 443
+    uuid: Fluffy_VPN-zKZUa4Ie
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: absolute-disaster.org
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8"
+  - name: "德国-042"
+    type: vless
+    server: 85.155.228.24
+    port: 443
+    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: alda1.thewalkingded.life
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "2IBUcPHOhFulmJaICe_xuRBJVgjDqVXB8fjHVdbdOQA"
+      short-id: "e114ca996877ce3a"
+  - name: "其他-043"
+    type: vless
+    server: md-kiv-2.blook.network
+    port: 443
+    uuid: 4715152e-d226-4d14-8cfd-f3f0463dff3a
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: md-kiv-2.blook.network
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "SqYAVrG01Mk0KXzlkmckO6lxvv6iZBJJvxE6PvD2vD0"
+      short-id: "db26"
+  - name: "澳大利亚-044"
+    type: vless
+    server: 34.87.229.148
+    port: 443
+    uuid: 4f865f35-cf47-4e7f-a7e6-8882511a1b36
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "OgTkmAQdLjipA9oLloxbU5BAX3hPjzbvkEGHF4aZ8z4"
+      short-id: "8a7d5e0248cdb1b1"
+  - name: "智利-045"
+    type: vless
+    server: 31.56.187.82
+    port: 443
+    uuid: 8917c433-eb10-4546-871b-ef9880f7a17e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: timeline.www.cloudflare.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "FN-A-q17JHKav9ePOlPeQzdz16WkhFNMQVcWQ1AuPhU"
+      short-id: "d1023e"
+  - name: "波兰-046"
+    type: vless
+    server: 34.118.70.195
+    port: 443
+    uuid: d518b4e2-bd6e-4d4e-a26e-238154d8d60c
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "t_ql5pn5MG1bkVQoteCXoKkSTzUzOs_yXMllmsyiqXY"
+      short-id: "7445870d4c2bdcb0"
+  - name: "哥伦比亚-047"
+    type: vless
+    server: 5.78.159.97
+    port: 443
+    uuid: b88a54a0-501c-4acf-930b-305354452f4e
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.yahoo.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "XB7peN-a_9j_WGBHvs3DIMDlsOzJAOehGnziOE9OvwE"
+      short-id: "884dffd8e62a5c48"
+  - name: "日本-048"
+    type: vless
+    server: 18.183.215.124
+    port: 28573
+    uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.sony.com
+    client-fingerprint: safari
+    reality-opts:
+      public-key: "1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg"
+      short-id: "03653bc03be10c97"
+  - name: "芬兰-049"
+    type: vless
+    server: finkafsb.finiki.lol
+    port: 443
+    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: finkafsb.finiki.lol
+    client-fingerprint: random
+    reality-opts:
+      public-key: "YBKHp6R7xp2Ss2kxbvDNMFPpRrf3oh1wQ2dVMukPHmA"
+      short-id: "d110331f200987ae"
+  - name: "智利-050"
+    type: vless
+    server: 34.176.98.128
+    port: 443
+    uuid: 4fe7ceb2-160c-4564-89e6-8f5fd0b05cd5
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "3ekBKAuIIAOjtkKJ0T-qpC7uJsqsY2fVLRB6C70A5hw"
+      short-id: "d7676b6a468a03b3"
+  - name: "新加坡-051"
+    type: vless
+    server: 54.169.200.246
+    port: 41688
+    uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.intel.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk"
+      short-id: "7f342137c20387"
+  - name: "其他-052"
+    type: vless
+    server: estomin1.vodniki.monster
+    port: 443
+    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: estomin1.vodniki.monster
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "r1MW0o1DsC6EEWN-KPKnoXszb1trxlKShRIgOpxqHBk"
+      short-id: "d98e7afec9c0c359"
+  - name: "美国-053"
+    type: vless
+    server: 94.228.166.164
+    port: 463
+    uuid: a82aa132-5ccc-4b3d-a219-bfd8a1993d59
+    network: grpc
+    udp: true
+    tls: true
+    servername: yandex.ru
+    client-fingerprint: android
+    reality-opts:
+      public-key: "2LhhfOTB7zeLJ-0s9aGNkISP3MmC2EV7odwrSVcdQww"
+      short-id: "53c7983cfd"
+  - name: "哥伦比亚-054"
+    type: vless
+    server: 13.231.19.51
+    port: 11690
+    uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.tesla.com
+    client-fingerprint: random
+    reality-opts:
+      public-key: "Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg"
+      short-id: "034885e346fd30"
 
 proxy-groups:
   - name: Auto
@@ -706,114 +731,118 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "其他-001"
-      - "德国-002"
-      - "美国-003"
-      - "美国-004"
+      - "荷兰-001"
+      - "美国-002"
+      - "荷兰-003"
+      - "荷兰-004"
       - "美国-005"
       - "美国-006"
-      - "其他-007"
-      - "其他-008"
-      - "荷兰-009"
+      - "美国-007"
+      - "美国-008"
+      - "哥伦比亚-009"
       - "英国-010"
-      - "英国-011"
-      - "德国-012"
-      - "哥伦比亚-013"
+      - "法国-011"
+      - "英国-012"
+      - "英国-013"
       - "德国-014"
       - "德国-015"
-      - "其他-016"
-      - "德国-017"
+      - "印度-016"
+      - "法国-017"
       - "德国-018"
       - "德国-019"
-      - "德国-020"
-      - "其他-021"
-      - "其他-022"
+      - "其他-020"
+      - "哥伦比亚-021"
+      - "德国-022"
       - "德国-023"
       - "德国-024"
-      - "德国-025"
-      - "其他-026"
-      - "拉脱维亚-027"
-      - "哥伦比亚-028"
-      - "拉脱维亚-029"
-      - "荷兰-030"
+      - "荷兰-025"
+      - "德国-026"
+      - "德国-027"
+      - "其他-028"
+      - "其他-029"
+      - "其他-030"
       - "拉脱维亚-031"
-      - "俄罗斯-032"
-      - "俄罗斯-033"
-      - "芬兰-034"
+      - "德国-032"
+      - "芬兰-033"
+      - "保加利亚-034"
       - "芬兰-035"
       - "德国-036"
-      - "德国-037"
+      - "芬兰-037"
       - "其他-038"
-      - "拉脱维亚-039"
-      - "韩国-040"
-      - "美国-041"
-      - "其他-042"
-      - "芬兰-043"
-      - "智利-044"
-      - "芬兰-045"
-      - "日本-046"
-      - "意大利-047"
-      - "德国-048"
-      - "拉脱维亚-049"
-      - "德国-050"
-      - "德国-051"
-      - "芬兰-052"
+      - "英国-039"
+      - "德国-040"
+      - "其他-041"
+      - "德国-042"
+      - "其他-043"
+      - "澳大利亚-044"
+      - "智利-045"
+      - "波兰-046"
+      - "哥伦比亚-047"
+      - "日本-048"
+      - "芬兰-049"
+      - "智利-050"
+      - "新加坡-051"
+      - "其他-052"
+      - "美国-053"
+      - "哥伦比亚-054"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "其他-001"
-      - "德国-002"
-      - "美国-003"
-      - "美国-004"
+      - "荷兰-001"
+      - "美国-002"
+      - "荷兰-003"
+      - "荷兰-004"
       - "美国-005"
       - "美国-006"
-      - "其他-007"
-      - "其他-008"
-      - "荷兰-009"
+      - "美国-007"
+      - "美国-008"
+      - "哥伦比亚-009"
       - "英国-010"
-      - "英国-011"
-      - "德国-012"
-      - "哥伦比亚-013"
+      - "法国-011"
+      - "英国-012"
+      - "英国-013"
       - "德国-014"
       - "德国-015"
-      - "其他-016"
-      - "德国-017"
+      - "印度-016"
+      - "法国-017"
       - "德国-018"
       - "德国-019"
-      - "德国-020"
-      - "其他-021"
-      - "其他-022"
+      - "其他-020"
+      - "哥伦比亚-021"
+      - "德国-022"
       - "德国-023"
       - "德国-024"
-      - "德国-025"
-      - "其他-026"
-      - "拉脱维亚-027"
-      - "哥伦比亚-028"
-      - "拉脱维亚-029"
-      - "荷兰-030"
+      - "荷兰-025"
+      - "德国-026"
+      - "德国-027"
+      - "其他-028"
+      - "其他-029"
+      - "其他-030"
       - "拉脱维亚-031"
-      - "俄罗斯-032"
-      - "俄罗斯-033"
-      - "芬兰-034"
+      - "德国-032"
+      - "芬兰-033"
+      - "保加利亚-034"
       - "芬兰-035"
       - "德国-036"
-      - "德国-037"
+      - "芬兰-037"
       - "其他-038"
-      - "拉脱维亚-039"
-      - "韩国-040"
-      - "美国-041"
-      - "其他-042"
-      - "芬兰-043"
-      - "智利-044"
-      - "芬兰-045"
-      - "日本-046"
-      - "意大利-047"
-      - "德国-048"
-      - "拉脱维亚-049"
-      - "德国-050"
-      - "德国-051"
-      - "芬兰-052"
+      - "英国-039"
+      - "德国-040"
+      - "其他-041"
+      - "德国-042"
+      - "其他-043"
+      - "澳大利亚-044"
+      - "智利-045"
+      - "波兰-046"
+      - "哥伦比亚-047"
+      - "日本-048"
+      - "芬兰-049"
+      - "智利-050"
+      - "新加坡-051"
+      - "其他-052"
+      - "美国-053"
+      - "哥伦比亚-054"
 
 rules:
   - MATCH,Proxy
