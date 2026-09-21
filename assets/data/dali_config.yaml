@@ -1,212 +1,329 @@
 proxies:
-  - name: "美国-001"
+  - name: "哥伦比亚-001"
     type: vless
-    server: 104.16.10.234
+    server: 91.209.253.229
     port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+    uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
     network: ws
     udp: true
     tls: true
-    servername: u.srilankangrill.online
+    servername: nb.lovecf.ggff.net
     client-fingerprint: chrome
     ws-opts:
-      path: /
+      path: /proxyip=us.xiabibi.cf
       headers:
-        Host: u.srilankangrill.online
-  - name: "美国-002"
+        Host: nb.lovecf.ggff.net
+  - name: "爱尔兰-002"
     type: vless
-    server: 104.21.5.156
+    server: ireland-new.failspace.top
     port: 443
-    uuid: 1aa96574-c28b-4ee9-855d-ebdbbf1f7e90
-    network: ws
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: 5-M13.1332afdc-0737-4BB1-8CA8-EE4F0cd20Bc6.KdNs.FR
+    servername: ireland-new.failspace.top
     client-fingerprint: chrome
-    ws-opts:
-      path: /ED3ZQPu7lqyeDGD58KabZ
-      headers:
-        Host: 5-m13.1332aFDC-0737-4bB1-8cA8-Ee4f0cD20bC6.Kdns.fR
-  - name: "德国-003"
+  - name: "荷兰-003"
     type: vless
-    server: rtishevo.murka.fun
-    port: 4443
-    uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
-    network: grpc
-    udp: true
-    tls: true
-    servername: rtishevo.murka.fun
-    client-fingerprint: android
-    reality-opts:
-      public-key: "yDa-arZjNKChYG-g39fXo3MI65CABHK7yk2Q6ejJLkw"
-      short-id: "9fcb7c3f5d8a"
-  - name: "德国-004"
-    type: vless
-    server: 93.152.224.199
-    port: 4443
-    uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
-    network: grpc
-    udp: true
-    tls: true
-    servername: rtishevo.murka.fun
-    client-fingerprint: android
-    reality-opts:
-      public-key: "yDa-arZjNKChYG-g39fXo3MI65CABHK7yk2Q6ejJLkw"
-      short-id: "9fcb7c3f5d8a"
-  - name: "哥伦比亚-005"
-    type: vless
-    server: 31.57.18.59
+    server: 50.7.197.205
     port: 443
-    uuid: 4f8a1d19-4d21-47f5-816e-a8f475fbd3f7
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: srv-waw.kintecolas.com
+    servername: hub-new.failspace.top
     client-fingerprint: chrome
-    reality-opts:
-      public-key: "qPgl3LmKAKs5K-KzGNRJyr5KTO0KoRNN5m2PTCMscXU"
-      short-id: "22f534c530d37170"
-  - name: "美国-006"
+  - name: "荷兰-004"
     type: vless
-    server: 5.78.28.48
+    server: netherlands.failspace.top
     port: 443
-    uuid: b88a54a0-501c-4acf-930b-305354452f4e
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: www.yahoo.com
-    client-fingerprint: android
-    reality-opts:
-      public-key: "XB7peN-a_9j_WGBHvs3DIMDlsOzJAOehGnziOE9OvwE"
-      short-id: "884dffd8e62a5c48"
-  - name: "美国-007"
+    servername: netherlands.failspace.top
+    client-fingerprint: chrome
+  - name: "爱尔兰-005"
     type: vless
-    server: 64.118.152.13
+    server: 50.7.5.186
     port: 443
-    uuid: ffe0a6ce-07f0-4146-910f-74bdce2f9697
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: konrad-test.amazon.com
-    client-fingerprint: android
-    reality-opts:
-      public-key: "9scNoKQky3ncRRW5yZqWlTU9cChQAK5rCpM6xfVQR3g"
-      short-id: "71b83607c5c0"
-  - name: "英国-008"
+    servername: ireland-new.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-006"
     type: vless
-    server: 212.64.210.109
+    server: 50.7.120.163
     port: 443
-    uuid: 10cb2689-72fc-418d-8d21-cf625e558bec
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: tr.responsiblecare.uk
-    client-fingerprint: android
-    reality-opts:
-      public-key: "nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg"
-      short-id: "c324fdcf18f3390e"
+    servername: nl-dedic-new-mori.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-007"
+    type: vless
+    server: nl-dedic-new-mori.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: nl-dedic-new-mori.failspace.top
+    client-fingerprint: chrome
+  - name: "荷兰-008"
+    type: vless
+    server: 50.7.182.22
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: netherlands.failspace.top
+    client-fingerprint: chrome
   - name: "荷兰-009"
     type: vless
-    server: 176.222.53.236
-    port: 8445
-    uuid: e5d73666-1ac5-49fc-8e4d-5c8cad769588
-    network: grpc
+    server: hub-new.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: hetzner.com
-    client-fingerprint: android
-    reality-opts:
-      public-key: "_UazRMiBq9RqMaVrHeLsvUuoBkGFo9Gm-A4ivuZ6ZS8"
-      short-id: "6ba85179e30d4fc2"
-  - name: "美国-010"
+    servername: hub-new.failspace.top
+    client-fingerprint: chrome
+  - name: "英国-010"
     type: vless
-    server: 103.79.76.253
-    port: 50149
-    uuid: 547cf8fd-2dd0-4ae5-aa8f-3683d389be26
+    server: uk-mori-new.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
     network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: yahoo.com
-    client-fingerprint: android
+    servername: uk-mori-new.failspace.top
+    client-fingerprint: chrome
+  - name: "英国-011"
+    type: vless
+    server: 50.7.227.253
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: uk-mori-new.failspace.top
+    client-fingerprint: chrome
+  - name: "波兰-012"
+    type: vless
+    server: 50.7.249.197
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: poland-new-first-one.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-013"
+    type: vless
+    server: austria-dedic1.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: austria-dedic1.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-014"
+    type: vless
+    server: poland-mori-new-ded.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: poland-mori-new-ded.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-015"
+    type: vless
+    server: 50.7.36.30
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ad-dedic-3.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-016"
+    type: vless
+    server: 50.7.249.189
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: poland-mori-new-ded.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-017"
+    type: vless
+    server: poland-ded-new-two.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: poland-ded-new-two.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-018"
+    type: vless
+    server: at-dedic-new-two.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: at-dedic-new-two.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-019"
+    type: vless
+    server: 50.7.249.173
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: poland-ded-new-two.failspace.top
+    client-fingerprint: chrome
+  - name: "荷兰-020"
+    type: vless
+    server: 130.78.191.25
+    port: 443
+    uuid: 11f21602-47aa-42e2-9149-69120f2e6df6
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: nl07.shifor01.life
+    client-fingerprint: chrome
     reality-opts:
-      public-key: "pBjuELJY0Pupr5YzfLeFL-zKpwmQTy2Z6_S5Jvr9YDE"
-      short-id: "82946f2f33"
-  - name: "捷克-011"
+      public-key: "0FwNJ9HYJgVj5566tb0zwjGTPLb-42i-mlXnceB9-Tc"
+      short-id: "3ac25eef1431b799"
+  - name: "德国-021"
     type: vless
-    server: 153.76.185.92
-    port: 3090
-    uuid: 64a38b01-074e-49c4-bf23-0ed61ad30c85
-    network: grpc
-    udp: true
-    tls: false
-  - name: "德国-012"
-    type: vless
-    server: germanynewirancell.xdragonfroums.com
-    port: 32210
-    uuid: 24051e17-a1c9-4566-a331-789e6b681007
+    server: 50.7.184.190
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
     network: tcp
+    flow: xtls-rprx-vision
     udp: true
-    tls: false
-  - name: "土耳其-013"
+    tls: true
+    servername: austria-dedic1.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-022"
     type: vless
-    server: turkeynewvdflvvjfkdsjvlk3jvoijuvoisdfjvoi3ju2voisfjdoivodfsiv.nevoxa.ir
-    port: 32210
-    uuid: 24051e17-a1c9-4566-a331-789e6b681007
+    server: ad-dedic-3.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
     network: tcp
+    flow: xtls-rprx-vision
     udp: true
-    tls: false
-  - name: "土耳其-014"
+    tls: true
+    servername: ad-dedic-3.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-023"
     type: vless
-    server: 93.190.9.31
-    port: 3090
-    uuid: 418c8163-706c-4f5f-9bfc-3e8687daaad0
-    network: grpc
-    udp: true
-    tls: false
-  - name: "土耳其-015"
-    type: vless
-    server: 93.190.9.43
-    port: 3090
-    uuid: 418c8163-706c-4f5f-9bfc-3e8687daaad0
-    network: grpc
-    udp: true
-    tls: false
-  - name: "土耳其-016"
-    type: vless
-    server: 93.190.9.47
-    port: 3090
-    uuid: 418c8163-706c-4f5f-9bfc-3e8687daaad0
-    network: grpc
-    udp: true
-    tls: false
-  - name: "土耳其-017"
-    type: vless
-    server: 93.190.9.51
-    port: 3090
-    uuid: 64a38b01-074e-49c4-bf23-0ed61ad30c85
-    network: grpc
-    udp: true
-    tls: false
-  - name: "土耳其-018"
-    type: vless
-    server: 93.190.9.6
-    port: 3090
-    uuid: 64a38b01-074e-49c4-bf23-0ed61ad30c85
-    network: grpc
-    udp: true
-    tls: false
-  - name: "日本-019"
-    type: vless
-    server: jp.sofast.live
-    port: 52683
-    uuid: 399b6b23-cc40-4831-a494-61948e2df133
+    server: pl-dedic-new-mori.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
     network: tcp
+    flow: xtls-rprx-vision
     udp: true
-    tls: false
+    tls: true
+    servername: pl-dedic-new-mori.failspace.top
+    client-fingerprint: chrome
+  - name: "德国-024"
+    type: vless
+    server: 50.7.37.158
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: at-dedic-new-two.failspace.top
+    client-fingerprint: chrome
+  - name: "日本-025"
+    type: vless
+    server: jumpernode.online
+    port: 443
+    uuid: e4cd263b-c5c7-4410-bf61-8893179ec429
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: amazon.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE"
+      short-id: "6d962e8d8a0dce"
+  - name: "保加利亚-026"
+    type: vless
+    server: 194.93.63.246
+    port: 443
+    uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: pl.bubahero.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "GmZv3anSeAeHr_cMFKr-6MPLli-nyKNatnY6P3AFK00"
+      short-id: "9c2378562188c3cb"
+  - name: "英国-027"
+    type: vless
+    server: 31.76.7.227
+    port: 443
+    uuid: d0e771c5-024e-4393-bb90-4a3e3c561656
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: origin.vpnoodles.ru
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "nIL5EeUo2XUkCaLJGbzgRm6zhF-96kWvV2VmhEt3CX4"
+      short-id: "4af4102cb26e59"
+  - name: "香港-028"
+    type: vless
+    server: 45.145.229.234
+    port: 45905
+    uuid: 83de2a89-7b91-47ca-8305-5d8acf48025a
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.paypal.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "StvqZwmo9OZKdjPrQiXEPZVQm46vq2DQLtglyVGeFwo"
 
 proxy-groups:
   - name: Auto
@@ -215,48 +332,66 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "美国-001"
-      - "美国-002"
-      - "德国-003"
-      - "德国-004"
-      - "哥伦比亚-005"
-      - "美国-006"
-      - "美国-007"
-      - "英国-008"
+      - "哥伦比亚-001"
+      - "爱尔兰-002"
+      - "荷兰-003"
+      - "荷兰-004"
+      - "爱尔兰-005"
+      - "德国-006"
+      - "德国-007"
+      - "荷兰-008"
       - "荷兰-009"
-      - "美国-010"
-      - "捷克-011"
-      - "德国-012"
-      - "土耳其-013"
-      - "土耳其-014"
-      - "土耳其-015"
-      - "土耳其-016"
-      - "土耳其-017"
-      - "土耳其-018"
-      - "日本-019"
+      - "英国-010"
+      - "英国-011"
+      - "波兰-012"
+      - "德国-013"
+      - "德国-014"
+      - "德国-015"
+      - "德国-016"
+      - "德国-017"
+      - "德国-018"
+      - "德国-019"
+      - "荷兰-020"
+      - "德国-021"
+      - "德国-022"
+      - "德国-023"
+      - "德国-024"
+      - "日本-025"
+      - "保加利亚-026"
+      - "英国-027"
+      - "香港-028"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "美国-001"
-      - "美国-002"
-      - "德国-003"
-      - "德国-004"
-      - "哥伦比亚-005"
-      - "美国-006"
-      - "美国-007"
-      - "英国-008"
+      - "哥伦比亚-001"
+      - "爱尔兰-002"
+      - "荷兰-003"
+      - "荷兰-004"
+      - "爱尔兰-005"
+      - "德国-006"
+      - "德国-007"
+      - "荷兰-008"
       - "荷兰-009"
-      - "美国-010"
-      - "捷克-011"
-      - "德国-012"
-      - "土耳其-013"
-      - "土耳其-014"
-      - "土耳其-015"
-      - "土耳其-016"
-      - "土耳其-017"
-      - "土耳其-018"
-      - "日本-019"
+      - "英国-010"
+      - "英国-011"
+      - "波兰-012"
+      - "德国-013"
+      - "德国-014"
+      - "德国-015"
+      - "德国-016"
+      - "德国-017"
+      - "德国-018"
+      - "德国-019"
+      - "荷兰-020"
+      - "德国-021"
+      - "德国-022"
+      - "德国-023"
+      - "德国-024"
+      - "日本-025"
+      - "保加利亚-026"
+      - "英国-027"
+      - "香港-028"
 
 rules:
   - MATCH,Proxy
