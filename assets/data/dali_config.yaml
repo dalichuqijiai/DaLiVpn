@@ -1,150 +1,142 @@
 proxies:
   - name: "美国-001"
     type: vless
-    server: 172.64.158.146
-    port: 8880
-    uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+    server: 104.21.37.55
+    port: 443
+    uuid: ef5c5d5c-08c6-4549-b05e-d1ff29ecc8ba
     network: ws
     udp: true
-    tls: false
+    tls: true
+    servername: 6-m16.cHiaN-MAI-8.kDnS.Fr
+    client-fingerprint: chrome
     ws-opts:
-      path: /?ed=2560security=tls
+      path: /JRr6VGcSLFc034DC6sDbwyWJLbB
       headers:
-        Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  - name: "美国-002"
+        Host: 6-M16.chian-mAI-8.KdNs.fR
+  - name: "日本-002"
     type: vless
-    server: 104.17.144.29
-    port: 8880
-    uuid: 77d68177-7331-4816-b5e9-23ec39a2ae3b
-    network: ws
+    server: 43.133.11.187
+    port: 443
+    uuid: 4192524f-09f0-414f-88fd-7a14378491c7
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
-    tls: false
-    ws-opts:
-      path: /pyip=ProxyIP.US.CMLiussss.net
-      headers:
-        Host: divine-rice-3224.464.workers.dev
+    tls: true
+    servername: cloudflare.com
+    client-fingerprint: android
+    reality-opts:
+      public-key: "ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE"
+      short-id: "913e9b95fbc71278"
   - name: "德国-003"
     type: vless
-    server: est1.serverslocal.ru
-    port: 443
-    uuid: 86863a94-436f-4b42-87a9-ada20223fc98
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: est1.serverslocal.ru
-    client-fingerprint: android
-    reality-opts:
-      public-key: "4NWUAAR518Hr4ivYfZqY_jkZtnJvJDiWC9LGkwalUV4"
-      short-id: "ca851e83d2f3d725"
-  - name: "俄罗斯-004"
-    type: vless
-    server: 188.225.24.201
-    port: 443
-    uuid: 7cde4592-4758-415f-8b97-c188faa4d1c9
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: app11.betust.net
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "XhzNlmMTdYr2pYTqiNNP6qWe7BkAgVHU-kZWXc9u9hY"
-      short-id: "91c2269c"
-  - name: "俄罗斯-005"
-    type: vless
-    server: 188.225.42.6
-    port: 443
-    uuid: 7cde4592-4758-415f-8b97-c188faa4d1c9
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: app6.betust.net
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "sS3x_ZygtA9uZ5WaYm7pHjy0_lPNUUK7kOSLz0BNhCs"
-      short-id: "54ac91da"
-  - name: "俄罗斯-006"
-    type: vless
-    server: ej204.subaru-volga.com
-    port: 443
-    uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: ej204.subaru-volga.com
-    client-fingerprint: android
-    reality-opts:
-      public-key: "PcC4S9huwrDj7pr0-GAKEdvDNp1lA1CiKLLM-9By6jw"
-      short-id: "caf2"
-  - name: "挪威-007"
-    type: vless
-    server: 138.124.121.233
-    port: 443
-    uuid: 8e826a69-63f6-0001-a67d-4a1958e8b2d2
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: amd.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc"
-      short-id: "a696de84963656de"
-  - name: "捷克-008"
-    type: vless
-    server: 153.76.185.180
-    port: 3090
-    uuid: b1cca0ae-fce0-4a48-b827-10aad217ec37
-    network: grpc
-    udp: true
-    tls: false
-  - name: "捷克-009"
-    type: vless
-    server: 153.76.185.97
-    port: 3090
-    uuid: b1cca0ae-fce0-4a48-b827-10aad217ec37
-    network: grpc
-    udp: true
-    tls: false
-  - name: "捷克-010"
-    type: vless
-    server: 194.87.59.23
-    port: 2085
-    uuid: b1cca0ae-fce0-4a48-b827-10aad217ec37
-    network: grpc
-    udp: true
-    tls: false
-  - name: "捷克-011"
-    type: vless
-    server: 153.76.185.103
-    port: 3090
-    uuid: e77dc199-f13e-48d5-8e1e-123a684ad67e
-    network: grpc
-    udp: true
-    tls: false
-  - name: "英国-012"
-    type: vless
-    server: 104.143.223.73
-    port: 2085
-    uuid: b1cca0ae-fce0-4a48-b827-10aad217ec37
-    network: grpc
-    udp: true
-    tls: false
-  - name: "巴西-013"
-    type: vless
-    server: 188.114.97.6
-    port: 8880
-    uuid: f09f4baa-7688-4514-8062-c3ea8e319624
+    server: nl6-node.rumedia-cdn.com
+    port: 2096
+    uuid: 11d826ce-d6e5-4154-8658-6829bb17dca2
     network: ws
     udp: true
-    tls: false
+    tls: true
+    servername: st682c8.rumedia-cdn.com
+    client-fingerprint: android
     ws-opts:
-      path: /pyip=ProxyIP.US.CMLiussss.net
+      path: /cdn/v3/live
       headers:
-        Host: dark-leaf-93a1.440-02e.workers.dev
+        Host: st682c8.rumedia-cdn.com
+  - name: "俄罗斯-004"
+    type: vless
+    server: 188.225.25.195
+    port: 443
+    uuid: 7cde4592-4758-415f-8b97-c188faa4d1c9
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: app25.betust.net
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "Fe_144ALuRRedGs06ljDnE1f_G2B2wE4i9_diqw5LnY"
+      short-id: "a16bc894"
+  - name: "俄罗斯-005"
+    type: vless
+    server: 188.225.57.78
+    port: 443
+    uuid: 7cde4592-4758-415f-8b97-c188faa4d1c9
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: app4.betust.net
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "NCW-zK60GXsiDdlbxww18Pqp4kz3zTG1URHWS_bnfDk"
+      short-id: "3f7e0363"
+  - name: "德国-006"
+    type: vless
+    server: se6-node.rumedia-cdn.com
+    port: 2096
+    uuid: 11d826ce-d6e5-4154-8658-6829bb17dca2
+    network: ws
+    udp: true
+    tls: true
+    servername: st90059.rumedia-cdn.com
+    client-fingerprint: android
+    ws-opts:
+      path: /cdn/v3/live
+      headers:
+        Host: st90059.rumedia-cdn.com
+  - name: "美国-007"
+    type: vless
+    server: 72.56.41.33
+    port: 40443
+    uuid: 5be7fb02-b6a5-450f-b041-3243b98e8420
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: deepl.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "Uvj5H9pDJP0HX2bN7NN7sCQwVCrC5N2NbKf-yuy1ikE"
+      short-id: "ee33"
+  - name: "德国-008"
+    type: vless
+    server: dostavitos.stroymatdv.cc
+    port: 443
+    uuid: 365de9e9-ba29-4819-af2d-766f9638e3be
+    network: ws
+    udp: true
+    tls: true
+    servername: dostavitos.stroymatdv.cc
+    client-fingerprint: android
+    ws-opts:
+      path: /e9ws
+  - name: "德国-009"
+    type: vless
+    server: pl1.gursub.com
+    port: 8444
+    uuid: 02bd8b5a-170b-4a79-8e68-9cec710272c7
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: pl1.gursub.com
+    client-fingerprint: android
+    reality-opts:
+      public-key: "sQ9CcspZ6urWlzGNjjmtfp8EuuDll5RVtcsVoq_EfUE"
+      short-id: "a3f509aa7a4b41cc"
+  - name: "德国-010"
+    type: vless
+    server: nl9-node.rumedia-cdn.com
+    port: 2096
+    uuid: 11d826ce-d6e5-4154-8658-6829bb17dca2
+    network: ws
+    udp: true
+    tls: true
+    servername: stadb90.rumedia-cdn.com
+    client-fingerprint: android
+    ws-opts:
+      path: /cdn/v3/live
+      headers:
+        Host: stadb90.rumedia-cdn.com
 
 proxy-groups:
   - name: Auto
@@ -154,35 +146,29 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "美国-001"
-      - "美国-002"
+      - "日本-002"
       - "德国-003"
       - "俄罗斯-004"
       - "俄罗斯-005"
-      - "俄罗斯-006"
-      - "挪威-007"
-      - "捷克-008"
-      - "捷克-009"
-      - "捷克-010"
-      - "捷克-011"
-      - "英国-012"
-      - "巴西-013"
+      - "德国-006"
+      - "美国-007"
+      - "德国-008"
+      - "德国-009"
+      - "德国-010"
   - name: Proxy
     type: select
     proxies:
       - Auto
       - "美国-001"
-      - "美国-002"
+      - "日本-002"
       - "德国-003"
       - "俄罗斯-004"
       - "俄罗斯-005"
-      - "俄罗斯-006"
-      - "挪威-007"
-      - "捷克-008"
-      - "捷克-009"
-      - "捷克-010"
-      - "捷克-011"
-      - "英国-012"
-      - "巴西-013"
+      - "德国-006"
+      - "美国-007"
+      - "德国-008"
+      - "德国-009"
+      - "德国-010"
 
 rules:
   - MATCH,Proxy
