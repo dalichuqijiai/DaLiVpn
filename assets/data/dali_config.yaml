@@ -1,122 +1,203 @@
 proxies:
-  - name: "俄罗斯-001"
+  - name: "美国-001"
     type: vless
-    server: 188.225.77.241
+    server: 104.21.16.137
     port: 443
-    uuid: 7cde4592-4758-415f-8b97-c188faa4d1c9
+    uuid: a1a6a3be-2bf9-46a2-bc24-328306e49ab7
+    network: ws
+    udp: true
+    tls: true
+    servername: 1-M17.kuWAit-aIRliNE.kDNs.FR
+    ws-opts:
+      path: /fVs1qv0xm8dxmnwuaPwokxgY4XlP
+      headers:
+        Host: 1-M17.kUWaIT-AirLInE.Kdns.Fr
+  - name: "美国-002"
+    type: vless
+    server: 172.64.151.134
+    port: 8880
+    uuid: 878dd962-027b-4bd3-a1f8-66be68a03c4d
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: young-wind-3c58.240-2ce.workers.dev
+  - name: "美国-003"
+    type: vless
+    server: 172.66.170.53
+    port: 8880
+    uuid: e4927998-38dd-4bf4-a37d-4cc67a06ee2d
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /pyip=ProxyIP.US.CMLiussss.net
+      headers:
+        Host: cold-shadow-66a0.278.workers.dev
+  - name: "美国-004"
+    type: vless
+    server: www.csgo.net
+    port: 2095
+    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: llm-api.sofurry.dpdns.org
+  - name: "荷兰-005"
+    type: vless
+    server: 109.121.44.71
+    port: 443
+    uuid: 03446511-2806-4fc0-b02f-f10d2d3a33c6
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: api.betust.net
+    servername: www.amd.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: "YczbievYAOeZIypa58aRpil6XbfdyifK_0cFJWn8-yg"
-      short-id: "d6c172d3"
-  - name: "俄罗斯-002"
+      public-key: "b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4"
+      short-id: "a7b2c9d4"
+  - name: "其他-006"
     type: vless
-    server: 188.225.25.195
+    server: 88.216.70.86
     port: 443
-    uuid: 7cde4592-4758-415f-8b97-c188faa4d1c9
+    uuid: 2583d2a4-bfc2-46ee-bd76-49d7289eca93
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: app25.betust.net
-    client-fingerprint: chrome
+    servername: main.abyssettle.net
+    client-fingerprint: firefox
     reality-opts:
-      public-key: "Fe_144ALuRRedGs06ljDnE1f_G2B2wE4i9_diqw5LnY"
-      short-id: "a16bc894"
-  - name: "德国-003"
-    type: vless
-    server: zodiacgrapedefiant.berylcord.net
-    port: 443
-    uuid: 3db8407b-1f96-4b82-bfeb-55258c1e57b4
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: zodiacgrapedefiant.berylcord.net
-    client-fingerprint: android
-    reality-opts:
-      public-key: "QPfM5knVgOkIykx2AC8S1MvkO_x-T9xMRYJdkF9aEng"
-      short-id: "fda83f2787e6016d"
-  - name: "法国-004"
-    type: vless
-    server: 201.24.50.94
-    port: 443
-    uuid: 8057eabc-921d-0003-9acb-80ccc6b48379
-    network: grpc
-    udp: true
-    tls: true
-    servername: download.amd.com
-    client-fingerprint: edge
-    reality-opts:
-      public-key: "wG3BS0H2EKpY2tpv9bWipTmafwIdXuUXPAZCpr1eZ0M"
-  - name: "德国-005"
-    type: vless
-    server: 104.171.138.229
-    port: 443
-    uuid: 8057eabc-921d-0001-9acb-80ccc6b48379
-    network: grpc
-    udp: true
-    tls: true
-    servername: download.amd.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "aK5um9qlbrjpXgpI4H9n05FBmWAvKUbmLm7iAj9K9mw"
-  - name: "美国-006"
-    type: vless
-    server: 72.56.41.33
-    port: 40443
-    uuid: 5be7fb02-b6a5-450f-b041-3243b98e8420
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: deepl.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "Uvj5H9pDJP0HX2bN7NN7sCQwVCrC5N2NbKf-yuy1ikE"
-      short-id: "ee33"
+      public-key: "C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4"
+      short-id: "7c4b9a2e8d5f3c1b"
   - name: "德国-007"
     type: vless
-    server: 37.139.42.138
+    server: 87.120.216.144
     port: 443
-    uuid: 365de9e9-ba29-4819-af2d-766f9638e3be
-    network: ws
-    udp: true
-    tls: true
-    servername: dostavitos.stroymatdv.cc
-    client-fingerprint: android
-    ws-opts:
-      path: /e9ws
-  - name: "德国-008"
-    type: vless
-    server: dostavitos.stroymatdv.cc
-    port: 443
-    uuid: 365de9e9-ba29-4819-af2d-766f9638e3be
-    network: ws
-    udp: true
-    tls: true
-    servername: dostavitos.stroymatdv.cc
-    client-fingerprint: android
-    ws-opts:
-      path: /e9ws
-  - name: "立陶宛-009"
-    type: vless
-    server: 194.41.112.152
-    port: 8443
-    uuid: 9b4792ad-187a-4775-bf4f-9b17b0a774ce
+    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: mozilla.org
+    servername: gerwai1488.vvzzkontaktezzvv.garden
     client-fingerprint: chrome
     reality-opts:
-      public-key: "TNsQJHoX2M2u07a6oEPb3tY9U08Aph4Qvdk76dAZdio"
-      short-id: "82ed5803a8047a3e"
+      public-key: "EYfpgja4VjpLUnWHtDJQ1XZk6xL5j4rXwf80Sw6keV0"
+      short-id: "0c13e8822e7f58aa"
+  - name: "美国-008"
+    type: vless
+    server: 132.243.65.159
+    port: 443
+    uuid: 46699f9f-b815-47d8-a657-08494b74aa93
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ee.global-cdn.org
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0"
+      short-id: "7a3f9e2b1c8d4f6a"
+  - name: "美国-009"
+    type: vless
+    server: 130.49.163.54
+    port: 8443
+    uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+    network: ws
+    udp: true
+    tls: true
+    servername: free.cndyw.ggff.net
+    client-fingerprint: random
+    ws-opts:
+      path: pyip=bpb.yousef.isegaro.com
+      headers:
+        Host: free.cndyw.ggff.net
+  - name: "其他-010"
+    type: vless
+    server: 95.129.236.239
+    port: 443
+    uuid: b65a30ea-d187-4ea8-8d7e-2eccdb9f9044
+    network: ws
+    udp: true
+    tls: true
+    servername: login.opendns.stream
+    client-fingerprint: android
+    ws-opts:
+      path: /stream/615428/socket
+      headers:
+        Host: login.opendns.stream
+  - name: "美国-011"
+    type: vless
+    server: 157.22.128.7
+    port: 443
+    uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+    network: ws
+    udp: true
+    tls: true
+    servername: free.cndyw.ggff.net
+    client-fingerprint: random
+    ws-opts:
+      path: pyip=bpb.yousef.isegaro.com
+      headers:
+        Host: free.cndyw.ggff.net
+  - name: "美国-012"
+    type: vless
+    server: 162.35.96.35
+    port: 8081
+    uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+    network: ws
+    udp: true
+    tls: false
+    ws-opts:
+      path: /vless-test
+  - name: "香港-013"
+    type: vless
+    server: 185.227.154.226
+    port: 443
+    uuid: b0e3d7fe-0ff5-470d-9c69-4f624a35d683
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.samsung.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "qxcpzDbypXaxsvsvzvebnyHxc0BTQdz7LvIkBXZ0TUc"
+      short-id: "3246e72c"
+  - name: "英国-014"
+    type: vless
+    server: 31.76.245.63
+    port: 443
+    uuid: d72f05b0-b182-4783-a6f2-21cecc7d841a
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: dzen.ru
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js"
+      short-id: "a1b2c3d4e5f67890"
+  - name: "德国-015"
+    type: vless
+    server: 91.240.87.166
+    port: 443
+    uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: yandex.ru
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "2ZUQYIhUijdJ1vRL8iR8RxjmJvRVHYp-JoWevQ2LyR4"
+      short-id: "7bb730e3e6616d31"
 
 proxy-groups:
   - name: Auto
@@ -125,28 +206,40 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "俄罗斯-001"
-      - "俄罗斯-002"
-      - "德国-003"
-      - "法国-004"
-      - "德国-005"
-      - "美国-006"
+      - "美国-001"
+      - "美国-002"
+      - "美国-003"
+      - "美国-004"
+      - "荷兰-005"
+      - "其他-006"
       - "德国-007"
-      - "德国-008"
-      - "立陶宛-009"
+      - "美国-008"
+      - "美国-009"
+      - "其他-010"
+      - "美国-011"
+      - "美国-012"
+      - "香港-013"
+      - "英国-014"
+      - "德国-015"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "俄罗斯-001"
-      - "俄罗斯-002"
-      - "德国-003"
-      - "法国-004"
-      - "德国-005"
-      - "美国-006"
+      - "美国-001"
+      - "美国-002"
+      - "美国-003"
+      - "美国-004"
+      - "荷兰-005"
+      - "其他-006"
       - "德国-007"
-      - "德国-008"
-      - "立陶宛-009"
+      - "美国-008"
+      - "美国-009"
+      - "其他-010"
+      - "美国-011"
+      - "美国-012"
+      - "香港-013"
+      - "英国-014"
+      - "德国-015"
 
 rules:
   - MATCH,Proxy
