@@ -1,96 +1,19 @@
 proxies:
-  - name: "德国-001"
+  - name: "美国-001"
     type: vless
-    server: www.large-files.info
-    port: 8443
-    uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
-    network: ws
-    udp: true
-    tls: true
-    ws-opts:
-      path: /var/www/html/video/preview/download/i8o0la
-  - name: "德国-002"
-    type: vless
-    server: freesocks.work
-    port: 2053
-    uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
-    network: ws
-    udp: true
-    tls: true
-    servername: uwu.blueknightnet.qzz.io
-    ws-opts:
-      path: "/@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net"
-      headers:
-        Host: uwu.blueknightnet.qzz.io
-  - name: "美国-003"
-    type: vless
-    server: 104.19.35.67
+    server: 104.17.144.249
     port: 443
     uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
     network: ws
     udp: true
     tls: true
     servername: x.m-90.xyz
+    client-fingerprint: chrome
     ws-opts:
       path: t.me/TEAMNETGRATISCOL
       headers:
         Host: x.m-90.xyz
-  - name: "法国-004"
-    type: vless
-    server: cip.navid.lat
-    port: 443
-    uuid: 33f13fd5-1553-4574-ac1a-432d2d762cbe
-    network: ws
-    udp: true
-    tls: true
-    servername: frc.navid.lat
-    client-fingerprint: random
-    ws-opts:
-      path: /webdl
-      headers:
-        Host: frc.navid.lat
-  - name: "德国-005"
-    type: vless
-    server: cctvhikvision.center
-    port: 2053
-    uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
-    network: ws
-    udp: true
-    tls: true
-    servername: uwu.blueknightnet.qzz.io
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net"
-      headers:
-        Host: uwu.blueknightnet.qzz.io
-  - name: "德国-006"
-    type: vless
-    server: undef.network
-    port: 2053
-    uuid: e3fb01b6-69b4-41d7-babf-696d992de194
-    network: ws
-    udp: true
-    tls: true
-    servername: uwu.blueknightnet.qzz.io
-    ws-opts:
-      path: "/@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net"
-      headers:
-        Host: uwu.blueknightnet.qzz.io
-  - name: "美国-007"
-    type: vless
-    server: support.zoom.us
-    port: 8443
-    uuid: ba9ba1d3-19c8-4792-9d3f-ddd2cdcc2e65
-    network: ws
-    udp: true
-    tls: true
-    servername: primelinelk.me
-    client-fingerprint: edge
-    ws-opts:
-      path: /xprolk-primeline
-      headers:
-        Host: primelinelk.me
-  - name: "哥伦比亚-008"
+  - name: "哥伦比亚-002"
     type: vless
     server: www.5199dy.com
     port: 443
@@ -100,24 +23,10 @@ proxies:
     tls: true
     servername: ccc.010304.xyz
     ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-  - name: "其他-009"
-    type: vless
-    server: cf.877774.xyz
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
       path: /fp=chrome
       headers:
         Host: ccc.010304.xyz
-  - name: "法国-010"
+  - name: "法国-003"
     type: vless
     server: fr.api-music-fa.com
     port: 2053
@@ -131,140 +40,7 @@ proxies:
       path: /api/voip/updates/static/fr2035
       headers:
         Host: fr.api-music-fa.com
-  - name: "美国-CDN-011"
-    type: vless
-    server: 104.18.35.15
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    ws-opts:
-      path: /fp=chrome
-      headers:
-        Host: ccc.010304.xyz
-  - name: "美国-CDN-012"
-    type: vless
-    server: 172.64.158.170
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-  - name: "香港-013"
-    type: vless
-    server: 104.17.189.184
-    port: 2096
-    uuid: da30a28c-5c01-4c93-8da8-c8d39d58bfb9
-    network: ws
-    udp: true
-    tls: true
-    servername: hk.yindu.cc.cd
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        Host: hk.yindu.cc.cd
-  - name: "德国-014"
-    type: vless
-    server: hikvision-plus.com
-    port: 2053
-    uuid: e3fb01b6-69b4-41d7-babf-696d992de194
-    network: ws
-    udp: true
-    tls: true
-    servername: uwu.blueknightnet.qzz.io
-    ws-opts:
-      path: "/@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net"
-      headers:
-        Host: uwu.blueknightnet.qzz.io
-  - name: "哥伦比亚-015"
-    type: vless
-    server: vl.cocopon.top
-    port: 443
-    uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-    network: ws
-    udp: true
-    tls: true
-    servername: vl.cocopon.top
-    ws-opts:
-      path: /
-      headers:
-        Host: vl.cocopon.top
-  - name: "其他-016"
-    type: vless
-    server: miki.moumou207.dpdns.org
-    port: 2096
-    uuid: cb79ddc4-ec21-4077-a2c9-f5035d680a10
-    network: ws
-    udp: true
-    tls: true
-    servername: mIKi.MoumOu207.dPdNs.Org
-    client-fingerprint: chrome
-    ws-opts:
-      path: /eyJqdW5rIjoiblNzWDl5VnRkRmF5R05mIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiNDUuOC4xMTQuOTkiXX0=
-      headers:
-        Host: mIKi.MoumOu207.dPdNs.Org
-  - name: "英国-017"
-    type: vless
-    server: ccs2g.pai50288.uk
-    port: 443
-    uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
-    network: ws
-    udp: true
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /pai50288
-  - name: "英国-018"
-    type: vless
-    server: 104.21.3.219
-    port: 443
-    uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
-    network: ws
-    udp: true
-    tls: true
-    servername: ccs2g.pai50288.uk
-    client-fingerprint: chrome
-    ws-opts:
-      path: /pai50288
-      headers:
-        Host: ccs2g.pai50288.uk
-  - name: "美国-019"
-    type: vless
-    server: cf.130519.xyz
-    port: 443
-    uuid: e6df2095-a73c-4043-8693-8d5a03686870
-    network: ws
-    udp: true
-    tls: true
-    servername: lucasjow.us.ci
-    client-fingerprint: qq
-    ws-opts:
-      path: /
-      headers:
-        Host: lucasjow.us.ci
-  - name: "美国-CDN-020"
-    type: vless
-    server: 172.64.152.241
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    ws-opts:
-      path: /fp=chrome
-      headers:
-        Host: ccc.010304.xyz
-  - name: "其他-021"
+  - name: "其他-004"
     type: vless
     server: ccc.010304.xyz
     port: 443
@@ -278,198 +54,7 @@ proxies:
       path: /
       headers:
         Host: ccc.010304.xyz
-  - name: "其他-022"
-    type: vless
-    server: cf.090227.xyz
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-  - name: "美国-CDN-023"
-    type: vless
-    server: 104.17.154.123
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-  - name: "其他-024"
-    type: vless
-    server: 188.164.248.216
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-  - name: "泰国-025"
-    type: vless
-    server: 104.16.10.185
-    port: 443
-    uuid: 3c52e091-6714-4915-949f-2149fe69951b
-    network: ws
-    udp: true
-    tls: true
-    servername: v2ray.simspeedup.com
-    ws-opts:
-      path: /ws
-      headers:
-        Host: v2ray.simspeedup.com
-  - name: "美国-CDN-026"
-    type: vless
-    server: 104.18.41.190
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-  - name: "瑞士-027"
-    type: vless
-    server: 104.17.98.5
-    port: 443
-    uuid: 49ccad64-c854-4f33-b334-793cf0d02b74
-    network: ws
-    udp: true
-    tls: true
-    servername: newcscf.jisucf.cloudns.ch
-    ws-opts:
-      path: /
-      headers:
-        Host: newcscf.jisucf.cloudns.ch
-  - name: "法国-028"
-    type: vless
-    server: 172.67.185.98
-    port: 2053
-    uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-    network: ws
-    udp: true
-    tls: true
-    servername: fr.api-music-fa.com
-    ws-opts:
-      path: /api/voip/updates/static/fr2035
-      headers:
-        Host: fr.api-music-fa.com
-  - name: "新加坡-029"
-    type: vless
-    server: 170.114.45.6
-    port: 8443
-    uuid: ba9ba1d3-19c8-4792-9d3f-ddd2cdcc2e65
-    network: ws
-    udp: true
-    tls: true
-    servername: primelinelk.me
-    client-fingerprint: firefox
-    ws-opts:
-      path: /xprolk-primeline
-      headers:
-        Host: primelinelk.me
-  - name: "美国-030"
-    type: vless
-    server: 172.66.1.43
-    port: 443
-    uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
-    network: ws
-    udp: true
-    tls: true
-    servername: x.m-90.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /t.me/TEAMNETGRATISCOL
-      headers:
-        Host: x.m-90.xyz
-  - name: "美国-CDN-031"
-    type: vless
-    server: 104.26.4.2
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-  - name: "法国-032"
-    type: vless
-    server: 172.67.118.45
-    port: 2053
-    uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-    network: ws
-    udp: true
-    tls: true
-    servername: fr.api-music-fa.com
-    client-fingerprint: chrome
-    ws-opts:
-      path: /api/voip/updates/static/fr2035
-      headers:
-        Host: fr.api-music-fa.com
-  - name: "日本-033"
-    type: vless
-    server: 104.17.169.13
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "法国-034"
-    type: vless
-    server: 8.47.69.0
-    port: 2053
-    uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-    network: ws
-    udp: true
-    tls: true
-    servername: fr.api-music-fa.com
-    client-fingerprint: android
-    ws-opts:
-      path: /api/voip/updates/static/fr2035
-      headers:
-        Host: fr.api-music-fa.com
-  - name: "泰国-035"
-    type: vless
-    server: 104.16.10.2
-    port: 443
-    uuid: 3c52e091-6714-4915-949f-2149fe69951b
-    network: ws
-    udp: true
-    tls: true
-    servername: v2ray.simspeedup.com
-    ws-opts:
-      path: /ws
-      headers:
-        Host: v2ray.simspeedup.com
-  - name: "美国-036"
+  - name: "美国-005"
     type: vless
     server: 104.17.148.44
     port: 443
@@ -483,200 +68,33 @@ proxies:
       path: t.me/TEAMNETGRATISCOL
       headers:
         Host: x.m-90.xyz
-  - name: "德国-037"
+  - name: "美国-006"
     type: vless
-    server: 104.21.60.29
-    port: 8443
-    uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
-    network: ws
-    udp: true
-    tls: true
-    servername: www.large-files.info
-    client-fingerprint: chrome
-    ws-opts:
-      path: "%2Fvar%2Fwww%2Fhtml%2Fvideo%2Fpreview%2Fdownload%2Fi8o0la"
-      headers:
-        Host: www.large-files.info
-  - name: "泰国-038"
-    type: vless
-    server: 104.18.26.90
-    port: 443
-    uuid: 3c52e091-6714-4915-949f-2149fe69951b
-    network: ws
-    udp: true
-    tls: true
-    servername: v2ray.simspeedup.com
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ws
-      headers:
-        Host: v2ray.simspeedup.com
-  - name: "美国-039"
-    type: vless
-    server: 104.17.154.214
+    server: 104.17.155.118
     port: 443
     uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
     network: ws
     udp: true
     tls: true
     servername: x.m-90.xyz
-    client-fingerprint: chrome
     ws-opts:
       path: t.me/TEAMNETGRATISCOL
       headers:
         Host: x.m-90.xyz
-  - name: "美国-CDN-040"
+  - name: "美国-007"
     type: vless
-    server: 172.67.76.40
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-  - name: "法国-041"
-    type: vless
-    server: 104.21.84.30
-    port: 2053
-    uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-    network: ws
-    udp: true
-    tls: true
-    servername: fr.api-music-fa.com
-    ws-opts:
-      path: /api/voip/updates/static/fr2035
-      headers:
-        Host: fr.api-music-fa.com
-  - name: "泰国-042"
-    type: vless
-    server: 104.16.10.9
-    port: 443
-    uuid: 3c52e091-6714-4915-949f-2149fe69951b
-    network: ws
-    udp: true
-    tls: true
-    servername: v2ray.simspeedup.com
-    ws-opts:
-      path: /ws
-      headers:
-        Host: v2ray.simspeedup.com
-  - name: "美国-CDN-043"
-    type: vless
-    server: 172.66.0.162
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-  - name: "德国-044"
-    type: vless
-    server: 104.21.84.167
-    port: 2053
-    uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
-    network: ws
-    udp: true
-    tls: true
-    servername: uwu.blueknightnet.qzz.io
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net"
-      headers:
-        Host: uwu.blueknightnet.qzz.io
-  - name: "美国-045"
-    type: vless
-    server: 104.17.144.249
+    server: 104.19.35.67
     port: 443
     uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
     network: ws
     udp: true
     tls: true
     servername: x.m-90.xyz
-    client-fingerprint: chrome
     ws-opts:
-      path: /t.me/TEAMNETGRATISCOL
+      path: t.me/TEAMNETGRATISCOL
       headers:
         Host: x.m-90.xyz
-  - name: "德国-046"
-    type: vless
-    server: 172.67.133.118
-    port: 2053
-    uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
-    network: ws
-    udp: true
-    tls: true
-    servername: uwu.blueknightnet.qzz.io
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net"
-      headers:
-        Host: uwu.blueknightnet.qzz.io
-  - name: "德国-047"
-    type: vless
-    server: 172.67.190.248
-    port: 8443
-    uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
-    network: ws
-    udp: true
-    tls: true
-    servername: www.large-files.info
-    client-fingerprint: chrome
-    ws-opts:
-      path: /var/www/html/video/preview/download/i8o0la
-      headers:
-        Host: www.large-files.info
-  - name: "泰国-048"
-    type: vless
-    server: 104.16.111.193
-    port: 443
-    uuid: 3c52e091-6714-4915-949f-2149fe69951b
-    network: ws
-    udp: true
-    tls: true
-    servername: v2ray.simspeedup.com
-    ws-opts:
-      path: /ws
-      headers:
-        Host: v2ray.simspeedup.com
-  - name: "美国-049"
-    type: vless
-    server: tk1.high-speed-test-56424.me
-    port: 443
-    uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: aws.amazon.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM"
-      short-id: "21270a66"
-  - name: "新加坡-050"
-    type: vless
-    server: 170.114.46.6
-    port: 8443
-    uuid: ba9ba1d3-19c8-4792-9d3f-ddd2cdcc2e65
-    network: ws
-    udp: true
-    tls: true
-    servername: primelinelk.me
-    client-fingerprint: firefox
-    ws-opts:
-      path: /xprolk-primeline
-      headers:
-        Host: primelinelk.me
-  - name: "美国-051"
+  - name: "美国-008"
     type: vless
     server: 172.64.229.3
     port: 443
@@ -690,7 +108,72 @@ proxies:
       path: t.me/TEAMNETGRATISCOL
       headers:
         Host: x.m-90.xyz
-  - name: "美国-052"
+  - name: "美国-CDN-009"
+    type: vless
+    server: 104.18.35.15
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: ccc.010304.xyz
+  - name: "英国-010"
+    type: vless
+    server: ccs2g.pai50288.uk
+    port: 443
+    uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
+    network: ws
+    udp: true
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /pai50288
+  - name: "日本-011"
+    type: vless
+    server: 104.16.10.84
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    client-fingerprint: chrome
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "新加坡-012"
+    type: vless
+    server: 170.114.45.6
+    port: 8443
+    uuid: ba9ba1d3-19c8-4792-9d3f-ddd2cdcc2e65
+    network: ws
+    udp: true
+    tls: true
+    servername: primelinelk.me
+    client-fingerprint: firefox
+    ws-opts:
+      path: /xprolk-primeline
+      headers:
+        Host: primelinelk.me
+  - name: "泰国-013"
+    type: vless
+    server: 104.16.10.2
+    port: 443
+    uuid: 3c52e091-6714-4915-949f-2149fe69951b
+    network: ws
+    udp: true
+    tls: true
+    servername: v2ray.simspeedup.com
+    ws-opts:
+      path: /ws
+      headers:
+        Host: v2ray.simspeedup.com
+  - name: "美国-014"
     type: vless
     server: 172.64.229.14
     port: 443
@@ -704,33 +187,499 @@ proxies:
       path: "%2Ft.me%2FTEAMNETGRATISCOL"
       headers:
         Host: x.m-90.xyz
-  - name: "美国-053"
+  - name: "其他-015"
     type: vless
-    server: www.epicgames.com
-    port: 2095
-    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+    server: cf.877774.xyz
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
     network: ws
     udp: true
-    tls: false
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: ccc.010304.xyz
+  - name: "泰国-016"
+    type: vless
+    server: 104.18.26.90
+    port: 443
+    uuid: 3c52e091-6714-4915-949f-2149fe69951b
+    network: ws
+    udp: true
+    tls: true
+    servername: v2ray.simspeedup.com
+    client-fingerprint: chrome
+    ws-opts:
+      path: /ws
+      headers:
+        Host: v2ray.simspeedup.com
+  - name: "美国-CDN-017"
+    type: vless
+    server: 172.64.158.170
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
-        Host: uwu.femboy67.cc.cd
-  - name: "英国-054"
+        Host: ccc.010304.xyz
+  - name: "美国-018"
     type: vless
-    server: 94.183.179.34
+    server: 162.159.135.234
     port: 443
-    uuid: 186a7d6f-e360-4c5f-bafb-a816f79e231b
-    network: tcp
-    flow: xtls-rprx-vision
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
     udp: true
     tls: true
-    servername: uk-akn-1.movietop24.site
+    servername: snip.edgeoneai.cc.cd
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560"
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "美国-019"
+    type: vless
+    server: cf.090227.xyz
+    port: 443
+    uuid: e6df2095-a73c-4043-8693-8d5a03686870
+    network: ws
+    udp: true
+    tls: true
+    servername: lucasjow.us.ci
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cart/docs/www/proxyip=108.160.132.132
+      headers:
+        Host: lucasjow.us.ci
+  - name: "德国-020"
+    type: vless
+    server: www.large-files.info
+    port: 8443
+    uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+    network: ws
+    udp: true
+    tls: true
+    ws-opts:
+      path: /var/www/html/video/preview/download/i8o0la
+  - name: "美国-021"
+    type: vless
+    server: 172.66.0.18
+    port: 443
+    uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
+    network: ws
+    udp: true
+    tls: true
+    servername: x.m-90.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: t.me/TEAMNETGRATISCOL
+      headers:
+        Host: x.m-90.xyz
+  - name: "美国-022"
+    type: vless
+    server: 104.17.154.214
+    port: 443
+    uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
+    network: ws
+    udp: true
+    tls: true
+    servername: x.m-90.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: t.me/TEAMNETGRATISCOL
+      headers:
+        Host: x.m-90.xyz
+  - name: "其他-023"
+    type: vless
+    server: cf.130519.xyz
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ccc.010304.xyz
+  - name: "美国-CDN-024"
+    type: vless
+    server: 172.64.152.241
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: ccc.010304.xyz
+  - name: "法国-025"
+    type: vless
+    server: 172.67.118.45
+    port: 2053
+    uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+    network: ws
+    udp: true
+    tls: true
+    servername: fr.api-music-fa.com
+    client-fingerprint: chrome
+    ws-opts:
+      path: /api/voip/updates/static/fr2035
+      headers:
+        Host: fr.api-music-fa.com
+  - name: "美国-026"
+    type: vless
+    server: 172.66.1.43
+    port: 443
+    uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
+    network: ws
+    udp: true
+    tls: true
+    servername: x.m-90.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: t.me/TEAMNETGRATISCOL
+      headers:
+        Host: x.m-90.xyz
+  - name: "英国-027"
+    type: vless
+    server: 104.21.3.219
+    port: 443
+    uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
+    network: ws
+    udp: true
+    tls: true
+    servername: ccs2g.pai50288.uk
+    client-fingerprint: chrome
+    ws-opts:
+      path: /pai50288
+      headers:
+        Host: ccs2g.pai50288.uk
+  - name: "法国-028"
+    type: vless
+    server: 172.67.185.98
+    port: 2053
+    uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+    network: ws
+    udp: true
+    tls: true
+    servername: fr.api-music-fa.com
+    ws-opts:
+      path: /api/voip/updates/static/fr2035
+      headers:
+        Host: fr.api-music-fa.com
+  - name: "法国-029"
+    type: vless
+    server: 8.47.69.0
+    port: 2053
+    uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+    network: ws
+    udp: true
+    tls: true
+    servername: fr.api-music-fa.com
+    client-fingerprint: android
+    ws-opts:
+      path: /api/voip/updates/static/fr2035
+      headers:
+        Host: fr.api-music-fa.com
+  - name: "日本-030"
+    type: vless
+    server: 104.16.111.202
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "日本-031"
+    type: vless
+    server: 104.17.50.227
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "瑞士-032"
+    type: vless
+    server: 188.114.97.6
+    port: 443
+    uuid: 49ccad64-c854-4f33-b334-793cf0d02b74
+    network: ws
+    udp: true
+    tls: true
+    servername: newcscf.jisucf.cloudns.ch
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+      headers:
+        Host: newcscf.jisucf.cloudns.ch
+  - name: "美国-CDN-033"
+    type: vless
+    server: 104.18.41.190
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ccc.010304.xyz
+  - name: "美国-CDN-034"
+    type: vless
+    server: 104.18.37.127
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ccc.010304.xyz
+  - name: "德国-035"
+    type: vless
+    server: 104.21.60.29
+    port: 8443
+    uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+    network: ws
+    udp: true
+    tls: true
+    servername: www.large-files.info
+    client-fingerprint: chrome
+    ws-opts:
+      path: "%2Fvar%2Fwww%2Fhtml%2Fvideo%2Fpreview%2Fdownload%2Fi8o0la"
+      headers:
+        Host: www.large-files.info
+  - name: "其他-036"
+    type: vless
+    server: 188.164.248.216
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ccc.010304.xyz
+  - name: "日本-037"
+    type: vless
+    server: 172.67.156.147
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "美国-CDN-038"
+    type: vless
+    server: 172.66.0.162
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ccc.010304.xyz
+  - name: "德国-039"
+    type: vless
+    server: 172.67.190.248
+    port: 8443
+    uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+    network: ws
+    udp: true
+    tls: true
+    servername: www.large-files.info
+    client-fingerprint: chrome
+    ws-opts:
+      path: /var/www/html/video/preview/download/i8o0la
+      headers:
+        Host: www.large-files.info
+  - name: "美国-040"
+    type: vless
+    server: support.zoom.us
+    port: 8443
+    uuid: ba9ba1d3-19c8-4792-9d3f-ddd2cdcc2e65
+    network: ws
+    udp: true
+    tls: true
+    servername: primelinelk.me
+    client-fingerprint: ios
+    ws-opts:
+      path: /xprolk-primeline
+      headers:
+        Host: primelinelk.me
+  - name: "瑞士-041"
+    type: vless
+    server: 104.17.98.5
+    port: 443
+    uuid: 49ccad64-c854-4f33-b334-793cf0d02b74
+    network: ws
+    udp: true
+    tls: true
+    servername: newcscf.jisucf.cloudns.ch
+    ws-opts:
+      path: /
+      headers:
+        Host: newcscf.jisucf.cloudns.ch
+  - name: "新加坡-042"
+    type: vless
+    server: 170.114.46.6
+    port: 8443
+    uuid: ba9ba1d3-19c8-4792-9d3f-ddd2cdcc2e65
+    network: ws
+    udp: true
+    tls: true
+    servername: primelinelk.me
     client-fingerprint: firefox
-    reality-opts:
-      public-key: "S5_vWkWKFGlfsrILyd8WmEeVgU-oobbEAfDTxEJOU2s"
-      short-id: "9260fdb5ca26047c"
-  - name: "波兰-055"
+    ws-opts:
+      path: /xprolk-primeline
+      headers:
+        Host: primelinelk.me
+  - name: "日本-043"
+    type: vless
+    server: 104.21.70.228
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    client-fingerprint: chrome
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "美国-CDN-044"
+    type: vless
+    server: 104.26.4.2
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ccc.010304.xyz
+  - name: "日本-045"
+    type: vless
+    server: 104.21.33.59
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "法国-046"
+    type: vless
+    server: 104.21.84.30
+    port: 2053
+    uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+    network: ws
+    udp: true
+    tls: true
+    servername: fr.api-music-fa.com
+    ws-opts:
+      path: /api/voip/updates/static/fr2035
+      headers:
+        Host: fr.api-music-fa.com
+  - name: "美国-CDN-047"
+    type: vless
+    server: 104.17.154.123
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ccc.010304.xyz
+  - name: "美国-CDN-048"
+    type: vless
+    server: 172.67.76.40
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ccc.010304.xyz
+  - name: "泰国-049"
+    type: vless
+    server: 104.16.111.193
+    port: 443
+    uuid: 3c52e091-6714-4915-949f-2149fe69951b
+    network: ws
+    udp: true
+    tls: true
+    servername: v2ray.simspeedup.com
+    ws-opts:
+      path: /ws
+      headers:
+        Host: v2ray.simspeedup.com
+  - name: "美国-050"
+    type: vless
+    server: 35.78.243.103
+    port: 443
+    uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
+    network: ws
+    udp: true
+    tls: true
+    servername: x.m-90.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: t.me/TEAMNETGRATISCOL
+      headers:
+        Host: x.m-90.xyz
+  - name: "波兰-051"
     type: vless
     server: 91.215.43.248
     port: 443
@@ -744,122 +693,199 @@ proxies:
       path: /gateway/v1/ws/a64eb463966ba9c4bfd628f1de0362ae
       headers:
         Host: my.kempekl.online
-  - name: "荷兰-056"
+  - name: "荷兰-052"
     type: vless
-    server: nl.alpheratzz.org
-    port: 8443
-    uuid: 8de76932-518a-4ac8-ac92-be6b1f17ddd8
+    server: 31.56.186.115
+    port: 443
+    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: api-v1-6ac7858f.vmagnum.win
-    client-fingerprint: android
-  - name: "波兰-057"
+    servername: fi-s-1.pythonmakemigreat.wiki
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg"
+      short-id: "78f97d82e16aaad6"
+  - name: "荷兰-053"
     type: vless
-    server: 95.129.236.124
+    server: fi-s-1.pythonmakemigreat.wiki
     port: 443
-    uuid: a5893c8b-28a2-4947-9a1c-708db25506c3
+    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: fi-s-1.pythonmakemigreat.wiki
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg"
+      short-id: "78f97d82e16aaad6"
+  - name: "其他-054"
+    type: vless
+    server: 107.189.26.160
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
     network: ws
     udp: true
     tls: true
-    servername: console.game-booster.sowt.app
-    client-fingerprint: firefox
+    servername: ccc.010304.xyz
     ws-opts:
-      path: /gateway/v1/ws/7b24d0b5be48f08bc93aea0617ae9d57
+      path: /fp=chrome
       headers:
-        Host: console.game-booster.sowt.app
-  - name: "荷兰-058"
+        Host: ccc.010304.xyz
+  - name: "哥伦比亚-055"
     type: vless
-    server: 185.200.199.199
-    port: 8444
-    uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
-    network: grpc
-    udp: true
-    tls: true
-    servername: github.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
-      short-id: "457fab2ac885dbe0"
-  - name: "美国-059"
-    type: vless
-    server: swidenlanzerotte.live
-    port: 443
-    uuid: 56de13ac-086e-4789-8e1e-1bf2bd90216b
+    server: 156.224.77.171
+    port: 9443
+    uuid: fe0721ac-c577-4938-b7ca-8ab5f43bb8da
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: swidenlanzerotte.live
+    servername: www.amazon.com
+    client-fingerprint: random
+    reality-opts:
+      public-key: "0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4"
+      short-id: "b390142456517acc"
+  - name: "美国-056"
+    type: vless
+    server: 43.161.226.55
+    port: 443
+    uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
+    network: ws
+    udp: true
+    tls: true
+    servername: x.m-90.xyz
+    client-fingerprint: firefox
+    ws-opts:
+      path: t.me/TEAMNETGRATISCOL
+      headers:
+        Host: x.m-90.xyz
+  - name: "俄罗斯-057"
+    type: vless
+    server: 217.149.30.73
+    port: 8443
+    uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: time.nztvpn.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "p87u9cOh91BaXsKS-HoCoOUXxHcOwkM6ByTWmz_6b2Y"
+      short-id: "0da7e14db353e7d0"
+  - name: "瑞士-058"
+    type: vless
+    server: ap2.directly.chat
+    port: 443
+    uuid: 2f9107cb-9af0-4c94-a89d-50437218e5fa
+    network: ws
+    udp: true
+    tls: true
+    servername: ap2.directly.chat
+    client-fingerprint: android
+    ws-opts:
+      path: /md/1
+      headers:
+        Host: ap2.directly.chat
+  - name: "俄罗斯-059"
+    type: vless
+    server: assets.halyvanedorogo.ru
+    port: 11515
+    uuid: cb8fbad5-4f14-55bc-a24a-3510f47f4b1b
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.sony.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: "MQrvfivvEfLGzDee7h0j5uC-DwaD_38_NXOY9-NhqxM"
+      public-key: "A826RSu-yeVM_t6v7kwHKasHSdfI9KOzUw3WaIa9SWc"
+      short-id: "65149fc5ba"
   - name: "新加坡-060"
     type: vless
-    server: 139.162.27.96
-    port: 2096
-    uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-    network: ws
+    server: 34.87.113.18
+    port: 443
+    uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
+    network: tcp
     udp: true
     tls: true
-    servername: free-server.techsonic.dev
-    client-fingerprint: chrome
-    ws-opts:
-      path: /free-server.techsonic.dev
-      headers:
-        Host: free-server.techsonic.dev
-  - name: "荷兰-061"
-    type: vless
-    server: 185.115.34.209
-    port: 8444
-    uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
-    network: grpc
-    udp: true
-    tls: true
-    servername: github.com
+    servername: www.cloudflare.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
-  - name: "法国-062"
+      public-key: "hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4"
+      short-id: "eb97ce837da2f6ad"
+  - name: "英国-061"
     type: vless
-    server: 31.131.251.17
-    port: 443
-    uuid: 9ea8b000-58ce-005a-b108-989dd4f248f1
+    server: pl-waw.dontblockmepls.com
+    port: 2063
+    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: quatro.lmstream.org
+    servername: rusbid.de
     client-fingerprint: firefox
-  - name: "巴西-063"
-    type: vless
-    server: netherseptem.live
-    port: 443
-    uuid: 56de13ac-086e-4789-8e1e-1bf2bd90216b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: netherseptem.live
-    client-fingerprint: chrome
     reality-opts:
-      public-key: "hBTP4uZgh7tCmjtIrf-hDhn0s-EI-mVjWWoquBBP6nI"
-  - name: "荷兰-064"
+      public-key: "MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM"
+  - name: "荷兰-062"
     type: vless
-    server: 185.86.145.183
+    server: cosmo-pulse.ru
     port: 443
-    uuid: 5d1f603d-34dc-4a38-9d4e-9d55bea241db
+    uuid: 7ec9f26a-edec-4bf1-addd-700626df27c1
     network: ws
     udp: true
     tls: true
-    servername: begemotov.cc
-    client-fingerprint: android
+    servername: cosmo-pulse.ru
+    client-fingerprint: edge
     ws-opts:
       path: /nl7ws
       headers:
-        Host: begemotov.cc
+        Host: cosmo-pulse.ru
+  - name: "韩国-063"
+    type: vless
+    server: 34.22.111.30
+    port: 443
+    uuid: cb2abff3-5fe6-4b5a-aa19-5739deb285b6
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "M0QKczb2MzOH45qDViIAbb9LPrVVyCp880D4HlwIKnA"
+      short-id: "8685f8b4d9f4f51e"
+  - name: "新加坡-064"
+    type: vless
+    server: 2610sgdodo.volkvpn.com
+    port: 39179
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.lamer.com.sg
+    client-fingerprint: safari
+    reality-opts:
+      public-key: "Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik"
+      short-id: "28f5c1f8f98a"
   - name: "新加坡-065"
+    type: vless
+    server: 43.255.156.43
+    port: 39179
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.lamer.com.sg
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik"
+      short-id: "28f5c1f8f98a"
+  - name: "其他-066"
     type: vless
     server: 47.251.95.178
     port: 443
@@ -868,79 +894,315 @@ proxies:
     udp: true
     tls: true
     servername: asia.csmaster.site
-    client-fingerprint: firefox
+    client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
         Host: asia.csmaster.site
-  - name: "美国-066"
+  - name: "日本-067"
     type: vless
-    server: gw1.edgemedia.lol
-    port: 13443
-    uuid: 9ebf4fda-7395-4800-b42f-b2dda649880a
+    server: 103.39.79.77
+    port: 41563
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: ya.ru
+    servername: iosapps.itunes.apple.com
     client-fingerprint: firefox
     reality-opts:
-      public-key: "1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ"
-      short-id: "d2061bb1"
-  - name: "巴西-067"
+      public-key: "HrcXRHtsitc_AVlN-_8fZuRgaP-Mqa_9JJotI9OnkVc"
+      short-id: "25c79e5856c7"
+  - name: "荷兰-068"
     type: vless
-    server: hollandlanzerotte.xyz
+    server: 147.45.213.54
     port: 443
-    uuid: 56de13ac-086e-4789-8e1e-1bf2bd90216b
+    uuid: 741809be-e44e-0008-b411-bf66f0ae3860
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: hollandlanzerotte.xyz
+    servername: diffoscope.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: "EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc"
-  - name: "香港-068"
+      public-key: "6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY"
+      short-id: "1c3e8241a8743df9"
+  - name: "南非-069"
     type: vless
-    server: 3696b38bsg.murphyweb.sbs
-    port: 32134
-    uuid: 5b01dc2d-6892-49b8-8289-3f73a32e00e4
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: buylite.music.apple.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4"
-      short-id: "6c6c7c97"
-  - name: "荷兰-069"
-    type: vless
-    server: 185.192.22.159
-    port: 8444
-    uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
-    network: grpc
-    udp: true
-    tls: true
-    servername: github.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
-      short-id: "457fab2ac885dbe0"
-  - name: "巴西-070"
-    type: vless
-    server: g1.coconutsvpn.com
+    server: 34.35.189.111
     port: 443
-    uuid: 8d790ba0-5407-441b-b545-8ab369c591ce
+    uuid: 4758aee6-6d1a-4306-b460-2398b5af4e35
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "dcox8XXfkOCmKn3kgrloj6wY5o1_0brJOi2mczYmAT4"
+      short-id: "5ced03e42cc31aab"
+  - name: "荷兰-070"
+    type: vless
+    server: 104.193.10.166
+    port: 443
+    uuid: 85fe968d-fbb5-40dc-8422-30635eccb149
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: g1.coconutsvpn.com
+    servername: portal.citygrainla.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE"
+      short-id: "051f20c2344a2dfd"
+  - name: "澳大利亚-071"
+    type: vless
+    server: 43.255.156.43
+    port: 35715
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo"
+      short-id: "54cca3c1c1c7"
+  - name: "新加坡-072"
+    type: vless
+    server: 2610sgdodo.volkvpn.com
+    port: 35715
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.apple.com
+    client-fingerprint: ios
+    reality-opts:
+      public-key: "7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo"
+      short-id: "54cca3c1c1c7"
+  - name: "日本-073"
+    type: vless
+    server: 103.39.79.4
+    port: 41563
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: iosapps.itunes.apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "HrcXRHtsitc_AVlN-_8fZuRgaP-Mqa_9JJotI9OnkVc"
+      short-id: "25c79e5856c7"
+  - name: "日本-074"
+    type: vless
+    server: 43.247.132.42
+    port: 41563
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: iosapps.itunes.apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "HrcXRHtsitc_AVlN-_8fZuRgaP-Mqa_9JJotI9OnkVc"
+      short-id: "25c79e5856c7"
+  - name: "美国-075"
+    type: vless
+    server: 45.153.130.75
+    port: 41705
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: us1p1.xn--ghq880n3na965a.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA"
+      short-id: "e51285e3"
+  - name: "新加坡-076"
+    type: vless
+    server: 103.214.173.122
+    port: 39179
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.lamer.com.sg
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik"
+      short-id: "28f5c1f8f98a"
+  - name: "新加坡-077"
+    type: vless
+    server: 45.153.130.153
+    port: 39179
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.lamer.com.sg
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik"
+      short-id: "28f5c1f8f98a"
+  - name: "新加坡-078"
+    type: vless
+    server: 2610sgdodo.volkvpn.com
+    port: 25102
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.kaidee.com
+    client-fingerprint: ios
+    reality-opts:
+      public-key: "EG-jzQw1RyOwAM4L9rMKondSx7cyFmPyv1OP7xXkIk4"
+      short-id: "cbd39bea0805e2"
+  - name: "美国-079"
+    type: vless
+    server: 103.214.173.62
+    port: 41705
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: us1p1.xn--ghq880n3na965a.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA"
+      short-id: "e51285e3"
+  - name: "澳大利亚-080"
+    type: vless
+    server: 45.153.130.153
+    port: 35715
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo"
+      short-id: "54cca3c1c1c7"
+  - name: "澳大利亚-081"
+    type: vless
+    server: 103.214.173.122
+    port: 35715
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo"
+      short-id: "54cca3c1c1c7"
+  - name: "西班牙-082"
+    type: vless
+    server: 45.198.55.200
+    port: 25136
+    uuid: c1c13ef7-affa-47e1-8967-25cc67679c10
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "nkmfL3QCskKAfBUk-OiTgcWyIXGmXrZVtDEoio0Qo1w"
+      short-id: "f78838fbd85e59ae"
+  - name: "智利-083"
+    type: vless
+    server: es3.h1cloud.net
+    port: 25136
+    uuid: c1c13ef7-affa-47e1-8967-25cc67679c10
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "nkmfL3QCskKAfBUk-OiTgcWyIXGmXrZVtDEoio0Qo1w"
+      short-id: "f78838fbd85e59ae"
+  - name: "德国-084"
+    type: vless
+    server: de2.srv.vbuste.ru
+    port: 443
+    uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: de2.srv.vbuste.ru
     client-fingerprint: chrome
     reality-opts:
-      public-key: "XW-uVSKkZJB14OFKOePhEE4UnrAOI4VfuAQQZ_gI3E0"
-      short-id: "848eb46fd7a0e43d"
+      public-key: "0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08"
+      short-id: "4be4110078ebed4a"
+  - name: "德国-085"
+    type: vless
+    server: 46.243.235.246
+    port: 7449
+    uuid: f23bc4f1-cc71-4003-ae6c-d6abe21d8191
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: passport.yandex.ru
+    client-fingerprint: edge
+    reality-opts:
+      public-key: "TixECE6AqdT0DEihGXGqBAovNYMxZSB2csK0Lmm1ch0"
+      short-id: "11e097a032298bd8"
+  - name: "英国-086"
+    type: vless
+    server: 157.228.150.34
+    port: 443
+    uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: addons.mozilla.org
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M"
+      short-id: "3cef317b"
+  - name: "美国-087"
+    type: vless
+    server: distant.sugarcanecoffee.top
+    port: 10654
+    uuid: 397bdc3b-9204-48d7-9003-5360864eecff
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.icloud.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "S-g0oP36DShii1uPOnZDSEhp_wQghX6h68PgMivOmD4"
+  - name: "日本-088"
+    type: vless
+    server: 43.247.132.85
+    port: 41563
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: iosapps.itunes.apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "HrcXRHtsitc_AVlN-_8fZuRgaP-Mqa_9JJotI9OnkVc"
+      short-id: "25c79e5856c7"
 
 proxy-groups:
   - name: Auto
@@ -949,150 +1211,186 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "德国-001"
-      - "德国-002"
-      - "美国-003"
-      - "法国-004"
-      - "德国-005"
-      - "德国-006"
+      - "美国-001"
+      - "哥伦比亚-002"
+      - "法国-003"
+      - "其他-004"
+      - "美国-005"
+      - "美国-006"
       - "美国-007"
-      - "哥伦比亚-008"
-      - "其他-009"
-      - "法国-010"
-      - "美国-CDN-011"
-      - "美国-CDN-012"
-      - "香港-013"
-      - "德国-014"
-      - "哥伦比亚-015"
-      - "其他-016"
-      - "英国-017"
-      - "英国-018"
+      - "美国-008"
+      - "美国-CDN-009"
+      - "英国-010"
+      - "日本-011"
+      - "新加坡-012"
+      - "泰国-013"
+      - "美国-014"
+      - "其他-015"
+      - "泰国-016"
+      - "美国-CDN-017"
+      - "美国-018"
       - "美国-019"
-      - "美国-CDN-020"
-      - "其他-021"
-      - "其他-022"
-      - "美国-CDN-023"
-      - "其他-024"
-      - "泰国-025"
-      - "美国-CDN-026"
-      - "瑞士-027"
+      - "德国-020"
+      - "美国-021"
+      - "美国-022"
+      - "其他-023"
+      - "美国-CDN-024"
+      - "法国-025"
+      - "美国-026"
+      - "英国-027"
       - "法国-028"
-      - "新加坡-029"
-      - "美国-030"
-      - "美国-CDN-031"
-      - "法国-032"
-      - "日本-033"
-      - "法国-034"
-      - "泰国-035"
-      - "美国-036"
-      - "德国-037"
-      - "泰国-038"
-      - "美国-039"
-      - "美国-CDN-040"
-      - "法国-041"
-      - "泰国-042"
-      - "美国-CDN-043"
-      - "德国-044"
-      - "美国-045"
-      - "德国-046"
-      - "德国-047"
-      - "泰国-048"
-      - "美国-049"
-      - "新加坡-050"
-      - "美国-051"
-      - "美国-052"
-      - "美国-053"
-      - "英国-054"
-      - "波兰-055"
-      - "荷兰-056"
-      - "波兰-057"
-      - "荷兰-058"
-      - "美国-059"
+      - "法国-029"
+      - "日本-030"
+      - "日本-031"
+      - "瑞士-032"
+      - "美国-CDN-033"
+      - "美国-CDN-034"
+      - "德国-035"
+      - "其他-036"
+      - "日本-037"
+      - "美国-CDN-038"
+      - "德国-039"
+      - "美国-040"
+      - "瑞士-041"
+      - "新加坡-042"
+      - "日本-043"
+      - "美国-CDN-044"
+      - "日本-045"
+      - "法国-046"
+      - "美国-CDN-047"
+      - "美国-CDN-048"
+      - "泰国-049"
+      - "美国-050"
+      - "波兰-051"
+      - "荷兰-052"
+      - "荷兰-053"
+      - "其他-054"
+      - "哥伦比亚-055"
+      - "美国-056"
+      - "俄罗斯-057"
+      - "瑞士-058"
+      - "俄罗斯-059"
       - "新加坡-060"
-      - "荷兰-061"
-      - "法国-062"
-      - "巴西-063"
-      - "荷兰-064"
+      - "英国-061"
+      - "荷兰-062"
+      - "韩国-063"
+      - "新加坡-064"
       - "新加坡-065"
-      - "美国-066"
-      - "巴西-067"
-      - "香港-068"
-      - "荷兰-069"
-      - "巴西-070"
+      - "其他-066"
+      - "日本-067"
+      - "荷兰-068"
+      - "南非-069"
+      - "荷兰-070"
+      - "澳大利亚-071"
+      - "新加坡-072"
+      - "日本-073"
+      - "日本-074"
+      - "美国-075"
+      - "新加坡-076"
+      - "新加坡-077"
+      - "新加坡-078"
+      - "美国-079"
+      - "澳大利亚-080"
+      - "澳大利亚-081"
+      - "西班牙-082"
+      - "智利-083"
+      - "德国-084"
+      - "德国-085"
+      - "英国-086"
+      - "美国-087"
+      - "日本-088"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "德国-001"
-      - "德国-002"
-      - "美国-003"
-      - "法国-004"
-      - "德国-005"
-      - "德国-006"
+      - "美国-001"
+      - "哥伦比亚-002"
+      - "法国-003"
+      - "其他-004"
+      - "美国-005"
+      - "美国-006"
       - "美国-007"
-      - "哥伦比亚-008"
-      - "其他-009"
-      - "法国-010"
-      - "美国-CDN-011"
-      - "美国-CDN-012"
-      - "香港-013"
-      - "德国-014"
-      - "哥伦比亚-015"
-      - "其他-016"
-      - "英国-017"
-      - "英国-018"
+      - "美国-008"
+      - "美国-CDN-009"
+      - "英国-010"
+      - "日本-011"
+      - "新加坡-012"
+      - "泰国-013"
+      - "美国-014"
+      - "其他-015"
+      - "泰国-016"
+      - "美国-CDN-017"
+      - "美国-018"
       - "美国-019"
-      - "美国-CDN-020"
-      - "其他-021"
-      - "其他-022"
-      - "美国-CDN-023"
-      - "其他-024"
-      - "泰国-025"
-      - "美国-CDN-026"
-      - "瑞士-027"
+      - "德国-020"
+      - "美国-021"
+      - "美国-022"
+      - "其他-023"
+      - "美国-CDN-024"
+      - "法国-025"
+      - "美国-026"
+      - "英国-027"
       - "法国-028"
-      - "新加坡-029"
-      - "美国-030"
-      - "美国-CDN-031"
-      - "法国-032"
-      - "日本-033"
-      - "法国-034"
-      - "泰国-035"
-      - "美国-036"
-      - "德国-037"
-      - "泰国-038"
-      - "美国-039"
-      - "美国-CDN-040"
-      - "法国-041"
-      - "泰国-042"
-      - "美国-CDN-043"
-      - "德国-044"
-      - "美国-045"
-      - "德国-046"
-      - "德国-047"
-      - "泰国-048"
-      - "美国-049"
-      - "新加坡-050"
-      - "美国-051"
-      - "美国-052"
-      - "美国-053"
-      - "英国-054"
-      - "波兰-055"
-      - "荷兰-056"
-      - "波兰-057"
-      - "荷兰-058"
-      - "美国-059"
+      - "法国-029"
+      - "日本-030"
+      - "日本-031"
+      - "瑞士-032"
+      - "美国-CDN-033"
+      - "美国-CDN-034"
+      - "德国-035"
+      - "其他-036"
+      - "日本-037"
+      - "美国-CDN-038"
+      - "德国-039"
+      - "美国-040"
+      - "瑞士-041"
+      - "新加坡-042"
+      - "日本-043"
+      - "美国-CDN-044"
+      - "日本-045"
+      - "法国-046"
+      - "美国-CDN-047"
+      - "美国-CDN-048"
+      - "泰国-049"
+      - "美国-050"
+      - "波兰-051"
+      - "荷兰-052"
+      - "荷兰-053"
+      - "其他-054"
+      - "哥伦比亚-055"
+      - "美国-056"
+      - "俄罗斯-057"
+      - "瑞士-058"
+      - "俄罗斯-059"
       - "新加坡-060"
-      - "荷兰-061"
-      - "法国-062"
-      - "巴西-063"
-      - "荷兰-064"
+      - "英国-061"
+      - "荷兰-062"
+      - "韩国-063"
+      - "新加坡-064"
       - "新加坡-065"
-      - "美国-066"
-      - "巴西-067"
-      - "香港-068"
-      - "荷兰-069"
-      - "巴西-070"
+      - "其他-066"
+      - "日本-067"
+      - "荷兰-068"
+      - "南非-069"
+      - "荷兰-070"
+      - "澳大利亚-071"
+      - "新加坡-072"
+      - "日本-073"
+      - "日本-074"
+      - "美国-075"
+      - "新加坡-076"
+      - "新加坡-077"
+      - "新加坡-078"
+      - "美国-079"
+      - "澳大利亚-080"
+      - "澳大利亚-081"
+      - "西班牙-082"
+      - "智利-083"
+      - "德国-084"
+      - "德国-085"
+      - "英国-086"
+      - "美国-087"
+      - "日本-088"
 
 rules:
   - MATCH,Proxy
