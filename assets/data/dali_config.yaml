@@ -1,48 +1,20 @@
 proxies:
-  - name: "哥伦比亚-001"
+  - name: "美国-001"
     type: vless
-    server: 199.232.78.160
+    server: saas.sin.fan
     port: 443
-    uuid: XpnTeam-16
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
     udp: true
     tls: true
-    servername: ssl.fastly.com
-    client-fingerprint: chrome
+    servername: snip.edgeoneai.cc.cd
     ws-opts:
-      path: /
+      path: "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560"
       headers:
-        Host: Appxdn.global.ssl.fastly.net
+        Host: snip.edgeoneai.cc.cd
   - name: "美国-002"
     type: vless
-    server: ccc.010304.xyz
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-  - name: "美国-003"
-    type: vless
-    server: 172.67.155.65
-    port: 8443
-    uuid: e6df2095-a73c-4043-8693-8d5a03686870
-    network: ws
-    udp: true
-    tls: true
-    servername: lucasjow.us.ci
-    ws-opts:
-      path: /cart/docs/www/proxyip=108.160.132.132fp=chrome
-      headers:
-        Host: lucasjow.us.ci
-  - name: "美国-004"
-    type: vless
-    server: 162.159.130.234
+    server: 162.159.135.234
     port: 443
     uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
@@ -51,10 +23,10 @@ proxies:
     servername: snip.edgeoneai.cc.cd
     client-fingerprint: chrome
     ws-opts:
-      path: /
+      path: "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560"
       headers:
         Host: snip.edgeoneai.cc.cd
-  - name: "美国-005"
+  - name: "美国-003"
     type: vless
     server: 188.114.97.6
     port: 443
@@ -65,28 +37,56 @@ proxies:
     servername: lucasjow.us.ci
     client-fingerprint: chrome
     ws-opts:
-      path: 3
+      path: "/?TELEGRAM-TOOTFFARANGI#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"
       headers:
         Host: lucasjow.us.ci
-  - name: "美国-006"
+  - name: "德国-004"
     type: vless
-    server: news.zoom.us
-    port: 8443
-    uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+    server: 152.232.57.10
+    port: 443
+    uuid: 082f5694-9019-4110-b67b-8125dbb9bab8
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: api.videobereg.cc
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs"
+      short-id: "a8"
+  - name: "法国-005"
+    type: vless
+    server: 140.248.186.45
+    port: 443
+    uuid: XpnTeam-15
     network: ws
     udp: true
     tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: safari
+    servername: ssl.fastly.com
+    client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
-        Host: u.srilankangrill.online
-  - name: "法国-007"
+        Host: Appxdn.global.ssl.fastly.net
+  - name: "法国-006"
     type: vless
     server: 199.232.78.170
     port: 443
     uuid: XpnTeam-15
+    network: ws
+    udp: true
+    tls: true
+    servername: ssl.fastly.com
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: Appxdn.global.ssl.fastly.net
+  - name: "法国-007"
+    type: vless
+    server: 199.232.78.160
+    port: 443
+    uuid: XpnTeam-16
     network: ws
     udp: true
     tls: true
@@ -105,94 +105,12 @@ proxies:
     udp: true
     tls: true
     servername: ccc.010304.xyz
-    client-fingerprint: android
+    client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
         Host: ccc.010304.xyz
-  - name: "法国-009"
-    type: vless
-    server: 140.248.186.45
-    port: 443
-    uuid: XpnTeam-15
-    network: ws
-    udp: true
-    tls: true
-    servername: ssl.fastly.com
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: Appxdn.global.ssl.fastly.net
-  - name: "新加坡-010"
-    type: vless
-    server: 141.193.213.20
-    port: 8443
-    uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-011"
-    type: vless
-    server: 141.193.213.21
-    port: 8443
-    uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: android
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-012"
-    type: vless
-    server: 104.168.132.109
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-013"
-    type: vless
-    server: 103.232.95.178
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "美国-014"
-    type: vless
-    server: www.csgo.net
-    port: 2095
-    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-    network: ws
-    udp: true
-    tls: false
-    ws-opts:
-      path: /
-      headers:
-        Host: openapi.pure-ai.us.ci
-  - name: "美国-015"
+  - name: "美国-009"
     type: vless
     server: www.epicgames.com
     port: 2095
@@ -204,254 +122,7 @@ proxies:
       path: /
       headers:
         Host: openapi.pure-ai.us.ci
-  - name: "新加坡-016"
-    type: vless
-    server: 43.174.218.1
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-017"
-    type: vless
-    server: 103.173.179.184
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-018"
-    type: vless
-    server: 166.88.14.179
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-019"
-    type: vless
-    server: 191.223.220.250
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-020"
-    type: vless
-    server: 149.62.44.41
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-021"
-    type: vless
-    server: 103.47.186.8
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-022"
-    type: vless
-    server: 45.153.246.5
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-023"
-    type: vless
-    server: 85.113.70.10
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "德国-024"
-    type: vless
-    server: 84.32.100.149
-    port: 443
-    uuid: 244d9eab-3311-40c7-b47f-4968dc3088a6
-    network: tcp
-    udp: true
-    tls: true
-    servername: tcpde7.figurapn.ru
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ"
-      short-id: "868419504747f6de"
-  - name: "德国-025"
-    type: vless
-    server: de-allnet.onlinernet.ir
-    port: 22000
-    uuid: 16188ecf-2dcd-40d7-898b-60461f125978
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: connectivitycheck.android.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "IffRRgkO2Kn06y1prY-NT2TfW-Ezm_RBi__F_jhKoSw"
-      short-id: "1b0fa065866978d2"
-  - name: "德国-026"
-    type: vless
-    server: ger-allnet.onlinernet.ir
-    port: 22000
-    uuid: 16188ecf-2dcd-40d7-898b-60461f125978
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: connectivitycheck.android.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "IffRRgkO2Kn06y1prY-NT2TfW-Ezm_RBi__F_jhKoSw"
-      short-id: "1b0fa065866978d2"
-  - name: "新加坡-027"
-    type: vless
-    server: 5.249.255.116
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "德国-028"
-    type: vless
-    server: de3-allnet.onlinernet.ir
-    port: 22000
-    uuid: 16188ecf-2dcd-40d7-898b-60461f125978
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: connectivitycheck.android.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "IffRRgkO2Kn06y1prY-NT2TfW-Ezm_RBi__F_jhKoSw"
-      short-id: "1b0fa065866978d2"
-  - name: "荷兰-029"
-    type: vless
-    server: api.mediaplotina.cc
-    port: 443
-    uuid: 7b41c123-f351-4c2b-a8c6-3f178c0e4a25
-    network: grpc
-    udp: true
-    tls: true
-    servername: api.mediaplotina.cc
-    client-fingerprint: ios
-  - name: "新加坡-030"
-    type: vless
-    server: 37.203.209.50
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "哥伦比亚-031"
-    type: vless
-    server: 23.246.154.243
-    port: 443
-    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-    network: ws
-    udp: true
-    tls: true
-    servername: snip.edgeoneai.cc.cd
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/fdip=sstp://vpn:vpn@VPNine1-vpn-200.opengw.net:443"
-      headers:
-        Host: snip.edgeoneai.cc.cd
-  - name: "波兰-032"
-    type: vless
-    server: 45.194.66.195
-    port: 443
-    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: pl.golangwikito.cfd
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "DsTVLCehsKvfFGtNZU5leKOLTlEp28qeifHYtRKOFwg"
-      short-id: "f8b695e5c59d028c"
-  - name: "波兰-033"
-    type: vless
-    server: pl.golangwikito.cfd
-    port: 443
-    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: pl.golangwikito.cfd
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "DsTVLCehsKvfFGtNZU5leKOLTlEp28qeifHYtRKOFwg"
-      short-id: "acccaaaa9f72147d"
-  - name: "德国-034"
+  - name: "德国-010"
     type: vless
     server: api.videolaguna.cc
     port: 443
@@ -465,155 +136,7 @@ proxies:
     reality-opts:
       public-key: "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs"
       short-id: "a8"
-  - name: "德国-035"
-    type: vless
-    server: 94.103.168.125
-    port: 2087
-    uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e4c0d
-    network: ws
-    udp: true
-    tls: true
-    servername: sdcdethyerft.localip.ir
-    client-fingerprint: chrome
-    ws-opts:
-      path: /hokm
-      headers:
-        Host: sdcdethyerft.localip.ir
-  - name: "捷克-036"
-    type: vless
-    server: api.mediavolna.cc
-    port: 443
-    uuid: 082f5694-9019-4110-b67b-8125dbb9bab8
-    network: grpc
-    udp: true
-    tls: true
-    servername: api.mediavolna.cc
-    client-fingerprint: safari
-  - name: "新加坡-037"
-    type: vless
-    server: 2.26.5.200
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "波兰-038"
-    type: vless
-    server: api.mediapolyana.cc
-    port: 443
-    uuid: 082f5694-9019-4110-b67b-8125dbb9bab8
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: api.mediapolyana.cc
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs"
-      short-id: "a8"
-  - name: "荷兰-039"
-    type: vless
-    server: 46.182.24.240
-    port: 443
-    uuid: 7285eb6f-6fef-4f15-9e74-da442d0f826a
-    network: grpc
-    udp: true
-    tls: true
-    servername: max.ru
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "Ed29G1bO6isJRo8iGPm7W_9c4mVFqHUilPmDP0llJW8"
-  - name: "俄罗斯-040"
-    type: vless
-    server: 168.113.135.90
-    port: 443
-    uuid: 7c86240f-ac0c-4cfe-87c8-fa0dd69b2d25
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: m-vruvc.mvpstr.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "ZtAlhN1pU4MTmv4KaX9J_5_8KWnwy9IOnc-BLzIf234"
-      short-id: "11ac376e18d20343"
-  - name: "新加坡-041"
-    type: vless
-    server: 212.119.43.76
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-042"
-    type: vless
-    server: 103.25.202.25
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-043"
-    type: vless
-    server: 121.127.37.211
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "新加坡-044"
-    type: vless
-    server: 188.253.125.236
-    port: 443
-    uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-    network: ws
-    udp: true
-    tls: true
-    servername: u.srilankangrill.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: u.srilankangrill.online
-  - name: "俄罗斯-045"
-    type: vless
-    server: 46.243.183.2
-    port: 443
-    uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: stream.indigo.ru
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "lrbP-ePUk7nbeLS8vBLbP5yyld7ZLmTB4_VQWRO31T8"
-      short-id: "8a68df3a93c63ac8"
-  - name: "荷兰-046"
+  - name: "荷兰-011"
     type: vless
     server: sw.golangwikito.cfd
     port: 443
@@ -627,44 +150,104 @@ proxies:
     reality-opts:
       public-key: "Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg"
       short-id: "a1037b25dcef6aa7"
-  - name: "俄罗斯-047"
+  - name: "奥地利-012"
     type: vless
-    server: 90.156.218.163
+    server: api.mediakaskad.cc
     port: 443
-    uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
+    uuid: 082f5694-9019-4110-b67b-8125dbb9bab8
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: eh.vk.ru
+    servername: api.mediakaskad.cc
+    client-fingerprint: android
+    reality-opts:
+      public-key: "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs"
+      short-id: "a8"
+  - name: "波兰-013"
+    type: vless
+    server: api.mediapolyana.cc
+    port: 443
+    uuid: 082f5694-9019-4110-b67b-8125dbb9bab8
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: api.mediapolyana.cc
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs"
+      short-id: "a8"
+  - name: "波兰-014"
+    type: vless
+    server: pl.golangwikito.cfd
+    port: 443
+    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: pl.golangwikito.cfd
     client-fingerprint: edge
     reality-opts:
-      public-key: "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI"
-      short-id: "db04ce8bdb8900f1"
-  - name: "英国-048"
+      public-key: "DsTVLCehsKvfFGtNZU5leKOLTlEp28qeifHYtRKOFwg"
+      short-id: "acccaaaa9f72147d"
+  - name: "巴西-015"
     type: vless
-    server: revers.bachidze.com
+    server: 152.233.71.81
     port: 443
-    uuid: 8a9c586c-4b2c-49e5-9e78-97408bf58500
+    uuid: 741809be-e44e-000b-b411-bf66f0ae3860
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: poland.travel
+    servername: brointelengence.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: "TIKEWdxQBblFGWMQmQWserNef8P1rqJCfCLLi-KB32s"
-  - name: "荷兰-049"
+      public-key: "6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY"
+      short-id: "1c3e8241a8743df9"
+  - name: "立陶宛-016"
     type: vless
-    server: 45.91.55.86
+    server: 212.24.105.101
     port: 443
-    uuid: 9cb8d71c-fe06-4402-a591-eaa1f173b890
-    network: grpc
+    uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+    network: tcp
     udp: true
     tls: true
-    servername: ru-auto-02.10media.top
+    servername: b58e68t.lt1.h1clayd.click
     client-fingerprint: chrome
-  - name: "立陶宛-050"
+    reality-opts:
+      public-key: "MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs"
+      short-id: "2301ac8aee8bf6d4"
+  - name: "波兰-017"
+    type: vless
+    server: 45.194.66.195
+    port: 443
+    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: pl.golangwikito.cfd
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "DsTVLCehsKvfFGtNZU5leKOLTlEp28qeifHYtRKOFwg"
+      short-id: "f8b695e5c59d028c"
+  - name: "英国-018"
+    type: vless
+    server: 168.113.135.90
+    port: 443
+    uuid: 7c86240f-ac0c-4cfe-87c8-fa0dd69b2d25
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: m-vruvc.mvpstr.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "ZtAlhN1pU4MTmv4KaX9J_5_8KWnwy9IOnc-BLzIf234"
+      short-id: "11ac376e18d20343"
+  - name: "立陶宛-019"
     type: vless
     server: b58e68t.lt1.h1clayd.click
     port: 443
@@ -677,33 +260,74 @@ proxies:
     reality-opts:
       public-key: "MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs"
       short-id: "2301ac8aee8bf6d4"
-  - name: "立陶宛-051"
+  - name: "美国-020"
     type: vless
-    server: 212.24.105.101
-    port: 443
-    uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-    network: tcp
-    udp: true
-    tls: true
-    servername: b58e68t.lt1.h1clayd.click
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs"
-      short-id: "2301ac8aee8bf6d4"
-  - name: "奥地利-052"
-    type: vless
-    server: api.mediakaskad.cc
-    port: 443
-    uuid: 082f5694-9019-4110-b67b-8125dbb9bab8
+    server: funagfrdfs.alixxplay.com
+    port: 34379
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: api.mediakaskad.cc
-    client-fingerprint: qq
+    servername: us1p1.xn--ghq880n3na965a.com
+    client-fingerprint: chrome
     reality-opts:
-      public-key: "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs"
-      short-id: "a8"
+      public-key: "KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA"
+      short-id: "e51285e3"
+  - name: "美国-021"
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 47672
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: us1p1.xn--ghq880n3na965a.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "tBvlo8F8hKRXSK-EHRAfzEH-x3e4uvheGloO-9bPKx4"
+      short-id: "70ab6d813e"
+  - name: "新加坡-022"
+    type: vless
+    server: 45.132.75.213
+    port: 2053
+    uuid: f46182d1-e13b-47d3-97e2-fa5426a93e7c
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "TpWeZocgNOygOhMo0l7oJawPu7STkn9D-SOa0UppcyY"
+      short-id: "cd7e85995ae2afc9"
+  - name: "芬兰-023"
+    type: vless
+    server: 36a466g.fi1.h1clayd.click
+    port: 443
+    uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
+    network: grpc
+    udp: true
+    tls: true
+    servername: 36a466g.fi1.h1clayd.click
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg"
+      short-id: "b3c9d0c6bdd114a6"
+  - name: "英国-024"
+    type: vless
+    server: 31.76.227.60
+    port: 443
+    uuid: 05c8eabe-96af-4db2-bb2f-a24fa84344ba
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: assets-mi-29.spbstudentlife.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "CcMEJ-JOS4clB3gXbc6wXgzkiJQbyNpKY90I8B6AqyU"
+      short-id: "4c188683e2c14a3c"
 
 proxy-groups:
   - name: Auto
@@ -712,114 +336,58 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "哥伦比亚-001"
+      - "美国-001"
       - "美国-002"
       - "美国-003"
-      - "美国-004"
-      - "美国-005"
-      - "美国-006"
+      - "德国-004"
+      - "法国-005"
+      - "法国-006"
       - "法国-007"
       - "其他-008"
-      - "法国-009"
-      - "新加坡-010"
-      - "新加坡-011"
-      - "新加坡-012"
-      - "新加坡-013"
-      - "美国-014"
-      - "美国-015"
-      - "新加坡-016"
-      - "新加坡-017"
-      - "新加坡-018"
-      - "新加坡-019"
-      - "新加坡-020"
-      - "新加坡-021"
+      - "美国-009"
+      - "德国-010"
+      - "荷兰-011"
+      - "奥地利-012"
+      - "波兰-013"
+      - "波兰-014"
+      - "巴西-015"
+      - "立陶宛-016"
+      - "波兰-017"
+      - "英国-018"
+      - "立陶宛-019"
+      - "美国-020"
+      - "美国-021"
       - "新加坡-022"
-      - "新加坡-023"
-      - "德国-024"
-      - "德国-025"
-      - "德国-026"
-      - "新加坡-027"
-      - "德国-028"
-      - "荷兰-029"
-      - "新加坡-030"
-      - "哥伦比亚-031"
-      - "波兰-032"
-      - "波兰-033"
-      - "德国-034"
-      - "德国-035"
-      - "捷克-036"
-      - "新加坡-037"
-      - "波兰-038"
-      - "荷兰-039"
-      - "俄罗斯-040"
-      - "新加坡-041"
-      - "新加坡-042"
-      - "新加坡-043"
-      - "新加坡-044"
-      - "俄罗斯-045"
-      - "荷兰-046"
-      - "俄罗斯-047"
-      - "英国-048"
-      - "荷兰-049"
-      - "立陶宛-050"
-      - "立陶宛-051"
-      - "奥地利-052"
+      - "芬兰-023"
+      - "英国-024"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "哥伦比亚-001"
+      - "美国-001"
       - "美国-002"
       - "美国-003"
-      - "美国-004"
-      - "美国-005"
-      - "美国-006"
+      - "德国-004"
+      - "法国-005"
+      - "法国-006"
       - "法国-007"
       - "其他-008"
-      - "法国-009"
-      - "新加坡-010"
-      - "新加坡-011"
-      - "新加坡-012"
-      - "新加坡-013"
-      - "美国-014"
-      - "美国-015"
-      - "新加坡-016"
-      - "新加坡-017"
-      - "新加坡-018"
-      - "新加坡-019"
-      - "新加坡-020"
-      - "新加坡-021"
+      - "美国-009"
+      - "德国-010"
+      - "荷兰-011"
+      - "奥地利-012"
+      - "波兰-013"
+      - "波兰-014"
+      - "巴西-015"
+      - "立陶宛-016"
+      - "波兰-017"
+      - "英国-018"
+      - "立陶宛-019"
+      - "美国-020"
+      - "美国-021"
       - "新加坡-022"
-      - "新加坡-023"
-      - "德国-024"
-      - "德国-025"
-      - "德国-026"
-      - "新加坡-027"
-      - "德国-028"
-      - "荷兰-029"
-      - "新加坡-030"
-      - "哥伦比亚-031"
-      - "波兰-032"
-      - "波兰-033"
-      - "德国-034"
-      - "德国-035"
-      - "捷克-036"
-      - "新加坡-037"
-      - "波兰-038"
-      - "荷兰-039"
-      - "俄罗斯-040"
-      - "新加坡-041"
-      - "新加坡-042"
-      - "新加坡-043"
-      - "新加坡-044"
-      - "俄罗斯-045"
-      - "荷兰-046"
-      - "俄罗斯-047"
-      - "英国-048"
-      - "荷兰-049"
-      - "立陶宛-050"
-      - "立陶宛-051"
-      - "奥地利-052"
+      - "芬兰-023"
+      - "英国-024"
 
 rules:
   - MATCH,Proxy
