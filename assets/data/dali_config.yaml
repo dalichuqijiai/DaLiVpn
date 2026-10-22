@@ -1,19 +1,5 @@
 proxies:
-  - name: "美国-001"
-    type: vless
-    server: 104.19.45.195
-    port: 443
-    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-    network: ws
-    udp: true
-    tls: true
-    servername: snip.edgeoneai.cc.cd
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?TELEGRAM-TOOTFFARANGI
-      headers:
-        Host: snip.edgeoneai.cc.cd
-  - name: "法国-002"
+  - name: "法国-001"
     type: vless
     server: 140.248.186.45
     port: 443
@@ -27,23 +13,9 @@ proxies:
       path: /
       headers:
         Host: Appxdn.global.ssl.fastly.net
-  - name: "法国-003"
+  - name: "美国-002"
     type: vless
-    server: 199.232.78.160
-    port: 443
-    uuid: XpnTeam-35
-    network: ws
-    udp: true
-    tls: true
-    servername: ssl.fastly.com
-    client-fingerprint: android
-    ws-opts:
-      path: /
-      headers:
-        Host: Appxdn.global.ssl.fastly.net
-  - name: "美国-004"
-    type: vless
-    server: 104.17.3.81
+    server: www.speedtest.net
     port: 443
     uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
@@ -52,38 +24,10 @@ proxies:
     servername: snip.edgeoneai.cc.cd
     client-fingerprint: chrome
     ws-opts:
-      path: "/fdip#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560"
+      path: "/fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560#Telegram---bored_vpn"
       headers:
         Host: snip.edgeoneai.cc.cd
-  - name: "其他-005"
-    type: vless
-    server: 188.164.248.216
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: android
-    ws-opts:
-      path: /
-      headers:
-        Host: ccc.010304.xyz
-  - name: "新加坡-006"
-    type: vless
-    server: 141.193.213.20
-    port: 8443
-    uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-    network: ws
-    udp: true
-    tls: true
-    servername: speed.dulacloud.store
-    client-fingerprint: android
-    ws-opts:
-      path: /dula
-      headers:
-        Host: speed.dulacloud.store
-  - name: "其他-007"
+  - name: "芬兰-003"
     type: vless
     server: 8.6.112.0
     port: 443
@@ -97,21 +41,37 @@ proxies:
       path: /mky-ws-4f19c8a7
       headers:
         Host: fi1.merky.one
-  - name: "德国-008"
+  - name: "新加坡-004"
     type: vless
-    server: uiuxtestsdcv-development-r6dg9.lucity.app
-    port: 443
-    uuid: 58b06206-cd53-23d6-279a-0f0dd259cb0a
+    server: 141.193.213.20
+    port: 8443
+    uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
     network: ws
     udp: true
     tls: true
-    servername: uiuxtestsdcv-development-r6dg9.lucity.app
+    servername: speed.dulacloud.store
     client-fingerprint: android
     ws-opts:
-      path: /ws/58b06206-cd53-23d6-279a-0f0dd259cb0a
-  - name: "美国-009"
+      path: /dula
+      headers:
+        Host: speed.dulacloud.store
+  - name: "其他-005"
     type: vless
-    server: 162.35.169.69
+    server: 188.164.248.216
+    port: 443
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
+    udp: true
+    tls: true
+    servername: ccc.010304.xyz
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: ccc.010304.xyz
+  - name: "美国-006"
+    type: vless
+    server: 104.18.33.121
     port: 443
     uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
@@ -119,12 +79,95 @@ proxies:
     tls: true
     servername: snip.edgeoneai.cc.cd
     ws-opts:
-      path: /fp=chromefp=chrome
+      path: /fp=chrome
       headers:
         Host: snip.edgeoneai.cc.cd
-  - name: "哥伦比亚-010"
+  - name: "美国-007"
     type: vless
-    server: 185.208.172.85
+    server: 162.159.130.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    udp: true
+    tls: true
+    servername: snip.edgeoneai.cc.cd
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560"
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "澳大利亚-008"
+    type: vless
+    server: 117.55.232.3
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    udp: true
+    tls: true
+    servername: snip.edgeoneai.cc.cd
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "美国-009"
+    type: vless
+    server: 162.35.127.65
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    udp: true
+    tls: true
+    servername: snip.edgeoneai.cc.cd
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "澳大利亚-010"
+    type: vless
+    server: 203.88.117.190
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    udp: true
+    tls: true
+    servername: snip.edgeoneai.cc.cd
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "日本-011"
+    type: vless
+    server: 60.130.209.253
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    udp: true
+    tls: true
+    servername: snip.edgeoneai.cc.cd
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "哥伦比亚-012"
+    type: vless
+    server: 185.71.230.237
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    udp: true
+    tls: true
+    servername: snip.edgeoneai.cc.cd
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "英国-013"
+    type: vless
+    server: 2.28.42.209
     port: 8443
     uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
@@ -136,9 +179,23 @@ proxies:
       path: "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome"
       headers:
         Host: snip.edgeoneai.cc.cd
-  - name: "美国-011"
+  - name: "哥伦比亚-014"
     type: vless
-    server: 152.67.41.217
+    server: 104.245.245.16
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    udp: true
+    tls: true
+    servername: snip.edgeoneai.cc.cd
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "美国-015"
+    type: vless
+    server: 13.140.29.45
     port: 443
     uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
@@ -150,63 +207,24 @@ proxies:
       path: /
       headers:
         Host: snip.edgeoneai.cc.cd
-  - name: "德国-012"
+  - name: "美国-016"
     type: vless
-    server: 212.60.4.134
-    port: 443
-    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-    network: ws
-    udp: true
-    tls: true
-    servername: snip.edgeoneai.cc.cd
-    ws-opts:
-      path: "/fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome"
-      headers:
-        Host: snip.edgeoneai.cc.cd
-  - name: "乌克兰-013"
-    type: vless
-    server: 213.111.177.107
-    port: 443
-    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-    network: ws
-    udp: true
-    tls: true
-    servername: snip.edgeoneai.cc.cd
-    ws-opts:
-      path: /fp=chrome
-      headers:
-        Host: snip.edgeoneai.cc.cd
-  - name: "保加利亚-014"
-    type: vless
-    server: 83.219.97.18
-    port: 443
-    uuid: fe551942-d6e5-4361-ae5c-1f2e9077cd79
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: fi5.silalink.sbs
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "32XFmS-ifqooBFY89KNP3ZrqgSBOd3vel9GlNinL6yw"
-      short-id: "03"
-  - name: "德国-015"
-    type: vless
-    server: 77.95.206.236
-    port: 64563
-    uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
-    network: grpc
-    udp: true
-    tls: true
-    servername: www.starlink.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "wtTHheIAfyG6Sis8_GC5aHW06QPs9K-LwTqZ15NHX2M"
-      short-id: "04bc4a55875f"
-  - name: "香港-016"
-    type: vless
-    server: 103.39.78.118
+    server: 144.31.181.177
     port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    udp: true
+    tls: true
+    servername: snip.edgeoneai.cc.cd
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "日本-017"
+    type: vless
+    server: 43.174.195.1
+    port: 443
     uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
     network: ws
     udp: true
@@ -217,101 +235,129 @@ proxies:
       path: "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443"
       headers:
         Host: snip.edgeoneai.cc.cd
-  - name: "新加坡-017"
+  - name: "德国-018"
+    type: vless
+    server: 62.152.58.90
+    port: 443
+    uuid: 1bb2af63-4472-44ed-9c70-8f316258b68b
+    network: grpc
+    udp: true
+    tls: true
+    servername: 360.yandex.ru
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k"
+      short-id: "27e53bbcab7593d7"
+  - name: "美国-019"
+    type: vless
+    server: 168.113.171.57
+    port: 443
+    uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: moscow.eosapp.net
+    client-fingerprint: android
+    reality-opts:
+      public-key: "Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU"
+  - name: "俄罗斯-020"
+    type: vless
+    server: 194.55.166.65
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    udp: true
+    tls: true
+    servername: snip.edgeoneai.cc.cd
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "英国-021"
+    type: vless
+    server: 193.36.95.34
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    udp: true
+    tls: true
+    servername: snip.edgeoneai.cc.cd
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "哥伦比亚-022"
+    type: vless
+    server: 103.161.179.171
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    udp: true
+    tls: true
+    servername: snip.edgeoneai.cc.cd
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+  - name: "俄罗斯-023"
+    type: vless
+    server: cdn2.rucdncomp.pro
+    port: 443
+    uuid: 21ffcccd-8fbe-43fb-9dd1-24452fdfa8ad
+    network: ws
+    udp: true
+    tls: true
+    servername: cdn2.rucdncomp.pro
+    client-fingerprint: chrome
+    ws-opts:
+      path: /static/events/27f78b054c54/
+      headers:
+        Host: cdn2.rucdncomp.pro
+  - name: "俄罗斯-024"
+    type: vless
+    server: 78.17.178.125
+    port: 443
+    uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: cdn.tbank.ru
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE"
+      short-id: "e0215064d8d1fd7c"
+  - name: "美国-025"
     type: vless
     server: funagfrdfs.alixxplay.com
-    port: 46105
+    port: 34379
     uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: www.lamer.com.sg
+    servername: us1p1.xn--ghq880n3na965a.com
     client-fingerprint: chrome
     reality-opts:
-      public-key: "Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik"
-      short-id: "28f5c1f8f98a"
-  - name: "越南-018"
+      public-key: "KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA"
+      short-id: "e51285e3"
+  - name: "美国-026"
     type: vless
-    server: 103.199.19.132
-    port: 8443
-    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-    network: ws
-    udp: true
-    tls: true
-    servername: snip.edgeoneai.cc.cd
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443"
-      headers:
-        Host: snip.edgeoneai.cc.cd
-  - name: "香港-019"
-    type: vless
-    server: 103.143.81.178
-    port: 443
-    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-    network: ws
-    udp: true
-    tls: true
-    servername: snip.edgeoneai.cc.cd
-    ws-opts:
-      path: /fp=chrome
-      headers:
-        Host: snip.edgeoneai.cc.cd
-  - name: "韩国-020"
-    type: vless
-    server: 123.111.169.70
-    port: 443
-    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-    network: ws
-    udp: true
-    tls: true
-    servername: snip.edgeoneai.cc.cd
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: snip.edgeoneai.cc.cd
-  - name: "挪威-021"
-    type: vless
-    server: pl1.h1cloud.net
-    port: 27591
-    uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+    server: funagfrdfs.alixxplay.com
+    port: 30892
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
     network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: www.samsung.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM"
-      short-id: "6c5c7900406a1ae7"
-  - name: "美国-022"
-    type: vless
-    server: 45.61.149.205
-    port: 8443
-    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-    network: ws
-    udp: true
-    tls: true
-    servername: snip.edgeoneai.cc.cd
+    servername: us1p1.xn--ghq880n3na965a.com
     client-fingerprint: chrome
-    ws-opts:
-      path: "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443"
-      headers:
-        Host: snip.edgeoneai.cc.cd
-  - name: "美国-023"
-    type: vless
-    server: 128.1.186.61
-    port: 443
-    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-    network: ws
-    udp: true
-    tls: true
-    servername: snip.edgeoneai.cc.cd
-    ws-opts:
-      path: /fp=chrome
-      headers:
-        Host: snip.edgeoneai.cc.cd
+    reality-opts:
+      public-key: "YinI5MijeZpRatg6QNDvP0qXEif-6VHC6gV5yoji4i4"
+      short-id: "3d31326f95"
 
 proxy-groups:
   - name: Auto
@@ -320,56 +366,62 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "美国-001"
-      - "法国-002"
-      - "法国-003"
-      - "美国-004"
+      - "法国-001"
+      - "美国-002"
+      - "芬兰-003"
+      - "新加坡-004"
       - "其他-005"
-      - "新加坡-006"
-      - "其他-007"
-      - "德国-008"
+      - "美国-006"
+      - "美国-007"
+      - "澳大利亚-008"
       - "美国-009"
-      - "哥伦比亚-010"
-      - "美国-011"
-      - "德国-012"
-      - "乌克兰-013"
-      - "保加利亚-014"
-      - "德国-015"
-      - "香港-016"
-      - "新加坡-017"
-      - "越南-018"
-      - "香港-019"
-      - "韩国-020"
-      - "挪威-021"
-      - "美国-022"
-      - "美国-023"
+      - "澳大利亚-010"
+      - "日本-011"
+      - "哥伦比亚-012"
+      - "英国-013"
+      - "哥伦比亚-014"
+      - "美国-015"
+      - "美国-016"
+      - "日本-017"
+      - "德国-018"
+      - "美国-019"
+      - "俄罗斯-020"
+      - "英国-021"
+      - "哥伦比亚-022"
+      - "俄罗斯-023"
+      - "俄罗斯-024"
+      - "美国-025"
+      - "美国-026"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "美国-001"
-      - "法国-002"
-      - "法国-003"
-      - "美国-004"
+      - "法国-001"
+      - "美国-002"
+      - "芬兰-003"
+      - "新加坡-004"
       - "其他-005"
-      - "新加坡-006"
-      - "其他-007"
-      - "德国-008"
+      - "美国-006"
+      - "美国-007"
+      - "澳大利亚-008"
       - "美国-009"
-      - "哥伦比亚-010"
-      - "美国-011"
-      - "德国-012"
-      - "乌克兰-013"
-      - "保加利亚-014"
-      - "德国-015"
-      - "香港-016"
-      - "新加坡-017"
-      - "越南-018"
-      - "香港-019"
-      - "韩国-020"
-      - "挪威-021"
-      - "美国-022"
-      - "美国-023"
+      - "澳大利亚-010"
+      - "日本-011"
+      - "哥伦比亚-012"
+      - "英国-013"
+      - "哥伦比亚-014"
+      - "美国-015"
+      - "美国-016"
+      - "日本-017"
+      - "德国-018"
+      - "美国-019"
+      - "俄罗斯-020"
+      - "英国-021"
+      - "哥伦比亚-022"
+      - "俄罗斯-023"
+      - "俄罗斯-024"
+      - "美国-025"
+      - "美国-026"
 
 rules:
   - MATCH,Proxy
