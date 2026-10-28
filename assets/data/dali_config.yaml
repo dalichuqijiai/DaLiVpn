@@ -1,32 +1,6 @@
 proxies:
   - name: "美国-001"
     type: vless
-    server: ld.235231.xyz
-    port: 443
-    uuid: 65d3f9b3-d289-4a8e-9c87-90bba156de30
-    network: ws
-    udp: true
-    tls: true
-    servername: ld.235231.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-  - name: "美国-002"
-    type: vless
-    server: 104.21.221.158
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /fp=chrome
-      headers:
-        Host: ccc.010304.xyz
-  - name: "美国-003"
-    type: vless
     server: support.zoom.us
     port: 443
     uuid: 22c2c689-767c-4042-a40a-a4189a6afd04
@@ -39,7 +13,7 @@ proxies:
       path: /whatever/vless
       headers:
         Host: support.zoom.us.sg4.zidstore.net
-  - name: "其他-004"
+  - name: "其他-002"
     type: vless
     server: 188.164.248.216
     port: 443
@@ -53,49 +27,35 @@ proxies:
       path: /
       headers:
         Host: ccc.010304.xyz
-  - name: "法国-005"
+  - name: "德国-003"
     type: vless
-    server: 199.232.78.160
+    server: 94.26.41.47
     port: 443
-    uuid: XpnTeam-59
+    uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ded.bsh-net.ru
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "eGTeI8aqjoea2v_vEHimFxEuC1IA42r2tg7IcP5oq1U"
+      short-id: "8e72c89e1adf4dc4"
+  - name: "荷兰-004"
+    type: vless
+    server: 185.86.145.183
+    port: 443
+    uuid: 872a2c34-23f4-4dc8-89c8-79e8817415c5
     network: ws
     udp: true
     tls: true
-    servername: ssl.fastly.com
+    servername: cdns2.wyre-file.ru
     client-fingerprint: android
     ws-opts:
-      path: /
+      path: /nl7ws
       headers:
-        Host: Appxdn.global.ssl.fastly.net
-  - name: "德国-006"
-    type: vless
-    server: de8ddk.vault-connect.online
-    port: 443
-    uuid: 9420ba04-6647-4c95-96f1-a9e094b922ed
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: de8ddk.vault-connect.online
-    client-fingerprint: android
-    reality-opts:
-      public-key: "570bJ-qVwDZinvel-Vj3tDk3-iExm3KdnT-nGT3TbXI"
-      short-id: "cfdb5828734a"
-  - name: "美国-007"
-    type: vless
-    server: sw.golangwikito.cfd
-    port: 443
-    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: sw.golangwikito.cfd
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg"
-      short-id: "a1037b25dcef6aa7"
-  - name: "其他-008"
+        Host: cdns2.wyre-file.ru
+  - name: "其他-005"
     type: vless
     server: 43.174.193.1
     port: 443
@@ -104,65 +64,12 @@ proxies:
     udp: true
     tls: true
     servername: ccc.010304.xyz
-    client-fingerprint: chrome
+    client-fingerprint: ios
     ws-opts:
-      path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+      path: /
       headers:
         Host: ccc.010304.xyz
-  - name: "美国-009"
-    type: vless
-    server: b6a968g.fi7.h1clayd.click
-    port: 443
-    uuid: fafc7c16-f890-45ee-a856-02df225172dd
-    network: grpc
-    udp: true
-    tls: true
-    servername: b6a968g.fi7.h1clayd.click
-    client-fingerprint: android
-    reality-opts:
-      public-key: "cO9GB66W4U7X6WR5LWL-mtwktwr2sOJ_RgTN7vYQojM"
-      short-id: "52970fb14e7248e6"
-  - name: "美国-010"
-    type: vless
-    server: d0dc94t.fi7.h1clayd.click
-    port: 443
-    uuid: fafc7c16-f890-45ee-a856-02df225172dd
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: d0dc94t.fi7.h1clayd.click
-    client-fingerprint: android
-    reality-opts:
-      public-key: "x9MHoriLB8T-vHaoM5LQTbSzaaWlNpZg6rEdM75QgRg"
-      short-id: "3688e172d5b59457"
-  - name: "俄罗斯-011"
-    type: vless
-    server: 81.222.148.104
-    port: 443
-    uuid: f439e4fe-139b-4882-ad8b-a16176d09c88
-    network: tcp
-    udp: true
-    tls: true
-    servername: eu53.cdn77.icu
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8"
-      short-id: "1ed136481e0ede74"
-  - name: "俄罗斯-012"
-    type: vless
-    server: 78.153.136.15
-    port: 443
-    uuid: f439e4fe-139b-4882-ad8b-a16176d09c88
-    network: tcp
-    udp: true
-    tls: true
-    servername: eu53.cdn77.icu
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8"
-      short-id: "1ed136481e0ede74"
-  - name: "法国-013"
+  - name: "法国-006"
     type: vless
     server: tau1.freerunet.online
     port: 443
@@ -172,90 +79,72 @@ proxies:
     udp: true
     tls: true
     servername: tau1.freerunet.online
-    client-fingerprint: android
+    client-fingerprint: firefox
     reality-opts:
       public-key: "l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg"
       short-id: "4a7b1c8d"
-  - name: "俄罗斯-014"
+  - name: "俄罗斯-007"
     type: vless
-    server: 46.8.43.125
+    server: ru16.oshost.network
     port: 443
-    uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
+    uuid: afbd410e-1663-4f40-9d3b-df5117aa23ca
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ru16.oshost.network
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "X9ghpQ7c1lgpEQjAcgx4K9eYs83PC9t9Uy6WHZvSsQY"
+      short-id: "2181f7d4104207e4"
+  - name: "美国-008"
+    type: vless
+    server: ph001.zestapp778.com
+    port: 15656
+    uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
     network: tcp
     udp: true
     tls: true
-    servername: kz-central.v8x2b.lol
+    servername: ph001.zestapp778.com
     client-fingerprint: chrome
-    reality-opts:
-      public-key: "ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w"
-  - name: "荷兰-015"
+  - name: "荷兰-009"
     type: vless
-    server: fr.golangwikito.cfd
+    server: sw.golangwikito.cfd
     port: 443
     uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: fr.golangwikito.cfd
-    client-fingerprint: android
+    servername: sw.golangwikito.cfd
+    client-fingerprint: edge
     reality-opts:
-      public-key: "isYQuhKDrgc7IQ7G0LHywFnt57wffrkZ-er18DkVsBA"
-      short-id: "e6d589857d1cec5e"
-  - name: "美国-016"
+      public-key: "Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg"
+      short-id: "a1037b25dcef6aa7"
+  - name: "新加坡-010"
     type: vless
-    server: f36f5ft.us4.h1clayd.click
-    port: 443
-    uuid: 5a519754-a673-4462-83f6-5eb25d2af141
+    server: 140.235.11.243
+    port: 56984
+    uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
     network: tcp
     udp: true
     tls: true
-    servername: f36f5ft.us4.h1clayd.click
+    servername: sg1.zestapp778.com
+    client-fingerprint: edge
+  - name: "俄罗斯-011"
+    type: vless
+    server: 78.17.178.125
+    port: 443
+    uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: cdn.tbank.ru
     client-fingerprint: chrome
     reality-opts:
-      public-key: "5KZVzOFqMgdL47--JzLlg5HmPlAYp-cmQsXxkTXngS0"
-      short-id: "8d50d3a4df71468c"
-  - name: "美国-017"
-    type: vless
-    server: finlandlanzarotte.live
-    port: 443
-    uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: finlandlanzarotte.live
-    client-fingerprint: android
-    reality-opts:
-      public-key: "6lZ5dkQN2sH9tYca374W4N1n9eCanD_F2FfghcksKSo"
-  - name: "美国-018"
-    type: vless
-    server: 216.167.126.97
-    port: 443
-    uuid: e5c3d067-7a15-4977-90c0-7e0f6e896a09
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "yFvOpugh65xKQNAwKrhitv4d2pflD8QwNFMj-jDOmT8"
-      short-id: "0123456789abcdef"
-  - name: "美国-019"
-    type: vless
-    server: 201.58.181.231
-    port: 2053
-    uuid: fafc7c16-f890-45ee-a856-02df225172dd
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: ya.ru
-    client-fingerprint: android
-    reality-opts:
-      public-key: "MNiFXYg5jUmPSGK799ApRlrPR1CV8QflX85dDakOzRg"
-      short-id: "cc91595f8222fda2"
+      public-key: "jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE"
+      short-id: "e0215064d8d1fd7c"
 
 proxy-groups:
   - name: Auto
@@ -265,47 +154,31 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "美国-001"
-      - "美国-002"
-      - "美国-003"
-      - "其他-004"
-      - "法国-005"
-      - "德国-006"
-      - "美国-007"
-      - "其他-008"
-      - "美国-009"
-      - "美国-010"
+      - "其他-002"
+      - "德国-003"
+      - "荷兰-004"
+      - "其他-005"
+      - "法国-006"
+      - "俄罗斯-007"
+      - "美国-008"
+      - "荷兰-009"
+      - "新加坡-010"
       - "俄罗斯-011"
-      - "俄罗斯-012"
-      - "法国-013"
-      - "俄罗斯-014"
-      - "荷兰-015"
-      - "美国-016"
-      - "美国-017"
-      - "美国-018"
-      - "美国-019"
   - name: Proxy
     type: select
     proxies:
       - Auto
       - "美国-001"
-      - "美国-002"
-      - "美国-003"
-      - "其他-004"
-      - "法国-005"
-      - "德国-006"
-      - "美国-007"
-      - "其他-008"
-      - "美国-009"
-      - "美国-010"
+      - "其他-002"
+      - "德国-003"
+      - "荷兰-004"
+      - "其他-005"
+      - "法国-006"
+      - "俄罗斯-007"
+      - "美国-008"
+      - "荷兰-009"
+      - "新加坡-010"
       - "俄罗斯-011"
-      - "俄罗斯-012"
-      - "法国-013"
-      - "俄罗斯-014"
-      - "荷兰-015"
-      - "美国-016"
-      - "美国-017"
-      - "美国-018"
-      - "美国-019"
 
 rules:
   - MATCH,Proxy
