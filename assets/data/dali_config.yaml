@@ -1,20 +1,6 @@
 proxies:
   - name: "美国-001"
     type: vless
-    server: bounded-crammed.video-streams.org
-    port: 443
-    uuid: 48f09fbe-7a6e-43d2-99a3-304c943f3bb4
-    network: ws
-    udp: true
-    tls: true
-    servername: bounded-crammed.video-streams.org
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ws
-      headers:
-        Host: bounded-crammed.video-streams.org
-  - name: "美国-002"
-    type: vless
     server: news.zoom.us
     port: 2083
     uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
@@ -27,77 +13,35 @@ proxies:
       path: /
       headers:
         Host: site.check-looks.space
-  - name: "美国-003"
+  - name: "美国-002"
     type: vless
-    server: 104.19.90.35
+    server: 162.159.153.4
     port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
+    uuid: f2a73750-3087-48ff-a763-1348c15dce68
     network: ws
     udp: true
     tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-      headers:
-        Host: ccc.010304.xyz
-  - name: "美国-004"
-    type: vless
-    server: 104.17.245.250
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
+    servername: rAyAn-007.mAxImA.DpDnS.OrG
     client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
-        Host: ccc.010304.xyz
-  - name: "美国-005"
-    type: vless
-    server: 104.16.10.185
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: chrome
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "其他-006"
-    type: vless
-    server: 43.174.193.1
-    port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
-    udp: true
-    tls: true
-    servername: ccc.010304.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-      headers:
-        Host: ccc.010304.xyz
-  - name: "法国-007"
+        Host: rAyAn-007.mAxImA.DpDnS.OrG
+  - name: "法国-003"
     type: vless
     server: 199.232.78.170
     port: 443
-    uuid: XpnTeam-80
+    uuid: XpnTeam-81
     network: ws
     udp: true
     tls: true
-    servername: ssl.fastly.com
+    servername: "http://global.fastly.com"
     client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
         Host: Appxdn.global.ssl.fastly.net
-  - name: "德国-008"
+  - name: "德国-004"
     type: vless
     server: 141.193.213.21
     port: 2083
@@ -106,26 +50,12 @@ proxies:
     udp: true
     tls: true
     servername: site.check-looks.space
-    client-fingerprint: chrome
+    client-fingerprint: android
     ws-opts:
       path: /
       headers:
         Host: site.check-looks.space
-  - name: "德国-009"
-    type: vless
-    server: 199.232.78.160
-    port: 443
-    uuid: XpnTeam-79
-    network: ws
-    udp: true
-    tls: true
-    servername: default.ssl.fastly.net
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: Appxdn.global.ssl.fastly.net
-  - name: "德国-010"
+  - name: "美国-005"
     type: vless
     server: 143.246.62.134
     port: 443
@@ -139,77 +69,35 @@ proxies:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "美国-011"
+  - name: "德国-006"
     type: vless
-    server: 43.173.75.30
-    port: 8443
-    uuid: 211d03a1-36e9-40e7-8b5e-f9dac6997f05
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.apple.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "ftbEBjykrVrMuhJrZvVVMu7A_YLyIJXXlWEnXDK7VFM"
-      short-id: "ed7720aa510154f5"
-  - name: "美国-012"
-    type: vless
-    server: pq.us06.yydjc.top
+    server: 213.145.72.93
     port: 443
-    uuid: 1e2b6632-576e-4592-821d-74415ca6fb68
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: iosapps.itunes.apple.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "GRpUsIrhrxRKshbSbWFs1YmTyWzhTQXjAyjpRIFo1zs"
-      short-id: "beadc711"
-  - name: "其他-013"
-    type: vless
-    server: 212.43.156.201
-    port: 8444
-    uuid: 35c9f200-7520-4005-b78e-f8a2fb9f68f7
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
     network: ws
     udp: true
     tls: true
-    servername: nl17.meshbeat.online
+    servername: xy1ej.stream-node-us.danfeng.qzz.io
     client-fingerprint: chrome
     ws-opts:
-      path: /api/v1/devices/e6a59ebbfc/telemetry
+      path: /danfeng?ed=2560
       headers:
-        Host: nl17.meshbeat.online
-  - name: "德国-014"
+        Host: xy1ej.stream-node-us.danfeng.qzz.io
+  - name: "荷兰-007"
     type: vless
-    server: 130.49.177.193
-    port: 443
-    uuid: 727a9178-d7f0-4142-8205-b0d19959ded0
-    network: tcp
-    flow: xtls-rprx-vision
+    server: 95.142.32.42
+    port: 8444
+    uuid: a8321cfe-39a2-48a0-a918-f01f7d9006ed
+    network: ws
     udp: true
     tls: true
-    servername: de-2.ffpn.pro
+    servername: nl18.meshbeat.online
     client-fingerprint: chrome
-    reality-opts:
-      public-key: "DCpi9-1rSXxBnEIAQ9U3mTqHivk7vHJRV_T2pWw5vCc"
-      short-id: "681fc2dd643bc2f3"
-  - name: "德国-015"
-    type: vless
-    server: sw.golangwikito.cfd
-    port: 443
-    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: sw.golangwikito.cfd
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg"
-      short-id: "a1037b25dcef6aa7"
-  - name: "德国-016"
+    ws-opts:
+      path: /api/v1/devices/86f81c4330/telemetry
+      headers:
+        Host: nl18.meshbeat.online
+  - name: "德国-008"
     type: vless
     server: 47.245.134.84
     port: 443
@@ -223,7 +111,7 @@ proxies:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-017"
+  - name: "德国-009"
     type: vless
     server: 47.245.139.226
     port: 443
@@ -237,62 +125,21 @@ proxies:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "美国-018"
+  - name: "其他-010"
     type: vless
-    server: swidenafterlanzerotte.space
+    server: 43.174.193.1
     port: 443
-    uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-    network: tcp
-    flow: xtls-rprx-vision
+    uuid: d342d11e-d224-4463-b982-532309285094
+    network: ws
     udp: true
     tls: true
-    servername: swidenafterlanzerotte.space
+    servername: ccc.010304.xyz
     client-fingerprint: chrome
-    reality-opts:
-      public-key: "MQrvfivvEfLGzDee7h0j5uC-DwaD_38_NXOY9-NhqxM"
-  - name: "美国-019"
-    type: vless
-    server: mhzedir.qzz.io
-    port: 2059
-    uuid: 8373f47d-5059-4ef5-90a6-aaff48572dd7
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: dns.resolver.quad9.net
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "R2iGvGK6SSncoLARMZHWZ4_p8XAmjGf0mxvbFfw6Rm0"
-      short-id: "0217548b15"
-  - name: "土耳其-020"
-    type: vless
-    server: 185.95.164.150
-    port: 443
-    uuid: 53154bc7-0409-4f8c-9873-29adad85fab5
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.apple.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "LnisQq4C_Z-c2atyogsViBwBntRXH7LZhxC1RccGXH4"
-      short-id: "1db18aa1"
-  - name: "其他-021"
-    type: vless
-    server: 201.51.29.153
-    port: 443
-    uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: db-23.topp-con.xyz
-    client-fingerprint: edge
-    reality-opts:
-      public-key: "Elmq7GhYEGaiujWnLYeK3HidTkZV6JYH-aYJXBG9iwc"
-      short-id: "20b37477b1d93f7e"
-  - name: "德国-022"
+    ws-opts:
+      path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+      headers:
+        Host: ccc.010304.xyz
+  - name: "韩国-011"
     type: vless
     server: 119.28.150.233
     port: 443
@@ -306,23 +153,9 @@ proxies:
       path: /danfeng?ed=2560
       headers:
         Host: t5pmr.mail-node.gfw.kdns.fr
-  - name: "德国-023"
+  - name: "德国-012"
     type: vless
-    server: 43.155.165.247
-    port: 443
-    uuid: 26524cce-d514-4014-a426-365fb266a14d
-    network: ws
-    udp: true
-    tls: true
-    servername: xy1ej.stream-node-us.danfeng.qzz.io
-    client-fingerprint: qq
-    ws-opts:
-      path: /danfeng?ed=2560
-      headers:
-        Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-024"
-    type: vless
-    server: 43.135.6.72
+    server: 43.128.130.45
     port: 443
     uuid: 26524cce-d514-4014-a426-365fb266a14d
     network: ws
@@ -334,47 +167,9 @@ proxies:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-025"
-    type: vless
-    server: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
-    port: 20065
-    uuid: 2446e2e2-1ce3-4502-9050-1dd32bacc68c
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
-  - name: "德国-026"
-    type: vless
-    server: 188.239.19.57
-    port: 443
-    uuid: 26524cce-d514-4014-a426-365fb266a14d
-    network: ws
-    udp: true
-    tls: true
-    servername: t5pmr.mail-node.gfw.kdns.fr
-    client-fingerprint: chrome
-    ws-opts:
-      path: /danfeng?ed=2560
-      headers:
-        Host: t5pmr.mail-node.gfw.kdns.fr
-  - name: "德国-027"
+  - name: "德国-013"
     type: vless
     server: 43.163.86.187
-    port: 443
-    uuid: 26524cce-d514-4014-a426-365fb266a14d
-    network: ws
-    udp: true
-    tls: true
-    servername: xy1ej.stream-node-us.danfeng.qzz.io
-    client-fingerprint: chrome
-    ws-opts:
-      path: /danfeng?ed=2560
-      headers:
-        Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-028"
-    type: vless
-    server: 43.133.62.238
     port: 443
     uuid: 26524cce-d514-4014-a426-365fb266a14d
     network: ws
@@ -386,7 +181,7 @@ proxies:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-029"
+  - name: "德国-014"
     type: vless
     server: 47.84.109.138
     port: 443
@@ -400,21 +195,7 @@ proxies:
       path: /danfeng?ed=2560
       headers:
         Host: t5pmr.mail-node.gfw.kdns.fr
-  - name: "新加坡-030"
-    type: vless
-    server: 101.32.142.168
-    port: 443
-    uuid: 26524cce-d514-4014-a426-365fb266a14d
-    network: ws
-    udp: true
-    tls: true
-    servername: xy1ej.stream-node-us.danfeng.qzz.io
-    client-fingerprint: chrome
-    ws-opts:
-      path: /danfeng?ed=2560
-      headers:
-        Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-031"
+  - name: "德国-015"
     type: vless
     server: 163.128.98.21
     port: 443
@@ -428,7 +209,21 @@ proxies:
       path: /danfeng
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-032"
+  - name: "德国-016"
+    type: vless
+    server: 188.239.19.57
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    udp: true
+    tls: true
+    servername: t5pmr.mail-node.gfw.kdns.fr
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: t5pmr.mail-node.gfw.kdns.fr
+  - name: "德国-017"
     type: vless
     server: 147.139.139.151
     port: 587
@@ -437,27 +232,28 @@ proxies:
     udp: true
     tls: true
     servername: xy1ej.stream-node-us.danfeng.qzz.io
-    client-fingerprint: android
+    client-fingerprint: firefox
     ws-opts:
-      path: /danfeng?ed=2560
+      path: "%2Fdanfeng%3Fed%3D2560"
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "俄罗斯-033"
+  - name: "德国-018"
     type: vless
-    server: qtir1.dnetsolutions.ru
+    server: sw.golangwikito.cfd
     port: 443
-    uuid: 63959ed7-d26f-48dd-8c7b-ebdb6ea68535
-    network: grpc
+    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: max.ru
+    servername: sw.golangwikito.cfd
     client-fingerprint: chrome
     reality-opts:
-      public-key: "9X-tgXeFaqxURY0nGxFNdz9bpNIo7DTXHoWXpBqiOj0"
-      short-id: "cbc638acc8ac87"
-  - name: "德国-034"
+      public-key: "Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg"
+      short-id: "a1037b25dcef6aa7"
+  - name: "德国-019"
     type: vless
-    server: 45.152.67.226
+    server: 43.161.253.137
     port: 443
     uuid: 26524cce-d514-4014-a426-365fb266a14d
     network: ws
@@ -479,76 +275,46 @@ proxy-groups:
     proxies:
       - "美国-001"
       - "美国-002"
-      - "美国-003"
-      - "美国-004"
+      - "法国-003"
+      - "德国-004"
       - "美国-005"
-      - "其他-006"
-      - "法国-007"
+      - "德国-006"
+      - "荷兰-007"
       - "德国-008"
       - "德国-009"
-      - "德国-010"
-      - "美国-011"
-      - "美国-012"
-      - "其他-013"
+      - "其他-010"
+      - "韩国-011"
+      - "德国-012"
+      - "德国-013"
       - "德国-014"
       - "德国-015"
       - "德国-016"
       - "德国-017"
-      - "美国-018"
-      - "美国-019"
-      - "土耳其-020"
-      - "其他-021"
-      - "德国-022"
-      - "德国-023"
-      - "德国-024"
-      - "德国-025"
-      - "德国-026"
-      - "德国-027"
-      - "德国-028"
-      - "德国-029"
-      - "新加坡-030"
-      - "德国-031"
-      - "德国-032"
-      - "俄罗斯-033"
-      - "德国-034"
+      - "德国-018"
+      - "德国-019"
   - name: Proxy
     type: select
     proxies:
       - Auto
       - "美国-001"
       - "美国-002"
-      - "美国-003"
-      - "美国-004"
+      - "法国-003"
+      - "德国-004"
       - "美国-005"
-      - "其他-006"
-      - "法国-007"
+      - "德国-006"
+      - "荷兰-007"
       - "德国-008"
       - "德国-009"
-      - "德国-010"
-      - "美国-011"
-      - "美国-012"
-      - "其他-013"
+      - "其他-010"
+      - "韩国-011"
+      - "德国-012"
+      - "德国-013"
       - "德国-014"
       - "德国-015"
       - "德国-016"
       - "德国-017"
-      - "美国-018"
-      - "美国-019"
-      - "土耳其-020"
-      - "其他-021"
-      - "德国-022"
-      - "德国-023"
-      - "德国-024"
-      - "德国-025"
-      - "德国-026"
-      - "德国-027"
-      - "德国-028"
-      - "德国-029"
-      - "新加坡-030"
-      - "德国-031"
-      - "德国-032"
-      - "俄罗斯-033"
-      - "德国-034"
+      - "德国-018"
+      - "德国-019"
 
 rules:
   - MATCH,Proxy
