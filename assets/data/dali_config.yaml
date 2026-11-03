@@ -8,40 +8,54 @@ proxies:
     udp: true
     tls: true
     servername: site.check-looks.space
-    client-fingerprint: chrome
+    client-fingerprint: firefox
     ws-opts:
       path: /
       headers:
         Host: site.check-looks.space
   - name: "美国-002"
     type: vless
-    server: 162.159.153.4
+    server: 151.101.1.242
     port: 443
-    uuid: f2a73750-3087-48ff-a763-1348c15dce68
+    uuid: ba479063-7734-48fa-aa0a-1e3a622bbe9b
     network: ws
     udp: true
     tls: true
-    servername: rAyAn-007.mAxImA.DpDnS.OrG
-    client-fingerprint: chrome
+    servername: brave-ploys.video-streams.org
+    client-fingerprint: firefox
     ws-opts:
-      path: /
+      path: /ws
       headers:
-        Host: rAyAn-007.mAxImA.DpDnS.OrG
-  - name: "法国-003"
+        Host: brave-ploys.video-streams.org
+  - name: "新加坡-003"
     type: vless
-    server: 199.232.78.170
-    port: 443
-    uuid: XpnTeam-81
+    server: 141.193.213.21
+    port: 8443
+    uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
     network: ws
     udp: true
     tls: true
-    servername: "http://global.fastly.com"
-    client-fingerprint: chrome
+    servername: u.srilankangrill.online
+    client-fingerprint: android
     ws-opts:
       path: /
       headers:
-        Host: Appxdn.global.ssl.fastly.net
+        Host: u.srilankangrill.online
   - name: "德国-004"
+    type: vless
+    server: 64.178.113.224
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    udp: true
+    tls: true
+    servername: xy1ej.stream-node-us.danfeng.qzz.io
+    client-fingerprint: qq
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: xy1ej.stream-node-us.danfeng.qzz.io
+  - name: "德国-005"
     type: vless
     server: 141.193.213.21
     port: 2083
@@ -50,14 +64,82 @@ proxies:
     udp: true
     tls: true
     servername: site.check-looks.space
-    client-fingerprint: android
+    client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
         Host: site.check-looks.space
-  - name: "美国-005"
+  - name: "美国-006"
+    type: vless
+    server: news.zoom.us
+    port: 8443
+    uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+    network: ws
+    udp: true
+    tls: true
+    servername: u.srilankangrill.online
+    client-fingerprint: firefox
+    ws-opts:
+      path: /
+      headers:
+        Host: u.srilankangrill.online
+  - name: "新加坡-007"
+    type: vless
+    server: 141.193.213.20
+    port: 8443
+    uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+    network: ws
+    udp: true
+    tls: true
+    servername: u.srilankangrill.online
+    client-fingerprint: firefox
+    ws-opts:
+      path: /
+      headers:
+        Host: u.srilankangrill.online
+  - name: "德国-008"
     type: vless
     server: 143.246.62.134
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    udp: true
+    tls: true
+    servername: xy1ej.stream-node-us.danfeng.qzz.io
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: xy1ej.stream-node-us.danfeng.qzz.io
+  - name: "立陶宛-009"
+    type: vless
+    server: lorettmay.top
+    port: 443
+    uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
+    network: ws
+    udp: true
+    tls: true
+    servername: lorettmay.top
+    client-fingerprint: chrome
+    ws-opts:
+      path: /blog/posts
+  - name: "德国-010"
+    type: vless
+    server: 119.28.150.233
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    udp: true
+    tls: true
+    servername: t5pmr.mail-node.gfw.kdns.fr
+    client-fingerprint: firefox
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: t5pmr.mail-node.gfw.kdns.fr
+  - name: "德国-011"
+    type: vless
+    server: 47.245.134.84
     port: 443
     uuid: 26524cce-d514-4014-a426-365fb266a14d
     network: ws
@@ -69,49 +151,49 @@ proxies:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-006"
+  - name: "德国-012"
     type: vless
-    server: 213.145.72.93
+    server: 82.139.215.7
     port: 443
     uuid: 26524cce-d514-4014-a426-365fb266a14d
     network: ws
     udp: true
     tls: true
     servername: xy1ej.stream-node-us.danfeng.qzz.io
-    client-fingerprint: chrome
+    client-fingerprint: firefox
     ws-opts:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "荷兰-007"
+  - name: "德国-013"
     type: vless
-    server: 95.142.32.42
-    port: 8444
-    uuid: a8321cfe-39a2-48a0-a918-f01f7d9006ed
-    network: ws
-    udp: true
-    tls: true
-    servername: nl18.meshbeat.online
-    client-fingerprint: chrome
-    ws-opts:
-      path: /api/v1/devices/86f81c4330/telemetry
-      headers:
-        Host: nl18.meshbeat.online
-  - name: "德国-008"
-    type: vless
-    server: 47.245.134.84
+    server: 82.139.215.245
     port: 443
     uuid: 26524cce-d514-4014-a426-365fb266a14d
     network: ws
     udp: true
     tls: true
     servername: xy1ej.stream-node-us.danfeng.qzz.io
-    client-fingerprint: chrome
+    client-fingerprint: safari
     ws-opts:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-009"
+  - name: "德国-014"
+    type: vless
+    server: 43.155.165.247
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    udp: true
+    tls: true
+    servername: xy1ej.stream-node-us.danfeng.qzz.io
+    client-fingerprint: firefox
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: xy1ej.stream-node-us.danfeng.qzz.io
+  - name: "德国-015"
     type: vless
     server: 47.245.139.226
     port: 443
@@ -125,35 +207,21 @@ proxies:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "其他-010"
+  - name: "美国-016"
     type: vless
-    server: 43.174.193.1
+    server: 45.129.242.56
     port: 443
-    uuid: d342d11e-d224-4463-b982-532309285094
-    network: ws
+    uuid: ebdfaf99-41d8-4e48-8196-d54510ffb556
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: ccc.010304.xyz
+    servername: www.cloudflare.com
     client-fingerprint: chrome
-    ws-opts:
-      path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-      headers:
-        Host: ccc.010304.xyz
-  - name: "韩国-011"
-    type: vless
-    server: 119.28.150.233
-    port: 443
-    uuid: 26524cce-d514-4014-a426-365fb266a14d
-    network: ws
-    udp: true
-    tls: true
-    servername: t5pmr.mail-node.gfw.kdns.fr
-    client-fingerprint: chrome
-    ws-opts:
-      path: /danfeng?ed=2560
-      headers:
-        Host: t5pmr.mail-node.gfw.kdns.fr
-  - name: "德国-012"
+    reality-opts:
+      public-key: "YURKlEQ3rap4KOXXGsVFZyYev2oDU2gCEbNTXPdKWRY"
+      short-id: "abcdef"
+  - name: "德国-017"
     type: vless
     server: 43.128.130.45
     port: 443
@@ -167,21 +235,115 @@ proxies:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-013"
+  - name: "德国-018"
     type: vless
-    server: 43.163.86.187
+    server: 95.81.75.207
     port: 443
     uuid: 26524cce-d514-4014-a426-365fb266a14d
     network: ws
     udp: true
     tls: true
     servername: xy1ej.stream-node-us.danfeng.qzz.io
-    client-fingerprint: firefox
+    client-fingerprint: chrome
     ws-opts:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-014"
+  - name: "德国-019"
+    type: vless
+    server: sw.golangwikito.cfd
+    port: 443
+    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: sw.golangwikito.cfd
+    client-fingerprint: edge
+    reality-opts:
+      public-key: "Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg"
+      short-id: "a1037b25dcef6aa7"
+  - name: "德国-020"
+    type: vless
+    server: 43.161.253.137
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    udp: true
+    tls: true
+    servername: xy1ej.stream-node-us.danfeng.qzz.io
+    client-fingerprint: edge
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: xy1ej.stream-node-us.danfeng.qzz.io
+  - name: "德国-021"
+    type: vless
+    server: 130.49.177.193
+    port: 443
+    uuid: 727a9178-d7f0-4142-8205-b0d19959ded0
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: de-2.ffpn.pro
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "DCpi9-1rSXxBnEIAQ9U3mTqHivk7vHJRV_T2pWw5vCc"
+      short-id: "681fc2dd643bc2f3"
+  - name: "俄罗斯-022"
+    type: vless
+    server: 95.182.110.17
+    port: 443
+    uuid: 4a0812f0-f9d7-4afd-9ae3-6c38e1e59485
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: promo-digital.wb.ru
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "3p6W4rMBh1HCwbjq4lcbWO0KjkqTshJU5lkTix5nwTc"
+      short-id: "d3f314d0b692f63d"
+  - name: "德国-023"
+    type: vless
+    server: 185.207.66.160
+    port: 443
+    uuid: a292fd7d-d4ab-4441-aae3-69784202b321
+    network: grpc
+    udp: true
+    tls: true
+    servername: basterdym.asia
+    client-fingerprint: firefox
+  - name: "德国-024"
+    type: vless
+    server: 84.252.101.6
+    port: 443
+    uuid: 03248cf9-cbcb-4718-a11d-35b499978d27
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: ru-node.vopn.net
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "lBCt9m_PzWWdm1HvyZtJyCupmcySkfphwArSyPLPKXk"
+      short-id: "ec65c264313fd33b"
+  - name: "德国-025"
+    type: vless
+    server: 101.32.142.168
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    udp: true
+    tls: true
+    servername: xy1ej.stream-node-us.danfeng.qzz.io
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: xy1ej.stream-node-us.danfeng.qzz.io
+  - name: "德国-026"
     type: vless
     server: 47.84.109.138
     port: 443
@@ -190,12 +352,12 @@ proxies:
     udp: true
     tls: true
     servername: t5pmr.mail-node.gfw.kdns.fr
-    client-fingerprint: chrome
+    client-fingerprint: firefox
     ws-opts:
       path: /danfeng?ed=2560
       headers:
         Host: t5pmr.mail-node.gfw.kdns.fr
-  - name: "德国-015"
+  - name: "德国-027"
     type: vless
     server: 163.128.98.21
     port: 443
@@ -204,12 +366,54 @@ proxies:
     udp: true
     tls: true
     servername: xy1ej.stream-node-us.danfeng.qzz.io
-    client-fingerprint: chrome
+    client-fingerprint: firefox
     ws-opts:
       path: /danfeng
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-016"
+  - name: "德国-028"
+    type: vless
+    server: 43.163.86.187
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    udp: true
+    tls: true
+    servername: xy1ej.stream-node-us.danfeng.qzz.io
+    client-fingerprint: ios
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: xy1ej.stream-node-us.danfeng.qzz.io
+  - name: "美国-029"
+    type: vless
+    server: sub.vanta-vpn.pro
+    port: 443
+    uuid: 71b566cb-78c4-48e4-af5b-720e4f7884f2
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: sub.vanta-vpn.pro
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "t9P5O3qtmepuC7_xEJ4bRMOPMHDQSbFai3TiOsQXnhY"
+      short-id: "8b8d979d16d9dd3b"
+  - name: "德国-030"
+    type: vless
+    server: 43.133.62.238
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    udp: true
+    tls: true
+    servername: xy1ej.stream-node-us.danfeng.qzz.io
+    client-fingerprint: safari
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: xy1ej.stream-node-us.danfeng.qzz.io
+  - name: "德国-031"
     type: vless
     server: 188.239.19.57
     port: 443
@@ -220,10 +424,10 @@ proxies:
     servername: t5pmr.mail-node.gfw.kdns.fr
     client-fingerprint: chrome
     ws-opts:
-      path: /danfeng?ed=2560
+      path: /danfeng?ed
       headers:
         Host: t5pmr.mail-node.gfw.kdns.fr
-  - name: "德国-017"
+  - name: "德国-032"
     type: vless
     server: 147.139.139.151
     port: 587
@@ -232,39 +436,90 @@ proxies:
     udp: true
     tls: true
     servername: xy1ej.stream-node-us.danfeng.qzz.io
-    client-fingerprint: firefox
+    client-fingerprint: qq
     ws-opts:
       path: "%2Fdanfeng%3Fed%3D2560"
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
-  - name: "德国-018"
+  - name: "美国-033"
     type: vless
-    server: sw.golangwikito.cfd
+    server: 3f8efdt.fi1.h1clayd.click
     port: 443
-    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+    uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
     network: tcp
-    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: sw.golangwikito.cfd
+    servername: 3f8efdt.fi1.h1clayd.click
+    client-fingerprint: ios
+    reality-opts:
+      public-key: "1D_o1pqfVoReg9zLPKNy1wCL7aGWytbmbYPbbJGaozY"
+      short-id: "023a1e6ffc32be10"
+  - name: "德国-034"
+    type: vless
+    server: 83.171.241.230
+    port: 443
+    uuid: 94042dd1-d32a-4797-b88c-dc48459e2b34
+    network: tcp
+    udp: true
+    tls: true
+    servername: 100497t.de2.h1clayd.click
+    client-fingerprint: edge
+    reality-opts:
+      public-key: "x-7K9P2E91DCL-0ONwm14gxDkUseukg98hYzB-1dW1A"
+      short-id: "5be240e45d3c445c"
+  - name: "德国-035"
+    type: vless
+    server: 100497t.de2.h1clayd.click
+    port: 443
+    uuid: 94042dd1-d32a-4797-b88c-dc48459e2b34
+    network: tcp
+    udp: true
+    tls: true
+    servername: 100497t.de2.h1clayd.click
+    client-fingerprint: android
+    reality-opts:
+      public-key: "x-7K9P2E91DCL-0ONwm14gxDkUseukg98hYzB-1dW1A"
+      short-id: "5be240e45d3c445c"
+  - name: "俄罗斯-036"
+    type: vless
+    server: qtir1.dnetsolutions.ru
+    port: 443
+    uuid: 63959ed7-d26f-48dd-8c7b-ebdb6ea68535
+    network: grpc
+    udp: true
+    tls: true
+    servername: max.ru
     client-fingerprint: chrome
     reality-opts:
-      public-key: "Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg"
-      short-id: "a1037b25dcef6aa7"
-  - name: "德国-019"
+      public-key: "9X-tgXeFaqxURY0nGxFNdz9bpNIo7DTXHoWXpBqiOj0"
+      short-id: "cbc638acc8ac87"
+  - name: "德国-037"
     type: vless
-    server: 43.161.253.137
+    server: 45.152.67.226
     port: 443
     uuid: 26524cce-d514-4014-a426-365fb266a14d
     network: ws
     udp: true
     tls: true
     servername: xy1ej.stream-node-us.danfeng.qzz.io
-    client-fingerprint: chrome
+    client-fingerprint: qq
     ws-opts:
       path: /danfeng?ed=2560
       headers:
         Host: xy1ej.stream-node-us.danfeng.qzz.io
+  - name: "瑞士-038"
+    type: vless
+    server: ch2.h1cloud.net
+    port: 25879
+    uuid: 241306b3-9f27-4ed3-9524-6c0792c55856
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.bing.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "XuI492LMe1OPIwQH5TQlIo33JRqMM3kfnto62tbx5FU"
+      short-id: "f1a7a14461a3f389"
 
 proxy-groups:
   - name: Auto
@@ -275,46 +530,84 @@ proxy-groups:
     proxies:
       - "美国-001"
       - "美国-002"
-      - "法国-003"
+      - "新加坡-003"
       - "德国-004"
-      - "美国-005"
-      - "德国-006"
-      - "荷兰-007"
+      - "德国-005"
+      - "美国-006"
+      - "新加坡-007"
       - "德国-008"
-      - "德国-009"
-      - "其他-010"
-      - "韩国-011"
+      - "立陶宛-009"
+      - "德国-010"
+      - "德国-011"
       - "德国-012"
       - "德国-013"
       - "德国-014"
       - "德国-015"
-      - "德国-016"
+      - "美国-016"
       - "德国-017"
       - "德国-018"
       - "德国-019"
+      - "德国-020"
+      - "德国-021"
+      - "俄罗斯-022"
+      - "德国-023"
+      - "德国-024"
+      - "德国-025"
+      - "德国-026"
+      - "德国-027"
+      - "德国-028"
+      - "美国-029"
+      - "德国-030"
+      - "德国-031"
+      - "德国-032"
+      - "美国-033"
+      - "德国-034"
+      - "德国-035"
+      - "俄罗斯-036"
+      - "德国-037"
+      - "瑞士-038"
   - name: Proxy
     type: select
     proxies:
       - Auto
       - "美国-001"
       - "美国-002"
-      - "法国-003"
+      - "新加坡-003"
       - "德国-004"
-      - "美国-005"
-      - "德国-006"
-      - "荷兰-007"
+      - "德国-005"
+      - "美国-006"
+      - "新加坡-007"
       - "德国-008"
-      - "德国-009"
-      - "其他-010"
-      - "韩国-011"
+      - "立陶宛-009"
+      - "德国-010"
+      - "德国-011"
       - "德国-012"
       - "德国-013"
       - "德国-014"
       - "德国-015"
-      - "德国-016"
+      - "美国-016"
       - "德国-017"
       - "德国-018"
       - "德国-019"
+      - "德国-020"
+      - "德国-021"
+      - "俄罗斯-022"
+      - "德国-023"
+      - "德国-024"
+      - "德国-025"
+      - "德国-026"
+      - "德国-027"
+      - "德国-028"
+      - "美国-029"
+      - "德国-030"
+      - "德国-031"
+      - "德国-032"
+      - "美国-033"
+      - "德国-034"
+      - "德国-035"
+      - "俄罗斯-036"
+      - "德国-037"
+      - "瑞士-038"
 
 rules:
   - MATCH,Proxy
