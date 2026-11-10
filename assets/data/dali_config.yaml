@@ -1,46 +1,49 @@
 proxies:
-  - name: "美国-001"
+  - name: "日本-001"
     type: vless
-    server: yx.l110.us.ci
+    server: 104.21.0.87
     port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
     network: ws
     udp: true
     tls: true
-    servername: fs.qicai99.com
-    client-fingerprint: chrome
+    servername: jp3.yohototo.top
+    client-fingerprint: qq
     ws-opts:
-      path: /
+      path: /tyxyws
       headers:
-        Host: fs.qicai99.com
-  - name: "哥伦比亚-002"
+        Host: jp3.yohototo.top
+  - name: "日本-002"
     type: vless
-    server: fs.qicai99.com
+    server: 104.16.111.102
     port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
     network: ws
     udp: true
     tls: true
-    servername: fs.qicai99.com
+    servername: jp3.yohototo.top
+    client-fingerprint: safari
     ws-opts:
-      path: /
-  - name: "美国-003"
-    type: vless
-    server: mao.kipfelmao.de5.net
-    port: 443
-    uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-    network: ws
-    udp: true
-    tls: true
-    servername: mao.kipfelmao.de5.net
-    client-fingerprint: android
-    ws-opts:
-      path: "%2Fapi%2Fv1%2Fguests%2Fprofiles%2F5de14443985f%2F"
+      path: /tyxyws
       headers:
-        Host: mao.kipfelmao.de5.net
+        Host: jp3.yohototo.top
+  - name: "德国-003"
+    type: vless
+    server: 103.31.4.75
+    port: 8443
+    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+    network: ws
+    udp: true
+    tls: true
+    servername: moz.ar-marz.fun
+    client-fingerprint: firefox
+    ws-opts:
+      path: /man
+      headers:
+        Host: moz.ar-marz.fun
   - name: "日本-004"
     type: vless
-    server: 104.19.164.155
+    server: 104.17.210.74
     port: 443
     uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
     network: ws
@@ -53,7 +56,7 @@ proxies:
         Host: jp3.yohototo.top
   - name: "德国-005"
     type: vless
-    server: 104.19.112.134
+    server: 104.25.242.200
     port: 8443
     uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
     network: ws
@@ -65,35 +68,7 @@ proxies:
       path: /man
       headers:
         Host: moz.ar-marz.fun
-  - name: "德国-006"
-    type: vless
-    server: 162.159.236.61
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "日本-007"
-    type: vless
-    server: 104.24.0.1
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: qq
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "美国-008"
+  - name: "美国-006"
     type: vless
     server: 172.67.199.126
     port: 2053
@@ -102,34 +77,63 @@ proxies:
     udp: true
     tls: true
     servername: fast.145779.xyz
-    client-fingerprint: android
+    client-fingerprint: firefox
     ws-opts:
-      path: "%2Fws-tesla"
+      path: /ws-tesla
       headers:
         Host: fast.145779.xyz
-  - name: "哥伦比亚-009"
+  - name: "德国-007"
     type: vless
-    server: 170.114.45.6
-    port: 2096
-    uuid: efd11a89-7506-44ce-95b6-6654859f155b
+    server: 103.31.4.160
+    port: 8443
+    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
     network: ws
     udp: true
     tls: true
-    servername: pcloud.z-tas.com
+    servername: moz.ar-marz.fun
     client-fingerprint: firefox
     ws-opts:
-      path: /
+      path: /man
       headers:
-        Host: pcloud.z-tas.com
+        Host: moz.ar-marz.fun
+  - name: "美国-008"
+    type: vless
+    server: 104.21.58.37
+    port: 2053
+    uuid: c83f15bf-1817-4ec8-a19f-6393d226434c
+    network: ws
+    udp: true
+    tls: true
+    servername: fast.145779.xyz
+    client-fingerprint: android
+    ws-opts:
+      path: /ws-tesla
+      headers:
+        Host: fast.145779.xyz
+  - name: "德国-009"
+    type: vless
+    server: 103.31.4.254
+    port: 8443
+    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+    network: ws
+    udp: true
+    tls: true
+    servername: moz.ar-marz.fun
+    client-fingerprint: firefox
+    ws-opts:
+      path: /man
+      headers:
+        Host: moz.ar-marz.fun
   - name: "日本-010"
     type: vless
-    server: 104.21.0.87
+    server: 172.67.156.147
     port: 443
     uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
     network: ws
     udp: true
     tls: true
     servername: jp3.yohototo.top
+    client-fingerprint: android
     ws-opts:
       path: /tyxyws
       headers:
@@ -148,118 +152,35 @@ proxies:
       path: /man
       headers:
         Host: moz.ar-marz.fun
-  - name: "德国-012"
+  - name: "日本-012"
     type: vless
-    server: 104.25.242.200
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "德国-013"
-    type: vless
-    server: 188.114.96.246
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "日本-014"
-    type: vless
-    server: 104.16.10.2
+    server: 104.16.10.56
     port: 443
     uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
     network: ws
     udp: true
     tls: true
     servername: jp3.yohototo.top
+    client-fingerprint: chrome
     ws-opts:
       path: /tyxyws
       headers:
         Host: jp3.yohototo.top
-  - name: "日本-015"
+  - name: "美国-013"
     type: vless
-    server: 104.17.210.74
+    server: ct.877774.xyz
     port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    uuid: 557b8df0-16d9-43d0-b7ca-d08cbea06ead
     network: ws
     udp: true
     tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: ios
+    servername: it-mil.862400.xyz
+    client-fingerprint: random
     ws-opts:
-      path: /tyxyws
+      path: /announcement?ed=2048
       headers:
-        Host: jp3.yohototo.top
-  - name: "日本-016"
-    type: vless
-    server: 104.21.34.106
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: android
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "德国-017"
-    type: vless
-    server: 104.17.70.206
-    port: 8443
-    uuid: 1beed393-7c4d-4432-beee-f1026b72d0cf
-    network: ws
-    udp: true
-    tls: true
-    servername: free.sahanwickramasinghe.com
-    client-fingerprint: firefox
-    ws-opts:
-      path: /
-      headers:
-        Host: free.sahanwickramasinghe.com
-  - name: "德国-018"
-    type: vless
-    server: 188.114.99.157
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "日本-019"
-    type: vless
-    server: 172.67.156.147
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: android
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "德国-020"
+        Host: it-mil.862400.xyz
+  - name: "德国-014"
     type: vless
     server: 172.67.110.86
     port: 8443
@@ -268,54 +189,12 @@ proxies:
     udp: true
     tls: true
     servername: moz.ar-marz.fun
-    client-fingerprint: firefox
+    client-fingerprint: chrome
     ws-opts:
       path: /man
       headers:
         Host: moz.ar-marz.fun
-  - name: "日本-021"
-    type: vless
-    server: 162.159.254.3
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: firefox
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "德国-022"
-    type: vless
-    server: 190.93.247.95
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "日本-023"
-    type: vless
-    server: 188.114.97.6
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: safari
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "哥伦比亚-024"
+  - name: "哥伦比亚-015"
     type: vless
     server: 162.159.198.1
     port: 443
@@ -329,79 +208,23 @@ proxies:
       path: /
       headers:
         Host: fs.qicai99.com
-  - name: "日本-025"
+  - name: "美国-016"
     type: vless
-    server: 104.19.12.94
+    server: yx.l110.us.ci
     port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
     network: ws
     udp: true
     tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: ios
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "日本-026"
-    type: vless
-    server: 104.16.111.102
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: edge
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "美国-027"
-    type: vless
-    server: 104.21.58.37
-    port: 2053
-    uuid: c83f15bf-1817-4ec8-a19f-6393d226434c
-    network: ws
-    udp: true
-    tls: true
-    servername: fast.145779.xyz
-    client-fingerprint: edge
-    ws-opts:
-      path: /ws-tesla
-      headers:
-        Host: fast.145779.xyz
-  - name: "日本-028"
-    type: vless
-    server: 104.24.31.89
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: safari
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "德国-029"
-    type: vless
-    server: 190.93.244.47
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
+    servername: fs.qicai99.com
     client-fingerprint: chrome
     ws-opts:
-      path: /man
+      path: /
       headers:
-        Host: moz.ar-marz.fun
-  - name: "德国-030"
+        Host: fs.qicai99.com
+  - name: "德国-017"
     type: vless
-    server: 104.24.21.163
+    server: 104.19.112.134
     port: 8443
     uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
     network: ws
@@ -413,7 +236,62 @@ proxies:
       path: /man
       headers:
         Host: moz.ar-marz.fun
-  - name: "哥伦比亚-031"
+  - name: "德国-018"
+    type: vless
+    server: 162.159.236.61
+    port: 8443
+    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+    network: ws
+    udp: true
+    tls: true
+    servername: moz.ar-marz.fun
+    client-fingerprint: firefox
+    ws-opts:
+      path: /man
+      headers:
+        Host: moz.ar-marz.fun
+  - name: "德国-019"
+    type: vless
+    server: 190.93.247.95
+    port: 8443
+    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+    network: ws
+    udp: true
+    tls: true
+    servername: moz.ar-marz.fun
+    client-fingerprint: firefox
+    ws-opts:
+      path: /man
+      headers:
+        Host: moz.ar-marz.fun
+  - name: "日本-020"
+    type: vless
+    server: 104.19.33.25
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "德国-021"
+    type: vless
+    server: 188.114.96.246
+    port: 8443
+    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+    network: ws
+    udp: true
+    tls: true
+    servername: moz.ar-marz.fun
+    client-fingerprint: firefox
+    ws-opts:
+      path: /man
+      headers:
+        Host: moz.ar-marz.fun
+  - name: "哥伦比亚-022"
     type: vless
     server: 172.67.74.177
     port: 443
@@ -427,7 +305,49 @@ proxies:
       path: /
       headers:
         Host: fs.qicai99.com
-  - name: "美国-032"
+  - name: "日本-023"
+    type: vless
+    server: 104.19.164.155
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    client-fingerprint: qq
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "德国-024"
+    type: vless
+    server: 190.93.244.47
+    port: 8443
+    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+    network: ws
+    udp: true
+    tls: true
+    servername: moz.ar-marz.fun
+    client-fingerprint: chrome
+    ws-opts:
+      path: /man
+      headers:
+        Host: moz.ar-marz.fun
+  - name: "德国-025"
+    type: vless
+    server: mao.kipfelmao.de5.net
+    port: 443
+    uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
+    network: ws
+    udp: true
+    tls: true
+    servername: mao.kipfelmao.de5.net
+    client-fingerprint: firefox
+    ws-opts:
+      path: /api/v1/guests/profiles/5de14443985f/
+      headers:
+        Host: mao.kipfelmao.de5.net
+  - name: "美国-026"
     type: vless
     server: fast.145779.xyz
     port: 2053
@@ -436,12 +356,12 @@ proxies:
     udp: true
     tls: true
     servername: fast.145779.xyz
-    client-fingerprint: android
+    client-fingerprint: ios
     ws-opts:
       path: /ws-tesla
-  - name: "德国-033"
+  - name: "德国-027"
     type: vless
-    server: 103.31.4.160
+    server: 104.24.21.163
     port: 8443
     uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
     network: ws
@@ -453,35 +373,7 @@ proxies:
       path: /man
       headers:
         Host: moz.ar-marz.fun
-  - name: "德国-034"
-    type: vless
-    server: 103.31.4.254
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "德国-035"
-    type: vless
-    server: 103.31.4.75
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "德国-036"
+  - name: "德国-028"
     type: vless
     server: 103.31.4.205
     port: 8443
@@ -495,35 +387,20 @@ proxies:
       path: /man
       headers:
         Host: moz.ar-marz.fun
-  - name: "日本-037"
+  - name: "哥伦比亚-029"
     type: vless
-    server: 23.144.124.76
+    server: fs.qicai99.com
     port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
     network: ws
     udp: true
     tls: true
-    servername: jp3.yohototo.top
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "法国-038"
-    type: vless
-    server: 3.169.9.125
-    port: 443
-    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-    network: ws
-    udp: true
-    tls: true
-    servername: d1afk2ndm8pox3.cloudfront.net
+    servername: fs.qicai99.com
     ws-opts:
       path: /
-      headers:
-        Host: d1afk2ndm8pox3.cloudfront.net
-  - name: "日本-039"
+  - name: "日本-030"
     type: vless
-    server: 45.66.129.225
+    server: 104.21.6.186
     port: 443
     uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
     network: ws
@@ -534,32 +411,21 @@ proxies:
       path: /tyxyws
       headers:
         Host: jp3.yohototo.top
-  - name: "日本-040"
+  - name: "日本-031"
     type: vless
-    server: 45.153.245.217
+    server: 104.21.70.228
     port: 443
     uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
     network: ws
     udp: true
     tls: true
     servername: jp3.yohototo.top
+    client-fingerprint: firefox
     ws-opts:
       path: /tyxyws
       headers:
         Host: jp3.yohototo.top
-  - name: "荷兰-041"
-    type: vless
-    server: chat.gpt.prem-ai.shop
-    port: 443
-    uuid: 95f85937-7b95-45c4-8d69-95da6a978569
-    network: ws
-    udp: true
-    tls: true
-    servername: chat.gpt.prem-ai.shop
-    client-fingerprint: edge
-    ws-opts:
-      path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-  - name: "立陶宛-042"
+  - name: "立陶宛-032"
     type: vless
     server: lorettmay.top
     port: 443
@@ -571,34 +437,19 @@ proxies:
     client-fingerprint: chrome
     ws-opts:
       path: /blog/posts
-  - name: "荷兰-043"
+  - name: "荷兰-033"
     type: vless
-    server: 178.214.109.1
+    server: chat.gpt.prem-ai.shop
     port: 443
-    uuid: 40a86b1b-239d-455e-b53f-4c270788ba6e
-    network: tcp
-    flow: xtls-rprx-vision
+    uuid: 95f85937-7b95-45c4-8d69-95da6a978569
+    network: ws
     udp: true
     tls: true
-    servername: promo-digital.wb.ru
-    client-fingerprint: edge
-    reality-opts:
-      public-key: "3p6W4rMBh1HCwbjq4lcbWO0KjkqTshJU5lkTix5nwTc"
-      short-id: "1cfa55abe4d2dc7a"
-  - name: "荷兰-044"
-    type: vless
-    server: 76574ct.nl7.h1clayd.click
-    port: 443
-    uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-    network: tcp
-    udp: true
-    tls: true
-    servername: 76574ct.nl7.h1clayd.click
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "9zW5lTDbs9svY-lzlPp-pq0j2Sr6g031SY0E-3xSHDc"
-      short-id: "2ca59bdc5121f921"
-  - name: "英国-045"
+    servername: chat.gpt.prem-ai.shop
+    client-fingerprint: android
+    ws-opts:
+      path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
+  - name: "英国-034"
     type: vless
     server: 212.69.135.26
     port: 8443
@@ -612,35 +463,20 @@ proxies:
     reality-opts:
       public-key: "FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8"
       short-id: "7da3ba09a037e956"
-  - name: "英国-046"
+  - name: "美国-035"
     type: vless
-    server: 5.104.74.25
-    port: 8443
-    uuid: c1f87d4d-3ea2-4378-925a-b4942e930a7d
+    server: hollandlanzerotte.xyz
+    port: 443
+    uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: uk-room07.filesnap.tech
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM"
-      short-id: "dbef98744832b751"
-  - name: "英国-047"
-    type: vless
-    server: 5.104.74.26
-    port: 8443
-    uuid: 0083a0f5-4418-44c2-a9ec-6dce0c26fb94
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: uk-room07.filesnap.tech
+    servername: hollandlanzerotte.xyz
     client-fingerprint: chrome
     reality-opts:
-      public-key: "48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM"
-      short-id: "dbef98744832b751"
-  - name: "美国-048"
+      public-key: "EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc"
+  - name: "美国-036"
     type: vless
     server: prime.jarbook.net
     port: 443
@@ -650,39 +486,39 @@ proxies:
     udp: true
     tls: true
     servername: prime.jarbook.net
-    client-fingerprint: firefox
+    client-fingerprint: chrome
     reality-opts:
       public-key: "oAX7soFKfN3xURgCD26trmjeF-e-eEjW3pBVXuuvW0k"
       short-id: "77a8c8c8"
-  - name: "英国-049"
+  - name: "荷兰-037"
     type: vless
-    server: 5.104.74.27
-    port: 8443
-    uuid: 857e5668-88b9-45cd-a600-79e55c04d8a8
+    server: 178.214.109.1
+    port: 443
+    uuid: 40a86b1b-239d-455e-b53f-4c270788ba6e
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: uk-room07.filesnap.tech
-    client-fingerprint: firefox
+    servername: promo-digital.wb.ru
+    client-fingerprint: edge
     reality-opts:
-      public-key: "48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM"
-      short-id: "dbef98744832b751"
-  - name: "英国-050"
+      public-key: "3p6W4rMBh1HCwbjq4lcbWO0KjkqTshJU5lkTix5nwTc"
+      short-id: "1cfa55abe4d2dc7a"
+  - name: "英国-038"
     type: vless
-    server: 212.69.135.27
+    server: 5.104.74.69
     port: 8443
-    uuid: 857e5668-88b9-45cd-a600-79e55c04d8a8
+    uuid: 16cd1338-ecb9-44f3-8f0c-919242370ef2
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: uk-room05.filesnap.tech
+    servername: uk-room06.filesnap.tech
     client-fingerprint: firefox
     reality-opts:
-      public-key: "FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8"
-      short-id: "7da3ba09a037e956"
-  - name: "英国-051"
+      public-key: "D9IxnCLtXuDLR1yBNZwWdxxbNDfsZgN3C9IsqKgG8Ec"
+      short-id: "17a35165f9d25923"
+  - name: "英国-039"
     type: vless
     server: 5.104.74.70
     port: 8443
@@ -696,49 +532,137 @@ proxies:
     reality-opts:
       public-key: "48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM"
       short-id: "dbef98744832b751"
-  - name: "英国-052"
+  - name: "法国-040"
     type: vless
-    server: 5.104.74.69
-    port: 8443
-    uuid: c6320c2e-15b3-4c3f-9d5a-d371828ea818
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: uk-room06.filesnap.tech
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "D9IxnCLtXuDLR1yBNZwWdxxbNDfsZgN3C9IsqKgG8Ec"
-      short-id: "17a35165f9d25923"
-  - name: "日本-053"
-    type: vless
-    server: 178.22.31.72
+    server: 3.168.218.7
     port: 443
-    uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-    network: tcp
-    flow: xtls-rprx-vision
+    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+    network: ws
     udp: true
     tls: true
-    servername: at1.japancase.site
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
-      short-id: "41ae8e266bc3346f"
-  - name: "日本-054"
+    servername: d1aedflfr97jes.cloudfront.net
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: d1aedflfr97jes.cloudfront.net
+  - name: "荷兰-041"
     type: vless
-    server: at1.japancase.site
+    server: 537df6t.nl16.h1clayd.click
     port: 443
-    uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+    uuid: 546fdb65-0967-45e8-a61b-b22ff85f11c9
     network: tcp
-    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: at1.japancase.site
+    servername: 537df6t.nl16.h1clayd.click
+    client-fingerprint: random
+    reality-opts:
+      public-key: "U-i0W0UqanfhBrLz1OBlAJQejwhs3rE23nFAjlR6pEU"
+      short-id: "b64bde4903453877"
+  - name: "荷兰-042"
+    type: vless
+    server: 129.101.106.205
+    port: 14443
+    uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
+    network: ws
+    udp: true
+    tls: true
+    servername: ndfst11.neuroblur.top
+    client-fingerprint: firefox
+    ws-opts:
+      path: /api/generate
+      headers:
+        Host: ndfst11.neuroblur.top
+  - name: "荷兰-043"
+    type: vless
+    server: ndfst11.neuroblur.top
+    port: 14443
+    uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
+    network: ws
+    udp: true
+    tls: true
+    servername: ndfst11.neuroblur.top
+    client-fingerprint: firefox
+    ws-opts:
+      path: /api/generate
+      headers:
+        Host: ndfst11.neuroblur.top
+  - name: "哥伦比亚-044"
+    type: vless
+    server: vps3.nemnogogo.com
+    port: 443
+    uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+    network: grpc
+    udp: true
+    tls: true
+    servername: vps3.nemnogogo.com
+    client-fingerprint: safari
+  - name: "荷兰-045"
+    type: vless
+    server: 185.42.14.206
+    port: 443
+    uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
+    network: ws
+    udp: true
+    tls: true
+    servername: Ndf31.onlineai.pro
     client-fingerprint: edge
-    reality-opts:
-      public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
-      short-id: "41ae8e266bc3346f"
-  - name: "韩国-055"
+    ws-opts:
+      path: /api/generate
+      headers:
+        Host: Ndf31.onlineai.pro
+  - name: "英国-046"
+    type: vless
+    server: lt.neuroblur.top
+    port: 14443
+    uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
+    network: ws
+    udp: true
+    tls: true
+    servername: lt.neuroblur.top
+    client-fingerprint: firefox
+    ws-opts:
+      path: /api/generate
+      headers:
+        Host: lt.neuroblur.top
+  - name: "俄罗斯-047"
+    type: vless
+    server: vps2.nemnogogo.com
+    port: 443
+    uuid: 95f85937-7b95-45c4-8d69-95da6a978569
+    network: grpc
+    udp: true
+    tls: true
+    servername: vps2.nemnogogo.com
+    client-fingerprint: chrome
+  - name: "德国-048"
+    type: vless
+    server: 5.42.107.38
+    port: 14443
+    uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
+    network: ws
+    udp: true
+    tls: true
+    servername: germ.onlineai.pro
+    ws-opts:
+      path: /api/generate
+      headers:
+        Host: germ.onlineai.pro
+  - name: "德国-049"
+    type: vless
+    server: germ.onlineai.pro
+    port: 14443
+    uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
+    network: ws
+    udp: true
+    tls: true
+    servername: germ.onlineai.pro
+    client-fingerprint: firefox
+    ws-opts:
+      path: /api/generate
+      headers:
+        Host: germ.onlineai.pro
+  - name: "韩国-050"
     type: vless
     server: 138.16.249.118
     port: 14443
@@ -752,35 +676,21 @@ proxies:
       path: /api/generate
       headers:
         Host: lt.krevetkabs111.net
-  - name: "英国-056"
+  - name: "韩国-051"
     type: vless
-    server: 95.163.232.240
+    server: 95.163.209.247
     port: 443
     uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
     network: ws
     udp: true
     tls: true
-    servername: files.neurixai.app
-    client-fingerprint: firefox
-    ws-opts:
-      path: /api/generate
-      headers:
-        Host: files.neurixai.app
-  - name: "英国-057"
-    type: vless
-    server: files.neurixai.app
-    port: 443
-    uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
-    network: ws
-    udp: true
-    tls: true
-    servername: files.neurixai.app
+    servername: fst.krevetkabs111.net
     client-fingerprint: edge
     ws-opts:
       path: /api/generate
       headers:
-        Host: files.neurixai.app
-  - name: "韩国-058"
+        Host: fst.krevetkabs111.net
+  - name: "韩国-052"
     type: vless
     server: lt.krevetkabs111.net
     port: 14443
@@ -794,35 +704,7 @@ proxies:
       path: /api/generate
       headers:
         Host: lt.krevetkabs111.net
-  - name: "西班牙-059"
-    type: vless
-    server: 83.171.241.142
-    port: 443
-    uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: 7aa271t.es1.h1clayd.click
-    client-fingerprint: ios
-    reality-opts:
-      public-key: "ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE"
-      short-id: "42426c882c5fcd41"
-  - name: "美国-060"
-    type: vless
-    server: 95.169.9.188
-    port: 42127
-    uuid: ab223342-2da1-447b-8c38-6f58f12b92b0
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.bing.com
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: "PrT425XRELfK8LyAggHgC0JvyO7Aow7ccx9safXkjnY"
-      short-id: "13d2fb17c035fa9d"
-  - name: "韩国-061"
+  - name: "韩国-053"
     type: vless
     server: fst.krevetkabs111.net
     port: 443
@@ -836,6 +718,46 @@ proxies:
       path: /api/generate
       headers:
         Host: fst.krevetkabs111.net
+  - name: "法国-054"
+    type: vless
+    server: 3.169.9.125
+    port: 443
+    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+    network: ws
+    udp: true
+    tls: true
+    servername: d1afk2ndm8pox3.cloudfront.net
+    ws-opts:
+      path: /
+      headers:
+        Host: d1afk2ndm8pox3.cloudfront.net
+  - name: "德国-055"
+    type: vless
+    server: b998f03d.de-p2.h1clayd.click
+    port: 443
+    uuid: 474638a5-dc58-4453-9e40-70bcaa4ef74c
+    network: tcp
+    udp: true
+    tls: true
+    servername: b998f03d.de-p2.h1clayd.click
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: "RjoTK5x2_y3hb4nsOUnjii7IAu6gy5GrC-VN-H_AIh0"
+      short-id: "c10f4100fa3a8d47"
+  - name: "瑞士-056"
+    type: vless
+    server: 74.161.152.237
+    port: 2083
+    uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: www.apple.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4"
+      short-id: "0123456789abcdef"
 
 proxy-groups:
   - name: Auto
@@ -844,132 +766,122 @@ proxy-groups:
     interval: 120
     tolerance: 50
     proxies:
-      - "美国-001"
-      - "哥伦比亚-002"
-      - "美国-003"
+      - "日本-001"
+      - "日本-002"
+      - "德国-003"
       - "日本-004"
       - "德国-005"
-      - "德国-006"
-      - "日本-007"
+      - "美国-006"
+      - "德国-007"
       - "美国-008"
-      - "哥伦比亚-009"
+      - "德国-009"
       - "日本-010"
       - "德国-011"
-      - "德国-012"
-      - "德国-013"
-      - "日本-014"
-      - "日本-015"
-      - "日本-016"
+      - "日本-012"
+      - "美国-013"
+      - "德国-014"
+      - "哥伦比亚-015"
+      - "美国-016"
       - "德国-017"
       - "德国-018"
-      - "日本-019"
-      - "德国-020"
-      - "日本-021"
-      - "德国-022"
+      - "德国-019"
+      - "日本-020"
+      - "德国-021"
+      - "哥伦比亚-022"
       - "日本-023"
-      - "哥伦比亚-024"
-      - "日本-025"
-      - "日本-026"
-      - "美国-027"
-      - "日本-028"
-      - "德国-029"
-      - "德国-030"
-      - "哥伦比亚-031"
-      - "美国-032"
-      - "德国-033"
-      - "德国-034"
-      - "德国-035"
-      - "德国-036"
-      - "日本-037"
-      - "法国-038"
-      - "日本-039"
-      - "日本-040"
+      - "德国-024"
+      - "德国-025"
+      - "美国-026"
+      - "德国-027"
+      - "德国-028"
+      - "哥伦比亚-029"
+      - "日本-030"
+      - "日本-031"
+      - "立陶宛-032"
+      - "荷兰-033"
+      - "英国-034"
+      - "美国-035"
+      - "美国-036"
+      - "荷兰-037"
+      - "英国-038"
+      - "英国-039"
+      - "法国-040"
       - "荷兰-041"
-      - "立陶宛-042"
+      - "荷兰-042"
       - "荷兰-043"
-      - "荷兰-044"
-      - "英国-045"
+      - "哥伦比亚-044"
+      - "荷兰-045"
       - "英国-046"
-      - "英国-047"
-      - "美国-048"
-      - "英国-049"
-      - "英国-050"
-      - "英国-051"
-      - "英国-052"
-      - "日本-053"
-      - "日本-054"
-      - "韩国-055"
-      - "英国-056"
-      - "英国-057"
-      - "韩国-058"
-      - "西班牙-059"
-      - "美国-060"
-      - "韩国-061"
+      - "俄罗斯-047"
+      - "德国-048"
+      - "德国-049"
+      - "韩国-050"
+      - "韩国-051"
+      - "韩国-052"
+      - "韩国-053"
+      - "法国-054"
+      - "德国-055"
+      - "瑞士-056"
   - name: Proxy
     type: select
     proxies:
       - Auto
-      - "美国-001"
-      - "哥伦比亚-002"
-      - "美国-003"
+      - "日本-001"
+      - "日本-002"
+      - "德国-003"
       - "日本-004"
       - "德国-005"
-      - "德国-006"
-      - "日本-007"
+      - "美国-006"
+      - "德国-007"
       - "美国-008"
-      - "哥伦比亚-009"
+      - "德国-009"
       - "日本-010"
       - "德国-011"
-      - "德国-012"
-      - "德国-013"
-      - "日本-014"
-      - "日本-015"
-      - "日本-016"
+      - "日本-012"
+      - "美国-013"
+      - "德国-014"
+      - "哥伦比亚-015"
+      - "美国-016"
       - "德国-017"
       - "德国-018"
-      - "日本-019"
-      - "德国-020"
-      - "日本-021"
-      - "德国-022"
+      - "德国-019"
+      - "日本-020"
+      - "德国-021"
+      - "哥伦比亚-022"
       - "日本-023"
-      - "哥伦比亚-024"
-      - "日本-025"
-      - "日本-026"
-      - "美国-027"
-      - "日本-028"
-      - "德国-029"
-      - "德国-030"
-      - "哥伦比亚-031"
-      - "美国-032"
-      - "德国-033"
-      - "德国-034"
-      - "德国-035"
-      - "德国-036"
-      - "日本-037"
-      - "法国-038"
-      - "日本-039"
-      - "日本-040"
+      - "德国-024"
+      - "德国-025"
+      - "美国-026"
+      - "德国-027"
+      - "德国-028"
+      - "哥伦比亚-029"
+      - "日本-030"
+      - "日本-031"
+      - "立陶宛-032"
+      - "荷兰-033"
+      - "英国-034"
+      - "美国-035"
+      - "美国-036"
+      - "荷兰-037"
+      - "英国-038"
+      - "英国-039"
+      - "法国-040"
       - "荷兰-041"
-      - "立陶宛-042"
+      - "荷兰-042"
       - "荷兰-043"
-      - "荷兰-044"
-      - "英国-045"
+      - "哥伦比亚-044"
+      - "荷兰-045"
       - "英国-046"
-      - "英国-047"
-      - "美国-048"
-      - "英国-049"
-      - "英国-050"
-      - "英国-051"
-      - "英国-052"
-      - "日本-053"
-      - "日本-054"
-      - "韩国-055"
-      - "英国-056"
-      - "英国-057"
-      - "韩国-058"
-      - "西班牙-059"
-      - "美国-060"
-      - "韩国-061"
+      - "俄罗斯-047"
+      - "德国-048"
+      - "德国-049"
+      - "韩国-050"
+      - "韩国-051"
+      - "韩国-052"
+      - "韩国-053"
+      - "法国-054"
+      - "德国-055"
+      - "瑞士-056"
 
 rules:
   - MATCH,Proxy
