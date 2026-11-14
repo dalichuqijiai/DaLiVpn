@@ -1,20 +1,6 @@
 proxies:
   - name: "哥伦比亚-001"
     type: vless
-    server: 170.114.45.6
-    port: 2096
-    uuid: efd11a89-7506-44ce-95b6-6654859f155b
-    network: ws
-    udp: true
-    tls: true
-    servername: pcloud.z-tas.com
-    client-fingerprint: firefox
-    ws-opts:
-      path: /
-      headers:
-        Host: pcloud.z-tas.com
-  - name: "哥伦比亚-002"
-    type: vless
     server: fs.qicai99.com
     port: 443
     uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
@@ -27,9 +13,47 @@ proxies:
       path: "%2F"
       headers:
         Host: fs.qicai99.com
+  - name: "哥伦比亚-002"
+    type: vless
+    server: 172.67.193.217
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    ws-opts:
+      path: /
+      headers:
+        Host: fs.qicai99.com
   - name: "美国-003"
     type: vless
+    server: fast.145779.xyz
+    port: 2053
+    uuid: c83f15bf-1817-4ec8-a19f-6393d226434c
+    network: ws
+    udp: true
+    tls: true
+    servername: fast.145779.xyz
+    client-fingerprint: ios
+    ws-opts:
+      path: /ws-tesla
+  - name: "美国-004"
+    type: vless
     server: yx.l110.us.ci
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    ws-opts:
+      path: /fp
+      headers:
+        Host: fs.qicai99.com
+  - name: "瑞典-005"
+    type: vless
+    server: cucc.cloudflare.seeck.cn
     port: 443
     uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
     network: ws
@@ -41,34 +65,6 @@ proxies:
       path: /fp=chrome
       headers:
         Host: fs.qicai99.com
-  - name: "日本-004"
-    type: vless
-    server: 172.67.156.147
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: chrome
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "日本-005"
-    type: vless
-    server: 172.67.217.240
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: chrome
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
   - name: "香港-006"
     type: vless
     server: hk1t.wawojk.dpdns.org
@@ -83,509 +79,20 @@ proxies:
       path: /hk1-ws-1f8915c8964a
       headers:
         Host: hk1t.wawojk.dpdns.org
-  - name: "其他-007"
+  - name: "哥伦比亚-007"
     type: vless
-    server: tn1r.eu.cc
-    port: 443
-    uuid: 22424ee2-6fe3-42ca-9749-6d4c5a8acc82
-    network: ws
-    udp: true
-    tls: true
-    servername: tn1r.eu.cc
-    client-fingerprint: chrome
-    ws-opts:
-      path: /id-pusat
-      headers:
-        Host: tn1r.eu.cc
-  - name: "美国-CDN-008"
-    type: vless
-    server: 104.25.0.1
-    port: 2096
-    uuid: 341832cc-ba98-425b-8225-b3db621a0da3
-    network: ws
-    udp: true
-    tls: true
-    servername: rainfall0705.cc.cd
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: rainfall0705.cc.cd
-  - name: "美国-CDN-009"
-    type: vless
-    server: 104.16.80.1
-    port: 443
-    uuid: 462f23ba-3286-4601-813d-878bf26b4fcb
-    network: ws
-    udp: true
-    tls: true
-    servername: nmdx.ccwu.cc
-    ws-opts:
-      path: /proxyip=proxyip.oracle.cmliussss.netfp=chrome
-      headers:
-        Host: nmdx.ccwu.cc
-  - name: "哥伦比亚-010"
-    type: vless
-    server: 104.18.21.69
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    client-fingerprint: chrome
-    ws-opts:
-      path: /fp=chromefp=chrome
-      headers:
-        Host: fs.qicai99.com
-  - name: "其他-011"
-    type: vless
-    server: kclx.eu.org
-    port: 443
-    uuid: 0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b
-    network: ws
-    udp: true
-    tls: true
-    servername: kclx.eu.org
-    ws-opts:
-      path: /154.16.10.34-8080
-      headers:
-        Host: kclx.eu.org
-  - name: "新加坡-012"
-    type: vless
-    server: www.visa.com.sg
-    port: 8443
-    uuid: 1753c03f-39c4-4bf2-ae83-38e90c847e8e
-    network: ws
-    udp: true
-    tls: true
-    servername: ydyg0908.mynameiszt.eu.org
-    client-fingerprint: random
-    ws-opts:
-      path: "%2F%3Fed%3D2560"
-      headers:
-        Host: ydyg0908.mynameiszt.eu.org
-  - name: "其他-013"
-    type: vless
-    server: cf.090227.xyz
-    port: 8443
-    uuid: 889fa37f-6bce-4674-8a49-1cc435e11de7
-    network: ws
-    udp: true
-    tls: true
-    servername: liusuyan.cc.cd
-    ws-opts:
-      path: /proxyip=ProxyIP.SG.CMLiussss.Netfp=chrome
-      headers:
-        Host: liusuyan.cc.cd
-  - name: "瑞典-014"
-    type: vless
-    server: cucc.cloudflare.seeck.cn
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    ws-opts:
-      path: /
-      headers:
-        Host: fs.qicai99.com
-  - name: "日本-015"
-    type: vless
-    server: 104.19.33.237
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: android
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "美国-016"
-    type: vless
-    server: fast.145779.xyz
-    port: 2053
-    uuid: c83f15bf-1817-4ec8-a19f-6393d226434c
-    network: ws
-    udp: true
-    tls: true
-    servername: fast.145779.xyz
-    client-fingerprint: ios
-    ws-opts:
-      path: /ws-tesla
-  - name: "美国-CDN-017"
-    type: vless
-    server: 172.67.172.155
-    port: 443
-    uuid: 3de5a94c-aadc-4e40-ba1a-7d4b6545f8a3
-    network: ws
-    udp: true
-    tls: true
-    servername: oooyo.bi8bo.cyou
-    ws-opts:
-      path: /
-      headers:
-        Host: oooyo.bi8bo.cyou
-  - name: "其他-018"
-    type: vless
-    server: cf.090227.xyz
-    port: 443
-    uuid: 3de5a94c-aadc-4e40-ba1a-7d4b6545f8a3
-    network: ws
-    udp: true
-    tls: true
-    servername: oooyo.bi8bo.cyou
-    ws-opts:
-      path: /
-      headers:
-        Host: oooyo.bi8bo.cyou
-  - name: "美国-CDN-019"
-    type: vless
-    server: 162.159.135.234
-    port: 2053
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp11.1145678.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /videos/forum
-      headers:
-        Host: vp11.1145678.xyz
-  - name: "美国-CDN-020"
-    type: vless
-    server: 162.159.135.234
-    port: 8443
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp17.1145678.xyz
-    ws-opts:
-      path: /class/toolfp
-      headers:
-        Host: vp17.1145678.xyz
-  - name: "马来西亚-021"
-    type: vless
-    server: 104.18.12.229
-    port: 8443
-    uuid: 1753c03f-39c4-4bf2-ae83-38e90c847e8e
-    network: ws
-    udp: true
-    tls: true
-    servername: ydyg0908.mynameiszt.eu.org
-    client-fingerprint: random
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: ydyg0908.mynameiszt.eu.org
-  - name: "其他-022"
-    type: vless
-    server: saas.sin.fan
-    port: 443
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp5.1145678.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /servicefp=chrome
-      headers:
-        Host: vp5.1145678.xyz
-  - name: "美国-CDN-023"
-    type: vless
-    server: 104.18.33.141
-    port: 443
-    uuid: 0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b
-    network: ws
-    udp: true
-    tls: true
-    servername: kclx.eu.org
-    client-fingerprint: chrome
-    ws-opts:
-      path: /154.16.10.34-8080
-      headers:
-        Host: kclx.eu.org
-  - name: "美国-CDN-024"
-    type: vless
-    server: 162.159.130.234
-    port: 2083
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp14.1145678.xyz
-    ws-opts:
-      path: /community/redirect.html
-      headers:
-        Host: vp14.1145678.xyz
-  - name: "美国-CDN-025"
-    type: vless
-    server: 162.159.135.234
-    port: 2096
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp8.1145678.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /p
-      headers:
-        Host: vp8.1145678.xyz
-  - name: "哥伦比亚-026"
-    type: vless
-    server: 104.24.197.20
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    ws-opts:
-      path: /
-      headers:
-        Host: fs.qicai99.com
-  - name: "哥伦比亚-027"
-    type: vless
-    server: 172.64.150.28
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    ws-opts:
-      path: /fp=chrome
-      headers:
-        Host: fs.qicai99.com
-  - name: "哥伦比亚-028"
-    type: vless
-    server: 172.67.66.177
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    ws-opts:
-      path: /
-      headers:
-        Host: fs.qicai99.com
-  - name: "哥伦比亚-029"
-    type: vless
-    server: 170.114.46.6
+    server: 170.114.45.6
     port: 2096
     uuid: efd11a89-7506-44ce-95b6-6654859f155b
     network: ws
     udp: true
     tls: true
     servername: pcloud.z-tas.com
-    client-fingerprint: firefox
     ws-opts:
       path: /
       headers:
         Host: pcloud.z-tas.com
-  - name: "其他-030"
-    type: vless
-    server: saas.sin.fan
-    port: 2083
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp25.1145678.xyz
-    client-fingerprint: firefox
-    ws-opts:
-      path: /comics/ads/threadfp=chrome
-      headers:
-        Host: vp25.1145678.xyz
-  - name: "其他-031"
-    type: vless
-    server: saas.sin.fan
-    port: 2087
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp3.1145678.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /new/comics
-      headers:
-        Host: vp3.1145678.xyz
-  - name: "其他-032"
-    type: vless
-    server: saas.sin.fan
-    port: 2096
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp13.1145678.xyz
-    client-fingerprint: firefox
-    ws-opts:
-      path: /index/content
-      headers:
-        Host: vp13.1145678.xyz
-  - name: "德国-033"
-    type: vless
-    server: 190.93.244.47
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "日本-034"
-    type: vless
-    server: 104.18.42.98
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: qq
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "美国-035"
-    type: vless
-    server: 104.21.58.37
-    port: 2053
-    uuid: c83f15bf-1817-4ec8-a19f-6393d226434c
-    network: ws
-    udp: true
-    tls: true
-    servername: fast.145779.xyz
-    client-fingerprint: android
-    ws-opts:
-      path: /ws-tesla
-      headers:
-        Host: fast.145779.xyz
-  - name: "美国-036"
-    type: vless
-    server: 172.67.199.126
-    port: 2053
-    uuid: c83f15bf-1817-4ec8-a19f-6393d226434c
-    network: ws
-    udp: true
-    tls: true
-    servername: fast.145779.xyz
-    client-fingerprint: firefox
-    ws-opts:
-      path: /ws-tesla
-      headers:
-        Host: fast.145779.xyz
-  - name: "美国-CDN-037"
-    type: vless
-    server: 188.114.98.0
-    port: 443
-    uuid: 22424ee2-6fe3-42ca-9749-6d4c5a8acc82
-    network: ws
-    udp: true
-    tls: true
-    servername: tn1r.eu.cc
-    ws-opts:
-      path: /id-pusat
-      headers:
-        Host: tn1r.eu.cc
-  - name: "美国-CDN-038"
-    type: vless
-    server: 162.159.130.234
-    port: 2096
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp8.1145678.xyz
-    client-fingerprint: safari
-    ws-opts:
-      path: /p
-      headers:
-        Host: vp8.1145678.xyz
-  - name: "哥伦比亚-039"
-    type: vless
-    server: 104.18.34.33
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    ws-opts:
-      path: /
-      headers:
-        Host: fs.qicai99.com
-  - name: "哥伦比亚-040"
-    type: vless
-    server: 172.64.159.33
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    ws-opts:
-      path: /
-      headers:
-        Host: fs.qicai99.com
-  - name: "美国-CDN-041"
-    type: vless
-    server: 104.18.35.86
-    port: 2083
-    uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-    network: ws
-    udp: true
-    tls: true
-    servername: vlsovip.1d.mom
-    client-fingerprint: chrome
-    ws-opts:
-      path: /fp=unsafe
-      headers:
-        Host: vlsovip.1d.mom
-  - name: "德国-042"
-    type: vless
-    server: 188.114.99.137
-    port: 443
-    uuid: c1208c5a-2350-0003-affd-fc41b4319286
-    network: ws
-    udp: true
-    tls: true
-    servername: decdn-28.nome-rkp.net
-    client-fingerprint: firefox
-    ws-opts:
-      path: /media/ws/
-      headers:
-        Host: decdn-28.nome-rkp.net
-  - name: "日本-043"
-    type: vless
-    server: 104.17.50.227
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: firefox
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "美国-044"
+  - name: "美国-008"
     type: vless
     server: mao.kipfelmao.de5.net
     port: 443
@@ -599,279 +106,21 @@ proxies:
       path: /api/v1/guests/profiles/5de14443985f/
       headers:
         Host: mao.kipfelmao.de5.net
-  - name: "美国-CDN-045"
+  - name: "美国-009"
     type: vless
-    server: 104.21.71.249
-    port: 443
-    uuid: 3de5a94c-aadc-4e40-ba1a-7d4b6545f8a3
-    network: ws
-    udp: true
-    tls: true
-    servername: oooyo.bi8bo.cyou
-    ws-opts:
-      path: /
-      headers:
-        Host: oooyo.bi8bo.cyou
-  - name: "哥伦比亚-046"
-    type: vless
-    server: 104.21.60.73
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    ws-opts:
-      path: /
-      headers:
-        Host: fs.qicai99.com
-  - name: "美国-CDN-047"
-    type: vless
-    server: 104.17.147.208
-    port: 443
-    uuid: 258ca28a-d982-4a40-b620-7c1c81108060
-    network: ws
-    udp: true
-    tls: true
-    servername: b.rack.sxsc.dpdns.org
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        Host: b.rack.sxsc.dpdns.org
-  - name: "其他-048"
-    type: vless
-    server: saas.sin.fan
-    port: 8443
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp17.1145678.xyz
-    ws-opts:
-      path: /class/toolfp
-      headers:
-        Host: vp17.1145678.xyz
-  - name: "日本-049"
-    type: vless
-    server: 104.21.33.59
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    client-fingerprint: firefox
-    ws-opts:
-      path: "%2Ftyxyws"
-      headers:
-        Host: jp3.yohototo.top
-  - name: "美国-CDN-050"
-    type: vless
-    server: 104.18.1.1
-    port: 2083
-    uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-    network: ws
-    udp: true
-    tls: true
-    servername: vlsovip.1d.mom
-    ws-opts:
-      path: "/socks5=888:888"
-      headers:
-        Host: vlsovip.1d.mom
-  - name: "其他-051"
-    type: vless
-    server: saas.sin.fan
+    server: 172.67.199.126
     port: 2053
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+    uuid: c83f15bf-1817-4ec8-a19f-6393d226434c
     network: ws
     udp: true
     tls: true
-    servername: vp21.1145678.xyz
-    client-fingerprint: android
+    servername: fast.145779.xyz
+    client-fingerprint: ios
     ws-opts:
-      path: /items/downloads
+      path: /ws-tesla
       headers:
-        Host: vp21.1145678.xyz
-  - name: "德国-052"
-    type: vless
-    server: 190.93.247.95
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "美国-053"
-    type: vless
-    server: www.zoom.us
-    port: 443
-    uuid: b19c62cc-f2c2-4895-aee1-978a0f58f8c8
-    network: ws
-    udp: true
-    tls: true
-    servername: matrix.phonicsindia.mobi
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: matrix.phonicsindia.mobi
-  - name: "哥伦比亚-054"
-    type: vless
-    server: 188.114.99.137
-    port: 8443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: fs.qicai99.com
-  - name: "马来西亚-055"
-    type: vless
-    server: 104.18.13.229
-    port: 8443
-    uuid: 1753c03f-39c4-4bf2-ae83-38e90c847e8e
-    network: ws
-    udp: true
-    tls: true
-    servername: ydyg0908.mynameiszt.eu.org
-    client-fingerprint: random
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: ydyg0908.mynameiszt.eu.org
-  - name: "哥伦比亚-056"
-    type: vless
-    server: 104.24.196.20
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    ws-opts:
-      path: /?TELEGRAM—MARAMBASHI—MARAMBASHI—MARAMBASHI—MARAMBASHI?ed=2560
-      headers:
-        Host: fs.qicai99.com
-  - name: "哥伦比亚-057"
-    type: vless
-    server: 172.64.153.33
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    ws-opts:
-      path: /
-      headers:
-        Host: fs.qicai99.com
-  - name: "美国-CDN-058"
-    type: vless
-    server: 162.159.135.234
-    port: 443
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp5.1145678.xyz
-    client-fingerprint: chrome
-    ws-opts:
-      path: /servicefp=chrome
-      headers:
-        Host: vp5.1145678.xyz
-  - name: "哥伦比亚-059"
-    type: vless
-    server: 104.18.39.33
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    ws-opts:
-      path: /
-      headers:
-        Host: fs.qicai99.com
-  - name: "德国-060"
-    type: vless
-    server: 103.31.4.205
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: chrome
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "哥伦比亚-061"
-    type: vless
-    server: 162.159.198.1
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/??ed=2560#Telegram—PLANB_NET—PLANB_NET—PLANB_NET—PLANB_NET"
-      headers:
-        Host: fs.qicai99.com
-  - name: "德国-062"
-    type: vless
-    server: 103.31.4.160
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: chrome
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "哥伦比亚-063"
-    type: vless
-    server: 104.26.13.54
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    ws-opts:
-      path: /
-      headers:
-        Host: fs.qicai99.com
-  - name: "德国-064"
-    type: vless
-    server: 103.31.4.75
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: chrome
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "哥伦比亚-065"
+        Host: fast.145779.xyz
+  - name: "哥伦比亚-010"
     type: vless
     server: 104.18.32.33
     port: 443
@@ -884,9 +133,23 @@ proxies:
       path: /
       headers:
         Host: fs.qicai99.com
-  - name: "哥伦比亚-066"
+  - name: "哥伦比亚-011"
     type: vless
-    server: 172.64.155.33
+    server: 104.18.21.69
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: fs.qicai99.com
+  - name: "哥伦比亚-012"
+    type: vless
+    server: 104.18.38.33
     port: 443
     uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
     network: ws
@@ -894,39 +157,12 @@ proxies:
     tls: true
     servername: fs.qicai99.com
     ws-opts:
-      path: "/?Telegram---@bored_vpn"
+      path: /DailyConfigs--DailyConfigs--DailyConfigs
       headers:
         Host: fs.qicai99.com
-  - name: "德国-067"
+  - name: "哥伦比亚-013"
     type: vless
-    server: 104.24.21.163
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: chrome
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "美国-CDN-068"
-    type: vless
-    server: 162.159.130.234
-    port: 8443
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-    network: ws
-    udp: true
-    tls: true
-    servername: vp17.1145678.xyz
-    ws-opts:
-      path: /class/toolfp
-      headers:
-        Host: vp17.1145678.xyz
-  - name: "哥伦比亚-069"
-    type: vless
-    server: 104.18.40.33
+    server: 104.18.39.33
     port: 443
     uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
     network: ws
@@ -937,21 +173,7 @@ proxies:
       path: /
       headers:
         Host: fs.qicai99.com
-  - name: "哥伦比亚-070"
-    type: vless
-    server: 104.18.37.228
-    port: 443
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    network: ws
-    udp: true
-    tls: true
-    servername: fs.qicai99.com
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: fs.qicai99.com
-  - name: "哥伦比亚-071"
+  - name: "哥伦比亚-014"
     type: vless
     server: 104.21.41.243
     port: 443
@@ -962,40 +184,12 @@ proxies:
     servername: fs.qicai99.com
     client-fingerprint: chrome
     ws-opts:
-      path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+      path: /
       headers:
         Host: fs.qicai99.com
-  - name: "德国-072"
+  - name: "哥伦比亚-015"
     type: vless
-    server: 104.19.112.134
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "德国-073"
-    type: vless
-    server: 162.159.236.61
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: chrome
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "哥伦比亚-074"
-    type: vless
-    server: 172.64.158.33
+    server: 162.159.198.1
     port: 443
     uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
     network: ws
@@ -1007,79 +201,63 @@ proxies:
       path: /
       headers:
         Host: fs.qicai99.com
-  - name: "德国-075"
+  - name: "美国-016"
     type: vless
-    server: 104.19.248.199
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+    server: 104.21.58.37
+    port: 2053
+    uuid: c83f15bf-1817-4ec8-a19f-6393d226434c
     network: ws
     udp: true
     tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
+    servername: fast.145779.xyz
+    client-fingerprint: ios
     ws-opts:
-      path: /man
+      path: /ws-tesla
       headers:
-        Host: moz.ar-marz.fun
-  - name: "德国-076"
+        Host: fast.145779.xyz
+  - name: "哥伦比亚-017"
     type: vless
-    server: 172.67.110.86
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: chrome
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "德国-077"
-    type: vless
-    server: 188.114.99.157
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: chrome
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "美国-CDN-078"
-    type: vless
-    server: 162.159.130.234
+    server: 104.24.196.20
     port: 443
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
     network: ws
     udp: true
     tls: true
-    servername: vp5.1145678.xyz
-    client-fingerprint: chrome
+    servername: fs.qicai99.com
     ws-opts:
-      path: /servicefp=chrome
+      path: /DailyConfigs--DailyConfigs--DailyConfigs
       headers:
-        Host: vp5.1145678.xyz
-  - name: "美国-CDN-079"
+        Host: fs.qicai99.com
+  - name: "哥伦比亚-018"
     type: vless
-    server: 162.159.135.234
-    port: 2083
-    uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+    server: 172.64.159.33
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
     network: ws
     udp: true
     tls: true
-    servername: vp25.1145678.xyz
-    client-fingerprint: chrome
+    servername: fs.qicai99.com
     ws-opts:
-      path: /comics/ads/thread
+      path: /
       headers:
-        Host: vp25.1145678.xyz
-  - name: "哥伦比亚-080"
+        Host: fs.qicai99.com
+  - name: "日本-019"
     type: vless
-    server: 104.18.38.33
+    server: 104.16.10.48
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    client-fingerprint: safari
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "哥伦比亚-020"
+    type: vless
+    server: 104.26.13.54
     port: 443
     uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
     network: ws
@@ -1090,9 +268,23 @@ proxies:
       path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
       headers:
         Host: fs.qicai99.com
-  - name: "哥伦比亚-081"
+  - name: "日本-021"
     type: vless
-    server: 172.64.152.33
+    server: 104.16.10.56
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    client-fingerprint: ios
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "哥伦比亚-022"
+    type: vless
+    server: 172.64.150.28
     port: 443
     uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
     network: ws
@@ -1104,7 +296,7 @@ proxies:
       path: /fp=chrome
       headers:
         Host: fs.qicai99.com
-  - name: "哥伦比亚-082"
+  - name: "哥伦比亚-023"
     type: vless
     server: 172.67.167.207
     port: 443
@@ -1113,12 +305,119 @@ proxies:
     udp: true
     tls: true
     servername: fs.qicai99.com
-    client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
         Host: fs.qicai99.com
-  - name: "哥伦比亚-083"
+  - name: "日本-024"
+    type: vless
+    server: 172.67.156.147
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    client-fingerprint: android
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "哥伦比亚-025"
+    type: vless
+    server: 104.18.37.228
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    ws-opts:
+      path: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
+      headers:
+        Host: fs.qicai99.com
+  - name: "哥伦比亚-026"
+    type: vless
+    server: 104.21.60.73
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    ws-opts:
+      path: /
+      headers:
+        Host: fs.qicai99.com
+  - name: "美国-027"
+    type: vless
+    server: 104.21.51.182
+    port: 443
+    uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
+    network: ws
+    udp: true
+    tls: true
+    servername: mao.kipfelmao.de5.net
+    client-fingerprint: android
+    ws-opts:
+      path: /api/v1/guests/profiles/5de14443985f/
+      headers:
+        Host: mao.kipfelmao.de5.net
+  - name: "美国-028"
+    type: vless
+    server: 172.67.183.149
+    port: 443
+    uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
+    network: ws
+    udp: true
+    tls: true
+    servername: mao.kipfelmao.de5.net
+    client-fingerprint: android
+    ws-opts:
+      path: /api/v1/guests/profiles/5de14443985f/
+      headers:
+        Host: mao.kipfelmao.de5.net
+  - name: "哥伦比亚-029"
+    type: vless
+    server: 104.24.197.20
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    ws-opts:
+      path: /
+      headers:
+        Host: fs.qicai99.com
+  - name: "日本-030"
+    type: vless
+    server: 104.24.31.89
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    client-fingerprint: chrome
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "哥伦比亚-031"
+    type: vless
+    server: 172.64.152.33
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    ws-opts:
+      path: /
+      headers:
+        Host: fs.qicai99.com
+  - name: "哥伦比亚-032"
     type: vless
     server: 172.67.74.177
     port: 443
@@ -1127,108 +426,120 @@ proxies:
     udp: true
     tls: true
     servername: fs.qicai99.com
-    client-fingerprint: chrome
     ws-opts:
-      path: /fp=chrome
+      path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
       headers:
         Host: fs.qicai99.com
-  - name: "德国-084"
+  - name: "日本-033"
     type: vless
-    server: 104.25.242.200
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "德国-085"
-    type: vless
-    server: 173.245.49.114
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "德国-086"
-    type: vless
-    server: 188.114.96.246
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: chrome
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "德国-087"
-    type: vless
-    server: 103.31.4.254
-    port: 8443
-    uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-    network: ws
-    udp: true
-    tls: true
-    servername: moz.ar-marz.fun
-    client-fingerprint: firefox
-    ws-opts:
-      path: /man
-      headers:
-        Host: moz.ar-marz.fun
-  - name: "美国-088"
-    type: vless
-    server: 174.137.54.133
-    port: 18443
-    uuid: 74529dd1-c01a-4622-a74a-c7ef6032fb7b
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: updates.cdn-apple.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "bqdOQ60hXST4ivHTo5nQ8SkcJ8N7cDrSH8eW69rlJBI"
-  - name: "美国-089"
-    type: vless
-    server: 174.137.54.133
-    port: 28443
-    uuid: fd8e435d-674f-457a-bc2a-c35d797349b3
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "2z30-1Zgv51Ktfs4A0HGhvLJ3c2p4UjxVRw6eGWEy2k"
-  - name: "立陶宛-090"
-    type: vless
-    server: lorettmay.top
+    server: 104.21.33.59
     port: 443
-    uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
     network: ws
     udp: true
     tls: true
-    servername: lorettmay.top
+    servername: jp3.yohototo.top
     client-fingerprint: chrome
     ws-opts:
-      path: /blog/posts
-  - name: "波兰-091"
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "哥伦比亚-034"
     type: vless
-    server: 3.168.218.14
+    server: 172.64.155.33
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    ws-opts:
+      path: /DailyConfigs--DailyConfigs--DailyConfigs
+      headers:
+        Host: fs.qicai99.com
+  - name: "哥伦比亚-035"
+    type: vless
+    server: 172.64.158.33
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    ws-opts:
+      path: /
+      headers:
+        Host: fs.qicai99.com
+  - name: "日本-036"
+    type: vless
+    server: 104.24.0.1
+    port: 443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    udp: true
+    tls: true
+    servername: jp3.yohototo.top
+    client-fingerprint: qq
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+  - name: "哥伦比亚-037"
+    type: vless
+    server: 104.18.34.33
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    ws-opts:
+      path: /DailyConfigs--DailyConfigs--DailyConfigs
+      headers:
+        Host: fs.qicai99.com
+  - name: "哥伦比亚-038"
+    type: vless
+    server: 104.18.40.33
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    client-fingerprint: edge
+    ws-opts:
+      path: /
+      headers:
+        Host: fs.qicai99.com
+  - name: "哥伦比亚-039"
+    type: vless
+    server: 172.67.66.177
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    ws-opts:
+      path: /
+      headers:
+        Host: fs.qicai99.com
+  - name: "哥伦比亚-040"
+    type: vless
+    server: 172.64.153.33
+    port: 443
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    network: ws
+    udp: true
+    tls: true
+    servername: fs.qicai99.com
+    ws-opts:
+      path: /
+      headers:
+        Host: fs.qicai99.com
+  - name: "波兰-041"
+    type: vless
+    server: 3.169.9.125
     port: 443
     uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
     network: ws
@@ -1240,21 +551,56 @@ proxies:
       path: /
       headers:
         Host: d2ex4nxd2e01ub.cloudfront.net
-  - name: "波兰-092"
+  - name: "日本-042"
     type: vless
-    server: 3.168.217.188
-    port: 443
-    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-    network: ws
+    server: 166.0.22.238
+    port: 2053
+    uuid: 9b2be2d3-96cd-4ffc-aac2-649c74f92402
+    network: tcp
+    flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: d2ex4nxd2e01ub.cloudfront.net
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: d2ex4nxd2e01ub.cloudfront.net
-  - name: "波兰-093"
+    servername: jp1.netease.uz
+    client-fingerprint: firefox
+  - name: "奥地利-043"
+    type: vless
+    server: api.mediaroshcha.cc
+    port: 443
+    uuid: f4a3fec3-80d2-4743-81a9-3ea4443e5456
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: api.mediaroshcha.cc
+    client-fingerprint: android
+    reality-opts:
+      public-key: "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs"
+      short-id: "a8"
+  - name: "奥地利-044"
+    type: vless
+    server: 189.74.115.24
+    port: 443
+    uuid: f4a3fec3-80d2-4743-81a9-3ea4443e5456
+    network: tcp
+    flow: xtls-rprx-vision
+    udp: true
+    tls: true
+    servername: api.mediaroshcha.cc
+    client-fingerprint: edge
+    reality-opts:
+      public-key: "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs"
+      short-id: "a8"
+  - name: "加拿大-045"
+    type: vless
+    server: 200.102.183.243
+    port: 443
+    uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
+    network: grpc
+    udp: true
+    tls: true
+    servername: f2hbck5x3c0g8pl7.cdn.cachefleet.com
+    client-fingerprint: firefox
+  - name: "波兰-046"
     type: vless
     server: 3.168.218.8
     port: 443
@@ -1268,9 +614,9 @@ proxies:
       path: /
       headers:
         Host: d2ex4nxd2e01ub.cloudfront.net
-  - name: "波兰-094"
+  - name: "波兰-047"
     type: vless
-    server: 3.168.218.7
+    server: 3.168.217.188
     port: 443
     uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
     network: ws
@@ -1282,48 +628,7 @@ proxies:
       path: /
       headers:
         Host: d2ex4nxd2e01ub.cloudfront.net
-  - name: "波兰-095"
-    type: vless
-    server: 3.168.218.9
-    port: 443
-    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-    network: ws
-    udp: true
-    tls: true
-    servername: d2ex4nxd2e01ub.cloudfront.net
-    client-fingerprint: chrome
-    ws-opts:
-      path: /
-      headers:
-        Host: d2ex4nxd2e01ub.cloudfront.net
-  - name: "波兰-096"
-    type: vless
-    server: 3.168.218.6
-    port: 443
-    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-    network: ws
-    udp: true
-    tls: true
-    servername: d2ex4nxd2e01ub.cloudfront.net
-    client-fingerprint: edge
-    ws-opts:
-      path: /
-      headers:
-        Host: d2ex4nxd2e01ub.cloudfront.net
-  - name: "波兰-097"
-    type: vless
-    server: 3.168.217.190
-    port: 443
-    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-    network: ws
-    udp: true
-    tls: true
-    servername: d2ex4nxd2e01ub.cloudfront.net
-    ws-opts:
-      path: /
-      headers:
-        Host: d2ex4nxd2e01ub.cloudfront.net
-  - name: "法国-098"
+  - name: "法国-048"
     type: vless
     server: 3.168.219.0
     port: 443
@@ -1337,32 +642,9 @@ proxies:
       path: /
       headers:
         Host: d1aedflfr97jes.cloudfront.net
-  - name: "德国-099"
+  - name: "波兰-049"
     type: vless
-    server: luminexorizon.ink
-    port: 443
-    uuid: 4b50270b-5caf-4c34-b3da-17b4525604a6
-    network: grpc
-    udp: true
-    tls: true
-    servername: luminexorizon.ink
-  - name: "芬兰-100"
-    type: vless
-    server: 138.124.254.181
-    port: 443
-    uuid: a5a8ffd9-17b9-000b-840d-bb69289f94fc
-    network: tcp
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: lywd3zccl0w7a4ih.customer.velacdn.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "iKYXOJoOvOk71UnjIzyEj502_nBalSNLJRWjKTf1fQc"
-      short-id: "f3bc3272312b46e9"
-  - name: "波兰-101"
-    type: vless
-    server: 3.169.9.125
+    server: 3.168.217.190
     port: 443
     uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
     network: ws
@@ -1373,75 +655,107 @@ proxies:
       path: /
       headers:
         Host: d2ex4nxd2e01ub.cloudfront.net
-  - name: "其他-102"
+  - name: "波兰-050"
     type: vless
-    server: 176.108.240.45
+    server: 3.168.218.6
     port: 443
-    uuid: 6895528a-aa3e-48c4-8804-ced625e92b47
+    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+    network: ws
+    udp: true
+    tls: true
+    servername: d2ex4nxd2e01ub.cloudfront.net
+    client-fingerprint: edge
+    ws-opts:
+      path: /
+      headers:
+        Host: d2ex4nxd2e01ub.cloudfront.net
+  - name: "波兰-051"
+    type: vless
+    server: 3.168.218.9
+    port: 443
+    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+    network: ws
+    udp: true
+    tls: true
+    servername: d2ex4nxd2e01ub.cloudfront.net
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: d2ex4nxd2e01ub.cloudfront.net
+  - name: "波兰-052"
+    type: vless
+    server: 3.168.218.14
+    port: 443
+    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+    network: ws
+    udp: true
+    tls: true
+    servername: d2ex4nxd2e01ub.cloudfront.net
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: d2ex4nxd2e01ub.cloudfront.net
+  - name: "波兰-053"
+    type: vless
+    server: 3.168.218.7
+    port: 443
+    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+    network: ws
+    udp: true
+    tls: true
+    servername: d2ex4nxd2e01ub.cloudfront.net
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: d2ex4nxd2e01ub.cloudfront.net
+  - name: "捷克-054"
+    type: vless
+    server: 189.74.118.3
+    port: 443
+    uuid: f4a3fec3-80d2-4743-81a9-3ea4443e5456
+    network: grpc
+    udp: true
+    tls: true
+    servername: cz-next.mediastvor.cc
+    client-fingerprint: edge
+  - name: "捷克-055"
+    type: vless
+    server: cz-next.mediastvor.cc
+    port: 443
+    uuid: f4a3fec3-80d2-4743-81a9-3ea4443e5456
+    network: grpc
+    udp: true
+    tls: true
+    servername: cz-next.mediastvor.cc
+    client-fingerprint: chrome
+  - name: "德国-056"
+    type: vless
+    server: luminexorizon.ink
+    port: 443
+    uuid: 4b50270b-5caf-4c34-b3da-17b4525604a6
+    network: grpc
+    udp: true
+    tls: true
+    servername: luminexorizon.ink
+    client-fingerprint: ios
+  - name: "日本-057"
+    type: vless
+    server: zfapi.zalolink.com
+    port: 47691
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: xn---26-5cd9bhfc0a8c7b8af.xn--p1ai
-    client-fingerprint: firefox
+    servername: m.media-amazon.com
+    client-fingerprint: safari
     reality-opts:
-      public-key: "me0xkqd3f9UlKOavrYCOTK5J2erH1-JK_LA017XHkUU"
-      short-id: "43560624cceb5666"
-  - name: "日本-103"
-    type: vless
-    server: 62.106.75.37
-    port: 443
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    network: ws
-    udp: true
-    tls: true
-    servername: jp3.yohototo.top
-    ws-opts:
-      path: /tyxyws
-      headers:
-        Host: jp3.yohototo.top
-  - name: "新加坡-104"
-    type: vless
-    server: 31.177.111.184
-    port: 443
-    uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
-    network: ws
-    udp: true
-    tls: true
-    servername: zry9ocg43w.flowersgood.top
-    client-fingerprint: edge
-    ws-opts:
-      path: /static/collect/9412171e8a3a/
-      headers:
-        Host: zry9ocg43w.flowersgood.top
-  - name: "新加坡-105"
-    type: vless
-    server: nguyxejonb.flowersgood.top
-    port: 443
-    uuid: 7955bf18-35c4-412d-aabd-c0b36c793063
-    network: ws
-    udp: true
-    tls: true
-    servername: nguyxejonb.flowersgood.top
-    client-fingerprint: chrome
-    ws-opts:
-      path: /service/telemetry/0294da469190/
-      headers:
-        Host: nguyxejonb.flowersgood.top
-  - name: "德国-106"
-    type: vless
-    server: api.alder.lalibobi.online
-    port: 443
-    uuid: 7d718630-7a1a-4af8-9332-aa0610634e8a
-    network: grpc
-    udp: true
-    tls: true
-    servername: api.alder.lalibobi.online
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "tKzo0qk-NJCNnmxmSgP7uGmd9VHKiTG2L-YqXYGj4Dc"
-      short-id: "203242200f9d16be"
-  - name: "哥伦比亚-107"
+      public-key: "6PbC7GxOg_YdXya-53llPReUzoU_yknQbkDvI4uorBg"
+      short-id: "2905326a"
+  - name: "哥伦比亚-058"
     type: vless
     server: 5.253.30.226
     port: 443
@@ -1452,75 +766,50 @@ proxies:
     servername: fs.qicai99.com
     client-fingerprint: chrome
     ws-opts:
-      path: /
+      path: /fp=chrome
       headers:
         Host: fs.qicai99.com
-  - name: "德国-108"
+  - name: "越南-059"
     type: vless
-    server: 79.98.38.24
-    port: 443
-    uuid: 7d718630-7a1a-4af8-9332-aa0610634e8a
-    network: grpc
+    server: 163.61.182.194
+    port: 34646
+    uuid: 5407a1c6-fbbf-417a-864d-48563da8e454
+    network: tcp
     udp: true
     tls: true
-    servername: api.alder.lalibobi.online
-    client-fingerprint: firefox
+    servername: api.receptivity.io
+    client-fingerprint: chrome
     reality-opts:
-      public-key: "tKzo0qk-NJCNnmxmSgP7uGmd9VHKiTG2L-YqXYGj4Dc"
-      short-id: "203242200f9d16be"
-  - name: "香港-109"
+      public-key: "UuXUXzPnZM8IY-D5bQPy4iBIzEpK4PJFEOJzeObISRA"
+      short-id: "4710d669"
+  - name: "保加利亚-060"
     type: vless
-    server: 31.192.106.192
+    server: 2.26.8.1
     port: 443
-    uuid: 4fb48619-c29d-47f3-8c21-12bdc3286935
+    uuid: 2db48a26-c97d-40c3-b8e2-8f04f1cfb512
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: node2.shakalchk.ru
-    client-fingerprint: firefox
+    servername: bg.edgemedia.lol
+    client-fingerprint: android
     reality-opts:
-      public-key: "bqzRxK5Nr7muCBDtExsYRK4yrxMwVPOH0_avLu27LQI"
-      short-id: "a132a3"
-  - name: "西班牙-110"
+      public-key: "t7dd2ar4QX4JaQz2FvVjE44XLT0jj7Z-0raaAQ6Y9As"
+      short-id: "f822140f54644166"
+  - name: "日本-061"
     type: vless
-    server: 196.196.149.80
-    port: 443
-    uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+    server: zfapi.zalolink.com
+    port: 43149
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
     network: tcp
     flow: xtls-rprx-vision
     udp: true
     tls: true
-    servername: 7aa271t.es1.h1clayd.click
+    servername: psstatic.cdn.bcebos.com
     client-fingerprint: firefox
     reality-opts:
-      public-key: "ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE"
-      short-id: "42426c882c5fcd41"
-  - name: "其他-111"
-    type: vless
-    server: 132.243.67.197
-    port: 443
-    uuid: 7d718630-7a1a-4af8-9332-aa0610634e8a
-    network: ws
-    udp: true
-    tls: true
-    servername: media.aava.lalibobi.online
-    client-fingerprint: firefox
-    ws-opts:
-      path: /live/showroom
-  - name: "荷兰-112"
-    type: vless
-    server: f0d7aft.nl17.h1clayd.click
-    port: 443
-    uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-    network: tcp
-    udp: true
-    tls: true
-    servername: f0d7aft.nl17.h1clayd.click
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI"
-      short-id: "8956c57cb4c4f8d2"
+      public-key: "cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE"
+      short-id: "15aa0ad4"
 
 proxy-groups:
   - name: Auto
@@ -1532,115 +821,64 @@ proxy-groups:
       - "哥伦比亚-001"
       - "哥伦比亚-002"
       - "美国-003"
-      - "日本-004"
-      - "日本-005"
+      - "美国-004"
+      - "瑞典-005"
       - "香港-006"
-      - "其他-007"
-      - "美国-CDN-008"
-      - "美国-CDN-009"
+      - "哥伦比亚-007"
+      - "美国-008"
+      - "美国-009"
       - "哥伦比亚-010"
-      - "其他-011"
-      - "新加坡-012"
-      - "其他-013"
-      - "瑞典-014"
-      - "日本-015"
+      - "哥伦比亚-011"
+      - "哥伦比亚-012"
+      - "哥伦比亚-013"
+      - "哥伦比亚-014"
+      - "哥伦比亚-015"
       - "美国-016"
-      - "美国-CDN-017"
-      - "其他-018"
-      - "美国-CDN-019"
-      - "美国-CDN-020"
-      - "马来西亚-021"
-      - "其他-022"
-      - "美国-CDN-023"
-      - "美国-CDN-024"
-      - "美国-CDN-025"
+      - "哥伦比亚-017"
+      - "哥伦比亚-018"
+      - "日本-019"
+      - "哥伦比亚-020"
+      - "日本-021"
+      - "哥伦比亚-022"
+      - "哥伦比亚-023"
+      - "日本-024"
+      - "哥伦比亚-025"
       - "哥伦比亚-026"
-      - "哥伦比亚-027"
-      - "哥伦比亚-028"
+      - "美国-027"
+      - "美国-028"
       - "哥伦比亚-029"
-      - "其他-030"
-      - "其他-031"
-      - "其他-032"
-      - "德国-033"
-      - "日本-034"
-      - "美国-035"
-      - "美国-036"
-      - "美国-CDN-037"
-      - "美国-CDN-038"
+      - "日本-030"
+      - "哥伦比亚-031"
+      - "哥伦比亚-032"
+      - "日本-033"
+      - "哥伦比亚-034"
+      - "哥伦比亚-035"
+      - "日本-036"
+      - "哥伦比亚-037"
+      - "哥伦比亚-038"
       - "哥伦比亚-039"
       - "哥伦比亚-040"
-      - "美国-CDN-041"
-      - "德国-042"
-      - "日本-043"
-      - "美国-044"
-      - "美国-CDN-045"
-      - "哥伦比亚-046"
-      - "美国-CDN-047"
-      - "其他-048"
-      - "日本-049"
-      - "美国-CDN-050"
-      - "其他-051"
-      - "德国-052"
-      - "美国-053"
-      - "哥伦比亚-054"
-      - "马来西亚-055"
-      - "哥伦比亚-056"
-      - "哥伦比亚-057"
-      - "美国-CDN-058"
-      - "哥伦比亚-059"
-      - "德国-060"
-      - "哥伦比亚-061"
-      - "德国-062"
-      - "哥伦比亚-063"
-      - "德国-064"
-      - "哥伦比亚-065"
-      - "哥伦比亚-066"
-      - "德国-067"
-      - "美国-CDN-068"
-      - "哥伦比亚-069"
-      - "哥伦比亚-070"
-      - "哥伦比亚-071"
-      - "德国-072"
-      - "德国-073"
-      - "哥伦比亚-074"
-      - "德国-075"
-      - "德国-076"
-      - "德国-077"
-      - "美国-CDN-078"
-      - "美国-CDN-079"
-      - "哥伦比亚-080"
-      - "哥伦比亚-081"
-      - "哥伦比亚-082"
-      - "哥伦比亚-083"
-      - "德国-084"
-      - "德国-085"
-      - "德国-086"
-      - "德国-087"
-      - "美国-088"
-      - "美国-089"
-      - "立陶宛-090"
-      - "波兰-091"
-      - "波兰-092"
-      - "波兰-093"
-      - "波兰-094"
-      - "波兰-095"
-      - "波兰-096"
-      - "波兰-097"
-      - "法国-098"
-      - "德国-099"
-      - "芬兰-100"
-      - "波兰-101"
-      - "其他-102"
-      - "日本-103"
-      - "新加坡-104"
-      - "新加坡-105"
-      - "德国-106"
-      - "哥伦比亚-107"
-      - "德国-108"
-      - "香港-109"
-      - "西班牙-110"
-      - "其他-111"
-      - "荷兰-112"
+      - "波兰-041"
+      - "日本-042"
+      - "奥地利-043"
+      - "奥地利-044"
+      - "加拿大-045"
+      - "波兰-046"
+      - "波兰-047"
+      - "法国-048"
+      - "波兰-049"
+      - "波兰-050"
+      - "波兰-051"
+      - "波兰-052"
+      - "波兰-053"
+      - "捷克-054"
+      - "捷克-055"
+      - "德国-056"
+      - "日本-057"
+      - "哥伦比亚-058"
+      - "越南-059"
+      - "保加利亚-060"
+      - "日本-061"
   - name: Proxy
     type: select
     proxies:
@@ -1648,115 +886,64 @@ proxy-groups:
       - "哥伦比亚-001"
       - "哥伦比亚-002"
       - "美国-003"
-      - "日本-004"
-      - "日本-005"
+      - "美国-004"
+      - "瑞典-005"
       - "香港-006"
-      - "其他-007"
-      - "美国-CDN-008"
-      - "美国-CDN-009"
+      - "哥伦比亚-007"
+      - "美国-008"
+      - "美国-009"
       - "哥伦比亚-010"
-      - "其他-011"
-      - "新加坡-012"
-      - "其他-013"
-      - "瑞典-014"
-      - "日本-015"
+      - "哥伦比亚-011"
+      - "哥伦比亚-012"
+      - "哥伦比亚-013"
+      - "哥伦比亚-014"
+      - "哥伦比亚-015"
       - "美国-016"
-      - "美国-CDN-017"
-      - "其他-018"
-      - "美国-CDN-019"
-      - "美国-CDN-020"
-      - "马来西亚-021"
-      - "其他-022"
-      - "美国-CDN-023"
-      - "美国-CDN-024"
-      - "美国-CDN-025"
+      - "哥伦比亚-017"
+      - "哥伦比亚-018"
+      - "日本-019"
+      - "哥伦比亚-020"
+      - "日本-021"
+      - "哥伦比亚-022"
+      - "哥伦比亚-023"
+      - "日本-024"
+      - "哥伦比亚-025"
       - "哥伦比亚-026"
-      - "哥伦比亚-027"
-      - "哥伦比亚-028"
+      - "美国-027"
+      - "美国-028"
       - "哥伦比亚-029"
-      - "其他-030"
-      - "其他-031"
-      - "其他-032"
-      - "德国-033"
-      - "日本-034"
-      - "美国-035"
-      - "美国-036"
-      - "美国-CDN-037"
-      - "美国-CDN-038"
+      - "日本-030"
+      - "哥伦比亚-031"
+      - "哥伦比亚-032"
+      - "日本-033"
+      - "哥伦比亚-034"
+      - "哥伦比亚-035"
+      - "日本-036"
+      - "哥伦比亚-037"
+      - "哥伦比亚-038"
       - "哥伦比亚-039"
       - "哥伦比亚-040"
-      - "美国-CDN-041"
-      - "德国-042"
-      - "日本-043"
-      - "美国-044"
-      - "美国-CDN-045"
-      - "哥伦比亚-046"
-      - "美国-CDN-047"
-      - "其他-048"
-      - "日本-049"
-      - "美国-CDN-050"
-      - "其他-051"
-      - "德国-052"
-      - "美国-053"
-      - "哥伦比亚-054"
-      - "马来西亚-055"
-      - "哥伦比亚-056"
-      - "哥伦比亚-057"
-      - "美国-CDN-058"
-      - "哥伦比亚-059"
-      - "德国-060"
-      - "哥伦比亚-061"
-      - "德国-062"
-      - "哥伦比亚-063"
-      - "德国-064"
-      - "哥伦比亚-065"
-      - "哥伦比亚-066"
-      - "德国-067"
-      - "美国-CDN-068"
-      - "哥伦比亚-069"
-      - "哥伦比亚-070"
-      - "哥伦比亚-071"
-      - "德国-072"
-      - "德国-073"
-      - "哥伦比亚-074"
-      - "德国-075"
-      - "德国-076"
-      - "德国-077"
-      - "美国-CDN-078"
-      - "美国-CDN-079"
-      - "哥伦比亚-080"
-      - "哥伦比亚-081"
-      - "哥伦比亚-082"
-      - "哥伦比亚-083"
-      - "德国-084"
-      - "德国-085"
-      - "德国-086"
-      - "德国-087"
-      - "美国-088"
-      - "美国-089"
-      - "立陶宛-090"
-      - "波兰-091"
-      - "波兰-092"
-      - "波兰-093"
-      - "波兰-094"
-      - "波兰-095"
-      - "波兰-096"
-      - "波兰-097"
-      - "法国-098"
-      - "德国-099"
-      - "芬兰-100"
-      - "波兰-101"
-      - "其他-102"
-      - "日本-103"
-      - "新加坡-104"
-      - "新加坡-105"
-      - "德国-106"
-      - "哥伦比亚-107"
-      - "德国-108"
-      - "香港-109"
-      - "西班牙-110"
-      - "其他-111"
-      - "荷兰-112"
+      - "波兰-041"
+      - "日本-042"
+      - "奥地利-043"
+      - "奥地利-044"
+      - "加拿大-045"
+      - "波兰-046"
+      - "波兰-047"
+      - "法国-048"
+      - "波兰-049"
+      - "波兰-050"
+      - "波兰-051"
+      - "波兰-052"
+      - "波兰-053"
+      - "捷克-054"
+      - "捷克-055"
+      - "德国-056"
+      - "日本-057"
+      - "哥伦比亚-058"
+      - "越南-059"
+      - "保加利亚-060"
+      - "日本-061"
 
 rules:
   - MATCH,Proxy
